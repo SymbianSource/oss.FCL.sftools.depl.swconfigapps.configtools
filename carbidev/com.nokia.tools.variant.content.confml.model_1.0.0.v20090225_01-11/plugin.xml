@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of the License "Symbian Foundation License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.content.confml.model component.
+-->
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.1.2.1 2008/07/16 11:05:18 e0283620 Exp $
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http///confml.ecore"
+            class="com.nokia.tools.variant.content.confml.ConfmlPackage"
+            genModel="model/confml.genmodel"/>
+   </extension>
+
+</plugin>

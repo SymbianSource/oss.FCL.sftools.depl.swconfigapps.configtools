@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.carbide.ct.confml.ui/src"
+    modelPluginID="com.nokia.tools.carbide.ct.confml.ui" modelName="Overview" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>overview.ecore</foreignModel>
+  <genPackages prefix="Overview" basePackage="com.nokia.tools.carbide.ct.ui" disposableProviderFactory="true"
+      ecorePackage="overview.ecore#/">
+    <genClasses ecoreClass="overview.ecore#//Configuration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference overview.ecore#//Configuration/features"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute overview.ecore#//Configuration/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute overview.ecore#//Configuration/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute overview.ecore#//Configuration/description"/>
+    </genClasses>
+    <genClasses ecoreClass="overview.ecore#//Feature">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference overview.ecore#//Feature/settings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute overview.ecore#//Feature/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute overview.ecore#//Feature/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="overview.ecore#//Setting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute overview.ecore#//Setting/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute overview.ecore#//Setting/name"/>
+    </genClasses>
+    <genClasses ecoreClass="overview.ecore#//SimpleSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute overview.ecore#//SimpleSetting/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute overview.ecore#//SimpleSetting/type"/>
+    </genClasses>
+    <genClasses ecoreClass="overview.ecore#//SequenceSetting">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference overview.ecore#//SequenceSetting/subSettings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference overview.ecore#//SequenceSetting/values"/>
+    </genClasses>
+    <genClasses ecoreClass="overview.ecore#//SequenceValueItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference overview.ecore#//SequenceValueItem/subValues"/>
+    </genClasses>
+    <genClasses ecoreClass="overview.ecore#//SimpleValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute overview.ecore#//SimpleValue/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference overview.ecore#//SimpleValue/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

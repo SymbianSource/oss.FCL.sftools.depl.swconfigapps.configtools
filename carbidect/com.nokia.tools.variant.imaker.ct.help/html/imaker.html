@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <title>Carbide.ct iMaker User Guide</title>
+   </head>
+
+   <body>
+      <h2>
+         Image creation overview
+      </h2>
+      <p>
+         It is possible to create flashable images straight from Carbide.ct. This is made possible by the integration of Carbide.ct and iMaker tool. iMaker is an image creation tool which provides a simple, standardized and configurable image creation framework.
+		 It is used by Nokia and its sub contractors. iMaker is based on the standardized Make system, and is thus, platform-independent. iMaker uses ConE to convert Configuration Project into target format, which it then includes into flashable image that it creates.
+	  </p>
+      <h2>
+         Preconditions for image creation
+      </h2>
+      <p>
+		 The following points must be fulfilled in order to create flashable images successfully
+		 <ol>
+		 <li>iMaker tool must be installed on the user system. iMaker must have necessary integration with ConE. This means that ConE tool must also exist in the system. These tools usually belong to a build environment or workspace. The workspace must be intact and product images must be creatable succesfully from it. 
+		 The workspace can be so called <i>mini environment</i>. Mini environment is a (relatively) small build environment where flashable phone images can be created, similarly to a full SW environment. First version of the renewed minienv functionality is implemented in iMaker 09.06.01. </li>
+		 <li>A Configuration Project must be open in Carbide.ct. The project and the workspace must be compatible. The Configuration Project must contain image <i>creation layer</i>, which specifies iMaker parameters.</li>
+		 <li>Image creation parameters must be configured appropriately.</li>
+		 </ol>
+      </p>
+      <h2>
+         Image creation steps
+      </h2>
+      <p>
+		 Follow these steps to create flashable image successfully
+		 <ol>
+		 <li>Verify that you have a build environment, with the required tools</li>
+		 <li>Create a Configuration Project from the environment or if it is already done use it as a basis. Create your Carbide.ct workspace on the same drive as the environment. Import the Configuration Project to Carbide.ct.</li>
+		 <li>Edit the Configuration Project as you wish</li>
+		 <li>Make sure that you have <i>image creation layer</i> in your Configuration Project. Fill the image creation parameters in it and in the end press <i>image creation button</i> as shown in the following figure:<br>
+		 <img src="images/imaker.png" ><br>
+		 <b>Figure 1</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Image creation layer
+		 <br><br>
+		  You can follow the creation process from <b>Console</b> view. Once the image creation is finished you can verify the output in the workdir folder that you specified in the <b>image creation layer</b>.
+		 
+		 </li>
+		 </ol>
+      </p>
+   </body>
+</html>

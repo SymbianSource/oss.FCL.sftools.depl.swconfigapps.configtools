@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.nokia.s60ct.cenrep.gui.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.nokia.s60ct.cenrep.gui.perspective.DeveloperPerspective"
+            id="configuration.definition.perspective.id"
+            name="CenRep Definition">
+      </perspective>
+   </extension>
+   <extension
+         name="CenRep"
+         point="com.nokia.S60CT.impl.gui">
+      <view view_id="cenrep.view"/>
+      <fileExtension value="crml"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="com.nokia.s60ct.cenrep.gui.view.AccessView"
+            icon="icons/Capabilities.gif"
+            id="access.view"
+            name="Capabilities">
+      </view>
+      <view
+            class="com.nokia.s60ct.cenrep.gui.view.SimpleKeyView"
+            icon="icons/Key.gif"
+            id="simplekey.view.id"
+            name="Simple Key">
+      </view>
+      <view
+            class="com.nokia.s60ct.cenrep.gui.view.RangeKeyView"
+            icon="icons/KeyRange.gif"
+            id="rangekey.view.id"
+            name="Range Key">
+      </view>
+      <view
+            class="com.nokia.s60ct.cenrep.gui.view.BitmaskKeyView"
+            icon="icons/BitmaskKey.gif"
+            id="bitmaskkey.view.id"
+            name="Bitmask Key">
+      </view>
+      <view
+            allowMultiple="false"
+            class="com.nokia.s60ct.cenrep.gui.view.CustomPropertySheet"
+            icon="icons/properties.gif"
+            id="org.eclipse.ui.views.PropertySheet"
+            name="Properties">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.nokia.s60ct.cenrep.gui.actionSet1_menu"
+            label="File"
+            visible="true">
+         <action
+               class="com.nokia.s60ct.cenrep.gui.Actions.NewRepositoryAction"
+               icon="icons/New_Key_enabled.gif"
+               id="cenrep.new.repository"
+               label="%_UI_Menu_New_CR_label"
+               menubarPath="CustomFile/New/impl"
+               style="push"
+               toolbarPath="MainToolBar/new.group"
+               tooltip="New Implementation"/>
+         <action
+               class="com.nokia.s60ct.cenrep.gui.Actions.OpenCrMLFile"
+               icon="icons/Open_Key_enabled.gif"
+               id="com.nokia.s60ct.cenrep.gui.action1_open"
+               label="%_UI_Menu_Open_CR_label"
+               menubarPath="CustomFile/Open/impl"
+               style="push"
+               toolbarPath="MainToolBar/open.ext"
+               tooltip="Open Implementation"/>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="false"
+            id="Repository.popup"
+            objectClass="cenrep.Repository">
+         <action
+               class="com.nokia.s60ct.cenrep.gui.Actions.AddKeyAction"
+               icon="icons/KeyRange.gif"
+               id="new.repository.rangeKey"
+               label="%_UI_Add_Range_Key_Lable"
+               menubarPath="new/additions">
+         </action>
+         <action
+               class="com.nokia.s60ct.cenrep.gui.Actions.AddKeyAction"
+               icon="icons/BitmaskKey.gif"
+               id="new.repository.bitmaskKey"
+               label="%_UI_Add_Bitmask_Key_Lable"
+               menubarPath="new/additions">
+         </action>
+         <action
+               class="com.nokia.s60ct.cenrep.gui.Actions.AddKeyAction"
+               icon="icons/Key.gif"
+               id="new.repository.simpleKey"
+               label="%_UI_Add_Simple_Key_Lable"
+               menubarPath="new/additions"/>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.nokia.s60ct.cenrep.gui.editors.CRBrowser"
+            extensions="crml"
+            icon="icons/crml.gif"
+            id="cenrep.browser"
+            name="CR Browser">
+      </editor>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.nokia.s60ct.cenrep.gui.Application"
+            name="Cenrep Plugin"/>
+   </extension>
+   <extension
+         point="confml.generate">
+      <generator
+            generate_call="com.nokia.s60ct.cenrep.gui.Actions.GenerateCall"
+            generator_id="cenrep">
+      </generator>
+   </extension>
+   <extension
+         point="org.eclipse.ui.elementFactories">
+      <factory
+            class="com.nokia.s60ct.cenrep.gui.editors.CenRepElementFactory"
+            id="com.nokia.s60ct.cenrep.gui.editors.CenRepElementFactory">
+      </factory>
+   </extension>
+
+</plugin>

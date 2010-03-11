@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Variant ConfML Tests Plug-in
+Bundle-SymbolicName: com.nokia.tools.variant.confml.tests
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.tools.variant.confml.tests.ConfmlTests
+Bundle-Vendor: NOKIA
+Require-Bundle: org.eclipse.core.runtime,
+ org.junit;bundle-version="3.8.2",
+ com.nokia.tools.variant.confml.core;bundle-version="2.0.0",
+ com.nokia.tools.variant.confml.ui;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: com.nokia.tools.variant.confml.tests

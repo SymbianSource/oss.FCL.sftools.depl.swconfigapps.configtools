@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Carbide.ct Product Plug-in
+Bundle-SymbolicName: com.nokia.tools.carbide.ct.product;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.tools.carbide.ct.product.Activator
+Bundle-Vendor: www.nokia.com
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui;bundle-version="3.4.0",
+ org.eclipse.ui.intro
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

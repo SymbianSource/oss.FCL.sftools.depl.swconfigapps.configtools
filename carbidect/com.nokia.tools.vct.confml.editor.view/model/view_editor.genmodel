@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.vct.confml.editor.view/src"
+    modelPluginID="com.nokia.tools.vct.confml.editor.view" modelName="View_editor"
+    editPluginClass="com.nokia.tools.vct.confml.editor.views.vemodel.provider.View_editorEditPlugin"
+    editorPluginClass="com.nokia.tools.vct.confml.editor.views.vemodel.presentation.View_editorEditorPlugin"
+    testsDirectory="/com.nokia.tools.vct.confml.editor.view.tests/src" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>view_editor.ecore</foreignModel>
+  <genPackages prefix="EViewEditor" basePackage="com.nokia.tools.vct.confml.editor.view"
+      disposableProviderFactory="true" ecorePackage="view_editor.ecore#/">
+    <genDataTypes ecoreDataType="view_editor.ecore#//EJavaURI"/>
+    <genClasses ecoreClass="view_editor.ecore#//EViewsEditorDocument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference view_editor.ecore#//EViewsEditorDocument/views"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EViewsEditorDocument/useCount"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference view_editor.ecore#//EViewsEditorDocument/features"/>
+    </genClasses>
+    <genClasses ecoreClass="view_editor.ecore#//EView">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EView/name"/>
+    </genClasses>
+    <genClasses ecoreClass="view_editor.ecore#//EGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference view_editor.ecore#//EGroup/refs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EGroup/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="view_editor.ecore#//EGroupContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference view_editor.ecore#//EGroupContainer/groups"/>
+    </genClasses>
+    <genClasses ecoreClass="view_editor.ecore#//ESettingRef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/featureId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/settingId"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference view_editor.ecore#//ESettingRef/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/minInclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/maxInclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/minExclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/maxExclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/maxLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/minLength"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingRef/patterns"/>
+    </genClasses>
+    <genClasses ecoreClass="view_editor.ecore#//EFeature">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference view_editor.ecore#//EFeature/settings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EFeature/name"/>
+    </genClasses>
+    <genClasses ecoreClass="view_editor.ecore#//ESettingEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESettingEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference view_editor.ecore#//ESettingEntry/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="view_editor.ecore#//EDescriptionContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EDescriptionContainer/descriptionText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EDescriptionContainer/descriptionUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EDescriptionContainer/descriptionUriTitle"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="view_editor.ecore#//EIconContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EIconContainer/iconUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EIconContainer/iconUriTitle"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="view_editor.ecore#//EResourceLocator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EResourceLocator/resourceUri"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="view_editor.ecore#//ERefTarget">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference view_editor.ecore#//ERefTarget/refs"/>
+    </genClasses>
+    <genClasses ecoreClass="view_editor.ecore#//EFeatureEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EFeatureEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference view_editor.ecore#//EFeatureEntry/value"/>
+    </genClasses>
+    <genClasses ecoreClass="view_editor.ecore#//ESetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESetting/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//ESetting/readOnly"/>
+    </genClasses>
+    <genClasses ecoreClass="view_editor.ecore#//EViewEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute view_editor.ecore#//EViewEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference view_editor.ecore#//EViewEntry/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

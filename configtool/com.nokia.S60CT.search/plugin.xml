@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:MainToolBar?after=additions">
+         <separator
+               name="com.nokia.S60CT.search.separator"
+               visible="true">
+         </separator>
+         <control
+               class="com.nokia.s60ct.search.SearchControlContribution">
+         </control>
+         <toolbar
+               id="SearchToolBar">
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.nokia.S60CT.search.buttons"
+            label="label"
+            visible="true">
+         <action
+               class="com.nokia.s60ct.search.actions.NextAction"
+               definitionId="search.next.command"
+               disabledIcon="icons/Next_disabled.gif"
+               icon="icons/Next.gif"
+               id="com.nokia.S60CT.search.next"
+               label="Find Next"
+               menubarPath="Edit/slot0"
+               state="true"
+               style="push"
+               toolbarPath="MainToolBar/SearchToolBar"
+               tooltip="Find next">
+         </action>
+         <action
+               class="com.nokia.s60ct.search.actions.PreviousAction"
+               definitionId="search.prev.command"
+               disabledIcon="icons/Previous_disabled.gif"
+               icon="icons/Previous.gif"
+               id="com.nokia.S60CT.search.previous"
+               label="Find Previous"
+               menubarPath="Edit/slot0"
+               pulldown="false"
+               state="true"
+               style="push"
+               toolbarPath="MainToolBar/SearchToolBar"
+               tooltip="Find previous">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.nokia.S60CT.search.category"
+            name="search commands">
+      </category>
+      <command
+            categoryId="com.nokia.S60CT.search.category"
+            id="search.next.command"
+            name="Find Next">
+      </command>
+      <command
+            categoryId="com.nokia.S60CT.search.category"
+            id="search.prev.command"
+            name="Find Previous">
+      </command>
+   </extension>
+   <extension
+         id="search.next.command"
+         name="search.next.command"
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="search.next.command"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Ctrl+J">
+      </key>
+      <key
+            commandId="search.prev.command"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="Ctrl+SHIFT+J">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="com.nokia.S60CT.search.JumpToKey"
+            objectClass="org.eclipse.emf.ecore.EObject">
+         <action
+               class="com.nokia.s60ct.search.actions.JumpToKey"
+               definitionId="jump.to.key"
+               icon="icons/JumpToKey.gif"
+               id="com.nokia.S60CT.search.jumpToImplementation"
+               label="Jump to Key">
+         </action>
+         <visibility>
+            <or>
+               <objectClass
+                     name="configurationemf.LeafSettingDelegator">
+               </objectClass>
+               <objectClass
+                     name="configurationemf.Setting">
+               </objectClass>
+            </or>
+         </visibility>
+      </objectContribution>
+      <objectContribution
+            id="com.nokia.S60CT.search.JumpToSetting"
+            objectClass="org.eclipse.emf.ecore.EObject">
+         <action
+               class="com.nokia.s60ct.search.actions.JumpToSetting"
+               definitionId="jump.to.setting"
+               icon="icons/JumpToSetting.gif"
+               id="com.nokia.Scom.nokia.S60CT.search.jumpToSetting"
+               label="Jump to Setting">
+         </action>
+         <visibility>
+            <or>
+               <objectClass
+                     name="cenrep.Key">
+               </objectClass>
+               <objectClass
+                     name="cenrep.Bit">
+               </objectClass>
+               <objectClass
+                     name="cenrep.KeyRange">
+               </objectClass>
+            </or>
+         </visibility>
+      </objectContribution>
+   </extension>
+</plugin>

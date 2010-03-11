@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Search Plug-in
+Bundle-SymbolicName: com.nokia.S60CT.search; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.s60ct.search.Activator
+Bundle-Vendor: NOKIA
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui, 
+ org.eclipse.core.runtime,
+ org.eclipse.emf.common,
+ org.eclipse.emf.ecore,
+ com.nokia.S60CT,
+ org.eclipse.emf.edit,
+ com.nokia.S60CT.CenRep,
+ com.nokia.S60CT.common,
+ org.eclipse.core.resources,
+ org.eclipse.emf.common.ui
+Eclipse-LazyStart: true

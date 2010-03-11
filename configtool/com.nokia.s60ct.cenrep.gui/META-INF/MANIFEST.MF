@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Gui Plug-in
+Bundle-SymbolicName: com.nokia.s60ct.cenrep.gui; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.s60ct.cenrep.gui.Activator
+Bundle-Vendor: NOKIA
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.edit.ui;resolution:=optional,
+ com.nokia.S60CT.CenRep.edit,
+ org.eclipse.core.resources,
+ org.eclipse.ui.ide,
+ com.nokia.S60CT.gui
+Eclipse-LazyStart: true
+Export-Package: com.nokia.s60ct.cenrep.gui.ExternalActions

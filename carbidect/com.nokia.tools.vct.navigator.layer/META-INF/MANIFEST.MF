@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Layer Ui Contributions Plug-in
+Bundle-SymbolicName: com.nokia.tools.vct.navigator.layer;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: NOKIA
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.ui.navigator,
+ com.nokia.tools.vct.confml.edit,
+ org.eclipse.core.resources,
+ org.eclipse.ui,
+ org.eclipse.core.runtime;bundle-version="3.4.0",
+ com.nokia.tools.vct.common.core,
+ com.nokia.tools.vct.common.appmodel,
+ com.nokia.tools.vct.common.ui,
+ org.eclipse.emf.edit.ui,
+ com.nokia.tools.variant.confml.core,
+ org.eclipse.emf.transaction,
+ org.eclipse.emf.transaction.ui,
+ com.nokia.tools.variant.confml.ui
+Export-Package: com.nokia.tools.vct.navigator.layer
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: com.nokia.tools.vct.navigator.layer.ConfigurationNavigatorPlugin

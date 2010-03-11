@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+============================================================================
+<FileName: "appshelldata.dtd">
+<PartOf  : "application shell">
+
+<FileDescription: "Localization strings for application shell content definition">
+<FileVersion    : >
+
+<Copyright:
+"Copyright © 2005 Nokia Corporation.
+This material, including documentation and any related 
+computer programs, is protected by copyright controlled by 
+Nokia Corporation. All rights are reserved. Copying, 
+including reproducing, storing,  adapting or translating, any 
+or all of this material requires the prior written consent of 
+Nokia Corporation. This material also contains confidential 
+information which may not be disclosed to others without the 
+prior written consent of Nokia Corporation.">
+============================================================================
+-->
+<!--
+ qtn_fldr_root_level.attributes		
+ qtn_fldr_root_level.recycled "Avkon.loc"
+ qtn_fldr_root_level.layout "list_single_large_graphic_pane_1"	
+ qtn_fldr_root_level.release "3.1"	
+ qtn_fldr_root_level.description "Application Shell root level folder name shown in "Move to folder" dialogs"	
+ qtn_fldr_root_level.parents "Folder selection list dialog"	
+ qtn_fldr_root_level.localizable "FALSE"
+-->
+<!ENTITY qtn_fldr_root_level "Root level">
+<!--
+qtn_apps_media_title.attributes		
+qtn_apps_media_title.layout "title_pane_1"	
+qtn_apps_media_title.release "3.1"	
+qtn_apps_media_title.description "Media folder caption title"
+qtn_apps_media_title.parents "Title pane"	
+qtn_apps_media_title.grammar "Media folder contains e.g. gallery application"	
+qtn_apps_media_title.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_media_title "Media">
+<!--
+qtn_apps_media_list.attributes		
+qtn_apps_media_list.layout "list_single_large_graphic_pane_1"	
+qtn_apps_media_list.release "3.1"	
+qtn_apps_media_list.description "Media folder caption list"
+qtn_apps_media_list.parents "<gridcelltemplate><text>"	
+qtn_apps_media_list.grammar "Media folder contains e.g. gallery application"	
+qtn_apps_media_list.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_media_list "Media">
+<!--
+qtn_apps_media_grid.attributes		
+qtn_apps_media_grid.layout "cell_app_pane_1"	
+qtn_apps_media_grid.release "3.1"	
+qtn_apps_media_grid.description "Media folder caption grid"
+qtn_apps_media_grid.parents "<gridcelltemplate><text>"	
+qtn_apps_media_grid.grammar "Media folder contains e.g. gallery application"	
+qtn_apps_media_grid.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_media_grid "Media">
+<!--
+qtn_apps_organiser_title.attributes		
+qtn_apps_organiser_title.layout "title_pane_1"	
+qtn_apps_organiser_title.release "3.1"	
+qtn_apps_organiser_title.description "organiser folder caption title"
+qtn_apps_organiser_title.parents "Title pane"	
+qtn_apps_organiser_title.grammar "Organiser folder contains PIM apps like calendar, todo etc."	
+qtn_apps_organiser_title.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_organiser_title "Organiser">
+<!--
+qtn_apps_organiser_list.attributes		
+qtn_apps_organiser_list.layout "list_single_large_graphic_pane_1"	
+qtn_apps_organiser_list.release "3.1"	
+qtn_apps_organiser_list.description "organiser folder caption list"
+qtn_apps_organiser_list.parents "<gridcelltemplate><text>"	
+qtn_apps_organiser_list.grammar "Organiser folder contains PIM apps like calendar, todo etc."	
+qtn_apps_organiser_list.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_organiser_list "Organiser">
+<!--
+qtn_apps_organiser_grid.attributes		
+qtn_apps_organiser_grid.layout "cell_app_pane_1"	
+qtn_apps_organiser_grid.release "3.1"	
+qtn_apps_organiser_grid.description "organiser folder caption grid"
+qtn_apps_organiser_grid.parents "<gridcelltemplate><text>"	
+qtn_apps_organiser_grid.grammar "Organiser folder contains PIM apps like calendar, todo etc."	
+qtn_apps_organiser_grid.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_organiser_grid "Organiser">
+<!--
+qtn_apps_conffolder_title.attributes		
+qtn_apps_conffolder_title.layout "title_pane_1"	
+qtn_apps_conffolder_title.release "3.1"	
+qtn_apps_conffolder_title.description "Configurations folder caption title"
+qtn_apps_conffolder_title.parents "Title pane"	
+qtn_apps_conffolder_title.grammar "Configurations folder contains phone configuration items like personalisation, filemanager etc."	
+qtn_apps_conffolder_title.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_conffolder_title "Configurations">
+<!--
+qtn_apps_conffolder_list.attributes		
+qtn_apps_conffolder_list.layout "list_single_large_graphic_pane_1"	
+qtn_apps_conffolder_list.release "3.1"	
+qtn_apps_conffolder_list.description "Configurations folder caption list"
+qtn_apps_conffolder_list.parents "<gridcelltemplate><text>"	
+qtn_apps_conffolder_list.grammar "Configurations folder contains phone configuration items like personalisation, filemanager etc."	
+qtn_apps_conffolder_list.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_conffolder_list "Configurations">
+<!--
+qtn_apps_conffolder_grid.attributes		
+qtn_apps_conffolder_grid.layout "cell_app_pane_1"	
+qtn_apps_conffolder_grid.release "3.1"	
+qtn_apps_conffolder_grid.description "Configurations folder caption grid"
+qtn_apps_conffolder_grid.parents "<gridcelltemplate><text>"	
+qtn_apps_conffolder_grid.grammar "Configurations folder contains phone configuration items like personalisation, filemanager etc."	
+qtn_apps_conffolder_grid.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_conffolder_grid "Tools">
+<!--
+qtn_apps_commsfolder_title.attributes		
+qtn_apps_commsfolder_title.layout "title_pane_1"	
+qtn_apps_commsfolder_title.release "3.1"	
+qtn_apps_commsfolder_title.description "Connectivity folder caption title"
+qtn_apps_commsfolder_title.parents "Title pane"	
+qtn_apps_commsfolder_title.grammar "Connectivity folder has bluetooth, IR, USB and other connectivity related apps"	
+qtn_apps_commsfolder_title.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_commsfolder_title "Connectivity">
+<!--
+qtn_apps_commsfolder_list.attributes		
+qtn_apps_commsfolder_list.layout "list_single_large_graphic_pane_1"	
+qtn_apps_commsfolder_list.release "3.1"	
+qtn_apps_commsfolder_list.description "Connectivity folder caption list"
+qtn_apps_commsfolder_list.parents "<gridcelltemplate><text>"	
+qtn_apps_commsfolder_list.grammar "Connectivity folder has bluetooth, IR, USB and other connectivity related apps"	
+qtn_apps_commsfolder_list.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_commsfolder_list "Connectivity">
+<!--
+qtn_apps_commsfolder.attributes		
+qtn_apps_commsfolder.layout "cell_app_pane_1"	
+qtn_apps_commsfolder.release "3.1"	
+qtn_apps_commsfolder.description "Connectivity folder caption grid"
+qtn_apps_commsfolder.parents "<gridcelltemplate><text>"	
+qtn_apps_commsfolder.grammar "Connectivity folder has bluetooth, IR, USB and other connectivity related apps"	
+qtn_apps_commsfolder.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_commsfolder "Connectivity">
+<!--
+qtn_apps_installed_title.attributes		
+qtn_apps_installed_title.layout "title_pane_1"	
+qtn_apps_installed_title.release "3.1"	
+qtn_apps_installed_title.description "Installed folder caption title"
+qtn_apps_installed_title.parents "Title pane"	
+qtn_apps_installed_title.grammar "Installed folder contains all user-installed apps by default"	
+qtn_apps_installed_title.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_installed_title "Installed">
+<!--
+qtn_apps_installed_list.attributes		
+qtn_apps_installed_list.layout "list_single_large_graphic_pane_1"	
+qtn_apps_installed_list.release "3.1"	
+qtn_apps_installed_list.description "Installed folder caption list"
+qtn_apps_installed_list.parents "<gridcelltemplate><text>"	
+qtn_apps_installed_list.grammar "Installed folder contains all user-installed apps by default"	
+qtn_apps_installed_list.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_installed_list "Installed">
+<!--
+qtn_apps_installed_grid.attributes		
+qtn_apps_installed_grid.layout "cell_app_pane_1"	
+qtn_apps_installed_grid.release "3.1"	
+qtn_apps_installed_grid.description "Installed folder caption grid"
+qtn_apps_installed_grid.parents "<gridcelltemplate><text>"	
+qtn_apps_installed_grid.grammar "Installed folder contains all user-installed apps by default"	
+qtn_apps_installed_grid.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_installed_grid "Installed">
+<!--
+qtn_apps_gamesfolder_title.attributes		
+qtn_apps_gamesfolder_title.layout "title_pane_1"	
+qtn_apps_gamesfolder_title.release "3.1"	
+qtn_apps_gamesfolder_title.description "Games folder caption title"
+qtn_apps_gamesfolder_title.parents "Title pane"	
+qtn_apps_gamesfolder_title.grammar "Games are for playing; folder may contain game apps"	
+qtn_apps_gamesfolder_title.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_gamesfolder_title "Games">
+<!--
+qtn_apps_gamesfolder_list.attributes		
+qtn_apps_gamesfolder_list.layout "list_single_large_graphic_pane_1"	
+qtn_apps_gamesfolder_list.release "3.1"	
+qtn_apps_gamesfolder_list.description "Games folder caption list"
+qtn_apps_gamesfolder_list.parents "<gridcelltemplate><text>"	
+qtn_apps_gamesfolder_list.grammar "Games are for playing; folder may contain game apps"	
+qtn_apps_gamesfolder_list.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_gamesfolder_list "Games">
+<!--
+qtn_apps_gamesfolder.attributes		
+qtn_apps_gamesfolder.layout "cell_app_pane_1"	
+qtn_apps_gamesfolder.release "3.1"	
+qtn_apps_gamesfolder.description "Games folder caption grid"
+qtn_apps_gamesfolder.parents "<gridcelltemplate><text>"	
+qtn_apps_gamesfolder.grammar "Games are for playing; folder may contain game apps"	
+qtn_apps_gamesfolder.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_gamesfolder "Games">
+<!--
+qtn_apps_simfolder_title.attributes		
+qtn_apps_simfolder_title.layout "title_pane_1"	
+qtn_apps_simfolder_title.release "3.1"	
+qtn_apps_simfolder_title.description "SIM folder caption title"
+qtn_apps_simfolder_title.parents "Title pane"	
+qtn_apps_simfolder_title.grammar "SIM card apps are in SIM folder"	
+qtn_apps_simfolder_title.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_simfolder_title "SIM">
+<!--
+qtn_apps_simfolder_list.attributes		
+qtn_apps_simfolder_list.layout "list_single_large_graphic_pane_1"	
+qtn_apps_simfolder_list.release "3.1"	
+qtn_apps_simfolder_list.description "SIM folder caption list"
+qtn_apps_simfolder_list.parents "<gridcelltemplate><text>"	
+qtn_apps_simfolder_list.grammar "SIM card apps are in SIM folder"	
+qtn_apps_simfolder_list.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_simfolder_list "SIM">
+<!--
+qtn_apps_simfolder.attributes		
+qtn_apps_simfolder.layout "cell_app_pane_1"	
+qtn_apps_simfolder.release "3.1"	
+qtn_apps_simfolder.description "SIM folder caption grid"
+qtn_apps_simfolder.parents "<gridcelltemplate><text>"	
+qtn_apps_simfolder.grammar "SIM card apps are in SIM folder"	
+qtn_apps_simfolder.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_simfolder "SIM">
+<!--
+qtn_apps_toolsfolder_title.attributes		
+qtn_apps_toolsfolder_title.layout "title_pane_1"	
+qtn_apps_toolsfolder_title.release "3.1"	
+qtn_apps_toolsfolder_title.description "Extras folder caption title"
+qtn_apps_toolsfolder_title.parents "Title pane"	
+qtn_apps_toolsfolder_title.grammar "If Extras folder is present, it contains apps like Presence"	
+qtn_apps_toolsfolder_title.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_toolsfolder_title "Extras">
+<!--
+qtn_apps_toolsfolder_list.attributes		
+qtn_apps_toolsfolder_list.layout "list_single_large_graphic_pane_1"	
+qtn_apps_toolsfolder_list.release "3.1"	
+qtn_apps_toolsfolder_list.description "Extras folder caption list"
+qtn_apps_toolsfolder_list.parents "<gridcelltemplate><text>"	
+qtn_apps_toolsfolder_list.grammar "If Extras folder is present, it contains apps like Presence"	
+qtn_apps_toolsfolder_list.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_toolsfolder_list "Extras">
+<!--
+qtn_apps_toolsfolder.attributes		
+qtn_apps_toolsfolder.layout "cell_app_pane_1"	
+qtn_apps_toolsfolder.release "3.1"	
+qtn_apps_toolsfolder.description "Extras folder caption grid"
+qtn_apps_toolsfolder.parents "<gridcelltemplate><text>"	
+qtn_apps_toolsfolder.grammar "If Extras folder is present, it contains apps like Presence"	
+qtn_apps_toolsfolder.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_toolsfolder "Extras">
+<!--
+qtn_apps_applications_title.attributes		
+qtn_apps_applications_title.layout "title_pane_t2/opt9"	
+qtn_apps_applications_title.release "3.1"	
+qtn_apps_applications_title.description "Applications folder caption title"
+qtn_apps_applications_title.parents "Title pane"	
+qtn_apps_applications_title.grammar "User installed Applications"	
+qtn_apps_applications_title.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_applications_title "Applications">
+<!--
+qtn_apps_applications_list.attributes		
+qtn_apps_applications_list.layout "list_single_large_graphic_pane_t1"	
+qtn_apps_applications_list.release "3.1"	
+qtn_apps_applications_list.description "Applications folder caption list"
+qtn_apps_applications_list.parents "<gridcelltemplate><text>"	
+qtn_apps_applications_list.grammar "User installed Applications"	
+qtn_apps_applications_list.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_applications_list "Applications">
+<!--
+qtn_apps_applications_grid.attributes		
+qtn_apps_applications_grid.layout "cell_app_pane_t1"	
+qtn_apps_applications_grid.release "3.1"	
+qtn_apps_applications_grid.description "Applications folder caption grid"
+qtn_apps_applications_grid.parents "<gridcelltemplate><text>"	
+qtn_apps_applications_grid.grammar "User installed Applications"
+qtn_apps_applications_grid.localizable "TRUE"
+-->
+<!ENTITY qtn_apps_applications_grid "Applications">
+
+<!-- End of File-->

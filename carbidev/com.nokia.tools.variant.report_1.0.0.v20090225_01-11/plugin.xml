@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of the License "Symbian Foundation License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.report component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+<extension
+         point="org.eclipse.ui.actionSets">
+   <actionSet
+         id="com.nokia.tools.variant.report.ReportActionSet"
+         label="Create Report"
+		 visible="true">
+      <action
+            class="com.nokia.tools.variant.report.actions.GenerateReportAction"
+            icon="icons/report_16_tlb.png"
+            id="com.nokia.tools.variant.report.actions.GenerateReportAction"
+            label="Create Report"
+            menubarPath="rcpTools/report"
+            style="push"
+            toolbarPath="rcpMain/additions"
+            tooltip="Create report">
+         	<enablement>
+	            	<systemProperty name="com.nokia.tools.variant.report.actions.GenerateReportAction"
+	            		value="enabled" />
+	        </enablement>
+	   </action>
+   </actionSet>
+   </extension>
+</plugin>

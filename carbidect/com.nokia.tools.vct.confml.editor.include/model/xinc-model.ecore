@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.confml.editor.include component.
+-->
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="xincmodel"
+    nsURI="http:///xinc-editor" nsPrefix="xinc">
+  <eClassifiers xsi:type="ecore:EClass" name="EDocument" eSuperTypes="#//EResourceContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="includes" upperBound="-1"
+        eType="#//EInclude" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" lowerBound="1"
+        eType="#//EConfMLVersion"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EInclude">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="href" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="#//EProjectFile"
+        transient="true" eOpposite="#//EProjectFile/included"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EProjectFile" eSuperTypes="#//EProjectResource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resource" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EResource"
+        transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="included" upperBound="-1"
+        eType="#//EInclude" changeable="false" transient="true" eOpposite="#//EInclude/target"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="version" eType="#//EConfMLVersion"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EProjectResource" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="projectPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EProjectFolder" eSuperTypes="#//EProjectResource #//EResourceContainer"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EResourceContainer" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resources" upperBound="-1"
+        eType="#//EProjectResource" changeable="false" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EConfMLVersion">
+    <eLiterals name="CONFML1" literal="Configuration ML v1"/>
+    <eLiterals name="CONFML2" value="1" literal="Configuration ML v2"/>
+  </eClassifiers>
+</ecore:EPackage>

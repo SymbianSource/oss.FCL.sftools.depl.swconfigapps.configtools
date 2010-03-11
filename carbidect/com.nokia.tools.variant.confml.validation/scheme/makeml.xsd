@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is an automatically generated default XML schema file -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.s60.com/xml/makeml/1"
+           elementFormDefault="qualified">
+    
+    <xs:element name="makeml">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:any processContents="skip"/>
+            </xs:choice>
+            <xs:anyAttribute processContents="skip"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

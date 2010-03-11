@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.generate component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.nokia.tools.carbidect.cone.ui.internal.preferences.ConePreferencePage"
+            id="com.nokia.tools.carbidect.cone.ui.preferences.ConePreferencePage"
+            name="Configuration Engine (ConE)">
+      </page>
+      <page
+            category="com.nokia.tools.carbidect.cone.ui.preferences.ConePreferencePage"
+            class="com.nokia.tools.carbidect.cone.ui.internal.preferences.InstalledConesPreferencePage"
+            id="com.nokia.tools.carbidect.cone.ui.preferences.InstalledConesPreferencePage"
+            name="ConE Installations">
+      </page>
+      <page
+            category="com.nokia.tools.carbidect.cone.ui.preferences.ConePreferencePage"
+            class="com.nokia.tools.carbidect.cone.ui.internal.preferences.CommonPropertiesPreferencePage"
+            id="com.nokia.tools.variant.generate.preferences.CommonPropertiesPreferencePage"
+            name="Common Properties">
+      </page>
+      <page
+            category="com.nokia.tools.carbidect.cone.ui.preferences.ConePreferencePage"
+            class="com.nokia.tools.carbidect.cone.ui.internal.preferences.RemotePropertiesPreferencePage"
+            id="com.nokia.tools.variant.generate.preferences.RemotePropertiesPreferencePage"
+            name="Remote Properties">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.nokia.tools.carbidect.cone.ui.internal.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               icon="icons/cone_logo.png"
+               id="com.nokia.tools.carbidect.cone.ui.menus.main"
+               label="Configuration Engine"
+               mnemonic="C">
+            <command
+                  commandId="com.nokia.tools.carbidect.cone.ui.commands.generateCommand"
+                  icon="icons/Generate_enabled.gif"
+                  id="com.nokia.tools.carbidect.cone.ui.commands.generateCommand"
+                  tooltip="Generate target files with ConE">
+            </command>
+            <separator
+                  name="com.nokia.tools.carbidect.cone.ui.separator1"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="com.nokia.tools.carbidect.cone.ui.commands.infoCommand"
+                  icon="icons/sample.gif"
+                  id="com.nokia.tools.carbidect.cone.ui.commands.infoCommand"
+                  tooltip="Pring information about the contents of the project">
+            </command>
+            <command
+                  commandId="com.nokia.tools.carbidect.cone.ui.commands.validateCommand"
+                  icon="icons/sample.gif"
+                  id="com.nokia.tools.carbidect.cone.ui.commands.validateCommand"
+                  tooltip="Validate selected resource with ConE">
+            </command>
+            <command
+                  commandId="com.nokia.tools.carbidect.cone.ui.commands.compareCommand"
+                  icon="icons/sample.gif"
+                  id="com.nokia.tools.carbidect.cone.ui.commands.compareCommand"
+                  tooltip="Compare selected configurations with ConE">
+            </command>
+            <separator
+                  name="com.nokia.tools.carbidect.cone.ui.separator2"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="org.eclipse.debug.ui.commands.OpenRunConfigurations"
+                  id="com.nokia.tools.carbidect.cone.ui.commands.runConfigsCommand"
+                  label="Run configurations..."
+                  tooltip="Display run configurations dialog">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.nokia.tools.carbidect.cone.ui.commands.category"
+            name="Cone Category">
+      </category>
+      <command
+            categoryId="com.nokia.tools.carbidect.cone.ui.commands.category"
+            description="ConE generate command"
+            id="com.nokia.tools.carbidect.cone.ui.commands.generateCommand"
+            name="Generate">
+      </command>
+      <command
+            categoryId="com.nokia.tools.carbidect.cone.ui.commands.category"
+            description="ConE info command"
+            id="com.nokia.tools.carbidect.cone.ui.commands.infoCommand"
+            name="Info">
+      </command>
+      <command
+            categoryId="com.nokia.tools.carbidect.cone.ui.commands.category"
+            description="ConE validate command"
+            id="com.nokia.tools.carbidect.cone.ui.commands.validateCommand"
+            name="Validate">
+      </command>
+      <command
+            categoryId="com.nokia.tools.carbidect.cone.ui.commands.category"
+            description="ConE compare command"
+            id="com.nokia.tools.carbidect.cone.ui.commands.compareCommand"
+            name="Compare">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.nokia.tools.carbidect.cone.ui.internal.handlers.GenerateHandler"
+            commandId="com.nokia.tools.carbidect.cone.ui.commands.generateCommand">
+         <activeWhen>
+            <iterate>
+               <or>
+                  <instanceof
+                        value="org.eclipse.core.resources.IFile">
+                  </instanceof>
+                  <instanceof
+                        value="org.eclipse.core.resources.IProject">
+                  </instanceof>
+               </or>
+            </iterate>
+         </activeWhen>
+      </handler>
+      <handler
+            class="com.nokia.tools.carbidect.cone.ui.internal.handlers.InfoHandler"
+            commandId="com.nokia.tools.carbidect.cone.ui.commands.infoCommand">
+         <activeWhen>
+            <instanceof
+                  value="org.eclipse.core.resources.IProject">
+            </instanceof>
+         </activeWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.nokia.tools.carbidect.cone.ui.commands.generateCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+G">
+      </key>
+      <key
+            commandId="com.nokia.tools.carbidect.cone.ui.commands.infoCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+I">
+      </key>
+      <key
+            commandId="com.nokia.tools.carbidect.cone.ui.commands.validateCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+L">
+      </key>
+      <key
+            commandId="com.nokia.tools.carbidect.cone.ui.commands.compareCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+X">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            delegate="com.nokia.tools.carbidect.cone.ui.internal.delegate.Delegate"
+            id="com.nokia.tools.carbidect.cone.ui.launchConfigurationType"
+            modes="run"
+            name="Configuration Engine"
+            public="true">
+      </launchConfigurationType>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="com.nokia.tools.variant.confml.ui.ConfML">
+         <actionSet
+               id="org.eclipse.debug.ui.launchActionSet">
+         </actionSet>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="com.nokia.tools.carbidect.cone.ui.launchConfigurationType"
+            icon="icons/cone_logo.png"
+            id="com.nokia.tools.carbidect.cone.ui.launchConfigurationTypeImage1">
+      </launchConfigurationTypeImage>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="com.nokia.tools.carbidect.cone.ui.internal.dialogs.LaunchConfigurationTabGroup"
+            id="com.nokia.tools.carbidect.cone.ui.launchConfigurationTabGroup1"
+            type="com.nokia.tools.carbidect.cone.ui.launchConfigurationType">
+      </launchConfigurationTabGroup>
+   </extension>
+
+</plugin>

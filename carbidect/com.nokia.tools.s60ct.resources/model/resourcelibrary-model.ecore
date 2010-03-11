@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model"
+    nsURI="http://www.nokia.com/xml/ns/confml-core/resourcelibrary" nsPrefix="model">
+  <eClassifiers xsi:type="ecore:EDataType" name="EPath" instanceClassName="org.eclipse.core.runtime.IPath"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="EStorage" instanceClassName="org.eclipse.core.resources.IStorage"
+      serializable="false"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ELibraryElement" abstract="true">
+    <eOperations name="getPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="getFullPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eOperations name="delete" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="move" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="target" eType="#//ELibraryDirectory"/>
+    </eOperations>
+    <eOperations name="copy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="target" eType="#//ELibraryDirectory"/>
+    </eOperations>
+    <eOperations name="touchedByReadonlySetting" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="settings" upperBound="-1"
+        eType="ecore:EClass /com.nokia.tools.s60ct.content.confml.model/model/confml.ecore#//Setting"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="readOnly" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="note" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timestamp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="path2" eType="#//Eclipse_IPath"
+        changeable="false" volatile="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceFromTopLayer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ELibraryDirectory" eSuperTypes="#//ELibraryElement">
+    <eOperations name="getChild" eType="#//ELibraryElement">
+      <eParameters name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eOperations>
+    <eOperations name="addChild" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eParameters name="child" unique="false" eType="#//ELibraryElement"/>
+    </eOperations>
+    <eOperations name="getSize" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eOperations name="deleteOnFileSystem" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="findChild" eType="#//ELibraryElement">
+      <eParameters name="path" lowerBound="1" eType="#//Eclipse_IPath"/>
+    </eOperations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//ELibraryElement" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ELibraryFile" eSuperTypes="#//ELibraryElement">
+    <eOperations name="getInputStream" eType="#//InputStream"/>
+    <eOperations name="recomputeContentDescription"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//ELong"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contentDescription" eType="#//IContentDescription"
+        changeable="false" transient="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultResource" eType="#//JAVA_IO_FILE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="InputStream" instanceClassName="java.io.InputStream"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="IContentType" instanceClassName="org.eclipse.core.runtime.content.IContentType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ELibraryRoot" eSuperTypes="#//ELibraryDirectory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tempDirPath" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="IContentDescription" instanceClassName="org.eclipse.core.runtime.content.IContentDescription"
+      serializable="false"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="JAVA_IO_FILE" instanceClassName="java.io.File"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Eclipse_IPath" instanceClassName="org.eclipse.core.runtime.IPath"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ELibraryThemeFile" eSuperTypes="#//ELibraryFile">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validationMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cpfPlatformId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="themePlatformId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

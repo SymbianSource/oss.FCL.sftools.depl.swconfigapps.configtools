@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="startup.initializer" name="Startup Initializer" schema="schema/startup.initializer.exsd"/>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="views.DescriptionView"
+            icon="icons/Description.gif"
+            id="common.description"
+            name="Description"/>
+      <view
+            class="views.OptionView"
+            icon="icons/Options.gif"
+            id="option.view"
+            name="Option"/>
+      <view
+            allowMultiple="false"
+            class="views.CustomProblemsView"
+            icon="icons/Problems.gif"
+            id="org.eclipse.ui.views.ProblemView"
+            name="Problems">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.constraintProviders">
+      <category
+            id="general.validation"
+            name="name">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.constraintBindings">
+      <clientContext
+            id="general.validationContext">
+         <selector
+               class="clientContext.GeneralValidationSelector">
+         </selector>
+      </clientContext>
+      <binding
+            category="general.validation"
+            context="general.validationContext">
+      </binding>
+   </extension>
+   <extension
+         id="com.nokia.S60CT.external.error"
+         point="org.eclipse.core.resources.markers">
+      <persistent
+            value="false">
+      </persistent>
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+   </extension>
+
+</plugin>

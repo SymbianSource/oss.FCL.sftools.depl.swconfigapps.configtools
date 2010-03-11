@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:crml="http:///crml.ecore" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ecore:nsPrefix="crml" ecore:package="com.nokia.tools.vct.crml.crml" targetNamespace="http:///crml.ecore">
+  <xsd:import namespace="http://www.eclipse.org/emf/2002/Ecore" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.xsd"/>
+  <xsd:element name="repository" type="crml:repositoryType"/>
+  <xsd:complexType abstract="true" ecore:name="CommonAttrs" name="commonType">
+    <xsd:attribute name="id" type="ecore:EString"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="Meta" name="metaType">
+    <xsd:complexContent>
+      <xsd:extension base="crml:commonType">
+        <xsd:sequence>
+          <xsd:element ecore:name="identification" form="qualified" minOccurs="0" name="id" type="ecore:EString"/>
+          <xsd:element form="qualified" minOccurs="0" name="date" type="ecore:EString"/>
+          <xsd:element form="qualified" minOccurs="0" name="platform" type="ecore:EString"/>
+          <xsd:element form="qualified" minOccurs="0" name="owner" type="ecore:EString"/>
+          <xsd:element form="qualified" minOccurs="0" name="editor" type="ecore:EString"/>
+          <xsd:element form="qualified" minOccurs="0" name="status" type="ecore:EString"/>
+          <xsd:element form="qualified" minOccurs="0" name="version" type="ecore:EString"/>
+          <xsd:element form="qualified" minOccurs="0" name="product" type="ecore:EString"/>
+          <xsd:element form="qualified" minOccurs="0" name="release" type="ecore:EString"/>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="Content" name="contentType">
+    <xsd:simpleContent>
+      <xsd:extension base="ecore:EString"/>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType ecore:implements="crml:accessibleType crml:backupType" ecore:name="Repository" name="repositoryType">
+    <xsd:complexContent>
+      <xsd:extension base="crml:descrType">
+        <xsd:sequence>
+          <xsd:element ecore:resolveProxies="true" form="qualified" maxOccurs="unbounded" minOccurs="0" name="key" type="crml:keyType"/>
+          <xsd:element ecore:resolveProxies="true" form="qualified" minOccurs="0" name="meta" type="crml:metaType"/>
+          <xsd:element ecore:name="rangeKey" ecore:resolveProxies="true" form="qualified" maxOccurs="unbounded" minOccurs="0" name="keyRange" type="crml:keyRangeType"/>
+        </xsd:sequence>
+        <xsd:attribute name="version" type="ecore:EString"/>
+        <xsd:attribute name="uidName" type="ecore:EString"/>
+        <xsd:attribute name="uidValue" type="ecore:EString"/>
+        <xsd:attribute name="initialisationFileVersion" type="ecore:EString"/>
+        <xsd:attribute name="owner" type="ecore:EString"/>
+        <xsd:attribute ecore:unsettable="false" name="rfs" type="ecore:EBoolean"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType ecore:implements="crml:rvgType crml:readOnlyType crml:accessibleType crml:backupType" ecore:name="Key" name="keyType">
+    <xsd:complexContent>
+      <xsd:extension base="crml:descrType">
+        <xsd:sequence>
+          <xsd:element ecore:resolveProxies="true" form="qualified" maxOccurs="unbounded" minOccurs="0" name="value" type="crml:valueType"/>
+          <xsd:element ecore:name="bits" ecore:resolveProxies="true" form="qualified" maxOccurs="unbounded" minOccurs="0" name="bit" type="crml:bitType"/>
+        </xsd:sequence>
+        <xsd:attribute name="name" type="ecore:EString"/>
+        <xsd:attribute ecore:name="ident" name="int" type="ecore:EString"/>
+        <xsd:attribute ecore:unsettable="false" name="type" type="crml:keyTypeValue"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType ecore:implements="crml:rvgType crml:readOnlyType crml:accessibleType crml:backupType" ecore:name="KeyRange" name="keyRangeType">
+    <xsd:complexContent>
+      <xsd:extension base="crml:descrType">
+        <xsd:sequence>
+          <xsd:element ecore:name="keys" form="qualified" maxOccurs="unbounded" minOccurs="0" name="key" type="crml:keyType"/>
+        </xsd:sequence>
+        <xsd:attribute name="name" type="ecore:EString"/>
+        <xsd:attribute name="int" type="ecore:EString"/>
+        <xsd:attribute name="firstInt" type="ecore:EString"/>
+        <xsd:attribute name="lastInt" type="ecore:EString"/>
+        <xsd:attribute name="indexBits" type="ecore:EString"/>
+        <xsd:attribute name="firstIndex" type="ecore:EString"/>
+        <xsd:attribute name="countInt" type="ecore:EString"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="Access" name="accessType">
+    <xsd:complexContent>
+      <xsd:extension base="crml:descrType">
+        <xsd:attribute ecore:unsettable="false" name="type" type="crml:accessTypeValue"/>
+        <xsd:attribute name="capabilities" type="ecore:EString"/>
+        <xsd:attribute name="sid" type="ecore:EString"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="Value" name="valueType">
+    <xsd:complexContent>
+      <xsd:extension base="crml:contentType">
+        <xsd:attribute ecore:name="val" name="value" type="ecore:EString"/>
+        <xsd:attribute name="id" type="ecore:EString"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType ecore:implements="crml:rvgType" ecore:name="Bit" name="bitType">
+    <xsd:complexContent>
+      <xsd:extension base="crml:contentType">
+        <xsd:attribute ecore:id="true" ecore:name="state" ecore:unsettable="false" name="value" type="ecore:EBoolean"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" ecore:interface="true" ecore:name="RVG" name="rvgType">
+    <xsd:attribute name="ref" type="ecore:EString"/>
+  </xsd:complexType>
+  <xsd:simpleType ecore:name="TYPE" name="keyTypeValue">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="int"/>
+      <xsd:enumeration value="real"/>
+      <xsd:enumeration value="string"/>
+      <xsd:enumeration value="string8"/>
+      <xsd:enumeration value="binary"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="ACCESS_TYPE" name="accessTypeValue">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="ND"/>
+      <xsd:enumeration ecore:name="READ" value="R"/>
+      <xsd:enumeration ecore:name="WRITE" value="W"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType abstract="true" ecore:name="AttributeAndDescription" name="descrType">
+    <xsd:complexContent>
+      <xsd:extension base="crml:commonType">
+        <xsd:attribute name="desc" type="ecore:EString"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" ecore:interface="true" ecore:name="IReadOnly" name="readOnlyType">
+    <xsd:attribute ecore:unsettable="false" name="readOnly" type="ecore:EBoolean"/>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" ecore:interface="true" ecore:name="IAccessable" name="accessibleType">
+    <xsd:sequence>
+      <xsd:element ecore:name="Access" ecore:resolveProxies="true" form="qualified" maxOccurs="unbounded" minOccurs="0" name="access" type="crml:accessType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType abstract="true" ecore:interface="true" ecore:name="IBackup" name="backupType">
+    <xsd:attribute ecore:unsettable="false" name="backup" type="ecore:EBoolean"/>
+  </xsd:complexType>
+</xsd:schema>

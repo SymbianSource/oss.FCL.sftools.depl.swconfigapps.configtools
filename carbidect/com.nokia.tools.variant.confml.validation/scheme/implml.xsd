@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.symbianfoundation.org/xml/implml/1"
+           xmlns:implml="http://www.symbianfoundation.org/xml/implml/1"
+           xmlns:commandml="http://www.s60.com/xml/commandml/1"
+           xmlns:contentml2="http://www.s60.com/xml/content/2"
+           xmlns:contentml1="http://www.s60.com/xml/content/1"
+           xmlns:ruleml1="http://www.s60.com/xml/ruleml/1"
+           xmlns:ruleml2="http://www.s60.com/xml/ruleml/2"
+           xmlns:templateml="http://www.s60.com/xml/templateml/1"
+           xmlns:crml="http://www.s60.com/xml/cenrep/1"
+           xmlns:gcfml="http://www.s60.com/xml/genconfml/1"
+           xmlns:hcrml="http://www.symbianfoundation.org/xml/hcrml/1"
+           xmlns:imageml="http://www.s60.com/xml/imageml/1"
+           xmlns:makeml="http://www.s60.com/xml/makeml/1"
+           xmlns:convertprojectml="http://www.s60.com/xml/convertprojectml/1"
+           xmlns:thememl="http://www.s60.com/xml/thememl/1"
+           elementFormDefault="qualified">
+    
+    <xs:import namespace="http://www.s60.com/xml/commandml/1"
+               schemaLocation="commandml.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/content/2"
+               schemaLocation="contentml2.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/content/1"
+               schemaLocation="contentml1.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/ruleml/1"
+               schemaLocation="ruleml1.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/ruleml/2"
+               schemaLocation="ruleml2.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/templateml/1"
+               schemaLocation="templateml.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/cenrep/1"
+               schemaLocation="crml.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/genconfml/1"
+               schemaLocation="gcfml.xsd" />
+    <xs:import namespace="http://www.symbianfoundation.org/xml/hcrml/1"
+               schemaLocation="hcrml.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/imageml/1"
+               schemaLocation="imageml.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/makeml/1"
+               schemaLocation="makeml.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/convertprojectml/1"
+               schemaLocation="convertprojectml.xsd" />
+    <xs:import namespace="http://www.s60.com/xml/thememl/1"
+               schemaLocation="thememl.xsd" />
+    
+    
+    <xs:element type="implml:containerType" name="container"/>
+    
+    <xs:complexType name="containerType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element ref="implml:phase"/>
+            <xs:element ref="implml:tag"/>
+            <xs:element ref="implml:settingRefsOverride"/>
+            <xs:element ref="implml:tempVariable"/>
+            <xs:element ref="implml:tempVariableSequence"/>
+            <xs:element ref="implml:outputRootDir"/>
+            <xs:element ref="implml:outputSubDir"/>
+            
+            <xs:element name="container" type="implml:containerType"/>
+            
+            <xs:element ref="commandml:commandml"/>
+            <xs:element ref="contentml2:content"/>
+            <xs:element ref="contentml1:content"/>
+            <xs:element ref="ruleml1:ruleml"/>
+            <xs:element ref="ruleml2:ruleml"/>
+            <xs:element ref="templateml:templateml"/>
+            <xs:element ref="crml:repository"/>
+            <xs:element ref="gcfml:file"/>
+            <xs:element ref="hcrml:hcr"/>
+            <xs:element ref="imageml:imageml"/>
+            <xs:element ref="makeml:makeml"/>
+            <xs:element ref="convertprojectml:convertprojectml"/>
+            <xs:element ref="thememl:thememl"/>
+            </xs:choice>
+        <xs:attribute name="condition" type="xs:string" use="optional"/>
+        <xs:attribute name="value" type="xs:string" use="optional"/>
+    </xs:complexType>
+    
+    
+    <!-- Phase -->
+    <xs:element name="phase">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Tag -->
+    <xs:element name="tag">
+        <xs:complexType>
+            <xs:attribute name="name" type="xs:string" use="required"/>
+            <xs:attribute name="value" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <!-- Temporary variable and sequence -->
+    <xs:element name="tempVariable">
+        <xs:complexType>
+            <xs:attribute name="ref" type="xs:string" use="required"/>
+            <xs:attribute name="type" type="xs:string" use="optional"/>
+            <xs:attribute name="value" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="tempVariableSequence">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="tempVariable" type="implml:tempVariableSequenceSubType"
+                            minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="ref" type="xs:string" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="tempVariableSequenceSubType">
+        <xs:attribute name="ref" type="xs:string" use="required"/>
+        <xs:attribute name="type" type="xs:string" use="optional"/>
+    </xs:complexType>
+    
+    <!-- Setting references override -->
+    <xs:element name="settingRefsOverride">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="settingRef" type="implml:settingRefType"
+                            minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:attribute name="refsIrrelevant" type="xs:string" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="settingRefType">
+        <xs:attribute name="value" type="xs:string" use="required"/>
+    </xs:complexType>
+    
+    <!-- Output directory overrides -->
+    <xs:element name="outputRootDir">
+        <xs:complexType>
+            <xs:attribute name="value" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="outputSubDir">
+        <xs:complexType>
+            <xs:attribute name="value" use="required"/>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

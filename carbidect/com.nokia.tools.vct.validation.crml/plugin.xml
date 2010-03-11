@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.validation.crml component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.validation.constraintBindings">
+      <clientContext
+            default="false"
+            id="com.nokia.tools.vct.validation.crml.data">
+         <selector
+               class="com.nokia.tools.variant.validation.core.BuildSelector">
+         </selector>
+      </clientContext>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.constraintProviders">
+      <category
+            id="vct.crml"
+            name="name">
+         <category
+               id="type"
+               name="name">
+         </category>
+         <category
+               id="data"
+               name="name">
+         </category>
+         <category
+               id="rfs"
+               name="name">
+         </category>
+         <category
+               id="meta"
+               name="name">
+         </category>
+         <category
+               id="other"
+               name="name">
+         </category>
+      </category>
+      <constraintProvider
+            cache="true"
+            mode="Batch">
+         <package
+               namespaceUri="http://www.s60.com/xml/cenrep/1">
+         </package>
+         <constraints
+               categories="vct.confml/type">
+         </constraints>
+         <constraints
+               categories="vct.confml/data">
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.uidvalue.RepositoryUidValueCheck"
+                  id="vct.crml.repository.uid"
+                  lang="Java"
+                  mode="Batch"
+                  name="Repository Uid Value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Repository {0}  has invalid uidValue {1}.
+               </message>
+               <target
+                     class="ERepository">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.keyrange.IndexBits"
+                  id="vct.crml.keyrange.indexbits"
+                  lang="Java"
+                  mode="Batch"
+                  name="Key Range Index Bits"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Key Range {0} indexBits attribute is invalid.
+               </message>
+               <target
+                     class="EKeyRange">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.keyrange.FirstLastUids"
+                  id="vct.crml.keyrange.firstLastInt"
+                  lang="Java"
+                  mode="Batch"
+                  name="Key Range Last Uids"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Key Range {0} firstInt-lastInt has invalid value {1}
+               </message>
+               <target
+                     class="EKeyRange">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.keyrange.FirstIndexCheck"
+                  id="vct.crml.keyrange.firstIndex"
+                  lang="Java"
+                  mode="Batch"
+                  name="Key Range First Index"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Key Range {0} firstIndex has invalid value {1}
+               </message>
+               <target
+                     class="EKeyRange">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.key.RefConstraint"
+                  id="vct.crml.key.ref"
+                  lang="Java"
+                  mode="Batch"
+                  name="Key Ref"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Key {0} does not have reference.
+               </message>
+               <target
+                     class="EKey">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.key.NameConstraint"
+                  id="vct.crml.key.name"
+                  lang="Java"
+                  mode="Batch"
+                  name="Key Name"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  Key {0} does not have name.
+               </message>
+               <target
+                     class="EKey">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.key.IdentConstraint"
+                  id="vct.crml.key.uid"
+                  lang="Java"
+                  mode="Batch"
+                  name="Key Uid"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Key {0} has invalid uidValue {1}
+               </message>
+               <target
+                     class="EKey">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.key.GValueConstraint"
+                  id="vct.crml.key.gvalue"
+                  lang="Java"
+                  mode="Batch"
+                  name="Key gvalue"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting of the key {0} doesn't have any value.
+               </message>
+               <target
+                     class="EKey">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.WriteCapaExistanceConstraint"
+                  id="vct.crml.access.write.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Write Capa Missing"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Writable {0} does not have any write capabilities.
+               </message>
+               <target
+                     class="EAccessContainer">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.WAccessWarning"
+                  id="vct.crml.access.write.notdefault"
+                  lang="Java"
+                  mode="Batch"
+                  name="WAccess is AlwaysPass or WriteDeviceData"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  {0} write capability is neither AlwaysPass nor WriteDeviceData.
+               </message>
+               <target
+                     class="EAccess">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.RFSwSIDConstraint"
+                  id="vct.crml.access.write.sid.rfs"
+                  lang="Java"
+                  mode="Batch"
+                  name="RFS and WSID"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  {0} has RFS defined, but write capability is restricted with SID.
+               </message>
+               <target
+                     class="EAccessContainer">
+               </target>
+               <target
+                     class="ERefContainer">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.RFSwCapaConstraint"
+                  id="vct.crml.access.write.capa.rfs"
+                  lang="Java"
+                  mode="Batch"
+                  name="RFS and WCapa"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  {0} has RFS defined, but write capability is missing.
+               </message>
+               <target
+                     class="EAccessContainer">
+               </target>
+               <target
+                     class="ERefContainer">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.RepositoryBUpOwnerConstraint"
+                  id="vct.crml.repository.backup.owner"
+                  lang="Java"
+                  mode="Batch"
+                  name="Back-up and Owner"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Back-up is enabled for {0}, but repository misses owner definition.
+               </message>
+               <target
+                     class="ERepository">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.ReadOnlyRuleConstraint"
+                  id="vct.crml.access.write.readonly"
+                  lang="Java"
+                  mode="Batch"
+                  name="Read-only WCapa"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  {0} is read-only, but also write capabilities are set.
+               </message>
+               <target
+                     class="EAccessContainer">
+               </target>
+               <target
+                     class="EReadOnly">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.ReadOnlyRFS"
+                  id="vct.crml.access.rfs.readonly"
+                  lang="Java"
+                  mode="Batch"
+                  name="Read-only RFS"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  Read-only {0} is marked for RFS
+               </message>
+               <target
+                     class="ERefContainer">
+               </target>
+               <target
+                     class="EReadOnly">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.ReadOnlyBackUpConstraint"
+                  id="vct.crml.backup.readonly"
+                  lang="Java"
+                  mode="Batch"
+                  name="Read-only Backup"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Read-only {0} is marked for backup.
+               </message>
+               <target
+                     class="EBackup">
+               </target>
+               <target
+                     class="EReadOnly">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.DuplicateKeyRefConstraint"
+                  id="vct.crml.key.ref.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Key Ref"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Two keys have same reference {0}
+               </message>
+               <target
+                     class="EKey">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.CapaAmount"
+                  id="vct.crml.access.amount"
+                  lang="Java"
+                  mode="Batch"
+                  name="Capability Amount"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0} exceeds capability amount limitations.
+               </message>
+               <target
+                     class="EAccess">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.AlwaysPassConstraint"
+                  id="vct.crml.access.read.notdefault"
+                  lang="Java"
+                  mode="Batch"
+                  name="Better to have AlwaysPass"
+                  severity="WARNING"
+                  statusCode="1">
+               <message>
+                  {0} read capabilities differs from AlwaysPass
+               </message>
+               <target
+                     class="EAccess">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.AlwaysPassConflict"
+                  id="vct.crml.access.read.conflict"
+                  lang="Java"
+                  mode="Batch"
+                  name="AlwaysPass Conflict"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0} has other read capabilities defined with AlwaysPass.
+               </message>
+               <target
+                     class="EAccess">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.AccessExistanceConstraint"
+                  id="vct.crml.access.read.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Read Capa Missing"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0} does not have any read capabilities.
+               </message>
+               <target
+                     class="EAccessContainer">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.crml.constraints.DuplicateKeyUidConstraint"
+                  id="vct.crml.key.uidf.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Key Uid"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Two keys have same uid {0}
+               </message>
+               <target
+                     class="ERepository">
+               </target>
+            </constraint>
+         </constraints>
+         <constraints
+               categories="vct.confml/meta">
+         </constraints>
+      </constraintProvider>
+   </extension>
+   <extension
+         point="com.nokia.tools.variant.validation">
+      <validator
+            file_extension="crml"
+            name="CRML Validation"
+            schema_uri="data/crml.xsd">
+      </validator>
+   </extension>
+   <extension
+         point="org.eclipse.wst.xml.core.catalogContributions">
+      <catalogContribution
+            id="com.nokia.tools.variant.confml.validation.catalogContribution">
+         <public
+               id="http://www.s60.com/xml/cenrep/1"
+               publicId="http://www.s60.com/xml/cenrep/1"
+               uri="data/crml.xsd"
+               webURL="http://www.s60.com/xml/cenrep/1">
+         </public>
+      </catalogContribution>
+   </extension>
+
+</plugin>

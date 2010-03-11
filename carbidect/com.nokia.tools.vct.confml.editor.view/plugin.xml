@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.confml.editor.view component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+	<extension point="org.eclipse.ui.editors">
+		<editor
+        class="com.nokia.tools.vct.confml.editor.view.ViewsEditor"
+        contributorClass="com.nokia.tools.vct.confml.editor.view.ViewsEditorActionBarContributor"
+        default="false"
+        extensions="confml"
+        icon="icons/edi_view.gif"
+        id="com.nokia.tools.variant.editor.ViewEditor"
+        name="ConfML View Editor">
+			<contentTypeBinding contentTypeId="com.nokia.tools.vct.content.confml">
+			</contentTypeBinding>
+			<contentTypeBinding contentTypeId="com.nokia.tools.vct.content.confml2">
+			</contentTypeBinding>
+		</editor>
+	</extension>
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+		<propertyContributor
+			contributorId="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TABBED_PROPERTIES_CONTRIBUTOR">
+			<propertyCategory category="common">
+			</propertyCategory>
+   <propertyCategory
+         category="constraints">
+   </propertyCategory>
+		</propertyContributor>
+	</extension>
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+		<propertyTabs
+			contributorId="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TABBED_PROPERTIES_CONTRIBUTOR">
+			<propertyTab category="common"
+				id="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB"
+				indented="false" label="General">
+			</propertyTab>
+			<propertyTab
+				afterTab="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB"
+				category="common" id="com.nokia.tools.variant.confml.ui.DetailsTab"
+				indented="false" label="Details">
+			</propertyTab>
+   <propertyTab
+         category="constraints"
+         id="com.nokia.tools.vct.confml.editor.view.ConstraintsTab"
+         indented="false"
+         label="Constraints">
+   </propertyTab>
+		</propertyTabs>
+	</extension>
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+		<propertySections
+			contributorId="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TABBED_PROPERTIES_CONTRIBUTOR">
+			<propertySection
+				class="com.nokia.tools.vct.confml.editor.view.properties.ViewPropertySection"
+				id="ViewTypeSection" tab="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB">
+				<input type="com.nokia.tools.vct.confml.editor.view.vemodel.EView">
+				</input>
+			</propertySection>
+			<propertySection
+				class="com.nokia.tools.vct.confml.editor.view.properties.GroupPropertySection"
+				id="GroupTypeSection" tab="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB">
+				<input type="com.nokia.tools.vct.confml.editor.view.vemodel.EGroup">
+				</input>
+			</propertySection>
+			<propertySection
+				class="com.nokia.tools.vct.confml.editor.view.properties.SettingRefSection"
+				id="SettingRefTypeSection" tab="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB">
+				<input type="com.nokia.tools.vct.confml.editor.view.vemodel.ESettingRef">
+				</input>
+			</propertySection>
+			<propertySection
+				class="com.nokia.tools.vct.confml.editor.view.properties.FeatureSection"
+				id="FeatureSection" tab="com.nokia.tools.variant.confml.ui.DetailsTab">
+				<input type="com.nokia.tools.vct.confml.editor.view.vemodel.EFeature">
+				</input>
+			</propertySection>
+			<propertySection
+				class="com.nokia.tools.vct.confml.editor.view.properties.SettingSection"
+				id="SettingSection" tab="com.nokia.tools.variant.confml.ui.DetailsTab">
+				<input type="com.nokia.tools.vct.confml.editor.view.vemodel.ESetting">
+				</input>
+			</propertySection>
+			<propertySection
+				class="com.nokia.tools.vct.confml.editor.view.properties.SettingEntrySection"
+				id="SettingEntrySection" tab="com.nokia.tools.variant.confml.ui.DetailsTab">
+				<input
+					type="com.nokia.tools.vct.confml.editor.view.vemodel.impl.ESettingEntryImpl">
+				</input>
+			</propertySection>
+   <propertySection
+         class="com.nokia.tools.vct.confml.editor.view.properties.ConstraintsSection"
+         id="SettingRefConstraintsSection"
+         tab="com.nokia.tools.vct.confml.editor.view.ConstraintsTab">
+      <input
+            type="com.nokia.tools.vct.confml.editor.view.vemodel.ESettingRef">
+      </input>
+   </propertySection>
+   <propertySection
+         class="com.nokia.tools.vct.confml.editor.view.properties.RefPropertySection"
+         id="RefPropertySection"
+         tab="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB">
+      <input
+            type="com.nokia.tools.vct.confml.editor.view.vemodel.ERefProperty">
+      </input> 
+   </propertySection>
+   <propertySection
+         class="com.nokia.tools.vct.confml.editor.view.properties.RefOptionSection"
+         id="RefOptionSection"
+         tab="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB">
+      <input
+            type="com.nokia.tools.vct.confml.editor.view.vemodel.ERefOption">
+      </input>
+   </propertySection>
+		</propertySections>
+	</extension>
+	<extension point="org.eclipse.ui.decorators">
+		<decorator adaptable="false"
+			class="com.nokia.tools.vct.confml.editor.view.viewers.ViewTreeViewerLabelDecorator"
+			id="com.nokia.tools.variant.confml.ui.editors.viewers.ViewTreeViewerLabelDecorator"
+			label="Decorator for Views Editor" lightweight="true" location="BOTTOM_LEFT"
+			state="true">
+			<enablement>
+      <or>
+         <objectClass
+               name="com.nokia.tools.vct.confml.editor.view.vemodel.EView">
+         </objectClass>
+         <objectClass
+               name="com.nokia.tools.vct.confml.editor.view.vemodel.EGroup">
+         </objectClass>
+         <objectClass
+               name="com.nokia.tools.vct.confml.editor.view.vemodel.ESettingRef">
+         </objectClass>
+         <objectClass
+               name="com.nokia.tools.vct.confml.editor.view.vemodel.ESetting">
+         </objectClass>
+         <objectClass
+               name="com.nokia.tools.vct.confml.editor.view.vemodel.impl.ESettingEntryImpl">
+         </objectClass>
+         <objectClass
+               name="com.nokia.tools.vct.common.appmodel.EAppFeature">
+         </objectClass>
+      </or>
+			</enablement>
+			<description> Show errors in the Views Editor.</description>
+		</decorator>
+	</extension>
+ <extension
+       point="org.eclipse.ui.popupMenus">
+    <objectContribution
+          adaptable="false"
+          id="com.nokia.tools.vct.confml.editor.view.openview.editor.popup"
+          objectClass="org.eclipse.emf.ecore.EObject">
+       <action
+             class="com.nokia.tools.vct.confml.editor.view.actions.OpenConfMLViewEditor"
+             id="com.nokia.tools.vct.confml.editor.view.action1"
+             label="Open View Editor"
+             tooltip="Open view editor">
+       </action>
+    </objectContribution>
+ </extension>
+</plugin>

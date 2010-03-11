@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Views Plug-in
+Bundle-SymbolicName: com.nokia.tools.variant.views;singleton:=true
+Bundle-Version: 1.0.0.v20090225_01-11
+Bundle-Activator: com.nokia.tools.variant.views.Activator
+Bundle-Vendor: NOKIA
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.nokia.tools.variant.content.confml.model;bundle-version="1.0.0",
+ org.eclipse.gef;bundle-version="3.4.0",
+ org.eclipse.ui.views;bundle-version="3.3.0",
+ com.nokia.tools.variant.preview;bundle-version="2.0.0",
+ com.nokia.tools.variant.resourcelibrary;bundle-version="1.0.0",
+ com.nokia.tools.variant.common.ui;bundle-version="2.0.0",
+ org.eclipse.ui.views.properties.tabbed;bundle-version="3.4.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: com.nokia.tools.variant.views.actions,
+ com.nokia.tools.variant.views.actions.registry,
+ com.nokia.tools.variant.views.changesview,
+ com.nokia.tools.variant.views.common,
+ com.nokia.tools.variant.views.errormodel,
+ com.nokia.tools.variant.views.errormodel.impl,
+ com.nokia.tools.variant.views.errorview,
+ com.nokia.tools.variant.views.notesview,
+ com.nokia.tools.variant.views.searchresultsview

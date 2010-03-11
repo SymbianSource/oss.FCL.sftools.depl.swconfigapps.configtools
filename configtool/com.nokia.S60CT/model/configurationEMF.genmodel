@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.S60CT/src"
+    editDirectory="/com.nokia.S60CT.edit/src" modelPluginID="com.nokia.S60CT" templateDirectory=""
+    modelName="ConfigurationEMF" testsDirectory="/com.nokia.S60CT.tests/src" booleanFlagsField=""
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0">
+  <foreignModel>variantdata.ecore</foreignModel>
+  <genPackages prefix="Configurationemf" disposableProviderFactory="true" ecorePackage="configurationEMF.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="configurationEMF.ecore#//TYPE">
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//TYPE/int"/>
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//TYPE/string"/>
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//TYPE/real"/>
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//TYPE/selection"/>
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//TYPE/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//TYPE/sequence"/>
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//TYPE/file"/>
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//TYPE/folder"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="configurationEMF.ecore#//EXTENSION_POLICY">
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//EXTENSION_POLICY/replace"/>
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//EXTENSION_POLICY/append"/>
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//EXTENSION_POLICY/prefix"/>
+      <genEnumLiterals ecoreEnumLiteral="configurationEMF.ecore#//EXTENSION_POLICY/no_policy"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="configurationEMF.ecore#//Configuration">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/name"/>
+      <genFeatures createChild="false" propertyCategory="" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/vers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Configuration/Feature"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Configuration/View"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Configuration/Meta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Configuration/Icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Configuration/Link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Configuration/Data"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/readOnly"/>
+      <genFeatures createChild="false" propertyCategory="Meta" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/metaId"/>
+      <genFeatures createChild="false" propertyCategory="Meta" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/owner"/>
+      <genFeatures createChild="false" propertyCategory="Meta" propertyDescription=""
+          ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/editor"/>
+      <genFeatures createChild="false" propertyCategory="Meta" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/status"/>
+      <genFeatures createChild="false" propertyCategory="Meta" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/version"/>
+      <genFeatures createChild="false" propertyCategory="Meta" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/platform"/>
+      <genFeatures createChild="false" propertyCategory="Meta" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/product"/>
+      <genFeatures createChild="false" propertyCategory="Meta" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/customer"/>
+      <genFeatures createChild="false" propertyCategory="Meta" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/date"/>
+      <genFeatures createChild="false" propertyCategory="Meta" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Configuration/release"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Configuration/getAllSettings"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Feature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Feature/relevant"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference configurationEMF.ecore#//Feature/conf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Feature/ParentSetting"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Feature/Link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Feature/Icon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Feature/readOnly"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Feature/getSettingByRef">
+        <genParameters ecoreParameter="configurationEMF.ecore#//Feature/getSettingByRef/refSetting"/>
+      </genOperations>
+    </genClasses>
+    <genClasses image="false" ecoreClass="configurationEMF.ecore#//Setting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/constraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/relevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/readOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/required"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/Option"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/Property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/MinLength"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/MaxLength"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/Length"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/MaxInclusive"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/MaxExclusive"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/MinExclusive"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/Pattern"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/MinInclusive"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/TotalDigits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/Link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/Icon"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/boolOptions"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/currentValue"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/topValue"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/currentConf"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference configurationEMF.ecore#//Setting/defaultConf"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/ro"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/possibleValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/currentType"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/valueChangeble"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Setting/rfs"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Setting/getAbsRef"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Setting/setConfValue">
+        <genParameters ecoreParameter="configurationEMF.ecore#//Setting/setConfValue/value"/>
+        <genParameters ecoreParameter="configurationEMF.ecore#//Setting/setConfValue/conf"/>
+      </genOperations>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Setting/getConfValue">
+        <genParameters ecoreParameter="configurationEMF.ecore#//Setting/getConfValue/configuration"/>
+      </genOperations>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Setting/getUserValue">
+        <genParameters ecoreParameter="configurationEMF.ecore#//Setting/getUserValue/systemValue"/>
+      </genOperations>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Setting/getSystemValue">
+        <genParameters ecoreParameter="configurationEMF.ecore#//Setting/getSystemValue/userValue"/>
+      </genOperations>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Setting/setConfRfs">
+        <genParameters ecoreParameter="configurationEMF.ecore#//Setting/setConfRfs/rfs"/>
+        <genParameters ecoreParameter="configurationEMF.ecore#//Setting/setConfRfs/rootConf"/>
+      </genOperations>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Setting/getGValue"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Setting/getGConf"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="configurationEMF.ecore#//AttributeAndDesc">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//AttributeAndDesc/desc"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//View">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//View/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference configurationEMF.ecore#//View/conf"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//View/Meta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//View/ParentGroup"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//View/Link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//View/Icon"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//View/readOnly"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="configurationEMF.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Group/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Group/GSetting"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Group/readOnly"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Group/Icon"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="configurationEMF.ecore#//CommonAttr">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//CommonAttr/id"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//Option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Option/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Option/relevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Option/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Option/Link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Option/Icon"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Option/readOnly"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//Meta">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Meta/Identification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Meta/Owner"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Meta/Editor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Meta/Status"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Meta/Version"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Meta/Platform"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Meta/Product"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Meta/Customer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Meta/Date"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Meta/Release"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//Release"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Identification"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Date"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Owner"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Editor"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Status"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Version"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Platform"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Product"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Customer"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//GSetting"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Property/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Property/unit"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//Pattern">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Pattern/value"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//Length">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Length/value"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//MaxLength">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//MaxLength/value"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//MinLength">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//MinLength/value"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//MaxExclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//MaxExclusive/value"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//MaxInclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//MaxInclusive/value"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//MinInclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//MinInclusive/value"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//MinExclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//MinExclusive/value"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//TotalDigits">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//TotalDigits/value"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//LeafSetting"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//ParentSetting">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//ParentSetting/LeafSetting"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//ParentSetting/frames"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference configurationEMF.ecore#//ParentSetting/template"/>
+      <genFeatures createChild="false" propertyCategory="" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//ParentSetting/currentExtensionPolicy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//ParentSetting/minOccurs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//ParentSetting/maxOccurs"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//ParentSetting/addFrame"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//ParentSetting/canAddFrame"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//ParentSetting/removeFrame">
+        <genParameters ecoreParameter="configurationEMF.ecore#//ParentSetting/removeFrame/frame"/>
+      </genOperations>
+      <genOperations ecoreOperation="configurationEMF.ecore#//ParentSetting/canRemoveFrame">
+        <genParameters ecoreParameter="configurationEMF.ecore#//ParentSetting/canRemoveFrame/frame"/>
+      </genOperations>
+      <genOperations ecoreOperation="configurationEMF.ecore#//ParentSetting/canSetExtPolicy">
+        <genParameters ecoreParameter="configurationEMF.ecore#//ParentSetting/canSetExtPolicy/policy"/>
+      </genOperations>
+      <genOperations ecoreOperation="configurationEMF.ecore#//ParentSetting/getMyCurrentFrames"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//ParentSetting/makeEmptySequence"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//LeafGroup"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//ParentGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//ParentGroup/LeafGroup"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="configurationEMF.ecore#//Content">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Content/value"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//Icon"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Link"/>
+    <genClasses image="false" ecoreClass="configurationEMF.ecore#//DIL">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//DIL/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//DIL/title"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//RootConf">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//RootConf/SubConf"/>
+      <genFeatures createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//RootConf/include"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//RootConf/root"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//RootConf/rfs"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//RootConf/getFeatureByRef">
+        <genParameters ecoreParameter="configurationEMF.ecore#//RootConf/getFeatureByRef/refFeature"/>
+      </genOperations>
+      <genOperations ecoreOperation="configurationEMF.ecore#//RootConf/getLevel"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//SubConf"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Data">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Data/Ref"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//Rfs"/>
+    <genClasses ecoreClass="configurationEMF.ecore#//Ref">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Ref/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Ref/Ref"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Ref/referable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Ref/template"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Ref/extensionPolicy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Ref/empty"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Ref/getAbsRef"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Ref/getConfiguration"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//Referable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Referable/ref"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Referable/refs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Referable/rfsRefs"/>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//Frame">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Frame/leafSettings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Frame/number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//Frame/template"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Frame/templateOwner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//Frame/ref"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Frame/getConfName"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Frame/isMyFrame"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//Frame/addLeafSetting">
+        <genParameters ecoreParameter="configurationEMF.ecore#//Frame/addLeafSetting/leafSetting"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="configurationEMF.ecore#//LeafSettingDelegator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//LeafSettingDelegator/leafSetting"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//LeafSettingDelegator/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference configurationEMF.ecore#//LeafSettingDelegator/ref"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//LeafSettingDelegator/type"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute configurationEMF.ecore#//LeafSettingDelegator/name"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//LeafSettingDelegator/canModifyValue"/>
+      <genOperations ecoreOperation="configurationEMF.ecore#//LeafSettingDelegator/canModifyAttribute"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="VariantData" resource="XML" disposableProviderFactory="true"
+      ecorePackage="variantdata.ecore#/">
+    <genClasses ecoreClass="variantdata.ecore#//VariantData">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference variantdata.ecore#//VariantData/include"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchQueryTab">
+      <queryTab
+            id="search.ui.CRMLModelPlainTextSearchID"
+            image="icons/textQuery.gif"
+            index="0"
+            label="%ModelSearchParticipantArea.CRMLModelPlainTextSearchExtPoint.Label"
+            queryCompositeAreaFactory="org.eclipse.emf.search.ecore.ui.factories.EcoreTextModelSearchQueryAreaFactory"
+            targetSearchPageID="search.ui.pages.CRMLModelModelSearchPageID"
+            tooltip="%CRMLModelPlainTextSearchExtPoint.Tooltip"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchParticipantTab">
+         
+      <participantTab
+            elementComposeableAdapterFactory="com.nokia.tools.vct.crml.crmodel.provider.ECRMLItemProviderAdapterFactory"
+            elementModelEditorSelectionHandler="search.ui.handlers.EditorSelectionHandler"
+            id="com.nokia.tools.vct.crml.crmodel.ECRMLPackageParticipantTab"
+            image="icons/ecore.gif"
+            index="1"
+            label="%ModelSearchParticipantArea.ECRMLPackageParticipantTab.Label"
+            participantCompositeAreaFactory="search.ui.factories.ModelSearchParticipantAreaFactory"
+            targetSearchPageID="search.ui.pages.CRMLModelModelSearchPageID"
+            targetNsURI="http://www.s60.com/xml/cenrep/1"
+            tooltip="%ModelSearchParticipantArea.ECRMLPackageParticipantTab.Tooltip">
+      </participantTab>
+      
+      
+   </extension>
+   
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            canSearchEnclosingProjects="true"
+            class="search.ui.pages.ModelSearchPage"
+            enabled="true"
+            icon="icons/esearch.gif"
+            id="search.ui.pages.CRMLModelModelSearchPageID"
+            label="%ModelSearchParticipantArea.CRMLModelModelSearchPage.Label"
+            showScopeSection="true"
+            tabPosition="0"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchEngineMapping">
+ 
+      <mapping
+            id="search.text4ECRMLPackage"
+            engineID="search.CRMLModelSearchEngine"
+            participantsTabID="com.nokia.tools.vct.crml.crmodel.ECRMLPackageParticipantTab"
+            queryTabID="search.ui.CRMLModelPlainTextSearchID">
+      </mapping>
+      
+   </extension>
+</plugin>

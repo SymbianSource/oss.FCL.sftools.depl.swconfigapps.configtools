@@ -1,0 +1,223 @@
+					==================================================================
+					Welcome to use S60 Configuration Tool (CT) for 3.X & 5.X platforms 
+					==================================================================
+
+S60 Configuration Tool is a PC software that is used to configure S60 build environment. This tool is targeted to variant or integration
+engineers to ease their manual work when creating variant content (i.e. updating default/changed values for CenRep keys in TXT files, creating IBY files etc) 
+and creating confml, crml files.
+See http://delivery.nmp.nokia.com/trac/configurationtool/wiki/ for more information.
+
+
+IMPORTANT NOTICE:
+
+Version 2.2.0 of the S60 Configuration Tool introduces validation feature that can cause unexpected validation error messages during generation. 
+For more information about validation, see http://s60wiki.nokia.com/S60Wiki/Configuration_Tool_Validation
+
+
+How to use S60 Configuration Tool
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Download tool from - http://configurationtools.nmp.nokia.com/builds/configurationtool/release/
+- To start the tool, double-click ConfigurationTool.exe
+- To learn more about the tool usage, please refer to the documentation in http://delivery.nmp.nokia.com/trac/configurationtool/wiki/UserGuide wiki page.
+
+****************************************
+** Version 2.2.1 08-08-2008 rev:xxxx  **
+****************************************
+
+New features:
+#356 Sequence setting defaults to be modifiable 
+#363 Validation for syntax and semantics of confml. 
+#569 Output folder path should be configurable in GUI 
+#579 Priority for multiple based-on configurations
+#586 VARIANT macro name in CT generated IBY files should be changed 
+#606 CT should inform about invalid input files 
+#609 All CLI errors should be put to a single file 
+#632 New column in Range Key  
+#632 New layout and column set for Simple, Bitmask, Range Key views 
+#635 Import Variant Data dialog 
+#642 Integrate iMaker plugin with configuration tool 
+#648 Re-arrange perspectives to allow more room for Setting Editor 
+#654 Enable building of a confml configuration with iMaker to an image 
+#655 A mechanism to clean the ConfigurationTool output/result folder 
+#668 Cli_build.cmd: Iby output file names should be configurable file 
+#669 Cli_build.cmd: The generation of cenrep_rfs.txt file should merge new changes 
+#676 Implement "Jump To Key/Setting" feature 
+#712 Usability: Key & Capabilities views should be cleared when user selects crml file from the CR Browser.
+#713 Usability: Sequence Setting menu pops up (under the table) only when it's needed 
+
+
+
+
+Error fixes and misc. stories:
+#195 Usability: Feature should be alphabetically ordered in the feature view 
+#222 Usability: Gcfml changes only take effect after tool restart 
+#357 Deleting based-on configuration in Configuration Browser window fails 
+#411 Cannot add values to selection field 
+#412 Short Ident values are not set automatically for Bitmask Keys
+#423 Properties disappear when scrolling capabilities 
+#425 Error message when closing CR browser 
+#430 Usability in searching the problem issue in the list 
+#448 SID text fields in capab. view takes any input as pasted text 
+#453 Same genconfmlby target path is generated to all 
+#454 Configuration tool cannot show correct error message when trying to open "nothing"  
+#455 Features and settings are deleted from UI but not in the confml file 
+#603 Validation gives different number of errors
+#604 Tool gets frozen when Problem View is used
+#620 Setting Editor "remembers" previously entered value
+#631 Expand/collapse buttons missing from CR Browserd 2nd tab
+#641 VD import string value incorrectly
+#643 Tool does not save setting type if it is "int"
+#663 sequence default values cannot be deleted 
+#664 Configuration Tool: All files are exported to same location in Genconf_files.iby 
+#683 Selecting key from key view doesn't update capabilities view 
+#700 Configuration tool remembers disposed crml information 
+
+
+
+****************************************
+** Version 2.2.0 02-06-2008 rev:1552  **
+****************************************
+New Features:
+
+Validation (see important notice)
+
+#544 Incremental search 
+#537 Generation to multiple locations 
+
+Error fixes and misc. stories:
+#542 New validation rules
+#495 Usability problem when drag and dropping Simple Key 
+#543 Collect list of validation rules missing in wiki 
+#563 VariantData import support from CLI 
+#409 Setting editor leaves open after configuration is closed 
+#573 Add "More Info..." menu item to Problems view 
+ 
+****************************************
+** Version 2.1.1 05-05-2008 rev:1303  **
+****************************************
+New features:
+#100 VariantData input support 
+#420 Possibility to copy validation message window content
+
+Error fixes:
+#450 Sequence causes jams and resets(GUI) 
+#408 Cannot remove settings from template of sequence 
+#443 Repository rfs logic different in excel+perl scripts vs CT 
+#426 UI shows write SID for the repository, although none defined in crml 
+#431 CT validation error 0010: OK to have only Write SID as the only capa required - no warning required 
+#432 CT validation error 0011: Key KAknDefaultAppOrientation is read-only but it has backup -> CT does not give valid error 
+#446 CLI error outputs should be suppressed totally 
+#424 Same error text is shown three times in msg dialog 
+
+***************************************
+** Version 2.1.0 beta1 18-04-2008 rev:1230  **
+***************************************
+New features:
+#293 Validation framework in CT
+#288 Validation rules: RFS / Backup Checks
+#289 Validation rules: Misc Checks
+#382 Validate Setting Values & RFS
+#388 Support for floating point (real) data type
+
+Error fixes:
+#366 RFS attribute should be configurable via property view
+#377 Genconfml generation reporting enhancement
+#394 Type integer should not let user to enter '.' character
+#398 Problems in Refs
+#399 Feeds confml and genconfml creation
+#402 problem in saving empty string
+#393 Sequence template items shown multiple times
+
+
+
+***************************************
+** Version 2.0.2 04-04-2008 rev:1130  **
+***************************************
+#144 Usability: Generation result information 	
+#104 KeyRange support 				
+#264 FIX: Option view allowes to add option to boolean setting
+#217 FIX: Creating new files to read-only folder		
+#330 FIX: Integers are generated as "empty"(GUI) 		
+#350 FIX: SettingEditor should show ReadOnly column as CustomerConfigurable
+#212 FIX: Same iby files are generated twice. 				
+#352 FIX: Sequence Setting's extension policies cannot be selected	
+#353 FIX: Renaming sequence setting's template item
+#355 FIX: Creating new confml or crml fails if user writes only filename to the file text field.
+
+
+***************************************
+** Version 2.0.1 19-03-2008 rev:1003  **
+***************************************
+New features:
+#202	Genconfml supports one or more settings and "*" wildcard 
+#290	Validation of UID when user writes the input 	
+
+Usability enhancements:
+#265	Save user preferences for the tool setup
+#266	Cenrep definition perspective is hidden by default
+#273	"Generate All" function could be found with less mouse clicks 
+
+Error fixes:
+#270	Capabilities view is broken
+#004	Delete operation does not work in any of the views
+#261	Configuration tool GUI/CLI bundle fix 
+#213	"Open File..." menu item & crml files	
+#301	cli_build causes StackOverflowError if s60 master conf already exists. 
+#300	RFS does not work because of multi ROFS support 	
+#301	Genconfml pattern matching bug
+#316	User should able to enter '-' character in first position, if setting type is int 
+
+
+***************************************
+** Version 2.0.0 07-03-2008 rev:898  **
+***************************************
+RM-RIM 107-22809 - S60 Configuration tool	
+RM-RIM 404-3636 - Configuration Tool has to support all file formats for configuration enablers
+
+
+Known issues:
+==============
+
+-Confml's and crml's provided in ConfigurationTool are not latest. They are migrated based on week04 excels.They work fine for 3.2.3
+
+Priority: major
+
+#216 Feature and setting name allows illegal chars like /  
+#366 RFS attribute should be configurable via property view  
+#410 "Empty" bitmask keys(GUI)  
+#411 Can not add values to selection field  
+#412 Short Ident values are not set automatically for Bitmask Keys (GUI)  
+#413 Configuration tool does not always generate output after restart 
+#425 Error message when closing CR browser  
+#452 CR browser opens only one crml after restart(GUI)  
+#453 Same genconfmlby target path is generated to all  
+
+Priority: minor
+
+#29 Usability: Allow user to hide/unhide the setting editor columns  
+#195 Usability: Feature should be alphabetically ordered in the feature view 
+#203 Impossible to add bits to bitkask keys  
+#205 Confml version information is missing from confml files  
+#208 Selection should remain on Repository when a new key is added  
+#214 Open Perspective opens new instance of the tool 
+#215 New setting error  
+#222 Usability: Gcfml changes only take effect after tool restart 
+#234 CT does not generate VariantFeatures.xml if "_" is used in conf name 
+#235 CT generates wrong configuration output( VariantData.xml) in case "_" is used in conf name 
+#258 Adding new feature, based-on, sub-config or view does not work in certain cases  
+#262 Usability: Default value column is confusing for the end user 
+#267 Renaming implementation and adding keys does not work in certain cases 
+#357 Deleting based-on configuration in Configuration Browser window fails (GUI)
+#395 Sequence template items not shown by default 
+#423 Properties disappear when scrolling capabilities
+#429 The warning is not listed in Problems list
+#448 SID text fields in capab. view takes any input as pasted text. 
+#454 Configuration tool cannot show correct error message when trying to open "nothing" (GUI) 
+
+
+Priority: trivial 
+
+#269 Dragging a key does not work in certain case 
+
+   
+For more information - http://delivery.nmp.nokia.com/trac/configurationtool/query?status=new&status=assigned&status=reopened&group=priority&type=error&order=priority

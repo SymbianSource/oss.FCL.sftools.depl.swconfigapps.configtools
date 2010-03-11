@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.nokia.tools.carbide.ct.ui.refactoring.commands.category"
+            name="Carbide.ct Refactoring Category">
+      </category>
+      <command
+            categoryId="com.nokia.tools.carbide.ct.ui.refactoring.commands.category"
+            id="com.nokia.tools.carbide.ct.ui.refactoring.commands.renameCommand"
+            name="Rename...">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.nokia.tools.carbide.ct.ui.refactoring.internal.handlers.RenameHandler"
+            commandId="com.nokia.tools.carbide.ct.ui.refactoring.commands.renameCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.nokia.tools.carbide.ct.ui.refactoring.commands.renameCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="ALT+SHIFT+R">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               id="com.nokia.tools.carbide.ct.ui.refactoring.menus.refactor"
+               label="Refactor"
+               mnemonic="R">
+            <command
+                  commandId="com.nokia.tools.carbide.ct.ui.refactoring.commands.renameCommand"
+                  id="com.nokia.tools.carbide.ct.ui.refactoring.menus.renameCommand"
+                  mnemonic="R">
+                  <visibleWhen>
+				  	<iterate>
+				    	<adapt type="org.eclipse.core.resources.IResource">
+				       </adapt>
+				    </iterate>
+                 </visibleWhen>
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+</plugin>

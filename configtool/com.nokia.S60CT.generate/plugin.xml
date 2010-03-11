@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="confml.generate" name="Generate Call" schema="schema/confml.generate.exsd"/>
+   <extension-point id="impl.initializer" name="initializer" schema="schema/impl.initializer.exsd"/>
+   <extension
+         point="startup.initializer">
+      <initializer
+            class="com.nokia.s60ct.generate.PluginInit">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.constraintProviders">
+      <constraintProvider
+            cache="true">
+         <package
+               namespaceUri="http://www.s60.com/xml/confml/1">
+         </package>
+         <constraints
+               categories="setting.validation">
+            <constraint
+                  class="validation.ConfigurableValue"
+                  id="configurable.value.constraint"
+                  lang="Java"
+                  name="Configurable Value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="Setting">
+               </target>
+            </constraint>
+         </constraints>
+      </constraintProvider>
+      <category
+            id="configurable.value"
+            name="Configurable Value">
+      </category>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.constraintBindings">
+      <clientContext
+            id="configurable.value.context">
+         <selector
+               class="validation.ConfigurableValueSelector">
+         </selector>
+      </clientContext>
+      <binding
+            category="configurable.value"
+            context="configurable.value.context">
+      </binding>
+   </extension>
+
+</plugin>

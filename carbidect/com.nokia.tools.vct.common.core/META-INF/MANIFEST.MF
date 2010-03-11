@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Variant Common Core Plug-in
+Bundle-SymbolicName: com.nokia.tools.vct.common.core
+Bundle-Version: 2.0.0
+Bundle-Vendor: NOKIA
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.resources;visibility:=reexport
+Bundle-Activator: com.nokia.tools.vct.internal.common.core.CommonCorePlugin
+Bundle-ActivationPolicy: lazy
+Export-Package: com.nokia.tools.vct.common.core,
+ com.nokia.tools.vct.common.core.utils

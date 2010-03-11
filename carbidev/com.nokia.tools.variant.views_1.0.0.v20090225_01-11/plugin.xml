@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of the License "Symbian Foundation License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.views component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="com.nokia.tools.variant.carbidev"
+            class="com.nokia.tools.variant.views.errorview.ErrorsView"
+            icon="icons/tab_errors_16.gif"
+            id="com.nokia.tools.variant.views.errorsview"
+            name="Errors"
+            restorable="true">
+      </view>
+      <view
+            category="com.nokia.tools.variant.carbidev"
+            class="com.nokia.tools.variant.views.notesview.NotesView"
+            icon="icons/tab_notes_16.gif"
+            id="com.nokia.tools.variant.views.notesview"
+            name="Notes"
+            restorable="true">
+      </view>
+      <view
+            category="com.nokia.tools.variant.carbidev"
+            class="com.nokia.tools.variant.views.changesview.ChangesView"
+            icon="icons/tab_changes_16.gif"
+            id="com.nokia.tools.variant.views.changesview"
+            name="Changes"
+            restorable="true">
+      </view>
+      <view
+            category="com.nokia.tools.variant.carbidev"
+            class="com.nokia.tools.variant.views.searchresultsview.SearchResultsView"
+            icon="icons/tab_searchresults_16.gif"
+            id="com.nokia.tools.variant.views.searchresultsview"
+            name="Search Results"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.nokia.tools.variant.views.previewsActions"
+            label="Previews Actions"
+            visible="true">
+         <action
+               class="com.nokia.tools.variant.views.actions.ResourcesViewAction"
+               icon="icons/teb_resources_16.png"
+               id="com.nokia.tools.variant.views.resourcesViewAction"
+               label="Resources"
+               menubarPath="rcpView/views"
+               state="true"
+               style="toggle"
+               tooltip="Displays / hides Resources view">
+         </action>
+         <action
+               class="com.nokia.tools.variant.views.actions.PreviewViewAction"
+               icon="icons/tab_preview_16.gif"
+               id="com.nokia.tools.variant.views.previewViewAction"
+               label="Preview"
+               menubarPath="rcpView/views"
+               state="true"
+               style="toggle"
+               tooltip="Displays / hides Preview view">
+         </action>
+         <action
+               class="com.nokia.tools.variant.views.actions.PropertiesViewAction"
+               icon="icons/tab_properties_16.gif"
+               id="com.nokia.tools.variant.views.propertiesViewAction"
+               label="Properties"
+               menubarPath="rcpView/views"
+               state="true"
+               style="toggle"
+               tooltip="Displays / hides Properties view">
+         </action>
+      </actionSet>
+      <actionSet
+            id="com.nokia.tools.variant.views.viewsActions"
+            label="Views Actions"
+            visible="true">
+         <action
+               class="com.nokia.tools.variant.views.actions.ErrorsViewAction"
+               icon="icons/tab_errors_16.gif"
+               id="com.nokia.tools.variant.views.errorsViewAction"
+               label="Errors"
+               menubarPath="rcpView/errorview"
+               state="true"
+               style="toggle"
+               tooltip="Displays / hides Errors view">
+         </action>
+         <action
+               class="com.nokia.tools.variant.views.actions.NotesViewAction"
+               icon="icons/tab_notes_16.gif"
+               id="com.nokia.tools.variant.views.notesViewAction"
+               label="Notes"
+               menubarPath="rcpView/notesview"
+               state="true"
+               style="toggle"
+               tooltip="Displays / hides Notes view">
+         </action>
+         <action
+               class="com.nokia.tools.variant.views.actions.ChangesViewAction"
+               icon="icons/tab_changes_16.gif"
+               id="com.nokia.tools.variant.views.changesViewAction"
+               label="Changes"
+               menubarPath="rcpView/changesview"
+               state="true"
+               style="toggle"
+               tooltip="Displays / hides Changes view">
+         </action>
+         <action
+               class="com.nokia.tools.variant.views.actions.SearchResultsViewAction"
+               icon="icons/tab_searchresults_16.gif"
+               id="com.nokia.tools.variant.views.searchResultsViewAction"
+               label="Search Results"
+               menubarPath="rcpView/searchresultview"
+               state="true"
+               style="toggle"
+               tooltip="Displays / hides Search Results view">
+         </action>
+      </actionSet>
+   </extension>
+
+</plugin>

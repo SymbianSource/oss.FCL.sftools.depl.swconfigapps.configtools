@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %pluginName
+Bundle-SymbolicName: com.nokia.S60CT.CenRep; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Export-Package: cenrep,
+ cenrep.impl,
+ cenrep.util,
+ constraints,
+ generate
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.emf.ecore.xmi;visibility:=reexport,
+ org.eclipse.jet,
+ com.nokia.S60CT.generate;visibility:=reexport,
+ org.eclipse.emf.validation
+Eclipse-LazyStart: true

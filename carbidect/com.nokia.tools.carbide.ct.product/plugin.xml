@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         id="carbide_ct"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ui.ide.workbench"
+            name="Carbide.ct">
+         <property
+               name="windowImages"
+               value="icons/Carbide_ct_icon_16x16.png,icons/Carbide_ct_icon_32x32.png,icons/Carbide_ct_icon_48x48.png">
+         </property>
+         <property
+               name="aboutText"
+               value="Carbide.ct&#x0A;&#x0A;[VERSION]&#x0A;[DATE] rev.[REVISION]&#x0A;&#x0A;Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).&#x0A;All rights reserved.&#x0A;This component and the accompanying materials are made available    &#x0A;under the terms of the License &quot;Eclipse Public License v1.0&quot;&#x0A;which accompanies this distribution, and is available at the URL &#x0A;&quot;http://www.eclipse.org/legal/epl-v10.html&quot;.">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/about_ct.png">
+         </property>
+         <property
+               name="appName"
+               value="Carbide.ct">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="0,245,469,22">
+         </property>
+         <property 
+			name="startupForegroundColor" 
+			value="777777" />
+		<property 
+			name="startupMessageRect" 
+			value="12,180,441,15" /> 
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.splashHandlers">
+      <splashHandler
+            class="com.nokia.tools.carbide.ct.product.splashHandlers.InteractiveSplashHandler"
+            id="com.nokia.tools.carbide.ct.product.splashHandlers.interactive">
+      </splashHandler>
+      <splashHandler
+            class="com.nokia.tools.carbide.ct.product.splashHandlers.BrowserSplashHandler"
+            id="com.nokia.tools.carbide.ct.product.splashHandlers.browser">
+      </splashHandler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro">
+      <intro
+            class="org.eclipse.ui.intro.config.CustomizableIntroPart"
+            icon="icons/Carbide_ct_icon_16x16.png"
+            id="com.nokia.tools.carbide.ct.product.intro">
+      </intro>
+      <introProductBinding
+            introId="com.nokia.tools.carbide.ct.product.intro"
+            productId="com.nokia.tools.carbide.ct.product.carbide_ct">
+      </introProductBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.intro.config">
+      <config
+            content="introContent.xml"
+            id="com.nokia.tools.carbide.ct.product.introConfigId"
+            introId="com.nokia.tools.carbide.ct.product.intro">
+         <presentation
+               home-page-id="root"
+               standby-page-id="standby">
+            <implementation
+                  kind="html"
+                  os="win32,linux,macosx"
+                  style="content/shared.css">
+            </implementation>
+            <launchBar
+                  computed="false"
+                  location="fastview">
+            </launchBar>
+         </presentation>
+      </config>
+   </extension>
+
+</plugin>

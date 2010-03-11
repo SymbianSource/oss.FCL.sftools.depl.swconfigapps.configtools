@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core Plug-in
+Bundle-SymbolicName: com.nokia.tools.carbide.validation.core;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: NOKIA
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.emf.transaction;bundle-version="1.3.0",
+ org.eclipse.ui;bundle-version="3.5.0",
+ org.apache.xerces;bundle-version="2.9.0",
+ com.nokia.tools.vct.confml;bundle-version="1.0.0",
+ com.nokia.tools.vct.crml;bundle-version="1.0.0"
+Export-Package: com.nokia.tools.carbide.validation.core,
+ com.nokia.tools.carbide.validation.core.builder,
+ com.nokia.tools.carbide.validation.core.preferences,
+ com.nokia.tools.carbide.validation.core.properties,
+ com.nokia.tools.carbide.validation.core.validators
+Bundle-Activator: com.nokia.tools.carbide.validation.core.ValidationCorePlugin
+Bundle-ActivationPolicy: lazy
+Import-Package: com.nokia.tools.carbide.validation.core

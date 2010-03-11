@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.S60CT.CenRep/src"
+    modelPluginID="com.nokia.S60CT.CenRep" modelName="CRPluginModel" richClientPlatform="true"
+    importerID="org.eclipse.emf.importer.rose" complianceLevel="5.0">
+  <foreignModel>C:\ConfigurationTool-baranov\ConfigurationTool\Design\models\CRPluginModel.mdl</foreignModel>
+  <genPackages prefix="Cenrep" disposableProviderFactory="true" ecorePackage="CRPluginModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CRPluginModel.ecore#//TYPE">
+      <genEnumLiterals ecoreEnumLiteral="CRPluginModel.ecore#//TYPE/int"/>
+      <genEnumLiterals ecoreEnumLiteral="CRPluginModel.ecore#//TYPE/real"/>
+      <genEnumLiterals ecoreEnumLiteral="CRPluginModel.ecore#//TYPE/string"/>
+      <genEnumLiterals ecoreEnumLiteral="CRPluginModel.ecore#//TYPE/string8"/>
+      <genEnumLiterals ecoreEnumLiteral="CRPluginModel.ecore#//TYPE/binary"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="CRPluginModel.ecore#//ACCESS_TYPE">
+      <genEnumLiterals ecoreEnumLiteral="CRPluginModel.ecore#//ACCESS_TYPE/ND"/>
+      <genEnumLiterals ecoreEnumLiteral="CRPluginModel.ecore#//ACCESS_TYPE/READ"/>
+      <genEnumLiterals ecoreEnumLiteral="CRPluginModel.ecore#//ACCESS_TYPE/WRITE"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="CRPluginModel.ecore#//CommonAttrs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//CommonAttrs/id"/>
+    </genClasses>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Meta">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Meta/identification"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Meta/date"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Meta/platform"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Meta/owner"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Meta/editor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Meta/status"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Meta/version"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Meta/product"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Meta/release"/>
+    </genClasses>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Identification"/>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Date"/>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Owner"/>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Editor"/>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Status"/>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Version"/>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Platform"/>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Product"/>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Release"/>
+    <genClasses image="false" ecoreClass="CRPluginModel.ecore#//Content">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Content/value"/>
+    </genClasses>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Repository">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Repository/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Repository/uidName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Repository/uidValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Repository/initialisationFileVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Repository/owner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Repository/rfs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Repository/key"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Repository/meta"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Repository/simpleKeys"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Repository/bitmaskKeys"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Repository/rangeKey"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Repository/fileName"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Repository/problems"/>
+      <genOperations ecoreOperation="CRPluginModel.ecore#//Repository/canGenerate"/>
+    </genClasses>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Key">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Key/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Key/ident"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Key/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Key/Value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//Key/bits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Key/bitmaskKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Key/simpleKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Key/shortIdent"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Key/strType"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Key/decFormat"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Key/hexFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="CRPluginModel.ecore#//KeyRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//KeyRange/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//KeyRange/int"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//KeyRange/firstInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//KeyRange/lastInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//KeyRange/indexBits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//KeyRange/firstIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//KeyRange/countInt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//KeyRange/keys"/>
+      <genOperations ecoreOperation="CRPluginModel.ecore#//KeyRange/getGKeys"/>
+    </genClasses>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Access">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Access/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Access/capabilities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Access/sid"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Access/strFormat"/>
+    </genClasses>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Value/val"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Value/id"/>
+    </genClasses>
+    <genClasses ecoreClass="CRPluginModel.ecore#//Bit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Bit/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//Bit/number"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CRPluginModel.ecore#//RVG">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//RVG/ref"/>
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//RVG/gvalue"/>
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//RVG/rfs"/>
+      <genOperations ecoreOperation="CRPluginModel.ecore#//RVG/canGenerate"/>
+      <genOperations ecoreOperation="CRPluginModel.ecore#//RVG/setGConf">
+        <genParameters ecoreParameter="CRPluginModel.ecore#//RVG/setGConf/confName"/>
+      </genOperations>
+      <genOperations ecoreOperation="CRPluginModel.ecore#//RVG/setPriority">
+        <genParameters ecoreParameter="CRPluginModel.ecore#//RVG/setPriority/prio"/>
+      </genOperations>
+      <genOperations ecoreOperation="CRPluginModel.ecore#//RVG/getGPriority"/>
+      <genOperations ecoreOperation="CRPluginModel.ecore#//RVG/getFolder"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CRPluginModel.ecore#//AttributeAndDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//AttributeAndDescription/desc"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CRPluginModel.ecore#//IReadOnly">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//IReadOnly/readOnly"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CRPluginModel.ecore#//IAccessable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//IAccessable/Access"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//IAccessable/readAccess"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference CRPluginModel.ecore#//IAccessable/writeAccess"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//IAccessable/gAccess"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="CRPluginModel.ecore#//IBackup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute CRPluginModel.ecore#//IBackup/backup"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

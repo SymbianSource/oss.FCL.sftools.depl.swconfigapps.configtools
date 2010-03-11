@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.navigator.gcfml component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         id="gcfmloutline"
+         point="org.eclipse.ui.navigator.viewer">
+      <viewerContentBinding
+            viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension
+                  pattern="com.nokia.tools.vct.navigator.gcfml">
+            </contentExtension>
+         </includes>
+      </viewerContentBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="com.nokia.tools.vct.navigator.gcfml.GcfmlContentProvider"
+            id="com.nokia.tools.vct.navigator.gcfml"
+            labelProvider="com.nokia.tools.vct.navigator.gcfml.GcfmlLabelProvider"
+            name="GCFML Content"
+            priority="high">
+         <triggerPoints>
+            <and>
+   	          <instanceof value="org.eclipse.core.resources.IFile"/>
+    	      <test property="org.eclipse.core.resources.extension" value="gcfml"/>
+            </and>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof
+                  value="com.nokia.tools.vct.crml.model.gcfml.EGCFMLDocumentRoot">
+            </instanceof>
+         </possibleChildren>
+      </navigatorContent>
+   </extension>
+
+</plugin>

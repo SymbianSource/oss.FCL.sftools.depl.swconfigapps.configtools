@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.4"?>
+
+<product name="Carbide.ct" id="com.nokia.tools.carbide.ct.product.carbide_ct" application="org.eclipse.ui.ide.workbench" version="1.1.2" useFeatures="false">
+
+   <aboutInfo>
+      <image path="/com.nokia.tools.carbide.ct.product/icons/about_ct.png"/>
+      <text>
+         Carbide.ct
+
+[VERSION]
+[DATE] rev.[REVISION]
+
+Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.
+This component and the accompanying materials are made available    
+under the terms of the License &quot;Eclipse Public License v1.0&quot;
+which accompanies this distribution, and is available at the URL 
+&quot;http://www.eclipse.org/legal/epl-v10.html&quot;.
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <windowImages i16="/com.nokia.tools.carbide.ct.product/icons/Carbide_ct_icon_16x16.png" i32="/com.nokia.tools.carbide.ct.product/icons/Carbide_ct_icon_32x32.png" i48="/com.nokia.tools.carbide.ct.product/icons/Carbide_ct_icon_48x48.png"/>
+
+   <splash
+      location="com.nokia.tools.carbide.ct.product" />
+   <launcher name="carbide.ct">
+      <solaris/>
+      <win useIco="false">
+         <bmp
+            winSmallHigh="/com.nokia.tools.carbide.ct.product/icons/Carbide_ct_icon_16x16.bmp"
+            winMediumHigh="/com.nokia.tools.carbide.ct.product/icons/Carbide_ct_icon_32x32.bmp"
+            winLargeHigh="/com.nokia.tools.carbide.ct.product/icons/Carbide_ct_icon_48x48.bmp"/>
+      </win>
+   </launcher>
+
+   <intro introId="com.nokia.tools.carbide.ct.product.intro"/>
+
+   <vm>
+      <windows>org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/j2sdk_1.5.0_12</windows>
+   </vm>
+
+   <plugins>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="com.nokia.tools.carbide.ct.confml.ui"/>
+      <plugin id="com.nokia.tools.carbide.ct.crml.ui"/>
+      <plugin id="com.nokia.tools.carbide.ct.help"/>
+      <plugin id="com.nokia.tools.carbide.ct.product"/>
+      <plugin id="com.nokia.tools.carbide.ct.ui.refactoring"/>
+      <plugin id="com.nokia.tools.carbidect.cone.core"/>
+      <plugin id="com.nokia.tools.carbidect.cone.help"/>
+      <plugin id="com.nokia.tools.carbidect.cone.tests"/>
+      <plugin id="com.nokia.tools.carbidect.cone.ui"/>
+      <plugin id="com.nokia.tools.s60ct.build"/>
+      <plugin id="com.nokia.tools.s60ct.confml"/>
+      <plugin id="com.nokia.tools.s60ct.confml.editor"/>
+      <plugin id="com.nokia.tools.s60ct.confml.tests"/>
+      <plugin id="com.nokia.tools.s60ct.content.confml.model"/>
+      <plugin id="com.nokia.tools.s60ct.javaversionchecker"/>
+      <plugin id="com.nokia.tools.s60ct.resources"/>
+      <plugin id="com.nokia.tools.variant.confml.core"/>
+      <plugin id="com.nokia.tools.variant.confml.ui"/>
+      <plugin id="com.nokia.tools.variant.confml.validation"/>
+      <plugin id="com.nokia.tools.variant.imaker.ct"/>
+      <plugin id="com.nokia.tools.variant.imaker.ct.help"/>
+      <plugin id="com.nokia.tools.variant.validation.core"/>
+      <plugin id="com.nokia.tools.variant.validation.help"/>
+      <plugin id="com.nokia.tools.variant.validation.ui"/>
+      <plugin id="com.nokia.tools.vct.common.appmodel"/>
+      <plugin id="com.nokia.tools.vct.common.confml.expressions"/>
+      <plugin id="com.nokia.tools.vct.common.core"/>
+      <plugin id="com.nokia.tools.vct.common.secure.core"/>
+      <plugin id="com.nokia.tools.vct.common.secure.ui"/>
+      <plugin id="com.nokia.tools.vct.common.ui"/>
+      <plugin id="com.nokia.tools.vct.common.ui.navigator"/>
+      <plugin id="com.nokia.tools.vct.confml"/>
+      <plugin id="com.nokia.tools.vct.confml.edit"/>
+      <plugin id="com.nokia.tools.vct.confml.editor.include"/>
+      <plugin id="com.nokia.tools.vct.confml.editor.view"/>
+      <plugin id="com.nokia.tools.vct.crml"/>
+      <plugin id="com.nokia.tools.vct.crml.edit"/>
+      <plugin id="com.nokia.tools.vct.gcfml"/>
+      <plugin id="com.nokia.tools.vct.gcfml.edit"/>
+      <plugin id="com.nokia.tools.vct.ibyml"/>
+      <plugin id="com.nokia.tools.vct.ibyml.edit"/>
+      <plugin id="com.nokia.tools.vct.imaker.core"/>
+      <plugin id="com.nokia.tools.vct.navigator.confml"/>
+      <plugin id="com.nokia.tools.vct.navigator.crml"/>
+      <plugin id="com.nokia.tools.vct.navigator.gcfml"/>
+      <plugin id="com.nokia.tools.vct.navigator.ibyml"/>
+      <plugin id="com.nokia.tools.vct.navigator.layer"/>
+      <plugin id="com.nokia.tools.vct.navigator.secure"/>
+      <plugin id="com.nokia.tools.vct.validation.confml"/>
+      <plugin id="com.nokia.tools.vct.validation.crml"/>
+      <plugin id="com.nokia.tools.vct.validation.gcfml"/>
+      <plugin id="com.nokia.tools.vct.validation.ibyml"/>
+      <plugin id="javax.servlet"/>
+      <plugin id="javax.servlet.jsp"/>
+      <plugin id="javax.xml"/>
+      <plugin id="org.antlr.runtime"/>
+      <plugin id="org.apache.commons.el"/>
+      <plugin id="org.apache.commons.lang"/>
+      <plugin id="org.apache.commons.logging"/>
+      <plugin id="org.apache.jasper"/>
+      <plugin id="org.apache.lucene"/>
+      <plugin id="org.apache.lucene.analysis"/>
+      <plugin id="org.apache.xerces"/>
+      <plugin id="org.apache.xml.resolver"/>
+      <plugin id="org.apache.xml.serializer"/>
+      <plugin id="org.easymock"/>
+      <plugin id="org.eclipse.compare"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.databinding"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.filebuffers"/>
+      <plugin id="org.eclipse.core.filesystem"/>
+      <plugin id="org.eclipse.core.filesystem.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.net"/>
+      <plugin id="org.eclipse.core.net.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.resources"/>
+      <plugin id="org.eclipse.core.resources.compatibility" fragment="true"/>
+      <plugin id="org.eclipse.core.resources.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.auth"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
+      <plugin id="org.eclipse.core.variables"/>
+      <plugin id="org.eclipse.debug.core"/>
+      <plugin id="org.eclipse.debug.ui"/>
+      <plugin id="org.eclipse.draw2d"/>
+      <plugin id="org.eclipse.emf.common"/>
+      <plugin id="org.eclipse.emf.common.ui"/>
+      <plugin id="org.eclipse.emf.ecore"/>
+      <plugin id="org.eclipse.emf.ecore.change"/>
+      <plugin id="org.eclipse.emf.ecore.edit"/>
+      <plugin id="org.eclipse.emf.ecore.editor"/>
+      <plugin id="org.eclipse.emf.ecore.xmi"/>
+      <plugin id="org.eclipse.emf.edit"/>
+      <plugin id="org.eclipse.emf.edit.ui"/>
+      <plugin id="org.eclipse.emf.search"/>
+      <plugin id="org.eclipse.emf.search.common"/>
+      <plugin id="org.eclipse.emf.search.ecore"/>
+      <plugin id="org.eclipse.emf.search.ui"/>
+      <plugin id="org.eclipse.emf.transaction"/>
+      <plugin id="org.eclipse.emf.transaction.ui"/>
+      <plugin id="org.eclipse.emf.validation"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.http.jetty"/>
+      <plugin id="org.eclipse.equinox.http.registry"/>
+      <plugin id="org.eclipse.equinox.http.servlet"/>
+      <plugin id="org.eclipse.equinox.jsp.jasper"/>
+      <plugin id="org.eclipse.equinox.jsp.jasper.registry"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.equinox.security"/>
+      <plugin id="org.eclipse.equinox.security.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.gef"/>
+      <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.help.appserver"/>
+      <plugin id="org.eclipse.help.base"/>
+      <plugin id="org.eclipse.help.ui"/>
+      <plugin id="org.eclipse.help.webapp"/>
+      <plugin id="org.eclipse.jem.util"/>
+      <plugin id="org.eclipse.jface"/>
+      <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.jface.text"/>
+      <plugin id="org.eclipse.ltk.core.refactoring"/>
+      <plugin id="org.eclipse.ltk.ui.refactoring"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.osgi.services"/>
+      <plugin id="org.eclipse.osgi.util"/>
+      <plugin id="org.eclipse.sdk"/>
+      <plugin id="org.eclipse.search"/>
+      <plugin id="org.eclipse.swt"/>
+      <plugin id="org.eclipse.swt.win32.win32.x86" fragment="true"/>
+      <plugin id="org.eclipse.team.core"/>
+      <plugin id="org.eclipse.team.ui"/>
+      <plugin id="org.eclipse.text"/>
+      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui.cheatsheets"/>
+      <plugin id="org.eclipse.ui.console"/>
+      <plugin id="org.eclipse.ui.editors"/>
+      <plugin id="org.eclipse.ui.forms"/>
+      <plugin id="org.eclipse.ui.ide"/>
+      <plugin id="org.eclipse.ui.ide.application"/>
+      <plugin id="org.eclipse.ui.intro"/>
+      <plugin id="org.eclipse.ui.navigator"/>
+      <plugin id="org.eclipse.ui.navigator.resources"/>
+      <plugin id="org.eclipse.ui.views"/>
+      <plugin id="org.eclipse.ui.views.properties.tabbed"/>
+      <plugin id="org.eclipse.ui.win32" fragment="true"/>
+      <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.eclipse.ui.workbench.texteditor"/>
+      <plugin id="org.eclipse.update.configurator"/>
+      <plugin id="org.eclipse.update.core"/>
+      <plugin id="org.eclipse.update.core.win32" fragment="true"/>
+      <plugin id="org.eclipse.wst"/>
+      <plugin id="org.eclipse.wst.common.core"/>
+      <plugin id="org.eclipse.wst.common.environment"/>
+      <plugin id="org.eclipse.wst.common.frameworks"/>
+      <plugin id="org.eclipse.wst.common.frameworks.ui"/>
+      <plugin id="org.eclipse.wst.common.project.facet.core"/>
+      <plugin id="org.eclipse.wst.common.ui"/>
+      <plugin id="org.eclipse.wst.common.uriresolver"/>
+      <plugin id="org.eclipse.wst.sse.core"/>
+      <plugin id="org.eclipse.wst.sse.ui"/>
+      <plugin id="org.eclipse.wst.validation"/>
+      <plugin id="org.eclipse.wst.validation.infopop"/>
+      <plugin id="org.eclipse.wst.validation.ui"/>
+      <plugin id="org.eclipse.wst.xml.core"/>
+      <plugin id="org.eclipse.wst.xml.core.source"/>
+      <plugin id="org.eclipse.wst.xml.ui"/>
+      <plugin id="org.eclipse.wst.xml.ui.infopop"/>
+      <plugin id="org.eclipse.wst.xml.ui.source"/>
+      <plugin id="org.eclipse.wst.xmleditor.doc.user"/>
+      <plugin id="org.eclipse.wst.xsd.core"/>
+      <plugin id="org.eclipse.wst.xsd.ui"/>
+      <plugin id="org.eclipse.xsd"/>
+      <plugin id="org.eclipse.xsd.edit"/>
+      <plugin id="org.junit"/>
+      <plugin id="org.junit4"/>
+      <plugin id="org.mortbay.jetty"/>
+   </plugins>
+
+   <features>
+      <feature id="com.nokia.tools.s60ct.feature" version="1.0.0"/>
+   </features>
+
+</product>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xcfwml SYSTEM "appshelldata.dtd">
+<!-- Content definition file based on 3.0 factory settings -->
+<appshell:data xmlns:appshell="http:://www.s60.com/xml/applicationshell/1" version="3.1">
+	<appshell:folder short_name="&qtn_fldr_root_level;">
+		<appshell:application uid="100058B3"/>
+		<!-- Phone app -->
+		<appshell:application uid="100058C5"/>
+		<!-- Messaging Centre -->
+		<appshell:application uid="101F4CCE"/>
+		<!-- Phonebook -->
+		<appshell:application uid="101F4CD5" view="1"/>
+		<!-- Logs -->
+		<!-- Media folder -->
+		<appshell:folder applicationgroup_name="media" short_name="&qtn_apps_media_grid;" long_name="&qtn_apps_media_list;" title_name="&qtn_apps_media_title;" icon_file="Menu.mif" icon_id="16396" mask_id="16397" icon_skin_minor_id="1448" icon_skin_major_id="101F86E3">
+			<appshell:application uid="10005a3e"/>
+			<!-- Media Player -->
+			<appshell:application uid="102072c3"/>
+			<!-- Music Player -->
+			<appshell:application uid="100058CA"/>
+			<!-- Voice recorder -->
+			<appshell:application uid="101f8599"/>
+			<!-- Media gallery -->
+			<appshell:application uid="101F857A"/>
+			<!-- Camcorder -->
+			<appshell:application uid="10207a89"/>
+			<!-- FM Radio -->
+		</appshell:folder>
+		<appshell:application uid="10008d5e"/>
+		<!-- Operator application -->
+		<!-- Organiser folder -->
+		<appshell:folder applicationgroup_name="organiser" short_name="&qtn_apps_organiser_grid;" long_name="&qtn_apps_organiser_list;" title_name="&qtn_apps_organiser_title;" icon_file="Menu.mif" icon_id="16388" mask_id="16389" icon_skin_minor_id="13FE" icon_skin_major_id="101F86E3">
+<!-- 
+			<appshell:application uid="10005902"/>
+Calculator -->
+			<appshell:application uid="10005903"/>
+			<!-- Clock -->
+			<appshell:application uid="101F4668"/>
+			<!-- Converter -->
+			<appshell:application uid="10005907"/>
+			<!-- Notepad -->
+			<appshell:application uid="10005901"/>
+			<!-- Calendar -->
+			<appshell:application uid="10005900"/>
+			<!-- To-do -->
+			<appshell:application uid="101F84EB"/>
+			<!-- File manager -->
+			<appshell:application uid="101F4666"/>
+			<!-- Memory card -->
+		</appshell:folder>
+		<appshell:application uid="100058F8"/>
+		<!-- Profiles application -->
+		<appshell:application uid="100058EC"/>
+		<!-- General settings -->
+		<!-- Tools folder -->
+		<appshell:folder applicationgroup_name="configurations" short_name="&qtn_apps_conffolder_grid;" long_name="&qtn_apps_conffolder_list;" title_name="&qtn_apps_conffolder_title;" icon_file="Menu.mif" icon_id="16390" mask_id="16391" icon_skin_minor_id="13FF" icon_skin_major_id="101F86E3">
+			<appshell:application uid="101f8555"/>
+			<!-- Voice commands -->
+			<appshell:application uid="100058F5"/>
+			<!-- Voice message service -->
+			<appshell:application uid="1000590A"/>
+			<!-- Speed dialling memory -->
+			<appshell:application uid="101F4CE0"/>
+			<!-- SIM Application -->
+			<appshell:application uid="10005A32"/>
+			<!-- Personalisation application -->
+			<appshell:application uid="101F85C7"/>
+			<!-- DRM manager -->
+			<appshell:application uid="101F4D91"/>
+			<!-- Location app -->
+			<appshell:application uid="101F85a0"/>
+			<!-- BLID -->
+			<appshell:application uid="101f85a2"/>
+			<!-- Landmarks -->
+			<appshell:application uid="101F6DE5"/>
+			<!-- Device manager -->
+			<!-- Japanese user dictionary (missing) -->
+			<appshell:application uid="10001011"/>
+			<!-- Chinese dictionary -->
+			<appshell:application uid="10005234"/>
+			<!-- Help -->
+			<appshell:application uid="10005A22"/>
+			<!-- About -->
+		</appshell:folder>
+		<!-- Connectivity folder -->
+		<appshell:folder applicationgroup_name="connectivity" short_name="&qtn_apps_commsfolder;" long_name="&qtn_apps_commsfolder_list;" title_name="&qtn_apps_commsfolder_title;" icon_file="Menu.mif" icon_id="16386" mask_id="16387" icon_skin_minor_id="13FB" icon_skin_major_id="101F86E3">
+			<appshell:application uid="10275458"/>
+			<!-- Service configurator -->
+			<appshell:application uid="101F4673"/>
+			<!-- Instant Messaging -->
+			<appshell:application uid="101F467C"/>
+			<!-- Presence Application -->
+			<appshell:application uid="101F84D0"/>
+			<!-- Connection manager -->
+			<appshell:application uid="10005951"/>
+			<!-- Bluetooth -->
+			<appshell:application uid="1000594D"/>
+			<!-- Infrared -->
+			<appshell:application uid="102068e2"/>
+			<!-- USB -->
+			<appshell:application uid="1000594E"/>
+			<!-- Fax modem -->
+			<appshell:application uid="101f6de4"/>
+			<!-- Sync -->
+		</appshell:folder>
+		<appshell:application uid="10008D39"/>
+		<!-- WML Browser -->
+		<!-- Installed folder ( Also known as default folder ) -->
+		<appshell:folder applicationgroup_name="installed" default="1" short_name="&qtn_apps_installed_grid;" long_name="&qtn_apps_installed_list;" title_name="&qtn_apps_installed_title;" icon_file="Menu.mif" icon_id="16394" mask_id="16395" icon_skin_minor_id="13FD" icon_skin_major_id="101F86E3">
+			<appshell:application uid="101f8512"/>
+			<!-- Application manager -->
+		</appshell:folder>
+	</appshell:folder>
+</appshell:data>

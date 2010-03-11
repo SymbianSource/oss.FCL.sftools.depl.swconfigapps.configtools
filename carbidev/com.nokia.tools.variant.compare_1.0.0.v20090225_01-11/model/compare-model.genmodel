@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.variant.compare/src"
+    editDirectory="com.nokia.tools.variant.compare.ui/src" editorDirectory="/com.nokia.tools.variant.compare/src"
+    modelPluginID="com.nokia.tools.variant.compare" modelName="ECompareModel" modelPluginClass=""
+    editPluginClass="com.nokia.tools.variant.compare.ui/CompareModelUIPlugin" editorPluginClass="com.nokia.tools.variant.compare.cmodel.presentation.ECompareModelEditorPlugin"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    editPluginID="com.nokia.tools.variant.compare.ui" editorPluginID="com.nokia.tools.variant.compare"
+    tableProviders="true" colorProviders="true" fontProviders="true">
+  <foreignModel>compare-model.ecore</foreignModel>
+  <genPackages prefix="ECompareModel" basePackage="com.nokia.tools.variant.compare"
+      disposableProviderFactory="true" ecorePackage="compare-model.ecore#/">
+    <genClasses image="false" ecoreClass="compare-model.ecore#//EDiffSettingContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compare-model.ecore#//EDiffSettingContainer/settings"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="compare-model.ecore#//EGroupContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compare-model.ecore#//EGroupContainer/groups"/>
+    </genClasses>
+    <genClasses ecoreClass="compare-model.ecore#//ECompareElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//ECompareElement/existsInSource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//ECompareElement/existsInTarget"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compare-model.ecore#//ECompareElement/sourceObject"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference compare-model.ecore#//ECompareElement/targetObject"/>
+    </genClasses>
+    <genClasses ecoreClass="compare-model.ecore#//EModelRoot"/>
+    <genClasses ecoreClass="compare-model.ecore#//EDiffGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffGroup/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="compare-model.ecore#//EDiffSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffSetting/absRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffSetting/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffSetting/sourceDefault"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffSetting/targetDefault"/>
+    </genClasses>
+    <genClasses ecoreClass="compare-model.ecore#//EDiffSimple">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffSimple/sourceValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffSimple/targetValue"/>
+    </genClasses>
+    <genClasses ecoreClass="compare-model.ecore#//EDiffSequence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffSequence/itemCount"/>
+    </genClasses>
+    <genClasses ecoreClass="compare-model.ecore#//EDiffResourceSetting2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compare-model.ecore#//EDiffResourceSetting2/sourcePath"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference compare-model.ecore#//EDiffResourceSetting2/targetPath"/>
+    </genClasses>
+    <genClasses ecoreClass="compare-model.ecore#//EDiffLocalPathSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffLocalPathSetting/uri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffLocalPathSetting/equalContent"/>
+    </genClasses>
+    <genClasses ecoreClass="compare-model.ecore#//EDiffMismatch">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffMismatch/sourceType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute compare-model.ecore#//EDiffMismatch/targetType"/>
+    </genClasses>
+    <genClasses ecoreClass="compare-model.ecore#//ECheckableElement">
+      <genFeatures notify="false" createChild="false" propertyCategory="" ecoreFeature="ecore:EAttribute compare-model.ecore#//ECheckableElement/checked"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

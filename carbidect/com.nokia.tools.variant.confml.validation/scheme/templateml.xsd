@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:xi="http://www.w3.org/2001/XInclude"
+	xmlns:templ="http://www.s60.com/xml/templateml/1"
+	targetNamespace="http://www.s60.com/xml/templateml/1"
+	elementFormDefault="qualified">
+
+	 <xs:import namespace="http://www.w3.org/2001/XInclude" schemaLocation="XInclude.xsd"/> 
+
+    
+    <xs:complexType name="tagType">
+		<xs:attribute name="name" type="xs:string"/>
+		<xs:attribute name="value" type="xs:string"/>
+	</xs:complexType>
+    
+	<xs:complexType name="templateType" mixed="true">
+		<xs:sequence>
+			<xs:element ref="xi:include" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>	
+        <xs:attribute name="file" type="xs:string"/>
+	</xs:complexType>
+
+		
+	<xs:complexType name="outputType">
+		<xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="template" type="templ:templateType"/>
+            <xs:element name="filter" type="templ:filterType"/>
+		</xs:choice>
+		<xs:attribute name="file" type="xs:string"/>
+		<xs:attribute name="dir" type="xs:string"/>
+        <xs:attribute name="ref" type="xs:string"/>
+		<xs:attribute name="encoding" type="xs:string"/>
+        <xs:attribute name="bom" type="xs:string" use="optional"/>
+	</xs:complexType>
+	
+	<xs:complexType name="filterType" mixed="true">
+		<xs:sequence>
+			<xs:element ref="xi:include" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" type="xs:string"/>
+        <xs:attribute name="file" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="templatemlRootType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="desc" type="xs:string"/>
+            <xs:element name="tag" type="templ:tagType"/>
+			<xs:element name="output" type="templ:outputType"/>
+			<xs:element name="filter" type="templ:filterType"/>
+        </xs:choice>
+    </xs:complexType>
+	
+	<xs:element name="templateml" type="templ:templatemlRootType"/>
+		
+</xs:schema>

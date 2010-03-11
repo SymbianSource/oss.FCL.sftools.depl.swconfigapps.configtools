@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.crml component.
+-->
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.s60.com/xml/cenrep/1"
+            class="com.nokia.tools.vct.crml.crmodel.ECRMLPackage"
+            genModel="model/CRPluginModel.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <parser
+            type="crml"
+            class="com.nokia.tools.vct.crml.crmodel.util.ECRMLResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.core.runtime.contentTypes">
+      <content-type
+            base-type="org.eclipse.core.runtime.xml"
+            file-extensions="crml"
+            id="com.nokia.tools.vct.content.crml"
+            name="CRML Content"
+            priority="normal">
+      </content-type>
+   </extension>
+
+</plugin>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.variant.content.confml.model/src"
+    editDirectory="/com.nokia.tools.variant.content.confml.model.edit/src" editorDirectory="/com.nokia.tools.variant.content.confml.model.editor/src"
+    modelPluginID="com.nokia.tools.variant.content.confml.model" modelName="Confml"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>../../com.nokia.tools.variant.content.confml/confml.ecore</foreignModel>
+  <genPackages prefix="Confml" basePackage="com.nokia.tools.variant.content" disposableProviderFactory="true"
+      ecorePackage="confml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="confml.ecore#//TYPE">
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/int"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/string"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/real"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/selection"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/file"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/folder"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/sequence"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/dateTime"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/date"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/time"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/duration"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/multiselection"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/simple_file"/>
+      <genEnumLiterals ecoreEnumLiteral="confml.ecore#//TYPE/simple_folder"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="confml.ecore#//URI"/>
+    <genDataTypes ecoreDataType="confml.ecore#//Object"/>
+    <genClasses ecoreClass="confml.ecore#//ParentGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//ParentGroup/leafGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//LeafGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference confml.ecore#//LeafGroup/settings"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//SimpleSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//SimpleSetting/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//SimpleSetting/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//SimpleSetting/lastSavedValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//SimpleSetting/option"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//SimpleSetting/minLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//SimpleSetting/maxLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//SimpleSetting/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//SimpleSetting/pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//SimpleSetting/totalDigits"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference confml.ecore#//SimpleSetting/maxExclusive"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference confml.ecore#//SimpleSetting/minExclusive"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference confml.ecore#//SimpleSetting/maxInclusive"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference confml.ecore#//SimpleSetting/minInclusive"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//Icon">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Icon/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Icon/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Icon/filePath"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//View">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//View/parentGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//View/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//View/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//View/sharedSettingInstances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//View/sharedFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//SequenceSetting">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//SequenceSetting/defaultStructure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//SequenceSetting/template"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//SequenceSetting/sequenceItem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//SequenceSetting/minOccurs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//SequenceSetting/maxOccurs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//SequenceSetting/lastSavedStructure"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//Setting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/absRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//Setting/property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference confml.ecore#//Setting/leafGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/rfsValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/featureName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/note"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/relevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/constraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/computedRelevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Setting/computedConstraint"/>
+      <genOperations ecoreOperation="confml.ecore#//Setting/isDefault"/>
+      <genOperations ecoreOperation="confml.ecore#//Setting/isDirty"/>
+      <genOperations ecoreOperation="confml.ecore#//Setting/getFeatureRef"/>
+      <genOperations ecoreOperation="confml.ecore#//Setting/getSettingRef"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//SequenceItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//SequenceItem/setting"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//Option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Option/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Option/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Option/relevant"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Group/desc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml.ecore#//Group/icon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Group/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Group/id"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Property/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Property/value"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//FileSystemEntrySetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//FileSystemEntrySetting/targetPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//FileSystemEntrySetting/sourcePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//FileSystemEntrySetting/lastSavedSourcePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//FileSystemEntrySetting/lastSavedTargetPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//FileSystemEntrySetting/defaultSourcePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//FileSystemEntrySetting/defaultTargetPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//FileSystemEntrySetting/file"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Feature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Feature/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Feature/relevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Feature/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Feature/iconTitle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Feature/iconDescriptor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Feature/iconURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//Feature/computedRelevant"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//MinInclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//MinInclusive/value"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//MaxInclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//MaxInclusive/value"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//MaxExclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//MaxExclusive/value"/>
+    </genClasses>
+    <genClasses ecoreClass="confml.ecore#//MinExclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml.ecore#//MinExclusive/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

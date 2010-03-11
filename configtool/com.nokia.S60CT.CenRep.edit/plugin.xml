@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+    
+  <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+    <factory 
+       uri = "http:///cenrep.ecore" 
+       class = "cenrep.provider.CenrepItemProviderAdapterFactory" 
+       supportedTypes = 
+         "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+          org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+          org.eclipse.emf.edit.provider.ITreeItemContentProvider
+          org.eclipse.emf.edit.provider.IItemLabelProvider
+          org.eclipse.emf.edit.provider.IItemPropertySource" />
+  </extension>
+  <extension
+        point="startup.initializer">
+     <initializer
+           class="init.CRPluginInitializer">
+     </initializer>
+  </extension>
+  <extension
+        point="org.eclipse.core.runtime.adapters">
+     <factory
+           adaptableType="cenrep.Key"
+           class="adapterFactories.KeyAdapterFactory">
+        <adapter
+              type="views.IDescriptionPage">
+        </adapter>
+     </factory>
+     <factory
+           adaptableType="cenrep.Repository"
+           class="adapterFactories.RepositoryAdapterFactory">
+        <adapter
+              type="views.IDescriptionPage">
+        </adapter>
+     </factory>
+     <factory
+           adaptableType="cenrep.Key"
+           class="s60cenrep.provider.ValueAdapterFactory">
+        <adapter
+              type="interfaces.IOptionAdapterFactory">
+        </adapter>
+     </factory>
+  </extension>
+
+</plugin>
+

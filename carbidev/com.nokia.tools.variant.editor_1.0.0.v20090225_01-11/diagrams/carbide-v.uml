@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_mEs50X7_Ed2q1abqtdNlvA">
+  <elementImport xmi:id="_mL4f4H7_Ed2q1abqtdNlvA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_mMLa0H7_Ed2q1abqtdNlvA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_mMLa0X7_Ed2q1abqtdNlvA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_mMLa0n7_Ed2q1abqtdNlvA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Component" xmi:id="_pY4nYH7_Ed2q1abqtdNlvA" name="CPFEditor" clientDependency="_diCqUH8BEd2q1abqtdNlvA _fDhEIH8BEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_rMMYEH7_Ed2q1abqtdNlvA" name="CPFModel"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_suM9YH7_Ed2q1abqtdNlvA" name="ResourcesView" clientDependency="_uQ5X0H8CEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_uMoDMH7_Ed2q1abqtdNlvA" name="PropertiesView" clientDependency="_gcIncH8CEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_vr8g4H7_Ed2q1abqtdNlvA" name="PreviewView" clientDependency="_07Pv8H8CEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_2J5bwH7_Ed2q1abqtdNlvA" name="SettingsViewer" clientDependency="_mXoyAH8BEd2q1abqtdNlvA _9LojsH8AEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_4HDsAH7_Ed2q1abqtdNlvA" name="NavigatorView" clientDependency="_NwEUcH8DEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_9LojsH8AEd2q1abqtdNlvA" name="edit values of settings" supplier="_rMMYEH7_Ed2q1abqtdNlvA" client="_2J5bwH7_Ed2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_diCqUH8BEd2q1abqtdNlvA" name="contains" supplier="_2J5bwH7_Ed2q1abqtdNlvA" client="_pY4nYH7_Ed2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_fDhEIH8BEd2q1abqtdNlvA" name="contains" supplier="_4HDsAH7_Ed2q1abqtdNlvA" client="_pY4nYH7_Ed2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_mXoyAH8BEd2q1abqtdNlvA" name="listen on selection" supplier="_4HDsAH7_Ed2q1abqtdNlvA" client="_2J5bwH7_Ed2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_98xQQH8BEd2q1abqtdNlvA" name="CPFManager" clientDependency="_GfQOsH8CEd2q1abqtdNlvA _KgnyYH8CEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="__ygC0H8BEd2q1abqtdNlvA" name="CPFFile"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_GfQOsH8CEd2q1abqtdNlvA" name="parse/create" supplier="__ygC0H8BEd2q1abqtdNlvA" client="_98xQQH8BEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_KgnyYH8CEd2q1abqtdNlvA" name="parse/create" supplier="_rMMYEH7_Ed2q1abqtdNlvA" client="_98xQQH8BEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_gcIncH8CEd2q1abqtdNlvA" name="displays properties" supplier="_rMMYEH7_Ed2q1abqtdNlvA" client="_uMoDMH7_Ed2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_uQ5X0H8CEd2q1abqtdNlvA" name="edits an attached files to settings" supplier="_rMMYEH7_Ed2q1abqtdNlvA" client="_suM9YH7_Ed2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_07Pv8H8CEd2q1abqtdNlvA" name="displays preview of attached files" supplier="_rMMYEH7_Ed2q1abqtdNlvA" client="_vr8g4H7_Ed2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_NwEUcH8DEd2q1abqtdNlvA" name="displays groups of settings" supplier="_rMMYEH7_Ed2q1abqtdNlvA" client="_4HDsAH7_Ed2q1abqtdNlvA"/>
+</uml:Package>

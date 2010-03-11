@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of the License "Symbian Foundation License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.carbidev component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="com.nokia.tools.variant.carbidev.perspective.CarbideVPerspective"
+            icon="icons/carbidev_app.ico"
+            id="com.nokia.tools.variant.carbidev.perspective"
+            name="Carbide.v">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.nokia.tools.variant.carbidev.rcpapplication"
+            name="%appName">
+         <property
+               name="windowImages"
+               value="icons/carbide_v_16x16.png">
+         </property>
+         <property
+               name="aboutText"
+               value="%aboutText">
+         </property>
+         <property
+               name="aboutImage"
+               value="icons/AboutCarbideVbg.png">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="0000AA">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="0,245,470,17">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="5,230,300,15">
+         </property>
+         <property
+               name="appName"
+               value="%appName">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="rcpapplication"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.nokia.tools.variant.carbidev.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.nokia.tools.variant.carbidev.notWorking"
+            label="Not working actions"
+            visible="false">
+         <action
+               id="com.nokia.tools.variant.carbidev.preferences"
+               label="Preferences ..."
+               menubarPath="rcpEdit/editEnd"
+               retarget="true"
+               style="push"
+               tooltip="Preferences">
+         </action>
+         <action
+               id="com.nokia.tools.variant.carbidev.window"
+               label="Window"
+               menubarPath="rcpView/additions"
+               retarget="true"
+               style="push"
+               tooltip="Window">
+         </action>
+      </actionSet>
+      <actionSet
+            id="com.nokia.tools.variant.carbidev.workbenchWindowActions"
+            label="Workbench Window Actions"
+            visible="true">
+         <action
+               class="com.nokia.tools.variant.carbidev.perspective.actions.StatusbarAction"
+               id="com.nokia.tools.variant.carbidev.statusbarAction"
+               label="Statusbar"
+               menubarPath="rcpView/bars"
+               state="true"
+               style="toggle"
+               tooltip="Displays / hides Statusbar">
+         </action>
+         <action
+               class="com.nokia.tools.variant.carbidev.perspective.actions.ReportBugsAction"
+               id="com.nokia.tools.variant.carbidev.reportBugs"
+               label="Report Bugs ..."
+               menubarPath="rcpHelp/middlepart"
+               retarget="false"
+               style="push"
+               tooltip="Report bugs">
+         </action>
+         <action
+               class="com.nokia.tools.variant.carbidev.perspective.actions.CarbideVWikiAction"
+               id="com.nokia.tools.variant.carbidev.wiki"
+               label="Carbide.V Wiki"
+               menubarPath="rcpHelp/middlepart"
+               retarget="false"
+               style="push"
+               tooltip="Open Carbide.V Wiki page">
+         </action>
+         <action
+               class="com.nokia.tools.variant.carbidev.perspective.actions.UpdateAction"
+               id="com.nokia.tools.variant.carbidev.checkForUpdates"
+               label="Check for Updates ..."
+               menubarPath="rcpHelp/middlepart"
+               retarget="false"
+               style="push"
+               tooltip="Check for updates">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="com.nokia.tools.vct.cli.commandline">
+      <handler
+            applicationId="com.nokia.tools.variant.carbidev.rcpapplication"
+            class="com.nokia.tools.variant.carbidev.HelpHandler">
+      </handler>
+      <handler
+            applicationId="com.nokia.tools.variant.carbidev.rcpapplication"
+            class="com.nokia.tools.variant.carbidev.CarbideRCPHandler">
+      </handler>
+      <option
+            description="Shows this message"
+            longName="help"
+            shortName="h">
+      </option>
+   </extension>
+   <extension
+         id="CarbideVCLIApplication"
+         point="org.eclipse.core.runtime.applications">
+      <application
+            cardinality="singleton-global"
+            thread="main"
+            visible="true">
+         <run
+               class="com.nokia.tools.variant.carbidev.CarbideVCLIApplication">
+         </run>
+      </application>
+   </extension>
+
+</plugin>

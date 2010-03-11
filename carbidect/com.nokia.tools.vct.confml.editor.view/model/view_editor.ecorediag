@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmi:id="_MZ-wsGhZEd2Ymp5sKMGA5w" type="EcoreTools" name="view_editor" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_Pb_JIGhZEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_Pb_JI2hZEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_Pb_JJGhZEd2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_TpKh8GheEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EViewsEditorDocument/useCount"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_TpKh8WheEd2Ymp5sKMGA5w"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Pb_JJWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Pb_JJmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Pb_JJ2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_PcI6IGhZEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_PcI6IWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_PcI6ImhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_PcI6I2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Pb_JIWhZEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EViewsEditorDocument"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pb_JImhZEd2Ymp5sKMGA5w" x="348" y="36"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_QuiWIGhZEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_QuiWI2hZEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_QuiWJGhZEd2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_uuiSIGhxEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EView/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_uuiSIWhxEd2Ymp5sKMGA5w"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_QuiWJWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_QuiWJmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_QuiWJ2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_QuiWKGhZEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_QuiWKWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_QuiWKmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_QuiWK2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_QuiWIWhZEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EView"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QuiWImhZEd2Ymp5sKMGA5w" x="36" y="288"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_R0IFMGhZEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_R0IFM2hZEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_R0IFNGhZEd2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_X-zpUGhaEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EGroup/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_X-zpUWhaEd2Ymp5sKMGA5w"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_R0IFNWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_R0IFNmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_R0IFN2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_R0IFOGhZEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_R0IFOWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_R0IFOmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_R0IFO2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_R0IFMWhZEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EGroup"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R0IFMmhZEd2Ymp5sKMGA5w" x="216" y="288"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_SrkDgGhZEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_SrkDg2hZEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_SrkDhGhZEd2Ymp5sKMGA5w" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SrkDhWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SrkDhmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SrkDh2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_SrkDiGhZEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SrkDiWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SrkDimhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SrkDi2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_SrkDgWhZEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EGroupContainer"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SrkDgmhZEd2Ymp5sKMGA5w" x="180" y="96"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_eb6FEGhZEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_eb6FE2hZEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_eb6FFGhZEd2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_bG7Q0GhaEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//ESettingRef/featureId"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_bG7Q0WhaEd2Ymp5sKMGA5w"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_cqnRIGhaEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//ESettingRef/settingId"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_cqnRIWhaEd2Ymp5sKMGA5w"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_eb6FFWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_eb6FFmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_eb6FF2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_eb6FGGhZEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_eb6FGWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_eb6FGmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_eb6FG2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_eb6FEWhZEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//ESettingRef"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eb6FEmhZEd2Ymp5sKMGA5w" x="216" y="420"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_k8h5cGhZEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_k8h5c2hZEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_k8h5dGhZEd2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_BUDacWngEd2wc65k29r2fA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EFeature/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_BUDacmngEd2wc65k29r2fA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_k8h5dWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_k8h5dmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_k8h5d2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_k8h5eGhZEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_k8h5eWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_k8h5emhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_k8h5e2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_k8h5cWhZEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EFeature"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k8h5cmhZEd2Ymp5sKMGA5w" x="624" y="132"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_l9gOQGhZEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_l9gOQ2hZEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_l9gORGhZEd2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_WMNqUGhaEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//ESettingEntry/key"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_WMNqUWhaEd2Ymp5sKMGA5w"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_l9gORWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_l9gORmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_l9gOR2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_l9gOSGhZEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_l9gOSWhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_l9gOSmhZEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_l9gOS2hZEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_l9gOQWhZEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//ESettingEntry"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_l9gOQmhZEd2Ymp5sKMGA5w" x="636" y="264"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_JrmCYGhaEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_JrmCY2haEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_JrmCZGhaEd2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_ZhP3AGhbEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EDescriptionContainer/descriptionText"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_ZhP3AWhbEd2Ymp5sKMGA5w"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_agSSIGhbEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EDescriptionContainer/descriptionUri"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_agSSIWhbEd2Ymp5sKMGA5w"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_bkFRcGhbEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EDescriptionContainer/descriptionUriTitle"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_bkFRcWhbEd2Ymp5sKMGA5w"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JrmCZWhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JrmCZmhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JrmCZ2haEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_JrmCaGhaEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_JrmCaWhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_JrmCamhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_JrmCa2haEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_JrmCYWhaEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EDescriptionContainer"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JrmCYmhaEd2Ymp5sKMGA5w" x="912" y="48"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_NvUWgGhaEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_NvUWg2haEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_NvUWhGhaEd2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_o9eUcGhbEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EIconContainer/iconUri"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_o9eUcWhbEd2Ymp5sKMGA5w"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_p473IGhbEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EIconContainer/iconUriTitle"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_p473IWhbEd2Ymp5sKMGA5w"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_NvUWhWhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_NvUWhmhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_NvUWh2haEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_NvUWiGhaEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_NvUWiWhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_NvUWimhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_NvUWi2haEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_NvUWgWhaEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EIconContainer"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_NvUWgmhaEd2Ymp5sKMGA5w" x="984" y="168"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_SQZVAGhaEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_SQZVA2haEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_SQZVBGhaEd2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_rkhPMGhbEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EResourceLocator/resourceUri"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_rkhPMWhbEd2Ymp5sKMGA5w"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SQZVBWhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SQZVBmhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SQZVB2haEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_SQZVCGhaEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_SQZVCWhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_SQZVCmhaEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_SQZVC2haEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_SQZVAWhaEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EResourceLocator"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SQZVAmhaEd2Ymp5sKMGA5w" x="996" y="264"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_ntgW0GhaEd2Ymp5sKMGA5w" type="Note">
+    <children xmi:type="notation:Node" xmi:id="_ntgW1WhaEd2Ymp5sKMGA5w" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_ntgW1mhaEd2Ymp5sKMGA5w" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_ntgW0WhaEd2Ymp5sKMGA5w" description="Relatioin-type object. Indicates SettingRef to Feature or SettingRef to Setting reference" fillColor="13369343" lineColor="6737151" lineWidth="1"/>
+    <styles xmi:type="notation:TextStyle" xmi:id="_ntgW0mhaEd2Ymp5sKMGA5w"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_ntgW02haEd2Ymp5sKMGA5w"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ntgW1GhaEd2Ymp5sKMGA5w" x="300" y="492" width="265" height="85"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_wkvAwGhbEd2Ymp5sKMGA5w" type="1004">
+    <children xmi:type="notation:Node" xmi:id="_wkvAw2hbEd2Ymp5sKMGA5w" type="4008"/>
+    <children xmi:type="notation:Node" xmi:id="_wkvAxGhbEd2Ymp5sKMGA5w" type="4009"/>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_wkvAwWhbEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EDataType" href="view_editor.ecore#//EJavaURI"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wkvAwmhbEd2Ymp5sKMGA5w" x="984" y="372"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_AFG1wGkJEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_AFG1w2kJEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_AFG1xGkJEd2Ymp5sKMGA5w" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_AFG1xWkJEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_AFG1xmkJEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_AFG1x2kJEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_AFG1yGkJEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_AFG1yWkJEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_AFG1ymkJEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_AFG1y2kJEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_AFG1wWkJEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//ERefTarget"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_AFG1wmkJEd2Ymp5sKMGA5w" x="429" y="256"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_9EMeIGk3Ed2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_9EMeI2k3Ed2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_9EWPIGk3Ed2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_FCtz4Gk4Ed2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EFeatureEntry/key"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_FCtz4Wk4Ed2Ymp5sKMGA5w"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9EWPIWk3Ed2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9EWPImk3Ed2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9EWPI2k3Ed2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_9EWPJGk3Ed2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_9EWPJWk3Ed2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_9EWPJmk3Ed2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_9EWPJ2k3Ed2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_9EMeIWk3Ed2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EFeatureEntry"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9EMeImk3Ed2Ymp5sKMGA5w" x="624" y="36"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_gsyRwGk5Ed2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_gsyRw2k5Ed2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_gsyRxGk5Ed2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_E1W-AGngEd2wc65k29r2fA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//ESetting/name"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_E1W-AWngEd2wc65k29r2fA"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_1YCDAaToEd2VAL2Kc2xCgA" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//ESetting/readOnly"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_1YCDAqToEd2VAL2Kc2xCgA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_gsyRxWk5Ed2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_gsyRxmk5Ed2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_gsyRx2k5Ed2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_gsyRyGk5Ed2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_gsyRyWk5Ed2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_gsyRymk5Ed2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_gsyRy2k5Ed2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_gsyRwWk5Ed2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//ESetting"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gsyRwmk5Ed2Ymp5sKMGA5w" x="636" y="396"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_pCmecGk_Ed2Ymp5sKMGA5w" type="Note">
+    <children xmi:type="notation:Node" xmi:id="_pCmedWk_Ed2Ymp5sKMGA5w" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_pCmedmk_Ed2Ymp5sKMGA5w" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_pCmecWk_Ed2Ymp5sKMGA5w" description="Feature and setting classes do not have IDs as they are managed by the map key. Map key/value features are fixed by ECore EMap contract" fillColor="13369343" lineColor="6737151" lineWidth="1"/>
+    <styles xmi:type="notation:TextStyle" xmi:id="_pCmecmk_Ed2Ymp5sKMGA5w"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_pCmec2k_Ed2Ymp5sKMGA5w"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pCmedGk_Ed2Ymp5sKMGA5w" x="768" y="228" width="205" height="85"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_zDv90GlAEd2Ymp5sKMGA5w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_zDv902lAEd2Ymp5sKMGA5w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_zDv91GlAEd2Ymp5sKMGA5w" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_CV3dAGlBEd2Ymp5sKMGA5w" type="2001">
+        <element xmi:type="ecore:EAttribute" href="view_editor.ecore#//EViewEntry/key"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_CV3dAWlBEd2Ymp5sKMGA5w"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_zDv91WlAEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_zDv91mlAEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_zDv912lAEd2Ymp5sKMGA5w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_zDv92GlAEd2Ymp5sKMGA5w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_zDv92WlAEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_zDv92mlAEd2Ymp5sKMGA5w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_zDv922lAEd2Ymp5sKMGA5w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_zDv90WlAEd2Ymp5sKMGA5w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EViewEntry"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zDv90mlAEd2Ymp5sKMGA5w" x="36" y="84"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_k2JVEOpNEd6kGJEwCCQd0w" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_k2JVE-pNEd6kGJEwCCQd0w" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_k2JVFOpNEd6kGJEwCCQd0w" type="5001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_k2JVFepNEd6kGJEwCCQd0w" collapsed="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_k2JVFupNEd6kGJEwCCQd0w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_k2JVF-pNEd6kGJEwCCQd0w"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_k2JVGOpNEd6kGJEwCCQd0w" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_k2JVGepNEd6kGJEwCCQd0w"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_k2JVGupNEd6kGJEwCCQd0w"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_k2JVG-pNEd6kGJEwCCQd0w"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_k2JVEepNEd6kGJEwCCQd0w" fontHeight="10" fillColor="13761016" lineColor="0"/>
+    <element xmi:type="ecore:EClass" href="view_editor.ecore#//EGroupEntry"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k2JVEupNEd6kGJEwCCQd0w" x="156" y="180"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_MZ-wsWhZEd2Ymp5sKMGA5w"/>
+  <element xmi:type="ecore:EPackage" href="view_editor.ecore#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_WhRw0GhZEd2Ymp5sKMGA5w" type="3003" source="_QuiWIGhZEd2Ymp5sKMGA5w" target="_k2JVEOpNEd6kGJEwCCQd0w">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_WhRw0WhZEd2Ymp5sKMGA5w" routing="Tree" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_WhRw0mhZEd2Ymp5sKMGA5w"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WhRw02hZEd2Ymp5sKMGA5w" points="[0, -23, -106, 69]$[0, -59, -106, 33]$[126, -59, 20, 33]$[126, -91, 20, 1]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_m_OhcOpNEd6kGJEwCCQd0w" id="(0.43,0.975)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_W5QzAGhZEd2Ymp5sKMGA5w" type="3003" source="_R0IFMGhZEd2Ymp5sKMGA5w" target="_k2JVEOpNEd6kGJEwCCQd0w">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_W5QzAWhZEd2Ymp5sKMGA5w" routing="Tree" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_W5QzAmhZEd2Ymp5sKMGA5w"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_W5QzA2hZEd2Ymp5sKMGA5w" points="[-7, -23, 61, 71]$[-7, -59, 61, 35]$[-54, -59, 14, 35]$[-54, -91, 14, 3]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mdGr0OpNEd6kGJEwCCQd0w" id="(0.49,0.925)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_XqvTQGhZEd2Ymp5sKMGA5w" type="3002" source="_Pb_JIGhZEd2Ymp5sKMGA5w" target="_zDv90GlAEd2Ymp5sKMGA5w">
+    <children xmi:type="notation:Node" xmi:id="_Xq4dMGhZEd2Ymp5sKMGA5w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Xq4dMWhZEd2Ymp5sKMGA5w" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Xq4dMmhZEd2Ymp5sKMGA5w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Xq4dM2hZEd2Ymp5sKMGA5w" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_XqvTQWhZEd2Ymp5sKMGA5w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_XqvTQmhZEd2Ymp5sKMGA5w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//EViewsEditorDocument/views"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XqvTQ2hZEd2Ymp5sKMGA5w" points="[-75, 0, 260, -35]$[-335, 0, 0, -35]$[-335, 25, 0, -10]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Xre6IGhZEd2Ymp5sKMGA5w" id="(0.50980395,0.21276596)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_bzX8kGhZEd2Ymp5sKMGA5w" type="3002" source="_SrkDgGhZEd2Ymp5sKMGA5w" target="_k2JVEOpNEd6kGJEwCCQd0w">
+    <children xmi:type="notation:Node" xmi:id="_bzX8lGhZEd2Ymp5sKMGA5w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_bzX8lWhZEd2Ymp5sKMGA5w" x="-42" y="-29"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_bzX8lmhZEd2Ymp5sKMGA5w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_bzX8l2hZEd2Ymp5sKMGA5w" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_bzX8kWhZEd2Ymp5sKMGA5w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_bzX8kmhZEd2Ymp5sKMGA5w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//EGroupContainer/groupsAndViews"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_bzX8k2hZEd2Ymp5sKMGA5w" points="[9, 4, 49, -78]$[83, 38, 123, -44]$[-33, 80, 7, -2]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bzX8mGhZEd2Ymp5sKMGA5w" id="(0.9237288,0.55)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_bzX8mWhZEd2Ymp5sKMGA5w" id="(0.93,0.525)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_fdBj0GhZEd2Ymp5sKMGA5w" type="3002" source="_R0IFMGhZEd2Ymp5sKMGA5w" target="_eb6FEGhZEd2Ymp5sKMGA5w">
+    <children xmi:type="notation:Node" xmi:id="_fdBj1GhZEd2Ymp5sKMGA5w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_fdBj1WhZEd2Ymp5sKMGA5w" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_fdBj1mhZEd2Ymp5sKMGA5w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_fdBj12hZEd2Ymp5sKMGA5w" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_fdBj0WhZEd2Ymp5sKMGA5w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_fdBj0mhZEd2Ymp5sKMGA5w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//EGroup/refs"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_fdBj02hZEd2Ymp5sKMGA5w" points="[-2, 20, 6, -133]$[-16, 158, -8, 5]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fdBj2GhZEd2Ymp5sKMGA5w" id="(0.46,0.05)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_vkA1gGhZEd2Ymp5sKMGA5w" type="3002" source="_k8h5cGhZEd2Ymp5sKMGA5w" target="_l9gOQGhZEd2Ymp5sKMGA5w">
+    <children xmi:type="notation:Node" xmi:id="_vkA1hGhZEd2Ymp5sKMGA5w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vkA1hWhZEd2Ymp5sKMGA5w" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_vkA1hmhZEd2Ymp5sKMGA5w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_vkA1h2hZEd2Ymp5sKMGA5w" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_vkA1gWhZEd2Ymp5sKMGA5w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_vkA1gmhZEd2Ymp5sKMGA5w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//EFeature/settings"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vkA1g2hZEd2Ymp5sKMGA5w" points="[-1, 20, -1, -76]$[-50, 95, -50, -1]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_k1x7wGhaEd2Ymp5sKMGA5w" type="3002" source="_AFG1wGkJEd2Ymp5sKMGA5w" target="_eb6FEGhZEd2Ymp5sKMGA5w">
+    <children xmi:type="notation:Node" xmi:id="_k1x7xGhaEd2Ymp5sKMGA5w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_k1x7xWhaEd2Ymp5sKMGA5w" x="-21" y="-23"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_k1x7xmhaEd2Ymp5sKMGA5w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_k1x7x2haEd2Ymp5sKMGA5w" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_k1x7wWhaEd2Ymp5sKMGA5w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_k1x7wmhaEd2Ymp5sKMGA5w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//ERefTarget/refs"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_k1x7w2haEd2Ymp5sKMGA5w" points="[-50, 10, 281, -238]$[-291, 217, 40, -31]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GpUwsmkJEd2Ymp5sKMGA5w" id="(0.52,0.125)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GpUws2kJEd2Ymp5sKMGA5w" id="(0.5,0.5)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="__fDYEGhoEd2Ymp5sKMGA5w" type="NoteAttachment" source="_k1x7wGhaEd2Ymp5sKMGA5w" target="_ntgW0GhaEd2Ymp5sKMGA5w">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="__fDYEWhoEd2Ymp5sKMGA5w" lineWidth="1"/>
+    <styles xmi:type="notation:ArrowStyle" xmi:id="__fDYEmhoEd2Ymp5sKMGA5w"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="__fDYE2hoEd2Ymp5sKMGA5w"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="__fDYFGhoEd2Ymp5sKMGA5w" points="[0, 0, -99, -180]$[68, 159, -31, -21]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="__fDYFWhoEd2Ymp5sKMGA5w" id="(0.4379845,0.44354838)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="__fDYFmhoEd2Ymp5sKMGA5w" id="(0.38113207,0.24705882)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Y_yAUGhpEd2Ymp5sKMGA5w" type="3002" source="_eb6FEGhZEd2Ymp5sKMGA5w" target="_AFG1wGkJEd2Ymp5sKMGA5w">
+    <children xmi:type="notation:Node" xmi:id="_Y_yAVGhpEd2Ymp5sKMGA5w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Y_yAVWhpEd2Ymp5sKMGA5w" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Y_yAVmhpEd2Ymp5sKMGA5w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_Y_yAV2hpEd2Ymp5sKMGA5w" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Y_yAUWhpEd2Ymp5sKMGA5w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Y_yAUmhpEd2Ymp5sKMGA5w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//ESettingRef/target"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Y_yAU2hpEd2Ymp5sKMGA5w" points="[40, -31, -291, 217]$[281, -238, -50, 10]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a8EG0GhpEd2Ymp5sKMGA5w" id="(0.5,0.5)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a8EG0WhpEd2Ymp5sKMGA5w" id="(0.52,0.125)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_LPBwgGkJEd2Ymp5sKMGA5w" type="3003" source="_k8h5cGhZEd2Ymp5sKMGA5w" target="_AFG1wGkJEd2Ymp5sKMGA5w">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_LPBwgWkJEd2Ymp5sKMGA5w" routing="Tree" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_LPBwgmkJEd2Ymp5sKMGA5w"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LPBwg2kJEd2Ymp5sKMGA5w" points="[0, 20, 195, -104]$[0, 64, 195, -60]$[-194, 64, 1, -60]$[-194, 104, 1, -20]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_Oa4BcGkJEd2Ymp5sKMGA5w" type="3003" source="_gsyRwGk5Ed2Ymp5sKMGA5w" target="_AFG1wGkJEd2Ymp5sKMGA5w">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_Oa4BcWkJEd2Ymp5sKMGA5w" routing="Tree" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_Oa4BcmkJEd2Ymp5sKMGA5w"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Oa4Bc2kJEd2Ymp5sKMGA5w" points="[-26, -23, 194, 72]$[-26, -47, 194, 48]$[-207, -47, 13, 48]$[-207, -87, 13, 8]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_id4b8Gk5Ed2Ymp5sKMGA5w" id="(0.47,0.1)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ObBycGkJEd2Ymp5sKMGA5w" id="(0.38,0.825)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_HdZGkGk4Ed2Ymp5sKMGA5w" type="3002" source="_9EMeIGk3Ed2Ymp5sKMGA5w" target="_k8h5cGhZEd2Ymp5sKMGA5w">
+    <children xmi:type="notation:Node" xmi:id="_HdZGlGk4Ed2Ymp5sKMGA5w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HdZGlWk4Ed2Ymp5sKMGA5w" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_HdZGlmk4Ed2Ymp5sKMGA5w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_HdZGl2k4Ed2Ymp5sKMGA5w" x="3" y="18"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_HdZGkWk4Ed2Ymp5sKMGA5w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_HdZGkmk4Ed2Ymp5sKMGA5w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//EFeatureEntry/value"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_HdZGk2k4Ed2Ymp5sKMGA5w" points="[50, 1, -167, 0]$[178, 3, -39, 2]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_HdZGmGk4Ed2Ymp5sKMGA5w" id="(0.45381525,0.04761905)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_MEJPQGk4Ed2Ymp5sKMGA5w" type="3002" source="_Pb_JIGhZEd2Ymp5sKMGA5w" target="_9EMeIGk3Ed2Ymp5sKMGA5w">
+    <children xmi:type="notation:Node" xmi:id="_MEJPRGk4Ed2Ymp5sKMGA5w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_MEJPRWk4Ed2Ymp5sKMGA5w" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_MEJPRmk4Ed2Ymp5sKMGA5w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_MEJPR2k4Ed2Ymp5sKMGA5w" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_MEJPQWk4Ed2Ymp5sKMGA5w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_MEJPQmk4Ed2Ymp5sKMGA5w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//EViewsEditorDocument/features"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MEJPQ2k4Ed2Ymp5sKMGA5w" points="[2, 7, 0, -55]$[8, 52, 6, -10]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MESZMGk4Ed2Ymp5sKMGA5w" id="(0.982906,0.4680851)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MESZMWk4Ed2Ymp5sKMGA5w" id="(0.039215688,0.4893617)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_l76pEGk5Ed2Ymp5sKMGA5w" type="3002" source="_l9gOQGhZEd2Ymp5sKMGA5w" target="_gsyRwGk5Ed2Ymp5sKMGA5w">
+    <children xmi:type="notation:Node" xmi:id="_l76pFGk5Ed2Ymp5sKMGA5w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_l76pFWk5Ed2Ymp5sKMGA5w" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_l8EaEGk5Ed2Ymp5sKMGA5w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_l8EaEWk5Ed2Ymp5sKMGA5w" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_l76pEWk5Ed2Ymp5sKMGA5w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_l76pEmk5Ed2Ymp5sKMGA5w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//ESettingEntry/value"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_l76pE2k5Ed2Ymp5sKMGA5w" points="[-2, 24, 0, -90]$[-3, 109, -1, -5]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_l8EaEmk5Ed2Ymp5sKMGA5w" id="(0.48,0.125)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_xeeekGk_Ed2Ymp5sKMGA5w" type="NoteAttachment" source="_gsyRwGk5Ed2Ymp5sKMGA5w" target="_pCmecGk_Ed2Ymp5sKMGA5w">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_xeeekWk_Ed2Ymp5sKMGA5w" lineWidth="1"/>
+    <styles xmi:type="notation:ArrowStyle" xmi:id="_xeeekmk_Ed2Ymp5sKMGA5w"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_xeeek2k_Ed2Ymp5sKMGA5w"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xeeelGk_Ed2Ymp5sKMGA5w" points="[10, -20, -119, 168]$[27, -216, -102, -28]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xeeelWk_Ed2Ymp5sKMGA5w" id="(0.81,0.5)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_y0wVAGk_Ed2Ymp5sKMGA5w" type="NoteAttachment" source="_k8h5cGhZEd2Ymp5sKMGA5w" target="_pCmecGk_Ed2Ymp5sKMGA5w">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_y0wVAWk_Ed2Ymp5sKMGA5w" lineWidth="1"/>
+    <styles xmi:type="notation:ArrowStyle" xmi:id="_y0wVAmk_Ed2Ymp5sKMGA5w"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_y0wVA2k_Ed2Ymp5sKMGA5w"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_y0wVBGk_Ed2Ymp5sKMGA5w" points="[31, 20, -72, -45]$[70, 59, -33, -6]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_y0wVBWk_Ed2Ymp5sKMGA5w" id="(0.1609756,0.34246576)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_KyV6EGlBEd2Ymp5sKMGA5w" type="3002" source="_zDv90GlAEd2Ymp5sKMGA5w" target="_QuiWIGhZEd2Ymp5sKMGA5w">
+    <children xmi:type="notation:Node" xmi:id="_KyV6FGlBEd2Ymp5sKMGA5w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_KyV6FWlBEd2Ymp5sKMGA5w" x="-10" y="-10"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_KyV6FmlBEd2Ymp5sKMGA5w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_KyV6F2lBEd2Ymp5sKMGA5w" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_KyV6EWlBEd2Ymp5sKMGA5w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_KyV6EmlBEd2Ymp5sKMGA5w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//EViewEntry/value"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_KyV6E2lBEd2Ymp5sKMGA5w" points="[-1, 24, 0, -164]$[-4, 181, -3, -7]"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_KyV6GGlBEd2Ymp5sKMGA5w" id="(0.4347826,0.11111111)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_siHPMOlxEd6kGJEwCCQd0w" type="3002" source="_Pb_JIGhZEd2Ymp5sKMGA5w" target="_zDv90GlAEd2Ymp5sKMGA5w">
+    <children xmi:type="notation:Node" xmi:id="_siQZIOlxEd6kGJEwCCQd0w" type="4011">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_siQZIelxEd6kGJEwCCQd0w" x="-9" y="-17"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_siQZIulxEd6kGJEwCCQd0w" type="4012">
+      <layoutConstraint xmi:type="notation:Location" xmi:id="_siQZI-lxEd6kGJEwCCQd0w" x="10" y="10"/>
+    </children>
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_siHPMelxEd6kGJEwCCQd0w" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_siHPMulxEd6kGJEwCCQd0w" fontHeight="10"/>
+    <element xmi:type="ecore:EReference" href="view_editor.ecore#//EViewsEditorDocument/allViews"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_siHPM-lxEd6kGJEwCCQd0w" points="[-23, 0, 261, -57]$[-323, -14, -39, -71]$[-297, 34, -13, -23]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_siQZJOlxEd6kGJEwCCQd0w" id="(0.15333334,0.31914893)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_oDeMsOpNEd6kGJEwCCQd0w" type="3003" source="_k2JVEOpNEd6kGJEwCCQd0w" target="_SrkDgGhZEd2Ymp5sKMGA5w">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_oDeMsepNEd6kGJEwCCQd0w" routing="Tree" lineColor="0"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_oDeMsupNEd6kGJEwCCQd0w"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_oDeMs-pNEd6kGJEwCCQd0w" points="[0, -20, -33, 64]$[0, -32, -33, 52]$[46, -32, 13, 52]$[46, -64, 13, 20]"/>
+  </edges>
+</notation:Diagram>

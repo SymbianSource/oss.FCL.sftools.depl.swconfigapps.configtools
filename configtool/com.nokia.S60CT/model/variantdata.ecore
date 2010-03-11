@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="variantdata"
+    nsURI="http:///variantdata.ecore" nsPrefix="vd">
+  <eClassifiers xsi:type="ecore:EClass" name="VariantData" eSuperTypes="configurationEMF.ecore#//Data">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="include" upperBound="-1"
+        eType="#//VariantData"/>
+  </eClassifiers>
+</ecore:EPackage>

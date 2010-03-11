@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+    
+  <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+    <factory 
+       uri = "http:///configurationemf.ecore" 
+       class = "configurationemf.provider.ConfigurationemfItemProviderAdapterFactory" 
+       supportedTypes = 
+         "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+          org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+          org.eclipse.emf.edit.provider.ITreeItemContentProvider
+          org.eclipse.emf.edit.provider.IItemLabelProvider
+          org.eclipse.emf.edit.provider.IItemPropertySource" />
+  </extension>
+  <extension
+        point="org.eclipse.core.runtime.adapters">
+     <factory
+           adaptableType="configurationemf.Feature"
+           class="adapterFactories.FeatureAdapterFactory">
+        <adapter
+              type="views.IDescriptionPage">
+        </adapter>
+     </factory>
+     <factory
+           adaptableType="configurationemf.Configuration"
+           class="adapterFactories.ConfigurationAdapterFactory">
+        <adapter
+              type="views.IDescriptionPage">
+        </adapter>
+     </factory>
+     <factory
+           adaptableType="configurationemf.Setting"
+           class="adapterFactories.SettingAdapterFactory">
+        <adapter
+              type="views.IDescriptionPage">
+        </adapter>
+     </factory>
+     <factory
+           adaptableType="configurationemf.Option"
+           class="adapterFactories.OptionAdapterFactory">
+        <adapter
+              type="views.IDescriptionPage">
+        </adapter>
+     </factory>
+     <factory
+           adaptableType="configurationemf.Setting"
+           class="s60ct.provider.OptionAdapterFactory">
+        <adapter
+              type="interfaces.IOptionAdapterFactory">
+        </adapter>
+     </factory>
+     <factory
+           adaptableType="configurationemf.LeafSettingDelegator"
+           class="adapterFactories.SettingAdapterFactory">
+        <adapter
+              type="views.IDescriptionPage">
+        </adapter>
+     </factory>
+     <factory
+           adaptableType="configurationemf.LeafSettingDelegator"
+           class="s60ct.provider.OptionAdapterFactory">
+        <adapter
+              type="interfaces.IOptionAdapterFactory">
+        </adapter>
+     </factory>
+  </extension>
+
+</plugin>
+

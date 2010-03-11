@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.confml.ui component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+	<extension point="org.eclipse.ui.perspectives">
+		<perspective
+        class="com.nokia.tools.variant.confml.ui.perspective.ConfMLPerspective"
+        id="com.nokia.tools.variant.confml.ui.ConfML"
+        name="ConfML">
+		</perspective>
+	</extension>
+ <extension
+       point="org.eclipse.ui.newWizards">
+    <category
+          id="com.nokia.tools.variant.confml.ui"
+          name="Configuration">
+    </category>
+    <wizard
+          category="com.nokia.tools.variant.confml.ui"
+          class="com.nokia.tools.variant.confml.ui.wizards.NewConfigurationProjectWizard"
+          finalPerspective="com.nokia.tools.variant.confml.ui.ConfML"
+          icon="icons/fld_project_new.gif"
+          id="com.nokia.tools.variant.confml.ui.wizards.NewConfiurationProjectWizard"
+          name="Configuration Project"
+          preferredPerspectives="com.nokia.tools.variant.confml.ui.ConfML"
+          project="true">
+    </wizard>
+    <wizard
+          category="com.nokia.tools.variant.confml.ui"
+          class="com.nokia.tools.variant.confml.ui.wizards.NewConfigurationWizard"
+          finalPerspective="com.nokia.tools.variant.confml.ui.ConfML"
+          icon="icons/fld_project.gif"
+          id="com.nokia.tools.variant.confml.ui.wizards.NewConfiurationWizard"
+          name="Configuration"
+          preferredPerspectives="com.nokia.tools.variant.confml.ui.ConfML"
+          project="false">
+    </wizard>
+    <wizard
+          category="com.nokia.tools.variant.confml.ui"
+          class="com.nokia.tools.variant.confml.ui.wizards.NewConfigurationLayerWizard"
+          finalPerspective="com.nokia.tools.variant.confml.ui.ConfML"
+          icon="icons/configurationlayer.gif"
+          id="com.nokia.tools.variant.confml.ui.wizards.NewConfiurationLayerWizard"
+          name="Configuration Layer"
+          preferredPerspectives="com.nokia.tools.variant.confml.ui.ConfML"
+          project="false">
+    </wizard>
+    <wizard
+          category="com.nokia.tools.variant.confml.ui"
+          class="com.nokia.tools.variant.confml.ui.wizards.NewConfMLWizard"
+          finalPerspective="com.nokia.tools.variant.confml.ui.ConfML"
+          icon="icons/fil_confml.gif"
+          id="com.nokia.tools.variant.confml.ui.wizards.NewConfMLWizard"
+          name="ConfML File"
+          project="false">
+    </wizard>
+    <wizard
+          category="com.nokia.tools.variant.confml.ui"
+          class="com.nokia.tools.variant.confml.ui.wizards.NewImplMLWizard"
+          finalPerspective="com.nokia.tools.variant.confml.ui.ConfML"
+          icon="icons/fil_implml.gif"
+          id="com.nokia.tools.variant.confml.ui.wizards.NewImplMLWizard"
+          name="ImplML File"
+          project="false">
+    </wizard>
+    <primaryWizard
+          id="com.nokia.tools.variant.confml.ui.wizards.NewConfiurationProjectWizard">
+    </primaryWizard>
+    <primaryWizard
+          id="com.nokia.tools.variant.confml.ui.wizards.NewConfiurationLayerWizard">
+    </primaryWizard>
+    <primaryWizard
+          id="com.nokia.tools.variant.confml.ui.wizards.NewConfMLWizard">
+    </primaryWizard>
+    <primaryWizard
+          id="com.nokia.tools.variant.confml.ui.wizards.NewImplMLWizard">
+    </primaryWizard>
+ </extension>
+	<extension point="org.eclipse.ui.exportWizards">
+		<category id="com.nokia.tools.variant.confml.ui" name="Configuration">
+		</category>
+		<wizard
+        category="com.nokia.tools.variant.confml.ui"
+        class="com.nokia.tools.variant.confml.ui.wizards.ExportCPFWizard"
+        icon="icons/edi_cpf.png"
+        id="com.nokia.tools.variant.confml.ui.wizards.ExportCPFWizard"
+        name="Export CPF">
+     <selection
+           class="org.eclipse.core.resources.IProject">
+     </selection>
+		</wizard>
+	</extension>
+ <extension
+       point="org.eclipse.ui.importWizards">
+    <category
+          id="com.nokia.tools.variant.confml.ui"
+          name="Configuration">
+    </category>
+    <wizard
+          category="com.nokia.tools.variant.confml.ui"
+          class="com.nokia.tools.variant.confml.ui.wizards.ImportCPFWizard"
+          icon="icons/edi_cpf.png"
+          id="com.nokia.tools.variant.confml.ui.wizards.ImportCPFWizard"
+          name="Import CPF">
+    </wizard>
+    <wizard
+          category="com.nokia.tools.variant.confml.ui"
+          class="com.nokia.tools.variant.confml.ui.wizards.ImportConfmlWizard"
+          icon="icons/fil_confml.gif"
+          id="com.nokia.tools.variant.confml.ui.confmlimportwizard"
+          name="Import set of ConfML files">
+       <description>
+          Import a file from the local file system into the workspace.
+       </description>
+    </wizard>
+    <wizard
+          category="com.nokia.tools.variant.confml.ui"
+          class="com.nokia.tools.variant.confml.ui.wizards.ImportImplMLWizard"
+          icon="icons/fil_implml.gif"
+          id="com.nokia.tools.variant.confml.ui.confmlimportwizard"
+          name="Import set of ImplML files">
+       <description>
+          Import a file from the local file system into the workspace.
+       </description>
+    </wizard>
+ </extension>
+	<extension point="org.eclipse.ui.views">
+		<category id="com.nokia.tools.variant.confml.ui" name="ConfML">
+		</category>
+		  <view
+        allowMultiple="false"
+        category="org.eclipse.ui"
+        class="com.nokia.tools.variant.confml.ui.views.CustomProjectExplorer"
+        icon="icons/tab_confmlnavigator.gif"
+        id="org.eclipse.ui.navigator.ProjectExplorer"
+        name="Project Explorer"
+        restorable="true">
+  </view>
+	</extension>
+	<extension point="org.eclipse.help.contexts">
+		<contexts file="contexts.xml">
+		</contexts>
+	</extension>
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+		<propertyContributor
+			contributorId="org.eclipse.ui.navigator.ProjectExplorer">
+			<propertyCategory category="common" />
+		</propertyContributor>
+	</extension>
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+		<propertyTabs
+			contributorId="org.eclipse.ui.navigator.ProjectExplorer">
+   <propertyTab
+         category="common"
+         id="CommonNavigator.tab.Advanced"
+         label="Advanced">
+   </propertyTab>
+		</propertyTabs>
+	</extension>
+	
+	            <extension
+            point="org.eclipse.ui.views.properties.tabbed.propertySections">
+         <propertySections
+               contributorId="org.eclipse.ui.navigator.ProjectExplorer">
+            <propertySection
+                  class="com.nokia.tools.variant.confml.ui.properties.ConfigurationProjectSection"
+                  id="configuration.project.section"
+                  tab="CommonNavigator.tab.Advanced">
+               <input
+                     type="org.eclipse.core.resources.IProject">
+               </input>
+            </propertySection>
+      </propertySections>
+      </extension>
+             <extension
+                   point="org.eclipse.ui.menus">
+                <menuContribution
+                      locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+                   <command
+                         commandId="com.nokia.tools.variant.confml.ui.commands.useasroot"
+                         style="push">
+                   </command>
+                </menuContribution>
+                <menuContribution
+                      locationURI="menu:file?after=additions">
+                   <menu
+                         label="Security">
+                      <command
+                            commandId="com.nokia.tools.vct.common.secure.ui.OpenKeyManager"
+                            label="Open Key Manager"
+                            style="push">
+                      </command>
+                      <separator
+                            name="additions">
+                      </separator>
+                   </menu>
+                </menuContribution>
+             </extension>
+	
+	<extension point="org.eclipse.ui.propertyPages">
+		<page
+        class="com.nokia.tools.variant.confml.ui.properties.ConfigurationProjectPropertyPage"
+        icon="icons/fil_confml.gif"
+        id="com.nokia.tools.variant.confml.ui.layerpropertypage1"
+        name="Configuration">
+			<enabledWhen>
+      <and>
+         <adapt
+               type="org.eclipse.core.resources.IProject">
+         </adapt>
+         <test
+               property="org.eclipse.core.resources.projectNature"
+               value="com.nokia.tools.variant.confml.core.ConfMLLayerNature">
+         </test>
+      </and>
+			</enabledWhen>
+		</page>
+	</extension>
+	
+	
+
+	 <extension
+        point="org.eclipse.ui.popupMenus">
+    <objectContribution
+          adaptable="true"
+          id="vct.popupMenus.newObjects"
+          objectClass="org.eclipse.core.resources.IContainer">
+       <action
+             class="com.nokia.tools.variant.confml.ui.popup.actions.NewImplMLFileAction"
+             enablesFor="1"
+             icon="icons/fil_implml.gif"
+             id="com.nokia.tools.variant.confml.ui.action3"
+             label="ImplML File"
+             menubarPath="common.new.menu/new">
+       </action>
+       <action
+             class="com.nokia.tools.variant.confml.ui.popup.actions.NewConfigurationFileAction"
+             enablesFor="1"
+             icon="icons/fil_confml.gif"
+             id="com.nokia.tools.variant.confml.ui.action4"
+             label="Configuration File"
+             menubarPath="common.new.menu/new">
+       </action>
+       <action
+             class="com.nokia.tools.variant.confml.ui.popup.actions.NewConfigurationLayer"
+             icon="icons/configurationlayer.gif"
+             id="com.nokia.tools.variant.confml.ui.action5"
+             label="Configuration Layer"
+             menubarPath="common.new.menu/new">
+       </action>
+    </objectContribution>
+    <objectContribution
+          adaptable="true"
+          id="vct.popupMenus.newObjects2"
+          objectClass="org.eclipse.core.resources.IResource">
+       <action
+             class="com.nokia.tools.variant.confml.ui.popup.actions.NewConfigurationProjectAction"
+             icon="icons/fld_project_new.gif"
+             id="com.nokia.tools.variant.confml.ui.action6"
+             label="Configuration Project"
+             menubarPath="common.new.menu/new">
+       </action>
+       <action
+             class="com.nokia.tools.variant.confml.ui.popup.actions.NewConfiguration"
+             icon="icons/fld_project.gif"
+             id="com.nokia.tools.variant.confml.ui.action7"
+             label="Configuration"
+             menubarPath="common.new.menu/new">
+       </action>
+    </objectContribution>
+    <objectContribution
+          adaptable="false"
+          id="vct.popupMnus.openViewEditor"
+          objectClass="org.eclipse.emf.ecore.EObject">
+       <action
+             class="com.nokia.tools.variant.confml.ui.popup.actions.OpenConfMLViewEditor"
+             enablesFor="1"
+             icon="icons/edi_view.gif"
+             id="com.nokia.tools.variant.confml.ui.action1"
+             label="Open View Editor"
+             menubarPath="common.open.menu"
+             tooltip="Open view editor">
+       </action>
+       <visibility>
+          <or>
+             <objectClass
+                   name="com.nokia.tools.vct.common.appmodel.EAppView">
+             </objectClass>
+             <objectClass
+                   name="com.nokia.tools.vct.common.appmodel.EAppGroup">
+             </objectClass>
+             <objectClass
+                   name="com.nokia.tools.vct.confml.model.confml1.EViewElement">
+             </objectClass>
+             <objectClass
+                   name="com.nokia.tools.vct.confml.model.confml2.EViewElement">
+             </objectClass>
+             <objectClass
+                   name="com.nokia.tools.vct.confml.model.confml1.EGroup">
+             </objectClass>
+             <objectClass
+                   name="com.nokia.tools.vct.confml.model.confml2.EGroup">
+             </objectClass>
+          </or>
+       </visibility>
+    </objectContribution>
+ </extension>
+  <extension
+        point="org.eclipse.ui.actionSets">
+     <actionSet
+           id="vct.configurationActionSet"
+           label="Configuration"
+           visible="true">
+        <action
+              class="com.nokia.tools.variant.confml.ui.popup.actions.NewConfigurationFileAction"
+              icon="icons/fil_confml.gif"
+              id="com.nokia.tools.variant.confml.ui.action1"
+              label="Configuration File"
+              menubarPath="file/new/additions"
+              style="push">
+           <selection
+                 class="org.eclipse.core.resources.IContainer">
+           </selection>
+        </action>
+        <action
+              class="com.nokia.tools.variant.confml.ui.popup.actions.NewConfigurationProjectAction"
+              icon="icons/fld_conf_project.gif"
+              id="com.nokia.tools.variant.confml.ui.action2"
+              label="Configuration Project"
+              menubarPath="file/new/additions"
+              style="push">
+        </action>
+        <action
+              class="com.nokia.tools.variant.confml.ui.popup.actions.NewConfigurationLayer"
+              icon="icons/configurationlayer.gif"
+              id="com.nokia.tools.variant.confml.ui.action5"
+              label="Configuration Layer"
+              menubarPath="file/new/additions"
+              style="push">
+        </action>
+     </actionSet>
+     <actionSet
+           description="Security-Related Actions"
+           id="com.nokia.tools.variant.confml.ui.securityActions"
+           label="Security Actions"
+           visible="true">
+        <menu
+              id="com.nokia.tools.variant.confml.ui.securityMenu"
+              label="Security"
+              path="file/file.end">
+           <groupMarker
+                 name="commonGroup">
+           </groupMarker>
+           <groupMarker
+                 name="additions">
+           </groupMarker>
+        </menu>
+     </actionSet>
+  </extension>
+    <extension
+        point="org.eclipse.ui.editors">
+     <editor
+           class="com.nokia.tools.variant.confml.ui.editors.ConfmlMetadataEditor"
+           default="false"
+           extensions="confml"
+           icon="icons/topic.gif"
+           id="com.nokia.tools.variant.confml.ui.confmlmetadataeditor1"
+           name="ConfML Metadata Editor">
+        <contentTypeBinding
+              contentTypeId="com.nokia.tools.vct.content.confml">
+        </contentTypeBinding>
+     </editor>
+  </extension>
+  <extension
+         point="org.eclipse.ui.decorators">
+        <decorator
+            adaptable="false"
+            class="com.nokia.tools.variant.confml.ui.views.ConfMLNavigatorLabelDecorator"
+            icon="icons/dec_inherited.gif"
+            id="com.nokia.tools.variant.confml.ui.views.ConfMLNavigatorLabelDecorator"
+            label="Decorator for ConfML navigator"
+            lightweight="true"
+            location="BOTTOM_RIGHT"
+            state="true">
+            <enablement>
+            	<objectClass name="org.eclipse.emf.ecore.EObject"/>
+         	</enablement>
+         <description>
+			Show which features/settings are inherited from parent layer.
+         </description>
+      </decorator>
+  </extension>
+  
+  <extension
+        name="Preview page adapter factory for navigators"
+        point="org.eclipse.core.runtime.adapters">
+     <factory
+           adaptableType="org.eclipse.ui.views.navigator.ResourceNavigator"
+           class="com.nokia.tools.variant.internal.confml.ui.adapters.NavigatorPreviewPageFactory">
+        <adapter
+              type="com.nokia.tools.variant.preview.ui.IPreviewViewPage">
+        </adapter>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.ui.navigator.CommonNavigator"
+           class="com.nokia.tools.variant.internal.confml.ui.adapters.NavigatorPreviewPageFactory">
+        <adapter
+              type="com.nokia.tools.variant.preview.ui.IPreviewViewPage">
+        </adapter>
+     </factory>
+     <factory
+           adaptableType="org.eclipse.ui.navigator.resources.ProjectExplorer"
+           class="com.nokia.tools.variant.internal.confml.ui.adapters.NavigatorPreviewPageFactory">
+        <adapter
+              type="com.nokia.tools.variant.preview.ui.IPreviewViewPage">
+        </adapter>
+     </factory>
+     
+  </extension>
+  <extension
+        point="org.eclipse.core.expressions.propertyTesters">
+     <propertyTester
+           class="com.nokia.tools.variant.confml.ui.testers.ConfigurationRootTester"
+           id="com.nokia.tools.variant.confml.ui.rootConfML"
+           namespace="com.nokia.tools.vct"
+           properties="isConfigurationRoot,isConfigurationRootCandidate"
+           type="org.eclipse.core.resources.IFile">
+     </propertyTester>
+  </extension>
+  <extension
+        point="org.eclipse.ui.commands">
+     <command
+           categoryId="com.nokia.tools.variant.confml.ui.category"
+           id="com.nokia.tools.variant.confml.ui.commands.useasroot"
+           name="Use as Configuration Root">
+     </command>
+     <category
+           id="com.nokia.tools.variant.confml.ui.category"
+           name="ConfML Operations Category">
+     </category>
+  </extension>
+  <extension
+        point="org.eclipse.ui.bindings">
+     <key
+           commandId="com.nokia.tools.variant.confml.ui.commands.useasroot"
+           contextId="org.eclipse.ui.contexts.window"
+           schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+           sequence="ALT+CTRL+R">
+     </key>
+  </extension>
+  <extension
+        point="org.eclipse.ui.handlers">
+     <handler
+           class="com.nokia.tools.variant.confml.ui.handlers.SetConfigurationRootHandler"
+           commandId="com.nokia.tools.variant.confml.ui.commands.useasroot">
+		   <activeWhen>
+		      <with
+		            variable="selection">
+		         <iterate
+		               operator="and">
+		            <instanceof
+		                  value="org.eclipse.core.resources.IFile">
+		            </instanceof>
+              <test
+                    property="org.eclipse.core.resources.extension "
+                    value="confml">
+              </test>
+              <test
+                    property="org.eclipse.core.resources.projectNature"
+                    value="com.nokia.tools.variant.confml.core.ConfMLLayerNature">
+              </test>
+		         </iterate>
+		      </with>
+		   </activeWhen>
+     </handler>
+  </extension>
+  <extension
+        point="org.eclipse.ui.commandImages">
+     <image
+           commandId="com.nokia.tools.variant.confml.ui.commands.useasroot"
+           icon="icons/fld_project.gif">
+     </image>
+  </extension>
+  
+   <extension
+        point="org.eclipse.ui.navigator.navigatorContent">
+     <commonFilter
+           activeByDefault="true"
+           class="com.nokia.tools.variant.confml.ui.filtering.ConfigurationFilter"
+           id="com.nokia.tools.variant.confml.ui.configuration.filter"
+           name="Configuration Filter">
+     </commonFilter>
+  </extension>
+  <extension
+        point="org.eclipse.ui.navigator.viewer">
+     <viewerContentBinding
+           viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+        <includes>
+           <contentExtension
+                 isRoot="true"
+                 pattern="com.nokia.tools.variant.confml.ui.configuration.filter">
+           </contentExtension>
+        </includes>
+     </viewerContentBinding>
+  </extension>
+  <extension
+        point="org.eclipse.ui.startup">
+     <startup
+           class="com.nokia.tools.variant.confml.ui.commandline.CommandLineHandler">
+     </startup>
+  </extension>
+  
+      <!--
+      <extension
+            point="org.eclipse.ui.views.properties.tabbed.propertySections">
+         <propertySections
+               contributorId="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TABBED_PROPERTIES_CONTRIBUTOR">
+            <propertySection
+                  class="com.nokia.tools.variant.confml.ui.properties.LinkContainerSection"
+                  id="LinkContainerSection"
+                  tab="com.nokia.tools.variant.confml.ui.DetailsTab">
+               <input
+                     type="com.nokia.tools.variant.confml.core.model.persistence.ELinkContainer">
+               </input>
+            </propertySection>
+            <propertySection
+                  class="com.nokia.tools.variant.confml.ui.properties.DescriptionContainerSection"
+                  id="DescriptionContainerSection"
+                  tab="com.nokia.tools.variant.confml.ui.DetailsTab">
+               <input
+                     type="com.nokia.tools.variant.confml.core.model.persistence.EDescriptionContainer">
+               </input>
+            </propertySection>
+            <propertySection
+                  class="com.nokia.tools.variant.confml.ui.properties.IconContainerSection"
+                  id="IconContainerSection"
+                  tab="com.nokia.tools.variant.confml.ui.DetailsTab">
+               <input
+                     type="com.nokia.tools.variant.confml.core.model.persistence.EIconContainer">
+               </input>
+            </propertySection>
+         </propertySections>
+      </extension>
+	-->
+</plugin>

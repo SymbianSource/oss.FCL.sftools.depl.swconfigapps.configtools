@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.validation.ui component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.nokia.tools.variant.validation.ui.page.ValidationPreferencePage"
+            id="com.nokia.tools.variant.validation.ui.preferences"
+            name="Confml Validation">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.ide.markerSupport">
+      <markerTypeCategory
+            name="ConfML Problems">
+         <markerTypeReference
+               id="com.nokia.tools.variant.validation.core.validationmarker">
+         </markerTypeReference>
+      </markerTypeCategory>
+      <markerGrouping
+            id="com.nokia.tools.variant.confml.ui.confml_problem_category"
+            label="ConfML Problem Category">
+         <markerGroupingEntry
+               id="com.nokia.tools.variant.confml.ui.category.layer"
+               label="Layer Problems"
+               priority="100">
+         </markerGroupingEntry>
+         <markerGroupingEntry
+               id="com.nokia.tools.variant.confml.ui.category.type"
+               label="Type Definition Problems"
+               priority="90">
+         </markerGroupingEntry>
+         <markerGroupingEntry
+               id="com.nokia.tools.variant.confml.ui.category.data"
+               label="Data Definition Problems"
+               priority="80">
+         </markerGroupingEntry>
+         <markerGroupingEntry
+               id="com.nokia.tools.variant.confml.ui.category.rfs"
+               label="RFS Definition Problems"
+               priority="70">
+         </markerGroupingEntry>
+         <markerGroupingEntry
+               id="com.nokia.tools.variant.confml.ui.category.view"
+               label="View Element Problems"
+               priority="60">
+         </markerGroupingEntry>
+         <markerGroupingEntry
+               id="com.nokia.tools.variant.confml.ui.category.xml"
+               label="XML Syntax Problems"
+               priority="50">
+         </markerGroupingEntry>
+         <markerGroupingEntry
+               id="com.nokia.tools.variant.confml.ui.category.other"
+               label="Other Problems"
+               priority="10">
+         </markerGroupingEntry>
+         <markerAttributeGrouping
+               attribute="categoryId"
+               defaultGroupingEntry="com.nokia.tools.variant.confml.ui.category.other"
+               markerType="com.nokia.tools.variant.validation.core.validationmarker">
+            <markerAttributeMapping
+                  markerGroupingEntry="com.nokia.tools.variant.confml.ui.category.layer"
+                  value="vct.confml/meta">
+            </markerAttributeMapping>
+            <markerAttributeMapping
+                  markerGroupingEntry="com.nokia.tools.variant.confml.ui.category.type"
+                  value="vct.confml/type">
+            </markerAttributeMapping>
+            <markerAttributeMapping
+                  markerGroupingEntry="com.nokia.tools.variant.confml.ui.category.data"
+                  value="vct.confml/data">
+            </markerAttributeMapping>
+            <markerAttributeMapping
+                  markerGroupingEntry="com.nokia.tools.variant.confml.ui.category.rfs"
+                  value="vct.confml/rfs">
+            </markerAttributeMapping>
+            <markerAttributeMapping
+                  markerGroupingEntry="com.nokia.tools.variant.confml.ui.category.view"
+                  value="vct.confml/view">
+            </markerAttributeMapping>
+            <markerAttributeMapping
+                  markerGroupingEntry="com.nokia.tools.variant.confml.ui.category.other"
+                  value="60">
+            </markerAttributeMapping>
+            <markerAttributeMapping
+                  markerGroupingEntry="com.nokia.tools.variant.confml.ui.category.xml"
+                  value="vct.confml/xml">
+            </markerAttributeMapping>
+         </markerAttributeGrouping>
+      </markerGrouping>
+   </extension>
+<extension
+        id="QuickFixerFeatureDefinition"
+        point="org.eclipse.ui.ide.markerResolution">
+     <markerResolutionGenerator
+           class="com.nokia.tools.variant.validation.ui.quickfix.QuickFixerFeatureDefinition"
+           markerType="com.nokia.tools.variant.validation.core.validationmarker">
+     </markerResolutionGenerator>
+  </extension>
+  <extension
+        id="QuickFixerSettingDefinition"
+        point="org.eclipse.ui.ide.markerResolution">
+     <markerResolutionGenerator
+           class="com.nokia.tools.variant.validation.ui.quickfix.QuickFixerSettingDefinition"
+           markerType="com.nokia.tools.variant.validation.core.validationmarker">
+     </markerResolutionGenerator>
+  </extension>
+
+</plugin>

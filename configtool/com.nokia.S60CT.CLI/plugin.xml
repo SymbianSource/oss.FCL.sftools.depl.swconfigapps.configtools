@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.nokia.s60ct.cli.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="com.nokia.S60CT.CLI.application"
+            name="S60CT_CLI">
+         <property
+               name="S60CT_CLI"
+               value="S60CT_CLI">
+         </property>
+         <property
+               name="appName"
+               value="S60CT_CLI">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="confml.generate">
+      <generator
+            generate_call="com.nokia.s60ct.cli.CenRepPlugin"
+            generator_id="cenrep">
+      </generator>
+   </extension>
+
+</plugin>

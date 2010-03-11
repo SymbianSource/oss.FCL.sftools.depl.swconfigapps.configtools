@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Contents" topic="html/topics/introduction.html">
+<topic label="Introduction" href="html/topics/introduction.html"/>
+<topic href="html/topics/installingUnInstallingCarbideV.html" label="Installing and Uninstalling Carbide.v">
+   <topic href="html/topics/installingUnInstallingCarbideV.html#checkingSystemCompatibility" label="Checking system compatibility">
+   </topic>
+   <topic href="html/topics/installingUnInstallingCarbideV.html#obtainingLatestVersion" label="Obtaining Latest Version of Carbide.V">
+   </topic>
+   <topic href="html/topics/installingUnInstallingCarbideV.html#installingCarbideV" label="Installing and Carbide.V">
+   </topic>
+</topic>
+<topic href="html/topics/navigatingInCarbideV.html" label="Navigating in Carbide.v">
+   <topic href="html/topics/navigatingInCarbideV.html#menuContent" label="Menu content">
+   </topic>
+   <topic href="html/topics/navigatingInCarbideV.html#toolbarContent" label="Toolbar description">
+   </topic>
+   <topic href="html/topics/navigatingInCarbideV.html#navigatingByGroups" label="Navigating By Groups">
+   </topic>
+</topic>
+<topic href="html/topics/workingWithVariantProposals.html" label="Working with Variant Proposals">
+   <topic href="html/topics/workingWithVariantProposals.html" label="Opening and saving variant proposal">
+   </topic>
+   <topic href="html/topics/workingWithVariantProposals.html#copyingSettingValues" label="Copying values">
+   </topic>
+   <topic href="html/topics/workingWithVariantProposals.html#searchingForSettings" label="Searching for settings">
+   </topic>
+   <topic href="html/topics/workingWithVariantProposals.html#creatingReport" label="Creating report">
+   </topic>
+   <topic href="html/topics/workingWithVariantProposals.html#viewingSummary" label="Summary page and changes history">
+   </topic>
+   <topic href="html/topics/workingWithVariantProposals.html#propertiesView" label="Properties view">
+   </topic>
+   <topic href="html/topics/workingWithVariantProposals.html#viewingErrors" label="Special views">
+      <topic href="html/topics/workingWithVariantProposals.html#viewingErrors" label="Errors view">
+      </topic>
+      <topic href="html/topics/workingWithVariantProposals.html#viewingNotes" label="Notes view">
+      </topic>
+      <topic href="html/topics/workingWithVariantProposals.html#viewingChanges" label="Changes view">
+      </topic>
+   </topic>
+</topic>
+<topic href="html/topics/workingWithSettings.html" label="Working with settings in the editor">
+   <topic href="html/topics/workingWithSettings.html#editingSettingsValues" label="Editing Values of Settings">
+   </topic>
+   <topic href="html/topics/workingWithSettings.html#editingSequences" label="Editing Sequence Settings">
+   </topic>
+   <topic href="html/topics/workingWithSettings.html#validatingSettingsValues" label="Validating Values of Settings for Correctness">
+   </topic>
+   <topic href="html/topics/workingWithSettings.html#selectingSettings" label="Selecting Settings">
+   </topic>
+   <topic href="html/topics/workingWithSettings.html#restoringSettingsToDefaultValues" label="Restoring Settings to their Default Values">
+   </topic>
+   <topic href="html/topics/workingWithSettings.html#orderSettings" label="Sorting of settings">
+   </topic>
+   <topic href="html/topics/workingWithSettings.html#appendingNotesToSettings" label="Appending Notes to Settings">
+   </topic>
+   <topic href="html/topics/workingWithSettings.html#removingSettings" label="Hiding Settings">
+   </topic>
+   <topic href="html/topics/workingWithSettings.html#relevantSetting" label="Using Relevant setting option">
+   </topic>
+   <topic href="html/topics/customizingGraphicalElements.html" label="Customizing Graphical Elements">
+   </topic>
+</topic>
+<topic href="html/topics/workingWithResources.html" label="Working with Resources library">
+   <topic href="html/topics/workingWithResources.html#importingResources" label="Importing resources">
+   </topic>
+   <topic href="html/topics/workingWithResources.html#removingResources" label="Resources Library operations">
+   </topic>
+   <topic href="html/topics/workingWithResources.html#previewingResources" label="Preview resources">
+   </topic>
+   <topic href="html/topics/workingWithResources.html#associatingResourcesToSettings" label="Associating Resources with Settings">
+   </topic>
+</topic>
+<topic label="Obtaining More Information on Carbide.v" href="html/topics/obtainingMoreInformation.html"/>
+</toc>

@@ -1,0 +1,19 @@
+#Wed Sep 05 09:38:53 EEST 2007
+###############################################################
+#commar separated list of the active columns in Setting Editor#
+#Options: TYPE,VALUE,REF,READ_ONLY,CONSTRAINT,RELEVANT,REQUIRED,FEATURE#
+SettingEditor/Columns=TYPE,VALUE,REF,READ_ONLY
+
+#crml PATH;
+CenRep/PATH=crml
+
+#ibyml PATH
+IBY/PATH=ibyml
+
+#genconfml PATH
+GENCONFML/PATH=genconfml;\\epoc32\\rom\\config\\confml_data\\s60\\
+
+#Variant folder Macros Name
+VARIANT/VAR=VARIANT
+
+VALIDATION/URL=http://s60wiki.nokia.com/S60Wiki/Configuration_Tool_Validation

@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core Plug-in
+Bundle-SymbolicName: com.nokia.tools.variant.validation.core;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: NOKIA
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.core.resources;bundle-version="3.4.0",
+ org.eclipse.core.runtime;bundle-version="3.4.0",
+ com.nokia.tools.variant.confml.core;bundle-version="2.0.0",
+ org.eclipse.emf.common;bundle-version="2.4.0",
+ org.eclipse.emf.ecore;bundle-version="2.4.0",
+ com.nokia.tools.vct.common.core,
+ com.nokia.tools.vct.common.appmodel,
+ org.eclipse.emf.transaction;bundle-version="1.2.0",
+ org.eclipse.ui;bundle-version="3.4.0",
+ org.apache.xerces;bundle-version="2.9.0",
+ com.nokia.tools.vct.confml;bundle-version="1.0.0",
+ com.nokia.tools.vct.crml;bundle-version="1.0.0"
+Export-Package: com.nokia.tools.variant.validation.core,
+ com.nokia.tools.variant.validation.core.builder,
+ com.nokia.tools.variant.validation.core.properties,
+ com.nokia.tools.variant.validation.core.validators
+Bundle-Activator: com.nokia.tools.variant.validation.core.ValidationCorePlugin
+Bundle-ActivationPolicy: lazy
+Import-Package: com.nokia.tools.variant.validation.core

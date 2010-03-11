@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Core Plug-in
+Bundle-SymbolicName: com.nokia.tools.carbidect.cone.core
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.tools.carbidect.cone.core.ConeCore
+Bundle-Vendor: NOKIA
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: com.nokia.tools.carbidect.cone.core,
+ com.nokia.tools.carbidect.cone.core.actions,
+ com.nokia.tools.carbidect.cone.core.internal.actions;x-friends:="com.nokia.tools.carbidect.cone.tests"

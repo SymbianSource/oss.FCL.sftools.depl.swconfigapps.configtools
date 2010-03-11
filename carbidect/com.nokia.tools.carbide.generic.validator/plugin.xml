@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+All rights reserved.
+This component and the accompanying materials are made available
+under the terms of "Eclipse Public License v1.0"
+which accompanies this distribution, and is available
+at the URL "http://www.eclipse.org/legal/epl-v10.html".
+
+Initial Contributors:
+Nokia Corporation - initial contribution.
+
+Contributors:
+
+  Description: This file is part of com.nokia.tools.carbide.generic.validator component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.wst.xml.core.catalogContributions">
+      <catalogContribution
+            id="com.nokia.tools.carbide.confml.validation.catalogContribution">
+         <public
+               id="http://www.s60.com/xml/confml/1"
+               publicId="http://www.s60.com/xml/confml/1"
+               uri="data/confml.xsd"
+               webURL="http://www.s60.com/xml/confml/1">
+         </public>
+         <public
+               id="http://www.s60.com/xml/confml/2"
+               publicId="http://www.s60.com/xml/confml/2"
+               uri="data/confml2.xsd"
+               webURL="http://www.s60.com/xml/confml/2">
+         </public>
+         <public
+               id="http://www.w3.org/1999/xlink"
+               publicId="http://www.w3.org/1999/xlink"
+               uri="data/xlink.xsd"
+               webURL="http://www.w3.org/1999/xlink">
+         </public>
+         <public
+               id="http://www.s60.com/xml/cenrep/1"
+               publicId="http://www.s60.com/xml/cenrep/1"
+               uri="data/crml.xsd"
+               webURL="http://www.s60.com/xml/cenrep/1">
+         </public>
+      </catalogContribution>
+   </extension>
+   <extension
+         point="com.nokia.tools.carbide.validation">
+      <validator
+            file_extension="confml"
+            name="Confml Validation"
+            schema_uri="data/confml.xsd">
+      </validator>
+      <validator
+            file_extension="crml"
+            name="Crml Validation"
+            schema_uri="data/crml.xsd">
+      </validator>
+   </extension>
+</plugin>

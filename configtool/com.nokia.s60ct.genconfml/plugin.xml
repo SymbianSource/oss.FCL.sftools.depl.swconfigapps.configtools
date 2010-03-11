@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="confml.generate">
+      <generator
+            generate_call="com.nokia.s60ct.genconfml.GenerateCall"
+            generator_id="gencon">
+      </generator>
+   </extension>
+   <extension
+         point="startup.initializer">
+      <initializer
+            class="com.nokia.s60ct.genconfml.GenConfMlPluginInitializer">
+      </initializer>
+   </extension>
+
+
+</plugin>

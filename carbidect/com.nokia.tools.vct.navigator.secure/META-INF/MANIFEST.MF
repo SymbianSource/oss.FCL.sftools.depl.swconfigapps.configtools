@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Sign Plug-in
+Bundle-SymbolicName: com.nokia.tools.vct.navigator.secure;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Vendor: NOKIA
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.nokia.tools.vct.common.appmodel,
+ org.eclipse.core.resources,
+ org.eclipse.ui.navigator,
+ com.nokia.tools.variant.confml.core,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.transaction,
+ com.nokia.tools.vct.common.core,
+ com.nokia.tools.vct.common.ui,
+ com.nokia.tools.vct.common.secure.core,
+ com.nokia.tools.vct.common.secure.ui
+Bundle-Activator: com.nokia.tools.vct.navigator.sign.SigningUIPlugin
+Bundle-ActivationPolicy: lazy

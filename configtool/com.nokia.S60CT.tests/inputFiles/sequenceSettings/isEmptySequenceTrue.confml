@@ -1,0 +1,8 @@
+<configuration xmlns="http://www.s60.com/xml/confml/1" xmlns:xi="http://www.w3.org/2001/xinclude" name="MyReplacePhonebook">
+    <xi:include href="phonebook.confml#/"/>
+    <data>
+        <Phonebook>
+            <Contact empty="true"/>
+         </Phonebook>
+    </data>
+</configuration>

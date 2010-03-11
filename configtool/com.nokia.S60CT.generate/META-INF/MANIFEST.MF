@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Generate Plug-in
+Bundle-SymbolicName: com.nokia.S60CT.generate;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.s60ct.generate.Activator
+Bundle-Vendor: NOKIA
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ com.nokia.S60CT.common;visibility:=reexport,
+ com.nokia.S60CT,
+ org.eclipse.emf.validation
+Eclipse-LazyStart: true
+Export-Package: com.nokia.s60ct.generate;
+  uses:="com.nokia.s60ct.interfaces,
+   org.eclipse.core.runtime,
+   configurationemf,
+   interfaces,
+   org.osgi.framework",
+ com.nokia.s60ct.interfaces;uses:="com.nokia.s60ct.generate"

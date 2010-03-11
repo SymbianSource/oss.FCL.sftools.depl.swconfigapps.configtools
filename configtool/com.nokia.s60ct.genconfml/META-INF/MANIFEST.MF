@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Transform Plug-in
+Bundle-SymbolicName: com.nokia.s60ct.genconfml;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.s60ct.genconfml.Activator
+Bundle-Vendor: NOKIA
+Require-Bundle: org.eclipse.core.runtime,
+ com.nokia.S60CT.generate,
+ org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi
+Eclipse-LazyStart: true
+Export-Package: com.nokia.s60ct.genconfml;uses:="org.eclipse.core.runtime,javax.xml.transform,org.osgi.framework"

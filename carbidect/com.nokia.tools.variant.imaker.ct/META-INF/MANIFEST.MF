@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: iMaker CT  Plug-in
+Bundle-SymbolicName: com.nokia.tools.variant.imaker.ct;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.tools.variant.imaker.ct.ImakerUIPlugin
+Bundle-Vendor: NOKIA
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.nokia.tools.vct.imaker.core;bundle-version="1.0.0",
+ com.nokia.tools.vct.common.appmodel,
+ org.eclipse.core.resources;bundle-version="3.4.0",
+ org.eclipse.ui.console;bundle-version="3.3.0",
+ com.nokia.tools.variant.confml.core;bundle-version="2.0.0",
+ org.eclipse.emf.common;bundle-version="2.4.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

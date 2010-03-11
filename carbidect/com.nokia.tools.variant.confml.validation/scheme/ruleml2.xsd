@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema 
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.s60.com/xml/ruleml/2"
+	xmlns:ruleml="http://www.s60.com/xml/ruleml/2"
+	elementFormDefault="qualified">
+
+    <xs:element name="ruleml">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="rule" type="xs:string"/>
+                <xs:element name="eval_globals" type="ruleml:evalGlobalsType"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:complexType name="evalGlobalsType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="file" type="xs:string" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>

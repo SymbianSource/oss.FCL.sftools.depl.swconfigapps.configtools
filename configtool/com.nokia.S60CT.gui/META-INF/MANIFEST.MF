@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-ToolName: S60 Configuration Tool
+Bundle-Name: Gui Plug-in
+Bundle-SymbolicName: com.nokia.S60CT.gui; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Date: 18-04-2008
+Bundle-RepositoryVersion: 1230
+Bundle-Activator: com.nokia.s60ct.gui.Activator
+Bundle-Vendor: NOKIA
+Bundle-Localization: plugin
+Require-Bundle: com.nokia.S60CT.generate,
+ org.eclipse.core.runtime,
+ org.eclipse.emf.edit.ui,
+ org.eclipse.ui.ide,
+ org.eclipse.core.resources,
+ com.nokia.S60CT.common,
+ com.nokia.S60CT.edit,
+ org.eclipse.core.runtime.compatibility.auth,
+ org.eclipse.ui
+Eclipse-LazyStart: true
+Bundle-ClassPath: .
+Export-Package: com.nokia.s60ct.gui.cpfImportAction

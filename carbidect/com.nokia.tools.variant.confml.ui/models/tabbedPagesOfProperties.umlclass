@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_d07ikH8sEd2bU5KxF_wo3g" type="UMLClass" name="tabbedPagesOfProperties.umlclass" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_e8RlIH8sEd2bU5KxF_wo3g" type="2014">
+    <children xmi:type="notation:Node" xmi:id="_e8kgEH8sEd2bU5KxF_wo3g" type="5020"/>
+    <children xmi:type="notation:Node" xmi:id="_e8kgEX8sEd2bU5KxF_wo3g" type="7032">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_e8kgEn8sEd2bU5KxF_wo3g" collapsed="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_e8kgE38sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_e8kgFH8sEd2bU5KxF_wo3g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_e8RlIX8sEd2bU5KxF_wo3g"/>
+    <element xmi:type="uml:Package" href="tabbedPagesOfProperties.uml#_duEFkX8sEd2bU5KxF_wo3g"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_e8RlIn8sEd2bU5KxF_wo3g"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_0i_O4H8sEd2bU5KxF_wo3g" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_0i_O438sEd2bU5KxF_wo3g" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="_0kLhsH8sEd2bU5KxF_wo3g" bold="true" italic="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_0i_O5H8sEd2bU5KxF_wo3g" type="5019"/>
+    <children xmi:type="notation:Node" xmi:id="_0i_O5X8sEd2bU5KxF_wo3g" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_0i_O5n8sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_0i_O538sEd2bU5KxF_wo3g" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_0i_O6H8sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_0i_O6X8sEd2bU5KxF_wo3g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_0i_O6n8sEd2bU5KxF_wo3g" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_mgRFkH8tEd2bU5KxF_wo3g" type="3002">
+        <element xmi:type="uml:Operation" href="tabbedPagesOfProperties.uml#_mgHUkH8tEd2bU5KxF_wo3g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_mgRFkX8tEd2bU5KxF_wo3g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_bXJ7wH8wEd2bU5KxF_wo3g" type="3002">
+        <element xmi:type="uml:Operation" href="tabbedPagesOfProperties.uml#_bXAKwH8wEd2bU5KxF_wo3g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_bXJ7wX8wEd2bU5KxF_wo3g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_KJDbkH8xEd2bU5KxF_wo3g" type="3002">
+        <element xmi:type="uml:Operation" href="tabbedPagesOfProperties.uml#_KI6RoH8xEd2bU5KxF_wo3g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_KJDbkX8xEd2bU5KxF_wo3g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_NGUd8H8xEd2bU5KxF_wo3g" type="3002">
+        <element xmi:type="uml:Operation" href="tabbedPagesOfProperties.uml#_NGKs8H8xEd2bU5KxF_wo3g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_NGUd8X8xEd2bU5KxF_wo3g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_OdfsQH8xEd2bU5KxF_wo3g" type="3002">
+        <element xmi:type="uml:Operation" href="tabbedPagesOfProperties.uml#_OdWiUH8xEd2bU5KxF_wo3g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_OdfsQX8xEd2bU5KxF_wo3g"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_0i_O638sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_0i_O7H8sEd2bU5KxF_wo3g" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_0i_O7X8sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_0i_O7n8sEd2bU5KxF_wo3g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_0i_O738sEd2bU5KxF_wo3g" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_0i_O8H8sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_0i_O8X8sEd2bU5KxF_wo3g" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_0i_O8n8sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_0i_O838sEd2bU5KxF_wo3g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_0i_O4X8sEd2bU5KxF_wo3g"/>
+    <element xmi:type="uml:Class" href="tabbedPagesOfProperties.uml#_0fjgYH8sEd2bU5KxF_wo3g"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0i_O4n8sEd2bU5KxF_wo3g" x="239" y="59"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="__I1MMH8sEd2bU5KxF_wo3g" type="2001">
+    <children xmi:type="notation:Node" xmi:id="__I1MM38sEd2bU5KxF_wo3g" type="5003">
+      <styles xmi:type="notation:FontStyle" xmi:id="__I1MRH8sEd2bU5KxF_wo3g" bold="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="__I1MNH8sEd2bU5KxF_wo3g" type="5019"/>
+    <children xmi:type="notation:Node" xmi:id="__I1MNX8sEd2bU5KxF_wo3g" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__I1MNn8sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="__I1MN38sEd2bU5KxF_wo3g" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__I1MOH8sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__I1MOX8sEd2bU5KxF_wo3g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="__I1MOn8sEd2bU5KxF_wo3g" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_Cdv5kH8tEd2bU5KxF_wo3g" type="3002">
+        <element xmi:type="uml:Operation" href="tabbedPagesOfProperties.uml#_Cdc-oH8tEd2bU5KxF_wo3g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_Cdv5kX8tEd2bU5KxF_wo3g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_T3FnIH8xEd2bU5KxF_wo3g" type="3002">
+        <element xmi:type="uml:Operation" href="tabbedPagesOfProperties.uml#_T2yFIH8xEd2bU5KxF_wo3g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_T3FnIX8xEd2bU5KxF_wo3g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_aOq0QH8xEd2bU5KxF_wo3g" type="3002">
+        <element xmi:type="uml:Operation" href="tabbedPagesOfProperties.uml#_aOhDQH8xEd2bU5KxF_wo3g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_aOq0QX8xEd2bU5KxF_wo3g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_bYb4sH8xEd2bU5KxF_wo3g" type="3002">
+        <element xmi:type="uml:Operation" href="tabbedPagesOfProperties.uml#_bYSHsH8xEd2bU5KxF_wo3g"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_bYb4sX8xEd2bU5KxF_wo3g"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__I1MO38sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="__I1MPH8sEd2bU5KxF_wo3g" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__I1MPX8sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__I1MPn8sEd2bU5KxF_wo3g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="__I1MP38sEd2bU5KxF_wo3g" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="__I1MQH8sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:TitleStyle" xmi:id="__I1MQX8sEd2bU5KxF_wo3g" showTitle="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="__I1MQn8sEd2bU5KxF_wo3g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="__I1MQ38sEd2bU5KxF_wo3g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="__I1MMX8sEd2bU5KxF_wo3g"/>
+    <element xmi:type="uml:Class" href="tabbedPagesOfProperties.uml#__IhqMH8sEd2bU5KxF_wo3g"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="__I1MMn8sEd2bU5KxF_wo3g" x="260" y="260"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_uE3YEH8wEd2bU5KxF_wo3g" type="Note">
+    <children xmi:type="notation:Node" xmi:id="_uE3YFX8wEd2bU5KxF_wo3g" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_uE3YFn8wEd2bU5KxF_wo3g" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_uE3YEX8wEd2bU5KxF_wo3g" description="method calls super.createControls, executes Tab hiding action if requested, calls createSpecificControls and than calls layout(true, true) on main component" fillColor="13369343" lineColor="6737151" lineWidth="1"/>
+    <styles xmi:type="notation:TextStyle" xmi:id="_uE3YEn8wEd2bU5KxF_wo3g"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_uE3YE38wEd2bU5KxF_wo3g"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uE3YFH8wEd2bU5KxF_wo3g" x="-70" y="130" width="292"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_mBBoAH8xEd2bU5KxF_wo3g" type="Note">
+    <children xmi:type="notation:Node" xmi:id="_mBBoBX8xEd2bU5KxF_wo3g" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_mBBoBn8xEd2bU5KxF_wo3g" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_mBBoAX8xEd2bU5KxF_wo3g" description="createSpecificControls(...) is an abstract method that is called to fill in components of XXXSectionClass" fillColor="13369343" lineColor="6737151" lineWidth="1"/>
+    <styles xmi:type="notation:TextStyle" xmi:id="_mBBoAn8xEd2bU5KxF_wo3g"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_mBBoA38xEd2bU5KxF_wo3g"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mBBoBH8xEd2bU5KxF_wo3g" x="480" y="125" width="256"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_BL1zgH8yEd2bU5KxF_wo3g" type="Note">
+    <children xmi:type="notation:Node" xmi:id="_BL1zhX8yEd2bU5KxF_wo3g" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_BL1zhn8yEd2bU5KxF_wo3g" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_BL1zgX8yEd2bU5KxF_wo3g" description="createControls(...) is supposed to select whether to keep tabs and to call super.createControls(...) " fillColor="13369343" lineColor="6737151" lineWidth="1"/>
+    <styles xmi:type="notation:TextStyle" xmi:id="_BL1zgn8yEd2bU5KxF_wo3g"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_BL1zg38yEd2bU5KxF_wo3g"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BL1zhH8yEd2bU5KxF_wo3g" x="460" y="305" width="291"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_bJ54AH8yEd2bU5KxF_wo3g" type="rectangle">
+    <children xmi:type="notation:Node" xmi:id="_bJ54BX8yEd2bU5KxF_wo3g" type="DiagramName">
+      <element xsi:nil="true"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_bJ54Bn8yEd2bU5KxF_wo3g" type="Description">
+      <element xsi:nil="true"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_bJ54AX8yEd2bU5KxF_wo3g" description="TabControlPropertySection is intented to provide services of tab section removal. There is no need to use it if you do not want to remove the tab." fillColor="13369343" lineColor="6737151" lineWidth="1"/>
+    <styles xmi:type="notation:TextStyle" xmi:id="_bJ54An8yEd2bU5KxF_wo3g"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_bJ54A38yEd2bU5KxF_wo3g"/>
+    <element xsi:nil="true"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_bJ54BH8yEd2bU5KxF_wo3g" x="120" y="5" width="451"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_d07ikX8sEd2bU5KxF_wo3g"/>
+  <styles xmi:type="notation:FilteringStyle" xmi:id="_d07ikn8sEd2bU5KxF_wo3g"/>
+  <element xmi:type="uml:Package" href="tabbedPagesOfProperties.uml#_duEFkX8sEd2bU5KxF_wo3g"/>
+  <edges xmi:type="notation:Edge" xmi:id="_aEvRoX8wEd2bU5KxF_wo3g" type="4001" source="__I1MMH8sEd2bU5KxF_wo3g" target="_0i_O4H8sEd2bU5KxF_wo3g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_aEvRon8wEd2bU5KxF_wo3g"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_aEvRo38wEd2bU5KxF_wo3g"/>
+    <element xmi:type="uml:Generalization" href="tabbedPagesOfProperties.uml#_aEvRoH8wEd2bU5KxF_wo3g"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_aEvRpH8wEd2bU5KxF_wo3g" points="[1, -7, -2, 149]$[18, -104, 15, 52]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_aEvRpX8wEd2bU5KxF_wo3g" id="(0.57009345,0.067307696)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_uFUEAH8wEd2bU5KxF_wo3g" type="NoteAttachment" source="_0i_O4H8sEd2bU5KxF_wo3g" target="_uE3YEH8wEd2bU5KxF_wo3g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_uFUEAX8wEd2bU5KxF_wo3g" lineWidth="1"/>
+    <styles xmi:type="notation:ArrowStyle" xmi:id="_uFUEAn8wEd2bU5KxF_wo3g"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_uFUEA38wEd2bU5KxF_wo3g"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uFUEBH8wEd2bU5KxF_wo3g" points="[-3, 0, 183, 16]$[-41, -3, 145, 13]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Fos10H8xEd2bU5KxF_wo3g" id="(0.0,0.59375)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_mBKx8H8xEd2bU5KxF_wo3g" type="NoteAttachment" source="_mBBoAH8xEd2bU5KxF_wo3g" target="_0i_O4H8sEd2bU5KxF_wo3g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_mBKx8X8xEd2bU5KxF_wo3g" lineWidth="1"/>
+    <styles xmi:type="notation:ArrowStyle" xmi:id="_mBKx8n8xEd2bU5KxF_wo3g"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_mBKx838xEd2bU5KxF_wo3g"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mBKx9H8xEd2bU5KxF_wo3g" points="[0, 0, -338, -139]$[239, 98, -99, -41]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_BL1zh38yEd2bU5KxF_wo3g" type="NoteAttachment" source="_BL1zgH8yEd2bU5KxF_wo3g" target="__I1MMH8sEd2bU5KxF_wo3g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_BL1ziH8yEd2bU5KxF_wo3g" lineWidth="1"/>
+    <styles xmi:type="notation:ArrowStyle" xmi:id="_BL1ziX8yEd2bU5KxF_wo3g"/>
+    <styles xmi:type="notation:LineTypeStyle" xmi:id="_BL1zin8yEd2bU5KxF_wo3g"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_BL1zi38yEd2bU5KxF_wo3g" points="[0, 0, -334, -333]$[260, 260, -74, -73]"/>
+  </edges>
+</notation:Diagram>

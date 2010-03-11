@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+   <extension
+         point="org.eclipse.emf.ecore.generated_package">
+      <package
+            class="com.nokia.tools.s60ct.model.confml.ConfmlPackage"
+            genModel="model/s60ct_confml.genmodel"
+            uri="http://www.nokia.com/xml/ns/s60ct-confml">
+      </package>
+   </extension>
+
+
+</plugin>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+	A content file for the Universal Welcome
+-->
+<introContent>
+    <!-- Root page -->
+    <page id="root" style="css/root.css"  style-id="page">	    
+        <title style-id="intro-header">Welcome to Carbide.ct</title>
+        <link url="http://org.eclipse.ui.intro/switchToLaunchBar" label="Go to the workbench" id="workbench" />
+        <!-- <link url="http://org.eclipse.ui.intro/showPage?id=tutorials" label="Link to tutorials"  id="tutorials" /> -->
+    </page>
+	
+    <!-- Standby page -->
+    <page id="standby" style="css/standby_root.css" style-id="page">
+   		 <title style-id="intro-header">Standby Page</title> 
+    </page>    
+    
+    <!-- Tutorials page -->
+	<page id="tutorials" style= "css/tutorials/tutorials.css" style-id="page">
+        <title style-id="intro-header">Tutorials</title>	
+        <text>This page under construction</text>
+    </page>   
+</introContent>

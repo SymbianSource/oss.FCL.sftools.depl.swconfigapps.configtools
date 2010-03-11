@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http:///cenrep.ecore" 
+       class = "cenrep.CenrepPackage"
+       genModel = "model/CRPluginModel.genmodel" /> 
+  </extension>
+  <extension
+        point="org.eclipse.emf.validation.constraintProviders">
+     <constraintProvider
+           cache="true">
+        <constraints
+              categories="general.validation">
+           <constraint
+                 class="constraints.AccessExistanceConstraint"
+                 id="readAccessExistance"
+                 lang="Java"
+                 name="Read Access Existance"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0} does not have any read capabilities.
+              </message>
+              <description>
+                 description body text
+              </description>
+              <target
+                    class="IAccessable">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.AlwaysPassConstraint"
+                 id="alwaysPassRule"
+                 lang="Java"
+                 name="Better to have AlwaysPass"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0} read capabilities differs from AlwaysPass
+              </message>
+              <target
+                    class="Access">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.ReadOnlyRuleConstraint"
+                 id="readOnlyRule"
+                 lang="Java"
+                 name="Read-only Rule"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0} is read-only, but also write capabilities are set.
+              </message>
+              <target
+                    class="IReadOnly">
+              </target>
+              <description>
+                 description body text
+              </description>
+              <target
+                    class="IAccessable">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.WriteCapaExistanceConstraint"
+                 id="writeCapaRule"
+                 lang="Java"
+                 name="Write Capa Existance"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 Writable {0} does not have any write capabilities.
+              </message>
+              <description>
+                 description body text
+              </description>
+              <target
+                    class="IAccessable">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.AlwaysPassConflict"
+                 id="readCapaWithAlwaysPass"
+                 lang="Java"
+                 name="Must have AlwaysPass or something"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0} has other read capabilities defined with AlwaysPass.
+              </message>
+              <description>
+                 description body text
+              </description>
+              <target
+                    class="Access">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.WAccessWarning"
+                 id="com.nokia.S60CT.validation.constraint4"
+                 lang="Java"
+                 name="wAccess: AlwaysPass or WriteDeviceData"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0} write capability is neither AlwaysPass nor WriteDeviceData.
+              </message>
+              <target
+                    class="Access">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.CapaAmount"
+                 id="capa.amount"
+                 lang="Java"
+                 name="Capability Amount"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0} exceeds capability amount limitations.
+              </message>
+              <description>
+                 description body text
+              </description>
+              <target
+                    class="Access">
+              </target>
+           </constraint>
+        </constraints>
+        <package
+              namespaceUri="http://www.s60.com/xml/cenrep/1">
+        </package>
+        <constraints
+              categories="general.validation">
+           <constraint
+                 class="constraints.uidValue.UidValueCheck"
+                 id="uidValue.constraint"
+                 lang="Java"
+                 name="uidValue Check"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Repository">
+              </target>
+           </constraint>
+        </constraints>
+        <constraints
+              categories="general.validation">
+           <constraint
+                 class="constraints.keyRange.IndexBits"
+                 id="indexBit.constraint"
+                 lang="Java"
+                 name="Index Bit Constraint"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="KeyRange">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.keyRange.FirstIndexCheck"
+                 id="firstIndex.check"
+                 lang="Java"
+                 name="First Index Check"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="KeyRange">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.keyRange.FirstLastUids"
+                 id="firstInt.lastInt.check"
+                 lang="Java"
+                 name="FirstInt LastInt"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="KeyRange">
+              </target>
+           </constraint>
+        </constraints>
+        <constraints
+              categories="general.validation">
+           <constraint
+                 class="constraints.key.NameConstraint"
+                 id="key.compulsory.attr.name"
+                 lang="Java"
+                 name="Attr Name"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 Name of the key {0} is not defined.
+              </message>
+              <target
+                    class="Key">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.key.IdentConstraint"
+                 id="key.compulsory.attr.ident"
+                 lang="Java"
+                 name="Attr Ident"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Key">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.key.RefConstraint"
+                 id="key.compulsory.attr.ref"
+                 lang="Java"
+                 name="Attr Ref"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 Key {0} does not have reference.
+              </message>
+              <target
+                    class="Key">
+              </target>
+           </constraint>
+        </constraints>
+        <constraints
+              categories="general.validation">
+           <constraint
+                 class="constraints.RepositoryBUpOwnerConstraint"
+                 id="repository.backup.owner"
+                 lang="Java"
+                 name="Back-up and Owner"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 Back-up is enabled for {0}, but repository misses owner definition.
+              </message>
+              <target
+                    class="Repository">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.ReadOnlyBackUpConstraint"
+                 id="readOnly.backUp"
+                 lang="Java"
+                 name="Read-Only and Backup"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 Read-only {0} is marked for backup.
+              </message>
+              <target
+                    class="IReadOnly">
+              </target>
+              <target
+                    class="IBackup">
+              </target>
+           </constraint>
+        </constraints>
+        <constraints
+              categories="configurable.value">
+           <constraint
+                 class="constraints.ReadOnlyRFS"
+                 id="repository.readOnly.rfs"
+                 lang="Java"
+                 name="ReadOnly RFS"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 Read-only {0} is marked for RFS
+              </message>
+              <target
+                    class="RVG">
+              </target>
+              <target
+                    class="IReadOnly">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.RFSwCapaConstraint"
+                 id="rfs.and.wcapa"
+                 lang="Java"
+                 name="RFS and W Capa"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0} has RFS defined, but write capability is missing.
+              </message>
+              <target
+                    class="RVG">
+              </target>
+              <target
+                    class="IAccessable">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.RFSwSIDConstraint"
+                 id="rfs.and.w.sid"
+                 lang="Java"
+                 name="RFS and w.SID"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0} has RFS defined, but write capability is restricted with SID.
+              </message>
+              <target
+                    class="RVG">
+              </target>
+              <target
+                    class="IAccessable">
+              </target>
+           </constraint>
+           <constraint
+                 class="constraints.key.GValueConstraint"
+                 id="key.gvalue"
+                 lang="Java"
+                 name="Key GValue"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 Setting of the key {0} doesn&apos;t have any value.
+              </message>
+              <target
+                    class="Key">
+              </target>
+           </constraint>
+        </constraints>
+     </constraintProvider>
+  </extension>
+
+</plugin>
+

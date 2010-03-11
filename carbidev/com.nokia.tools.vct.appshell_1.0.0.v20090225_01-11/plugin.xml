@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of the License "Symbian Foundation License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.appshell component.
+-->
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
+      <factory
+            uri="http:://www.s60.com/xml/applicationshell/1"
+            class="com.nokia.tools.vct.appshell.appshellmodel.provider.EAppshellModelItemProviderAdapterFactory"
+            supportedTypes=
+              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
+               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
+               org.eclipse.emf.edit.provider.ITreeItemContentProvider
+               org.eclipse.emf.edit.provider.IItemLabelProvider
+               org.eclipse.emf.edit.provider.IItemPropertySource"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http:://www.s60.com/xml/applicationshell/1"
+            class="com.nokia.tools.vct.appshell.appshellmodel.EAppshellModelPackage"
+            genModel="model/appshell-mode.genmodel"/>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.newWizards">
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="com.nokia.tools.vct.appshell.appshellmodel.presentation.EAppshellModelModelWizardID"
+            name="%_UI_EAppshellModelModelWizard_label"
+            class="com.nokia.tools.vct.appshell.appshellmodel.presentation.EAppshellModelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/EAppshellModelModelFile.gif">
+         <description>%_UI_EAppshellModelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <editor
+            class="com.nokia.tools.vct.appshell.appshellmodel.presentation.EAppshellModelEditor"
+            contributorClass="com.nokia.tools.vct.appshell.appshellmodel.presentation.EAppshellModelActionBarContributor"
+            filenames="appshelldata.xml"
+            icon="icons/full/obj16/EAppshellDocument.gif"
+            id="com.nokia.tools.vct.appshell.appshellmodel.presentation.EAppshellModelEditorID"
+            name="%_UI_EAppshellModelEditor_label">
+      </editor>
+   </extension>
+
+</plugin>

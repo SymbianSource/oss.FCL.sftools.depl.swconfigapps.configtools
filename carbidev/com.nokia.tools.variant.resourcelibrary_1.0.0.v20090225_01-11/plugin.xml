@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of the License "Symbian Foundation License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.resourcelibrary component.
+-->
+<?eclipse version="3.3"?>
+<plugin>
+   <extension-point id="resourceCategory" name="resourceCategory" schema="schema/resourceCategory.exsd"/>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Carbide.v"
+            id="com.nokia.tools.variant.carbidev">
+      </category>
+      <view
+            name="Resources"
+            icon="icons/library_16_tab.png"
+            category="com.nokia.tools.variant.carbidev"
+            class="com.nokia.tools.variant.resourcelibrary.views.ResourceLibraryView"
+            id="com.nokia.tools.variant.resourcelibrary.views.ResourceLibraryView">
+      </view>
+   </extension>
+   <extension
+         point="com.nokia.tools.variant.resourcelibrary.resourceCategory">
+      <category
+            fileSuffixes="sis"
+            icon="icons/applications_16_lib.png"
+            resourceCategory="Application">
+      </category>
+      <category
+            fileSuffixes="bmp png gif jpg jpeg tif tiff svg"
+            icon="icons/graphics_16_lib.png"
+            resourceCategory="Image">
+      </category>
+      <category
+            fileSuffixes="avi mpg mpeg"
+            icon="icons/media_16_lib.png"
+            resourceCategory="Media File">
+      </category>
+      <category
+            fileSuffixes="aif aac mp3 wav"
+            icon="icons/sounds_16_lib.png"
+            resourceCategory="Sound">
+      </category>
+      <category
+            fileSuffixes="tpf"
+            icon="icons/themes_16_lib.png"
+            resourceCategory="Theme">
+      </category>
+      <category
+            icon="icons/other_16_nav.png"
+            resourceCategory="Other">
+      </category>      
+   </extension>
+
+   <extension point="org.eclipse.core.expressions.definitions">
+		<definition id="com.nokia.tools.variant.resourcelibrary.allSelectedRemovable">
+		    <iterate operator="and">
+		       <adapt type="org.eclipse.core.resources.IStorage">
+            <not>
+               <test
+                     property="com.nokia.tools.variant.resourcelibrary.resource.isReadOnly">
+               </test>
+            </not>		          
+		       </adapt>
+		    </iterate>
+		</definition>
+		<definition id="com.nokia.tools.variant.resourcelibrary.hasRoots">
+          <count value="+"/>		          
+		</definition>
+	</extension>
+
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="com.nokia.tools.variant.resourcelibrary.handlers.ResourceTester"
+            id="com.nokia.tools.variant.resourcelibrary.resource"
+            namespace="com.nokia.tools.variant.resourcelibrary.resource"
+            properties="isRoot, isReadOnly, isFolder"
+            type="org.eclipse.core.resources.IStorage">
+      </propertyTester>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="java.net.URI"
+            class="com.nokia.tools.variant.resourcelibrary.adapters.URI2IResourceAdapter">
+         <adapter
+               type="org.eclipse.core.resources.IResource">
+         </adapter>
+      </factory>
+      <factory
+            adaptableType="org.eclipse.core.resources.IResource"
+            class="com.nokia.tools.variant.resourcelibrary.adapters.IResource2URIAdapter">
+         <adapter
+               type="java.net.URI">
+         </adapter>
+      </factory>
+   </extension>
+   <extension
+         point="com.nokia.tools.variant.preview.contentpreview">
+      <descriptorFactory
+            class="com.nokia.tools.variant.media.ui.preview.ImagePreviewDescriptor">
+         <contentTypeBinding
+               contentTypeId="com.nokia.tools.variant.contenttype.image">
+         </contentTypeBinding>
+      </descriptorFactory>
+   </extension>
+
+   
+</plugin>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.s60ct.resources component.
+-->
+<?eclipse version="3.3"?>
+<plugin>
+   <extension-point id="resourceCategory" name="resourceCategory" schema="schema/resourceCategory.exsd"/>
+   <extension
+         point="com.nokia.tools.s60ct.resources.resourceCategory">
+      <category
+            fileSuffixes="sis"
+            icon="icons/applications_16_lib.png"
+            resourceCategory="Application">
+      </category>
+      <category
+            fileSuffixes="bmp png gif jpg jpeg tif tiff svg"
+            icon="icons/graphics_16_lib.png"
+            resourceCategory="Image">
+      </category>
+      <category
+            fileSuffixes="avi mpg mpeg"
+            icon="icons/media_16_lib.png"
+            resourceCategory="Media File">
+      </category>
+      <category
+            fileSuffixes="aif aac mp3 wav"
+            icon="icons/sounds_16_lib.png"
+            resourceCategory="Sound">
+      </category>
+      <category
+            fileSuffixes="tpf"
+            icon="icons/themes_16_lib.png"
+            resourceCategory="Theme">
+      </category>
+      <category
+            icon="icons/other_16_nav.png"
+            resourceCategory="Other">
+      </category>      
+   </extension>
+
+   <extension point="org.eclipse.core.expressions.definitions">
+		<definition id="com.nokia.tools.s60ct.resources.allSelectedRemovable">
+		    <iterate operator="and">
+		       <adapt type="org.eclipse.core.resources.IStorage">
+            <not>
+               <test
+                     property="com.nokia.tools.s60ct.resources.resource.isReadOnly">
+               </test>
+            </not>		          
+		       </adapt>
+		    </iterate>
+		</definition>
+		<definition id="com.nokia.tools.s60ct.resources.hasRoots">
+          <count value="+"/>		          
+		</definition>
+	</extension>
+
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="com.nokia.tools.s60ct.resources.handlers.ResourceTester"
+            id="com.nokia.tools.s60ct.resources.resource"
+            namespace="com.nokia.tools.s60ct.resources.resource"
+            properties="isRoot, isReadOnly, isFolder"
+            type="org.eclipse.core.resources.IStorage">
+      </propertyTester>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="java.net.URI"
+            class="com.nokia.tools.s60ct.resources.adapters.URI2IResourceAdapter">
+         <adapter
+               type="org.eclipse.core.resources.IResource">
+         </adapter>
+      </factory>
+      <factory
+            adaptableType="org.eclipse.core.resources.IResource"
+            class="com.nokia.tools.s60ct.resources.adapters.IResource2URIAdapter">
+         <adapter
+               type="java.net.URI">
+         </adapter>
+      </factory>
+   </extension>
+
+   
+</plugin>

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: UI for Key Store
+Bundle-SymbolicName: com.nokia.tools.vct.common.secure.ui;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.tools.vct.secure.common.ui.SecurityUI
+Bundle-Vendor: NOKIA
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.core.expressions,
+ org.eclipse.ui,
+ com.nokia.tools.vct.common.core,
+ com.nokia.tools.vct.common.ui,
+ com.nokia.tools.vct.common.secure.core
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy
+Export-Package: 
+ com.nokia.tools.vct.secure.common.ui

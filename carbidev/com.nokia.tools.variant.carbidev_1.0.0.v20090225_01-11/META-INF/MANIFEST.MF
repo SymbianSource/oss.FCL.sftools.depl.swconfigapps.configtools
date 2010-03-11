@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Carbidev Plug-in
+Bundle-Localization: plugin
+Bundle-SymbolicName: com.nokia.tools.variant.carbidev;singleton:=true
+Bundle-Version: 1.0.0.v20090225_01-11
+Bundle-Activator: com.nokia.tools.variant.carbidev.Activator
+Bundle-Vendor: NOKIA
+Require-Bundle: org.eclipse.core.runtime,
+ com.nokia.tools.variant.preview;bundle-version="2.0.0",
+ com.nokia.tools.variant.resourcelibrary;bundle-version="1.0.0",
+ org.eclipse.ui.views.properties.tabbed;bundle-version="3.4.0",
+ com.nokia.tools.variant.editor;bundle-version="1.0.0",
+ org.eclipse.ui.ide;bundle-version="3.4.0",
+ com.nokia.tools.variant.views;bundle-version="1.0.0",
+ org.eclipse.update.ui;bundle-version="3.2.0",
+ org.eclipse.update.core;bundle-version="3.2.0",
+ org.eclipse.ui.browser;bundle-version="3.2.0",
+ org.eclipse.debug.core;bundle-version="3.4.0",
+ org.eclipse.debug.ui;bundle-version="3.4.0",
+ com.nokia.tools.vct.cli;bundle-version="1.0.0",
+ org.eclipse.update.configurator;bundle-version="3.2.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

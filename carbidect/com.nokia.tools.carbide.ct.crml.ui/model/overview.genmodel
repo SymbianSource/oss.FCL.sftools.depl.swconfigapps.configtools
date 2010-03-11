@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.carbide.ct.crml.ui/src"
+    editDirectory="/com.nokia.tools.carbide.ct.crml.ui.edit/src" editorDirectory="/com.nokia.tools.carbide.ct.crml.ui.editor/src"
+    modelPluginID="com.nokia.tools.carbide.ct.crml.ui" modelName="Overview" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>overview.ecore</foreignModel>
+  <genPackages prefix="Overview" basePackage="com.nokia.tools.carbide.ct.ui" disposableProviderFactory="true"
+      ecorePackage="overview.ecore#/"/>
+</genmodel:GenModel>

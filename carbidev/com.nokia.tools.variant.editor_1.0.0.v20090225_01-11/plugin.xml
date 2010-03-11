@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of the License "Symbian Foundation License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.editor component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="com.nokia.tools.variant.editor.widget" name="Editor Widget" schema="schema/com.nokia.tools.variant.editor.widget.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.nokia.tools.variant.editor.editors.CPFEditor"
+            contributorClass="com.nokia.tools.variant.editor.actionbars.CPFEditorActionBarContributor"
+            default="true"
+            extensions="cpf"
+            icon="icons/cpf_16_lib.png"
+            id="com.nokia.tools.variant.editor.editors.CPFEditor"
+            name="CPF Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com.nokia.tools.variant.editor.actionSet1"
+            label="label"
+            visible="true">
+         <action
+               class="com.nokia.tools.variant.editor.actions.OpenCpfAction"
+               icon="icons/open.png"
+               id="com.nokia.tools.variant.editor.opencpf"
+               label="Open ..."
+               menubarPath="rcpFile/open.ext"
+               style="push"
+               toolbarPath="rcpMain/open.ext"
+               tooltip="Open cpf">
+         </action>
+         <!--
+         <action
+               class="com.nokia.tools.variant.editor.actions.ResetToDefaultAction"
+               enablesFor="1"
+               id="com.nokia.tools.variant.editor.actions.ResetToDefaultAction"
+               label="R"
+               style="push"
+               toolbarPath="rcpMain/resetToDefault.ext">
+         </action>
+         <action
+               class="com.nokia.tools.variant.editor.actions.HideSettingsFromViewAction"
+               id="com.nokia.tools.variant.editor.actions.HideSettingsFromViewAction"
+               label="H"
+               style="push"
+               toolbarPath="rcpMain/hideSettingsFromView.ext">
+         </action>
+         <action
+               class="com.nokia.tools.variant.editor.actions.SelectAllSettingsAction"
+               id="com.nokia.tools.variant.editor.actions.SelectAllSettingsAction"
+               label="S"
+               style="push"
+               toolbarPath="rcpMain/selectAllSettingsAction.ext">
+         </action>
+         <action
+               class="com.nokia.tools.variant.editor.actions.DeselectAllSettingsAction"
+               id="com.nokia.tools.variant.editor.actions.DeselectAllSettingsAction"
+               label="D"
+               style="push"
+               toolbarPath="rcpMain/deselectAllSettingsAction.ext">
+         </action>
+         -->
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections
+            contributorId="com.nokia.tools.variant.editor.editors.CPF_EDITOR_TABBED_PROPERTIES_CONTRIBUTOR">
+         <propertySection
+               class="com.nokia.tools.variant.editor.properties.SettingPropertySection"
+               id="SettingSection"
+               tab="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB">
+            <input
+                  type="com.nokia.tools.variant.content.confml.Setting">
+            </input>
+         </propertySection>
+         <propertySection
+               class="com.nokia.tools.variant.editor.properties.SummaryPropertySection"
+               id="SummarySection"
+               tab="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB">
+            <input
+                  type="com.nokia.tools.variant.editor.model.summaryModel.UIElement">
+            </input>
+         </propertySection>
+         <propertySection
+               class="com.nokia.tools.variant.editor.properties.FeaturePropertySection"
+               id="FeatureSection"
+               tab="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB">
+            <input
+                  type="com.nokia.tools.variant.content.confml.Feature">
+            </input>
+         </propertySection>
+      </propertySections>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor
+            contributorId="com.nokia.tools.variant.editor.editors.CPF_EDITOR_TABBED_PROPERTIES_CONTRIBUTOR">
+         <propertyCategory
+               category="common">
+         </propertyCategory>
+      </propertyContributor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs
+            contributorId="com.nokia.tools.variant.editor.editors.CPF_EDITOR_TABBED_PROPERTIES_CONTRIBUTOR">
+         <propertyTab
+               category="common"
+               id="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB"
+               indented="false"
+               label="General">
+         </propertyTab>
+      </propertyTabs>
+   </extension>
+   <extension
+         point="com.nokia.tools.variant.editor.widget">
+      <action
+            class="com.nokia.tools.variant.editor.actions.AddSequenceItemAction"
+            widget_class="com.nokia.tools.variant.viewer.widgets.SequenceWidget">
+      </action>
+      <action
+            class="com.nokia.tools.variant.editor.actions.RemoveSequenceItemsAction"
+            widget_class="com.nokia.tools.variant.viewer.widgets.SequenceWidget">
+      </action>
+      <action
+            class="com.nokia.tools.variant.editor.actions.ExpandSequenceAction"
+            widget_class="com.nokia.tools.variant.viewer.widgets.SequenceWidget">
+      </action>
+      <action
+            class="com.nokia.tools.variant.editor.actions.CollapseSequenceAction"
+            widget_class="com.nokia.tools.variant.viewer.widgets.SequenceWidget">
+      </action>
+      <action
+            class="com.nokia.tools.variant.editor.actions.BrowseFileAction"
+            widget_class="com.nokia.tools.variant.viewer.widgets.FileTextBox">
+      </action>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="com.nokia.tools.variant.content.confml.FileSystemEntrySetting"
+            class="com.nokia.tools.variant.editor.adapters.FileSetting2PreviewAdapterFactory">
+         <adapter
+               type="com.nokia.tools.variant.preview.IPreviewDescriptor">
+         </adapter>
+      </factory>
+      <factory
+            adaptableType="com.nokia.tools.variant.content.confml.SimpleSetting"
+            class="com.nokia.tools.variant.editor.adapters.FileSetting2PreviewAdapterFactory">
+         <adapter
+               type="com.nokia.tools.variant.preview.IPreviewDescriptor">
+         </adapter>
+      </factory>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.nokia.tools.variant.editor.actions.OpenCpfFromOutside">
+      </startup>
+   </extension>
+	<extension
+        point="org.eclipse.ui.elementFactories">
+        <factory
+            class="com.nokia.tools.variant.editor.utils.FileEditorInputFactory"
+            id="com.nokia.tools.variant.editor.utils.FileEditorInputFactory"/>
+        
+  </extension>
+ <extension
+       point="org.eclipse.ui.bindings">
+    <key
+          commandId="com.nokia.tools.variant.editor.selectAll"
+          contextId="org.eclipse.ui.contexts.window"
+          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+          sequence="Alt+S">
+    </key>
+    <key
+          commandId="com.nokia.tools.variant.editor.removeSequenceItem"
+          contextId="org.eclipse.ui.contexts.window"
+          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+          sequence="Alt+E">
+    </key>
+    <key
+          commandId="com.nokia.tools.variant.editor.deselectAll"
+          contextId="org.eclipse.ui.contexts.window"
+          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+          sequence="Alt+D">
+    </key>
+    <key
+          commandId="com.nokia.tools.variant.editor.hide"
+          contextId="org.eclipse.ui.contexts.window"
+          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+          sequence="Alt+H">
+    </key>
+    <key
+          commandId="com.nokia.tools.variant.editor.clearValue"
+          contextId="org.eclipse.ui.contexts.window"
+          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+          sequence="Alt+C">
+    </key>
+    <key
+          commandId="com.nokia.tools.variant.editor.resetToDefault"
+          contextId="org.eclipse.ui.contexts.window"
+          schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+          sequence="Alt+R">
+    </key>
+ </extension>
+ <extension
+       point="org.eclipse.ui.commands">
+    <command
+          id="com.nokia.tools.variant.editor.selectAll"
+          name="select">
+    </command>
+    <command
+          id="com.nokia.tools.variant.editor.deselectAll"
+          name="deselect">
+    </command>
+    <command
+          id="com.nokia.tools.variant.editor.hide"
+          name="hide">
+    </command>
+    <command
+          id="com.nokia.tools.variant.editor.resetToDefault"
+          name="reset">
+    </command>
+    <command
+          id="com.nokia.tools.variant.editor.removeSequenceItem"
+          name="remove item">
+    </command>
+    <command
+          id="com.nokia.tools.variant.editor.clearValue"
+          name="clear value">
+    </command>
+ </extension>
+ <extension
+       point="com.nokia.tools.vct.cli.commandline">
+    <handler
+          applicationId="com.nokia.tools.variant.carbidev.CarbideVCLIApplication"
+          class="com.nokia.tools.variant.editor.cli.CPFOpenValidationHandler">
+    </handler>
+    <option
+          description="Validate ConfML file for opening"
+          longName="validate"
+          shortName="v">
+    </option>
+    <option
+          description="lists all configurations in cpf file"
+          shortName="list">
+    </option>
+    <option
+          description="Displays a summary of selected configuration"
+          longName="summary"
+          shortName="s">
+    </option>
+    <option
+          description="Detail list of errors and changes"
+          shortName="l">
+    </option>
+    <option
+          longName="help"
+          shortName="?">
+    </option>
+ </extension>
+ <extension
+       point="org.eclipse.ui.views.properties.tabbed.propertySections">
+    <propertySections
+          contributorId="  com.nokia.tools.variant.editor.editors.CPF_EDITOR_TABBED_PROPERTIES_CONTRIBUTOR">
+       <propertySection
+             class="com.nokia.tools.variant.editor.properties.ResourceLibraryPropertySection"
+             id="ResourceLibraryPropertySection"
+             tab="com.nokia.tools.variant.confml.ui.editors.VIEW_EDITOR_TAB">
+          <input
+                type="com.nokia.tools.variant.resourcelibrary.views.ResourceStorage">
+          </input>
+       </propertySection>
+    </propertySections>
+ </extension>
+</plugin>

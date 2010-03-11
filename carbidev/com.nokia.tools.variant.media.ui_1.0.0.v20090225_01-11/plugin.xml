@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of the License "Symbian Foundation License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.media.ui component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.nokia.tools.variant.internal.media.ui.SVGPreloader">
+      </startup>
+   </extension>
+   <extension
+         point="com.nokia.tools.variant.preview.contentpreview">
+      <descriptorFactory
+            class="com.nokia.tools.variant.internal.media.ui.AudioDescriptorFactory">
+         <contentTypeBinding
+               contentTypeId="com.nokia.tools.variant.contenttype.audio">
+         </contentTypeBinding>
+      </descriptorFactory>
+      <descriptorFactory
+            class="com.nokia.tools.variant.internal.media.ui.VideoDescriptorFactory">
+         <contentTypeBinding
+               contentTypeId="com.nokia.tools.variant.contenttype.video">
+         </contentTypeBinding>
+      </descriptorFactory>
+      <descriptorFactory
+            class="com.nokia.tools.variant.internal.media.ui.ImageDescriptorFactory">
+         <contentTypeBinding
+               contentTypeId="com.nokia.tools.variant.contenttype.image">
+         </contentTypeBinding>
+      </descriptorFactory>
+   </extension>
+   <extension
+         name="Media content types"
+         point="org.eclipse.core.runtime.contentTypes">
+      <content-type
+            id="com.nokia.tools.variant.contenttype.media"
+            name="Media Content Type"
+            priority="normal">
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.media"
+            id="com.nokia.tools.variant.contenttype.video"
+            name="Video Content"
+            priority="normal">
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.media"
+            id="com.nokia.tools.variant.contenttype.audio"
+            name="Audio Content"
+            priority="normal">
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.media"
+            id="com.nokia.tools.variant.contenttype.image"
+            name="Image Content"
+            priority="normal">
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.image"
+            file-extensions="svg"
+            id="com.nokia.tools.variant.contenttype.image.svg"
+            name="SVG Image"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.SVGImageDescriber">
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.audio"
+            file-extensions="mp3"
+            id="com.nokia.tools.variant.contenttype.audio.mp3"
+            name="MP3 Audio"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.MediaDescriber">
+            <parameter
+                  name="extension"
+                  value="mp3">
+            </parameter>
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.audio"
+            file-extensions="wav"
+            id="com.nokia.tools.variant.contenttype.audio.wav"
+            name="WAV Audio"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.MediaDescriber">
+            <parameter
+                  name="extension"
+                  value="wav">
+            </parameter>
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.audio"
+            file-extensions="wave"
+            id="com.nokia.tools.variant.contenttype.audio.wave"
+            name="WAVE Audio"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.MediaDescriber">
+            <parameter
+                  name="extension"
+                  value="wave">
+            </parameter>
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.audio"
+            file-extensions="aif"
+            id="com.nokia.tools.variant.contenttype.audio.aif"
+            name="AIF Audio"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.MediaDescriber">
+            <parameter
+                  name="extension"
+                  value="aif">
+            </parameter>
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.video"
+            file-extensions="mpeg"
+            id="com.nokia.tools.variant.contenttype.video.mpeg"
+            name="MPEG Video"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.MediaDescriber">
+            <parameter
+                  name="extension"
+                  value="mpeg">
+            </parameter>
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.video"
+            file-extensions="mpg"
+            id="com.nokia.tools.variant.contenttype.video.mpg"
+            name="MPG Video"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.MediaDescriber">
+            <parameter
+                  name="extension"
+                  value="mpg">
+            </parameter>
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.video"
+            file-extensions="avi"
+            id="com.nokia.tools.variant.contenttype.video.avi"
+            name="AVI Video"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.MediaDescriber">
+            <parameter
+                  name="extension"
+                  value="avi">
+            </parameter>
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.video"
+            file-extensions="mov"
+            id="com.nokia.tools.variant.contenttype.video.mov"
+            name="MOV Video"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.MediaDescriber">
+            <parameter
+                  name="extension"
+                  value="mov">
+            </parameter>
+         </describer>
+      </content-type>
+      <content-type
+            file-extensions="zip"
+            id="com.nokia.tools.variant.contenttype.zip"
+            name="Zip Archive"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.ZipDescriber">
+         </describer>
+      </content-type>
+      <content-type
+            file-extensions="tpf"
+            id="com.nokia.tools.variant.contenttype.tpf"
+            name="Theme Archive"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.ZipDescriber">
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.image"
+            file-extensions="bmp"
+            id="com.nokia.tools.variant.contenttype.image.bmp"
+            name="BMP Image"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.ImageDescriber">
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.image"
+            file-extensions="jpg,jpeg"
+            id="com.nokia.tools.variant.contenttype.image.jpg"
+            name="JPEG Image"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.ImageDescriber">
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.image"
+            file-extensions="png"
+            id="com.nokia.tools.variant.contenttype.image.png"
+            name="PNG Image"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.ImageDescriber">
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.image"
+            file-extensions="gif"
+            id="com.nokia.tools.variant.contenttype.image.gif"
+            name="GIF Image"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.ImageDescriber">
+         </describer>
+      </content-type>
+      <content-type
+            base-type="com.nokia.tools.variant.contenttype.image"
+            file-extensions="tiff,tif"
+            id="com.nokia.tools.variant.contenttype.image.tiff"
+            name="TIFF Image"
+            priority="normal">
+         <describer
+               class="com.nokia.tools.variant.internal.media.ui.ImageDescriber">
+         </describer>
+      </content-type>
+   </extension>
+</plugin>

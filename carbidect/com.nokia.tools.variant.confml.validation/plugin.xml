@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.confml.validation component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.wst.xml.core.catalogContributions">
+      <catalogContribution
+            id="com.nokia.tools.variant.confml.validation.catalogContribution">
+         <public
+               id="http://www.s60.com/xml/confml/1"
+               publicId="http://www.s60.com/xml/confml/1"
+               uri="scheme/confml.xsd"
+               webURL="http://www.s60.com/xml/confml/1">
+         </public>
+         <public
+               id="http://www.s60.com/xml/confml/2"
+               publicId="http://www.s60.com/xml/confml/2"
+               uri="scheme/confml2.xsd"
+               webURL="http://www.s60.com/xml/confml/2">
+         </public>
+         <public
+               id="http://www.w3.org/1999/xlink"
+               publicId="http://www.w3.org/1999/xlink"
+               uri="scheme/xlink.xsd"
+               webURL="http://www.w3.org/1999/xlink">
+         </public>
+         <public
+               id="http://www.s60.com/xml/commandml/1"
+               publicId="http://www.s60.com/xml/commandml/1"
+               uri="scheme/commandml.xsd"
+               webURL="http://www.s60.com/xml/commandml/1">
+         </public>
+         <public
+               id="http://www.s60.com/xml/content/1"
+               publicId="http://www.s60.com/xml/content/1"
+               uri="scheme/contentml1.xsd"
+               webURL="http://www.s60.com/xml/content/1">
+         </public>
+         <public
+               id="http://www.s60.com/xml/content/2"
+               publicId="http://www.s60.com/xml/content/2"
+               uri="scheme/contentml2.xsd"
+               webURL="http://www.s60.com/xml/content/2">
+         </public>
+         <public
+               id="http://www.s60.com/xml/convertprojectml/1"
+               publicId="http://www.s60.com/xml/convertprojectml/1"
+               uri="scheme/convertprojectml.xsd"
+               webURL="http://www.s60.com/xml/convertprojectml/1">
+         </public>
+         <public
+               id="http://www.s60.com/xml/genconfml/1"
+               publicId="http://www.s60.com/xml/genconfml/1"
+               uri="scheme/gcfml.xsd"
+               webURL="http://www.s60.com/xml/genconfml/1">
+         </public>
+         <public
+               id="http://www.symbianfoundation.org/xml/hcrml/1"
+               publicId="http://www.symbianfoundation.org/xml/hcrml/1"
+               uri="scheme/hcrml.xsd"
+               webURL="http://www.symbianfoundation.org/xml/hcrml/1">
+         </public>
+         <public
+               id="http://www.s60.com/xml/imageml/1"
+               publicId="http://www.s60.com/xml/imageml/1"
+               uri="scheme/imageml.xsd"
+               webURL="http://www.s60.com/xml/imageml/1">
+         </public>
+         <public
+               id="http://www.symbianfoundation.org/xml/implml/1"
+               publicId="http://www.symbianfoundation.org/xml/implml/1"
+               uri="scheme/implml.xsd"
+               webURL="http://www.symbianfoundation.org/xml/implml/1">
+         </public>
+         <public
+               id="http://www.s60.com/xml/makeml/1"
+               publicId="http://www.s60.com/xml/makeml/1"
+               uri="scheme/makeml.xsd"
+               webURL="http://www.s60.com/xml/makeml/1">
+         </public>
+         <public
+               id="http://www.s60.com/xml/ruleml/1"
+               publicId="http://www.s60.com/xml/ruleml/1"
+               uri="scheme/ruleml1.xsd"
+               webURL="http://www.s60.com/xml/ruleml/1">
+         </public>
+         <public
+               id="http://www.s60.com/xml/ruleml/2"
+               publicId="http://www.s60.com/xml/ruleml/2"
+               uri="scheme/ruleml2.xsd"
+               webURL="http://www.s60.com/xml/ruleml/2">
+         </public>
+         <public
+               id="http://www.s60.com/xml/templateml/1"
+               publicId="http://www.s60.com/xml/templateml/1"
+               uri="scheme/templateml.xsd"
+               webURL="http://www.s60.com/xml/templateml/1">
+         </public>
+         <public
+               id="http://www.s60.com/xml/thememl/1"
+               publicId="http://www.s60.com/xml/thememl/1"
+               uri="scheme/thememl.xsd"
+               webURL="http://www.s60.com/xml/thememl/1">
+         </public>
+         <public
+               id="http://www.w3.org/2001/XInclude"
+               publicId="http://www.w3.org/2001/XInclude"
+               uri="scheme/XInclude.xsd"
+               webURL="http://www.w3.org/2001/XInclude">
+         </public>
+         <public
+               id="http://www.w3.org/XML/1998/namespace"
+               publicId="http://www.w3.org/XML/1998/namespace"
+               uri="scheme/xml.xsd"
+               webURL="http://www.w3.org/XML/1998/namespace">
+         </public>
+      </catalogContribution>
+   </extension>
+   <extension id="confml" name="Confml_Validator" point="org.eclipse.wst.validation.validatorV2">
+      <validator
+            build="true"
+            class="org.eclipse.wst.xml.core.internal.validation.eclipse.Validator"
+            manual="true"
+            sourceid="org.eclipse.wst.xml.ui.internal.validation.DelegatingSourceValidatorForXML"
+            version="3"
+            markerId="org.eclipse.wst.xml.core.validationMarker">
+         <include>
+            <rules>
+                <!--fileext
+                     caseSensitive="false"
+                     ext="confml">
+               </fileext-->
+                <contentType
+                      id="com.nokia.tools.variant.confml.core.ConfML">
+                </contentType>
+            </rules>
+         </include>
+      </validator>
+   </extension>
+</plugin>

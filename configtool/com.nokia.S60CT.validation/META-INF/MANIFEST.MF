@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Validation Plug-in
+Bundle-SymbolicName: com.nokia.S60CT.validation; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: com.nokia.s60ct.validation.Activator
+Bundle-Vendor: NOKIA
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.emf.validation;visibility:=reexport,
+ org.eclipse.ui,
+ com.nokia.S60CT,
+ org.eclipse.core.resources,
+ com.nokia.S60CT.common,
+ org.eclipse.emf.edit,
+ com.nokia.S60CT.generate,
+ com.nokia.S60CT.CenRep,
+ org.eclipse.ui.ide,
+ com.nokia.s60ct.cenrep.gui
+Eclipse-LazyStart: true
+Export-Package: com.nokia.s60ct.general

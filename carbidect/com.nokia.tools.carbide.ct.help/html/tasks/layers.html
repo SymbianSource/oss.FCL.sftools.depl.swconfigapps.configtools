@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <title>Creating a new layer</title>
+   </head>
+
+   <body>
+      <h2>
+         Creating a new layer
+      </h2>
+      <p>
+         A Configuration Project can contain any number of layer folders, each representing a set of settings and customizable resources produced in certain phase of configuration process. Names of these layers can be arbitrary. Each layer contains at least the following folders confml, implml, content and doc. Confml folder contains confml files, implml folder contains implementation files, content folder contains customizable resources and doc folder contains documentation files.
+      </p>
+	  <p>
+	    To create a new layer:
+		<ol>
+		<li>Right-click the project name and select <b>New &gt; Configuration layer</b>.</li>
+		<li>Specify the name of the layer (e.g. s60).</li>
+		<li>Click <b>Finish</b>. The layer is added to the project, as shown in the following example. It contains only empty folders.</li>
+		<li>Add layer root file by selecting the layer and right-click <b>New &gt; Configuration file</b> (s60.confml in the picture). The layer root file will usually include all confml files in the layer.</li>
+		</ol>
+	  </p>
+	  <p>
+	  <img src="../images/image006.jpg"><br>
+	  <b>Figure 3</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Example of new layer inside configuration project
+	  </p>
+      <h2>
+         Creating a new configuration
+      </h2>
+      <p>
+         Information about collection of layers, their order and related metadata form a single configuration. Configuration project can consist of any number of configurations. 
+      </p>
+	  <p>
+	    The following wizard allows user to create a configuration with single layer inside the configuration project:
+		<ol>
+		<li>Right-click the project name and select <b>New &gt; Configuration</b>.</li>
+		<li>Specify the name of the configuration (e.g. root). Specify the based on configuration if any.</li>
+		<li>Click <b>Next</b></li>
+		<li>Specify the name of the layer that will be created and its parent folder.</li>
+		<li>Click <b>Finish</b></li>
+		</ol>
+		The configuration is added to the project. It has a root file and single layer, with layer root and empty folders.
+	  </p>	  
+   </body>
+</html>

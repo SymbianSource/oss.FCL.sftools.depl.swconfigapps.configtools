@@ -1,0 +1,1305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.validation.confml component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.validation.constraintBindings">
+      <clientContext
+            default="true"
+            id="com.nokia.tools.vct.validation.confml.other">
+         <selector
+               class="com.nokia.tools.variant.validation.core.BuildSelector">
+         </selector>
+      </clientContext>
+      <clientContext
+            default="false"
+            id="com.nokia.tools.vct.validation.confml.meta">
+         <selector
+               class="com.nokia.tools.variant.validation.core.BuildSelector">
+         </selector>
+      </clientContext>
+      <clientContext
+            default="false"
+            id="com.nokia.tools.vct.validation.confml.type">
+         <selector
+               class="com.nokia.tools.variant.validation.core.BuildSelector">
+         </selector>
+      </clientContext>
+      <clientContext
+            default="false"
+            id="com.nokia.tools.vct.validation.confml.data">
+         <selector
+               class="com.nokia.tools.variant.validation.core.BuildSelector">
+         </selector>
+      </clientContext>
+      <clientContext
+            default="false"
+            id="com.nokia.tools.vct.validation.confml.rfs">
+         <selector
+               class="com.nokia.tools.variant.validation.core.BuildSelector">
+         </selector>
+      </clientContext>
+      <binding
+            context="com.nokia.tools.vct.validation.confml.other">
+         <category
+               ref="vct.confml">
+         </category>
+         <category
+               ref="vct.confml/type">
+         </category>
+         <constraint
+               ref="com.nokia.tools.vct.validation.confml.constraint1">
+         </constraint>
+      </binding>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.constraintProviders">
+      <category
+            id="vct.confml"
+            name="name">
+         <category
+               id="type"
+               name="name">
+         </category>
+         <category
+               id="data"
+               name="name">
+         </category>
+         <category
+               id="rfs"
+               name="name">
+         </category>
+         <category
+               id="meta"
+               name="name">
+         </category>
+         <category
+               id="view"
+               name="name">
+         </category>
+         <category
+               id="other"
+               name="name">
+         </category>
+      </category>
+      <constraintProvider
+            cache="true"
+            mode="Batch">
+         <package
+               namespaceUri="http://www.s60.com/xml/confml/1">
+         </package>
+         <constraints
+               categories="vct.confml/type">
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateSettingRef"
+                  id="vct.confml.type.setting.ref.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Setting REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Setting ref=&quot;{0}&quot; is redefined
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateFeatureRef"
+                  id="vct.confml.type.feature.ref.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Feature REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Feature ref=&quot;{0}&quot; is redefined
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateSettingName"
+                  id="vct.confml.type.setting.name.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Setting Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Setting ref=&quot;{0}&quot; has duplicate name &quot;{1}&quot;
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateFeatureName"
+                  id="vct.confml.type.feature.name.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Feature Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Feature ref=&quot;{0}&quot; has duplicate name &quot;{1}&quot;
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MatchingSettingRefName"
+                  id="vct.confml.type.setting.matchingrefname"
+                  lang="Java"
+                  mode="Batch"
+                  name="Matching Setting REF and Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Setting ref=&quot;{0}&quot; has matching ref and name
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MatchingFeatureRefName"
+                  id="vct.confml.type.feature.matchingrefname"
+                  lang="Java"
+                  mode="Batch"
+                  name="Matching Feature REF and Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Feature ref=&quot;{0}&quot; has matching ref and name
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingSettingName"
+                  id="vct.confml.type.setting.name.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Setting Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Missing setting name {0}
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingFeatureName"
+                  id="vct.confml.type.feature.name.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Feature Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Missing feature name {0}
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingSettingRef"
+                  id="vct.confml.type.setting.ref.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Setting REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Missing setting REF {0}
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingFeatureRef"
+                  id="vct.confml.type.feature.ref.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Feature REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Missing feature REF {0}
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.InvalidFeatureRef"
+                  id="vct.confml.type.feature.ref.invalid"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Feature REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Invalid Feature REF {0}
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.InvalidSettingRef"
+                  id="vct.confml.type.setting.ref.invalid"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Setting REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Invalid Setting REF {0}
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.InvalidSettingType"
+                  id="vct.confml.type.setting.type.invalid"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Setting Type"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Setting ref=&quot;{0}&quot; name=&quot;{1}&quot; has unsupported type &quot;{2}&quot;
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateOptionName"
+                  id="vct.confml.option.name.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Option Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Duplicate option name {0} {1}
+               </message>
+               <target
+                     class="EOptionElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateOptionValue"
+                  id="vct.confml.option.value.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Option Value"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Duplicate option value {0} {1}
+               </message>
+               <target
+                     class="EOptionElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingSettingDescription"
+                  id="vct.confml.type.setting.description.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Setting Description"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Setting ref=&quot;{0}&quot; has no description
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingFeatureDescription"
+                  id="vct.confml.type.feature.description.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Feature Description"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Feature ref=&quot;{0}&quot; has no description
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.IsRequired"
+                  id="vct.confml.data.setting.isrequired"
+                  lang="Java"
+                  mode="Batch"
+                  name="Is Required"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting's {0} value is required
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+         </constraints>
+         <constraints
+               categories="vct.confml/view">
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateViewName"
+                  id="vct.confml.view.view.name.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate View Name"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Duplicate View name {0}
+               </message>
+               <target
+                     class="EViewElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateGroupName"
+                  id="vct.confml.view.group.name.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Group Name"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Duplicate Group name {0}
+               </message>
+               <target
+                     class="EGroup">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.UnresolvedViewSettingReference"
+                  id="vct.confml.view.setting.ref.unresolved"
+                  lang="Java"
+                  mode="Batch"
+                  name="Unresolved view setting reference"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Unresolved View Setting Ref {0}
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.ReadOnlyViewSettingReference"
+                  id="vct.confml.view.setting.ref.readOnly"
+                  lang="Java"
+                  mode="Batch"
+                  name="Read-Only Setting Reference"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  View includes read-only setting {0}
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+         </constraints>
+         <constraints
+               categories="vct.confml/data">
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidBooleanValue"
+                  id="vct.confml.data.setting.boolean"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Boolean Value"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Setting {0} has invalid boolean value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.ComplexDataEncountered"
+                  id="vct.confml.data.setting.complex"
+                  lang="Java"
+                  mode="Batch"
+                  name="Complex Data  Expected"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Setting {0} should have simple data
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.SimpleDataEncountered"
+                  id="vct.confml.data.setting.simple"
+                  lang="Java"
+                  mode="Batch"
+                  name="Simple Data Expected"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Setting {0} should have sequence or composite data
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidIntegerValue"
+                  id="vct.confml.data.setting.integer"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Integer Value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidRealValue"
+                  id="vct.confml.data.setting.real"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Real Value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidStringValue"
+                  id="vct.confml.data.setting.string"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid String Value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidSelectionValue"
+                  id="vct.confml.data.setting.selection"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Selection value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting {0} has invalid selection value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.TooManySequences"
+                  id="vct.confml.data.setting.maxocccurs"
+                  lang="Java"
+                  mode="Batch"
+                  name="Too Many Sequences"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Sequence setting {0} has too many occurences. Maximum size is {1}.
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.TooFewSequences"
+                  id="vct.confml.data.setting.minocccurs"
+                  lang="Java"
+                  mode="Batch"
+                  name="Too Few Sequences"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Sequence setting {0} has too few occurences. Minumum size is {1}.
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidFile"
+                  id="vct.confml.data.setting.file"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid File"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting {0} has invalid file value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.SettingProperty"
+                  id="vct.confml.data.setting.property"
+                  lang="Java"
+                  mode="Batch"
+                  name="Setting Property"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.SettingConstraint"
+                  id="vct.confml.data.setting.constraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Setting Constraint"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+         </constraints>
+         <constraints
+               categories="vct.confml/meta">
+         </constraints>
+      </constraintProvider>
+      <constraintProvider
+            cache="true"
+            mode="Batch">
+         <package
+               namespaceUri="http://www.w3.org/2001/XInclude">
+         </package>
+         <constraints
+               categories="vct.confml/meta">
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.meta.NoIncludeTarget"
+                  id="vct.confml.meta.include"
+                  lang="Java"
+                  mode="Batch"
+                  name="No Include Target"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  The ConfML-Include Reference"{0}" does not point to a valid target
+               </message>
+               <target
+                     class="EInclude">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.meta.MissingIncludeReference"
+                  id="vct.confml.meta.include.href.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Include Reference"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  The ConfML-Include is missing reference value
+               </message>
+               <target
+                     class="EInclude">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.meta.MalformedIncludeReference"
+                  id="vct.confml.meta.include.href.bad"
+                  lang="Java"
+                  mode="Batch"
+                  name="Malformed Include Reference"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  The ConfML-Include Reference"{0}" is malformed
+               </message>
+               <target
+                     class="EInclude">
+               </target>
+            </constraint>
+         </constraints>
+      </constraintProvider>
+      <constraintProvider
+            cache="true"
+            mode="Batch">
+         <package
+               namespaceUri="http://www.s60.com/xml/confml/2">
+         </package>
+         <constraints
+               categories="vct.confml/type">
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateSettingRef"
+                  id="vct.confml2.type.setting.ref.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Setting REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Setting ref="{0}" is redefined
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateFeatureRef"
+                  id="vct.confml2.type.feature.ref.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Feature REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Feature ref="{0}" is redefined
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateSettingName"
+                  id="vct.confml2.type.setting.name.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Setting Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Setting ref="{0}" has duplicate name "{1}"
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateFeatureName"
+                  id="vct.confml2.type.feature.name.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Feature Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Feature ref="{0}" has duplicate name "{1}"
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MatchingSettingRefName"
+                  id="vct.confml2.type.setting.matchingrefname"
+                  lang="Java"
+                  mode="Batch"
+                  name="Matching Setting REF and Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Setting ref="{0}" has matching ref and name
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MatchingFeatureRefName"
+                  id="vct.confml2.type.feature.matchingrefname"
+                  lang="Java"
+                  mode="Batch"
+                  name="Matching Feature REF and Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Feature ref="{0}" has matching ref and name
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingSettingName"
+                  id="vct.confml2.type.setting.name.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Setting Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Missing setting name {0}
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingFeatureName"
+                  id="vct.confml2.type.feature.name.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Feature Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Missing feature name {0}
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingSettingRef"
+                  id="vct.confml2.type.setting.ref.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Setting REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Missing setting REF {0}
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingFeatureRef"
+                  id="vct.confml2.type.feature.ref.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Feature REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Missing feature REF {0}
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.InvalidFeatureRef"
+                  id="vct.confml2.type.feature.ref.invalid"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Feature REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Invalid Feature REF {0}
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.InvalidSettingRef"
+                  id="vct.confml2.type.setting.ref.invalid"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Setting REF"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Invalid Setting REF {0}
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.InvalidSettingType"
+                  id="vct.confml2.type.setting.type.invalid"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Setting Type"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Setting ref="{0}" name="{1}" has unsupported type "{2}"
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateOptionName"
+                  id="vct.confml2.option.name.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Option Name"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Duplicate option name {0} {1}
+               </message>
+               <target
+                     class="EOptionElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateOptionValue"
+                  id="vct.confml2.option.value.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Option Value"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Duplicate option value {0} {1}
+               </message>
+               <target
+                     class="EOptionElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingSettingDescription"
+                  id="vct.confml2.type.setting.description.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Setting Description"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Setting ref="{0}" has no description
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.MissingFeatureDescription"
+                  id="vct.confml2.type.feature.description.missing"
+                  lang="Java"
+                  mode="Batch"
+                  name="Missing Feature Description"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  Feature ref="{0}" has no description
+               </message>
+               <target
+                     class="EFeatureElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.IsRequired"
+                  id="vct.confml2.data.setting.isrequired"
+                  lang="Java"
+                  mode="Batch"
+                  name="Is Required"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting's {0} value is required
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+         </constraints>
+         <constraints
+               categories="vct.confml/view">
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateViewName"
+                  id="vct.confml2.view.view.name.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate View Name"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Duplicate View name {0}
+               </message>
+               <target
+                     class="EViewElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.DuplicateGroupName"
+                  id="vct.confml2.view.group.name.duplicate"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duplicate Group Name"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Duplicate Group name {0}
+               </message>
+               <target
+                     class="EGroup">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.UnresolvedViewSettingReference"
+                  id="vct.confml2.view.setting.ref.unresolved"
+                  lang="Java"
+                  mode="Batch"
+                  name="Unresolved view setting reference"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Unresolved View Setting Ref {0}
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.ReadOnlyViewSettingReference"
+                  id="vct.confml2.view.setting.ref.readOnly"
+                  lang="Java"
+                  mode="Batch"
+                  name="Read-Only Setting Reference"
+                  severity="WARNING"
+                  statusCode="0">
+               <message>
+                  View includes read-only setting {0}
+               </message>
+               <target
+                     class="ESettingElement">
+               </target>
+            </constraint>
+         </constraints>
+         <constraints
+               categories="vct.confml/data">
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidFile"
+                  id="vct.confml2.data.setting.file"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid File"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting {0} has invalid file value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+               <target
+                     class="ELocalPathElement">
+               </target>
+               <target
+                     class="ETargetPathElement">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidBooleanValue"
+                  id="vct.confml2.data.setting.boolean"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Boolean Value"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Setting {0} has invalid boolean value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.ComplexDataEncountered"
+                  id="vct.confml2.data.setting.complex"
+                  lang="Java"
+                  mode="Batch"
+                  name="Complex Data  Expected"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Setting {0} should have simple data
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.SimpleDataEncountered"
+                  id="vct.confml2.data.setting.simple"
+                  lang="Java"
+                  mode="Batch"
+                  name="Simple Data Expected"
+                  severity="ERROR"
+                  statusCode="0">
+               <message>
+                  Setting {0} should have sequence or composite data
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidIntegerValue"
+                  id="vct.confml2.data.setting.integer"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Integer Value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidRealValue"
+                  id="vct.confml2.data.setting.real"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Real Value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidStringValue"
+                  id="vct.confml2.data.setting.string"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid String Value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidSelectionValue"
+                  id="vct.confml2.data.setting.selection"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid Selection value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting {0} has invalid selection value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.TooManySequences"
+                  id="vct.confml2.data.setting.maxocccurs"
+                  lang="Java"
+                  mode="Batch"
+                  name="Too Many Sequences"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Sequence setting {0} has too many occurences. Maximum size is {1}.
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.TooFewSequences"
+                  id="vct.confml2.data.setting.minocccurs"
+                  lang="Java"
+                  mode="Batch"
+                  name="Too Few Sequences"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Sequence setting {0} has too few occurences. Minumum size is {1}.
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.DateTime"
+                  id="vct.confml2.data.setting.datetime"
+                  lang="Java"
+                  mode="Batch"
+                  name="Date Time"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting {0} has invalid dateTime value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.Date"
+                  id="vct.confml2.data.setting.date"
+                  lang="Java"
+                  mode="Batch"
+                  name="Date"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting {0} has invalid date value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.Time"
+                  id="vct.confml2.data.setting.time"
+                  lang="Java"
+                  mode="Batch"
+                  name="Time"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting {0} has invalid time value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.InvalidMultiSelectionValue"
+                  id="vct.confml2.data.setting.multiselection"
+                  lang="Java"
+                  mode="Batch"
+                  name="Invalid MultiSelection Value"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting {0} has invalid multiSelection value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.Duration"
+                  id="vct.confml2.data.setting.duration"
+                  lang="Java"
+                  mode="Batch"
+                  name="Duration"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  Setting {0} has invalid duration value {1}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.SettingConstraint"
+                  id="vct.confml2.data.setting.constraint"
+                  lang="Java"
+                  mode="Batch"
+                  name="Setting Constraint"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+            <constraint
+                  class="com.nokia.tools.vct.validation.confml.constraints.data.SettingProperty"
+                  id="vct.confml2.data.setting.property"
+                  lang="Java"
+                  mode="Batch"
+                  name="Setting Property"
+                  severity="ERROR"
+                  statusCode="1">
+               <message>
+                  {0}
+               </message>
+               <target
+                     class="ESettingData">
+               </target>
+            </constraint>
+         </constraints>
+         <constraints
+               categories="vct.confml/meta">
+         </constraints>
+      </constraintProvider>
+   </extension>
+   <extension
+         point="com.nokia.tools.variant.validation">
+      <validator
+            file_extension="confml"
+            name="ConfML Validation"
+            schema_uri="data/confml.xsd">
+      </validator>
+   </extension>
+
+</plugin>

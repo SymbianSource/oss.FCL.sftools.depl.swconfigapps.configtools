@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2008 Nokia. All Rights Reserved"
+    modelDirectory="/com.nokia.tools.vct.confml/src" editDirectory="/com.nokia.tools.vct.confml.edit/src"
+    editorDirectory="/com.nokia.tools.vct.confml.editor/src" modelPluginID="com.nokia.tools.vct.confml"
+    modelName="ConfML1" editPluginClass="com.nokia.tools.vct.confml.edit.ConfMLEditPlugin"
+    editorPluginClass="com.nokia.tools.vct.confml.editor.ConfMLXMIEditorPlugin" codeFormatting="true"
+    testsDirectory="/com.nokia.tools.vct.confml.tests/src" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false" providerRootExtendsClass="" editPluginID="com.nokia.tools.vct.confml.edit"
+    editorPluginID="com.nokia.tools.vct.confml.editor" testsPluginID="com.nokia.tools.vct.confml.tests"
+    colorProviders="true" fontProviders="true">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.s60.com/xml/confml/1" value="persistence-confml.xsd"/>
+      <details key="http://www.w3.org/2001/XMLSchema" value="xsd-part.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <foreignModel>persistence-confml.ecore</foreignModel>
+  <genPackages prefix="EConfML1" basePackage="com.nokia.tools.vct.confml.model" resource="XML"
+      disposableProviderFactory="true" providerPackageSuffix="edit.provider" presentationPackageSuffix="edit.presentation"
+      multipleEditorPages="false" contentTypeIdentifier="com.nokia.tools.vct.content.confml"
+      fileExtensions="confml" ecorePackage="persistence-confml.ecore#/">
+    <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+      <genAnnotations source="persistence-confml.xsd"/>
+    </genAnnotations>
+    <genClasses ecoreClass="persistence-confml.ecore#//EConfigurationElement">
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EConfigurationElement/configurations"/>
+      <genFeatures property="None" createChild="true" propertyCategory="" ecoreFeature="ecore:EReference persistence-confml.ecore#//EConfigurationElement/features"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EConfigurationElement/views"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EConfigurationElement/data"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EConfigurationElement/rfs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EConfigurationElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EConfigurationElement/version"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EConfigurationElement/includes"/>
+    </genClasses>
+    <genClasses provider="None" image="false" dynamic="true" ecoreClass="persistence-confml.ecore#//EContents">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EContents/contents"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EFeatureElement" labelFeature="#//confml1/EFeatureElement/ref">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EFeatureElement/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EFeatureElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EFeatureElement/relevant"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EFeatureData"/>
+    <genClasses image="false" ecoreClass="persistence-confml.ecore#//ESettingTypeContainer">
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingTypeContainer/settings"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//ESettingElement" labelFeature="#//confml1/ESettingElement/ref">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/readOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/relevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/required"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/mapKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/mapValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/constraint"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/options"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/minOccurs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingElement/maxOccurs"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/minExclusive"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/maxExclusive"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/minInclusive"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/maxInclusive"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/minLength"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/maxLength"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/length"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/totalDigits"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingElement/pattern"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-confml.ecore#//ESettingDataContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ESettingDataContainer/settings"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//ESettingData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingData/template"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingData/extensionPolicy"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingData/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingData/text"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EViewElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EViewElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EGroup">
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EGroup/settings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EGroup/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-confml.ecore#//EGroupContainer">
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EGroupContainer/groups"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EFeatureRfs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EFeatureRfs/settings"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//ESettingRfs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ESettingRfs/rfs"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-confml.ecore#//EMetaContainer">
+      <genFeatures property="None" createChild="true" propertyCategory="" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaContainer/metas"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EMetaElement">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/id"/>
+      <genFeatures property="None" notify="false" createChild="false" propertyDescription=""
+          ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/date"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/owner"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/editor"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/product"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/status"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/platform"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/version"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/release"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/customer"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EMetaElement/configurationProperty"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EOptionElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EOptionElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EOptionElement/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EOptionElement/relevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EOptionElement/map"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EPropertyElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EPropertyElement/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EPropertyElement/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EPropertyElement/unit"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-confml.ecore#//EDescriptionContainer">
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EDescriptionContainer/descriptions"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EDescriptionElement" labelFeature="#//confml1/EDescriptionElement/description">
+      <genFeatures createChild="false" propertyDescription="" propertyMultiLine="true"
+          ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EDescriptionElement/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-confml.ecore#//EIconContainer">
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EIconContainer/icons"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EIconElement" labelFeature="#//confml1/EXLinkReference/href"/>
+    <genClasses image="false" ecoreClass="persistence-confml.ecore#//ELinkContainer">
+      <genFeatures createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ELinkContainer/links"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//ELinkElement" labelFeature="#//confml1/EXLinkReference/href"/>
+    <genClasses ecoreClass="persistence-confml.ecore#//EDataElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//EDataElement/data"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//ERfsElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//ERfsElement/rfs"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-confml.ecore#//EXLinkReference">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EXLinkReference/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EXLinkReference/title"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//ECommonAttrs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ECommonAttrs/id"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EMetaContent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//EMetaContent/value"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//ERefNamedElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//ERefNamedElement/ref"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-confml.ecore#//EConfMLDocument">
+      <genFeatures notify="false" children="true" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference persistence-confml.ecore#//EConfMLDocument/configuration"/>
+    </genClasses>
+    <nestedGenPackages prefix="EConfMLInclude" disposableProviderFactory="true" fileExtensions=""
+        ecorePackage="persistence-confml.ecore#//include">
+      <genClasses ecoreClass="persistence-confml.ecore#//include/EInclude">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//include/EInclude/href"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="EConfML2" basePackage="com.nokia.tools.vct.confml.model"
+        resource="XML" disposableProviderFactory="true" contentTypeIdentifier="com.nokia.tools.vct.content.confml2"
+        fileExtensions="confml" ecorePackage="persistence-confml.ecore#//confml2">
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EConfigurationElement">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EConfigurationElement/configurations"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EConfigurationElement/features"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EConfigurationElement/views"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EConfigurationElement/data"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EConfigurationElement/rfs"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EConfigurationElement/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EConfigurationElement/version"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EConfigurationElement/includes"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="persistence-confml.ecore#//confml2/EContents">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EContents/contents"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EFeatureElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EFeatureElement/ref"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EFeatureElement/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EFeatureElement/relevant"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EFeatureData"/>
+      <genClasses image="false" ecoreClass="persistence-confml.ecore#//confml2/ESettingTypeContainer">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingTypeContainer/settings"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/ESettingElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/ref"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/readOnly"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/relevant"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/required"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/mapKey"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/mapValue"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/constraint"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/options"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/properties"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/minOccurs"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingElement/maxOccurs"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/minExclusive"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/maxExclusive"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/minInclusive"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/maxInclusive"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/minLength"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/maxLength"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/length"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/totalDigits"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/pattern"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/localPath"/>
+        <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingElement/targetPath"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="persistence-confml.ecore#//confml2/ESettingDataContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ESettingDataContainer/settings"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/ESettingData">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingData/template"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingData/extensionPolicy"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingData/value"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingData/text"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingData/map"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EViewElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EViewElement/name"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EGroup">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EGroup/settings"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EGroup/name"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="persistence-confml.ecore#//confml2/EGroupContainer">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EGroupContainer/groups"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EFeatureRfs">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EFeatureRfs/settings"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/ESettingRfs">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ESettingRfs/rfs"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="persistence-confml.ecore#//confml2/EMetaContainer">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaContainer/metas"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EMetaElement">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/id"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/date"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/owner"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/editor"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/product"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/status"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/platform"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/version"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/release"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/customer"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/origin"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/target"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EMetaElement/configurationProperty"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EOptionElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EOptionElement/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EOptionElement/value"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EOptionElement/relevant"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EOptionElement/map"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EPropertyElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EPropertyElement/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EPropertyElement/value"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EPropertyElement/unit"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="persistence-confml.ecore#//confml2/EDescriptionContainer">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EDescriptionContainer/descriptions"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EDescriptionElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EDescriptionElement/description"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="persistence-confml.ecore#//confml2/EIconContainer">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EIconContainer/icons"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EIconElement"/>
+      <genClasses image="false" ecoreClass="persistence-confml.ecore#//confml2/ELinkContainer">
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ELinkContainer/links"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/ELinkElement"/>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EDataElement">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EDataElement/data"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/ERfsElement">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/ERfsElement/rfs"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="persistence-confml.ecore#//confml2/EXLinkReference">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EXLinkReference/href"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EXLinkReference/title"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/ECommonAttrs">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ECommonAttrs/id"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EMetaContent">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/EMetaContent/value"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/EConfML2Document">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-confml.ecore#//confml2/EConfML2Document/configuration"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/ELocalPathElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ELocalPathElement/constraint"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ELocalPathElement/readOnly"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ELocalPathElement/required"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ELocalPathElement/map"/>
+      </genClasses>
+      <genClasses ecoreClass="persistence-confml.ecore#//confml2/ETargetPathElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ETargetPathElement/constraint"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ETargetPathElement/readOnly"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ETargetPathElement/required"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//confml2/ETargetPathElement/map"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="EMetaExt" basePackage="com.nokia.tools.vct.confml.model"
+        resource="XML" disposableProviderFactory="true" ecorePackage="persistence-confml.ecore#//metaext">
+      <genClasses ecoreClass="persistence-confml.ecore#//metaext/EConfigurationPropertyElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//metaext/EConfigurationPropertyElement/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-confml.ecore#//metaext/EConfigurationPropertyElement/value"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages prefix="EXSDFacet" basePackage="com.nokia.tools.vct.confml.model" multipleEditorPages="false"
+      generateModelWizard="false" ecorePackage="xsd-part.ecore#/">
+    <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+      <genAnnotations source="xsd-part.xsd"/>
+    </genAnnotations>
+    <genClasses image="false" ecoreClass="xsd-part.ecore#//EFacet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xsd-part.ecore#//EFacet/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xsd-part.ecore#//EFacet/fixed"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xsd-part.ecore#//ENumFacet"/>
+    <genClasses ecoreClass="xsd-part.ecore#//EMinInclusive"/>
+    <genClasses ecoreClass="xsd-part.ecore#//EMinExclusive"/>
+    <genClasses ecoreClass="xsd-part.ecore#//EMaxInclusive"/>
+    <genClasses ecoreClass="xsd-part.ecore#//EMaxExclusive"/>
+    <genClasses ecoreClass="xsd-part.ecore#//ELength"/>
+    <genClasses ecoreClass="xsd-part.ecore#//EMinLength"/>
+    <genClasses ecoreClass="xsd-part.ecore#//EMaxLength"/>
+    <genClasses ecoreClass="xsd-part.ecore#//ETotalDigits"/>
+    <genClasses ecoreClass="xsd-part.ecore#//EPattern"/>
+  </genPackages>
+</genmodel:GenModel>

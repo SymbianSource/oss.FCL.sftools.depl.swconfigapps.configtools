@@ -1,0 +1,12 @@
+<configuration xmlns="http://www.s60.com/xml/confml/1" xmlns:xi="http://www.w3.org/2001/xinclude" name="MyPrefixPhonebook">
+    <xi:include href="canNotaddFrame3_base.confml#/"/>
+    <data>
+        <Phonebook>
+            <Contact extensionPolicy="prefix">
+                <FirstName>The</FirstName>
+                <LastName>Godfather</LastName>
+                <Mobile>3</Mobile>
+            </Contact>
+         </Phonebook>
+    </data>
+</configuration>

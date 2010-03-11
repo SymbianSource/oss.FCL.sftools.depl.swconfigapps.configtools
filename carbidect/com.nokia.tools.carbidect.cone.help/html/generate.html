@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+   <head>
+      <title>Carbide.ct Generation Guide</title>
+   </head>
+
+   <body>
+      <h2>
+         Generation Overview
+      </h2>
+      <p>
+         With the generation functionality of Carbide.ct users can convert their Configuration Project structure, which 
+		 contains ConfMLs, implMLs and resources into a format usable by target platform application. Target in this case 
+		 can be some s60 emulator or a real phone hardware. This allows the user to verify his/her changes on the target platform.
+      </p>
+	  <p>
+         The task of generating target files in Carbide.ct is performed by a tool called ConE (Configuration Engine). 
+		 ConE is a Python API for a Configuration Project. ConE tool is structured around the concept of plug-ins. Plug-ins are structured bundles of code and/or data that contribute function to the system. 
+		 This makes ConE highly extendable and customizable. 
+	  </p>
+	  <p>
+         ConE tool can perform several operations on a Configuration Project. One of this is to take in a Configuration Project or to be precise a Configuration inside a Configuration Project and produce 
+		 a resource structure that can be taken to the target device, for example to the mobile hardware. We call this generation.
+	  </p>
+      <h2>
+         Preconditions of Generation
+      </h2>
+      <p>
+		 The following points must be fulfilled in order to generate successfully
+		 <ol>
+		 <li>ConE tool must be installed on the user system</li>
+		 <li>Carbide.ct has to be configured to use ConE</li>
+		 </ol>
+      </p>
+      <h2>
+         Generation steps
+      </h2>
+      <p>
+		 Follow these steps to generate successfully
+		 <ol>
+		 <li>Check that ConE tool is installed on your system. If not download it and install</li>
+		 <li>Configure Carbide.ct to use ConE. To do this select <b>Window > Preferences</b><br>
+		 <img src="images/prefs.png" ><br>
+		 <b>Figure 1</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Carbide.ct preferences
+		 <br><br>
+		 In the preferences page select <b>Build Engine</b>. Under <b>ConE Build Properties</b> configure the output folder for the generated files, the layers to include in the output (-1=last layer) 
+		 and optionally the implimentation filters (e.g. crml, gcfml, ...). <br><br>
+		 Under the <b>Installed ConE Tools</b> item specify ConE installations. <br>
+		 <img src="images/cones.png" ><br>
+		 <b>Figure 2</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installed ConEs
+		 <br><br>
+		 If there are several ConEs in the list. The first one in the list will be used for the generation task.
+		 </li>
+		 <li>Once preferences are configured the target files can be generated as in the following figure:<br>
+		 <img src="images/generate.png" ><br>
+		 <b>Figure 2</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installed ConEs
+		 <br><br>
+		 Make sure the that you have a <b>Configuration Project</b> open (<b>test</b> in this case). Select the <b>Configuration</b> that you want to generate (<b>root3.confml</b> in the example) and then press <b>Generate button</b> in the tool bar. 
+		 </li>
+		 <li>Verify generation output. Below figure show example generation output.<br>
+		 <img src="images/generate_out.png" ><br>
+		 <b>Figure 2</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Installed ConEs
+		 <br><br>
+		  You can follow the generation process from <b>Console</b> view. Once the generation is finished you can verify the output in the output folder that you specified in the <b>Preferences Page</b>.
+		 </li>
+		 </ol>
+      </p>
+   </body>
+</html>

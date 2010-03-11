@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.s60.com/xml/cenrep/1" xmlns:cenrep="http://www.s60.com/xml/cenrep/1">
+    <xs:include schemaLocation=""></xs:include>
+    <xs:include schemaLocation=""></xs:include>
+    <xs:include schemaLocation=""></xs:include>
+    <xs:element name="repository">
+    <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+            	<xs:element minOccurs="0" maxOccurs="2"
+            		ref="cenrep:access" />
+            	<xs:element minOccurs="0" maxOccurs="1"
+            		ref="cenrep:desc" />
+            	<xs:element minOccurs="0" maxOccurs="unbounded"
+            		ref="cenrep:key" />
+            	<xs:element minOccurs="0" maxOccurs="unbounded"
+            		ref="cenrep:keyMask" />
+            	<xs:element minOccurs="0" maxOccurs="unbounded"
+            		ref="cenrep:keyRange" />
+
+            </xs:choice>
+            <xs:attribute name="backup" type="xs:boolean" default="false"/>
+      <xs:attribute name="rfs" type="xs:boolean" default="false"/>
+      <xs:attribute name="initialialisationFileVersion" type="xs:NMTOKEN" default="1"/>
+      <xs:attribute name="owner" type="xs:NMTOKEN"/>
+      <xs:attribute name="uidName" type="xs:NMTOKEN"/>
+      <xs:attribute name="uidValue" type="xs:NMTOKEN"/>
+      <xs:attribute name="version" type="xs:decimal" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="desc" type="xs:string"/>
+  <xs:element name="key">
+    <xs:complexType mixed="true">
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+	    		<xs:element ref="cenrep:desc" minOccurs="0" maxOccurs="1" />
+	    		<xs:element minOccurs="0" maxOccurs="2" ref="cenrep:access" />
+	    		<xs:element minOccurs="0" maxOccurs="unbounded" ref="cenrep:value" />
+	    		<xs:element minOccurs="0" maxOccurs="unbounded" ref="cenrep:bit" />
+    		</xs:choice>
+
+
+    	<xs:attribute name="backup" type="xs:boolean" default="false" />
+    	<xs:attribute name="int" type="xs:NMTOKEN" />
+    	<xs:attribute name="name" type="xs:string" />
+
+    	<xs:attribute name="readOnly" type="xs:boolean" />
+    	<xs:attribute name="ref" type="xs:string" />
+    	<xs:attribute name="type" type="cenrep:typeType" />
+    	<xs:attribute name="userMeta" type="xs:NMTOKEN"></xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="keyMask">
+    <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+            	<xs:element minOccurs="0" maxOccurs="2"
+            		ref="cenrep:access" />
+            	<xs:element ref="cenrep:desc" minOccurs="0" maxOccurs="1"></xs:element>
+            </xs:choice>
+            
+      <xs:attribute name="backup" type="xs:boolean" default="false"/>
+      <xs:attribute name="partialKey" type="xs:NMTOKEN"/>
+      <xs:attribute name="mask" type="xs:NMTOKEN"/>
+
+      <xs:attribute name="readOnly" type="xs:boolean"/>
+      <xs:attribute name="restoreFactorySettings" type="xs:boolean"/>
+
+            <xs:attribute name="userMeta" type="xs:NMTOKEN" />
+        </xs:complexType>
+  </xs:element>
+  
+  <xs:element name="value">
+    <xs:complexType mixed="true">
+      <xs:attribute name="desc" type="xs:string"/>
+      <xs:attribute name="value" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="bit">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="ref" type="xs:string"/>
+          <xs:attribute name="value" type="xs:boolean"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="keyRange">
+    <xs:complexType>
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+      	<xs:element minOccurs="0" maxOccurs="2" ref="cenrep:access" />
+      	<xs:element ref="cenrep:desc" minOccurs="0" maxOccurs="1"></xs:element>
+      	<xs:element ref="cenrep:key" minOccurs="0" maxOccurs="unbounded"></xs:element>
+      </xs:choice>
+      <xs:attribute name="backup" type="xs:boolean" default="false"/>
+      <xs:attribute name="countInt" type="xs:NMTOKEN"/>
+      <xs:attribute name="firstIndex" type="xs:NMTOKEN" default="0"/>
+      <xs:attribute name="firstInt" type="xs:NMTOKEN"/>
+      <xs:attribute name="indexBits" type="xs:NMTOKEN"/>
+      <xs:attribute name="int" type="xs:NMTOKEN"/>
+      <xs:attribute name="lastInt" type="xs:NMTOKEN"/>
+      <xs:attribute name="name" type="xs:string"/>
+      <xs:attribute name="ref" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="access">
+    <xs:complexType>
+    	<xs:attribute name="capabilities" type="cenrep:capaType" />
+    	<xs:attribute name="sid" type="xs:NMTOKEN" />
+    	<xs:attribute name="type" type="cenrep:accessType" />
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="typeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration id="int" value="int"></xs:enumeration>
+			<xs:enumeration id="binary" value="binary"></xs:enumeration>
+			<xs:enumeration id="real" value="real"></xs:enumeration>
+			<xs:enumeration id="string" value="string"></xs:enumeration>
+			<xs:enumeration id="string8" value="string8"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="accessType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration id="R" value="R"></xs:enumeration>
+			<xs:enumeration id="W" value="W"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="capaType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(AlwaysPass,?|TCB,?|CommDD,?|PowerMgmt,?|MultimediaDD,?|ReadDeviceData,?|WriteDeviceData,?|DRM,?|TrustedUI,?|ProtServ,?|DiskAdmin,?|AllFiles,?|SwEvent,?|NetworkServices,?|LocalServices,?|ReadUserData,?|WriteUserData,?|SurroundingsDD,?|Location,?|UserEnvironment,?|NetworkControl,?)*"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

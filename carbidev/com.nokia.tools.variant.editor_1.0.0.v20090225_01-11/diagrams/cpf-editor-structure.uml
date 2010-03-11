@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_ImF_sX2fEd2c-_iXG7jBFA" name="com.nokia.tools.variant.editor">
+  <elementImport xmi:id="_IqHkEH2fEd2c-_iXG7jBFA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_IqQuAH2fEd2c-_iXG7jBFA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_IqQuAX2fEd2c-_iXG7jBFA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_IqQuAn2fEd2c-_iXG7jBFA">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Component" xmi:id="_Ox-TIH2fEd2c-_iXG7jBFA" name="CPFEditor" clientDependency="_ZycW8H2fEd2c-_iXG7jBFA _dzXOsH2fEd2c-_iXG7jBFA _vl9toH2fEd2c-_iXG7jBFA _IftOYH2gEd2c-_iXG7jBFA _tyUJQH2gEd2c-_iXG7jBFA _1y3_AH2jEd2c-_iXG7jBFA _M-Y_MH2rEd2c-_iXG7jBFA _Y-YuYH8AEd2q1abqtdNlvA _aXhrkH8AEd2q1abqtdNlvA _b01-IH8AEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_QDu18H2fEd2c-_iXG7jBFA" name="NavigatorViewer" clientDependency="_ZliToH2wEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_S-8p4H2fEd2c-_iXG7jBFA" name="SettingValuesViewer" clientDependency="_kiDrkH2wEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_ZycW8H2fEd2c-_iXG7jBFA" name="use" supplier="_QDu18H2fEd2c-_iXG7jBFA" client="_Ox-TIH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_dzXOsH2fEd2c-_iXG7jBFA" name="use" supplier="_S-8p4H2fEd2c-_iXG7jBFA" client="_Ox-TIH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_lWELIH2fEd2c-_iXG7jBFA" name="UIModel" clientDependency="_88qOsH2vEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_vl9toH2fEd2c-_iXG7jBFA" name="contain" supplier="_lWELIH2fEd2c-_iXG7jBFA" client="_Ox-TIH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_yWJ9UH2fEd2c-_iXG7jBFA" name="ApplicationModel" clientDependency="_QqmzQH2gEd2c-_iXG7jBFA _TPUywH2gEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_2Ec0AH2fEd2c-_iXG7jBFA" name="PersistenceModel"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_66O3MH2fEd2c-_iXG7jBFA" name="CPFModel" clientDependency="_OS2RsH2gEd2c-_iXG7jBFA _Pw91gH2gEd2c-_iXG7jBFA _NXQc0H5IEd2wLK5S9NB6Gg"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_8Jm0YH2fEd2c-_iXG7jBFA" name="Metadata"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_IftOYH2gEd2c-_iXG7jBFA" name="contain" supplier="_66O3MH2fEd2c-_iXG7jBFA" client="_Ox-TIH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_OS2RsH2gEd2c-_iXG7jBFA" name="contain" supplier="_yWJ9UH2fEd2c-_iXG7jBFA" client="_66O3MH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Pw91gH2gEd2c-_iXG7jBFA" name="has" supplier="_8Jm0YH2fEd2c-_iXG7jBFA" client="_66O3MH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_QqmzQH2gEd2c-_iXG7jBFA" name="has" supplier="_8Jm0YH2fEd2c-_iXG7jBFA" client="_yWJ9UH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_TPUywH2gEd2c-_iXG7jBFA" name="contain" supplier="_2Ec0AH2fEd2c-_iXG7jBFA" client="_yWJ9UH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_X5Vq0H2gEd2c-_iXG7jBFA" name="ConfmlPersistenceModel2ViewModelConvertor" clientDependency="_quRwgH2gEd2c-_iXG7jBFA _wVxkgH2gEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_gGB_cH2gEd2c-_iXG7jBFA" name="UIModel2PersistenceModelConvertor" clientDependency="_0cTVAH2gEd2c-_iXG7jBFA _25o6IH2gEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_p8hjcH2gEd2c-_iXG7jBFA" name="use" supplier="_AoIVMH8AEd2q1abqtdNlvA" client="_JlD2cH2sEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_quRwgH2gEd2c-_iXG7jBFA" name="creates" supplier="_y-WB4H2jEd2c-_iXG7jBFA" client="_X5Vq0H2gEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_tyUJQH2gEd2c-_iXG7jBFA" name="use" supplier="_gGB_cH2gEd2c-_iXG7jBFA" client="_Ox-TIH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_wVxkgH2gEd2c-_iXG7jBFA" name="parse" supplier="_66O3MH2fEd2c-_iXG7jBFA" client="_X5Vq0H2gEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_0cTVAH2gEd2c-_iXG7jBFA" name="parse" supplier="_y-WB4H2jEd2c-_iXG7jBFA" client="_gGB_cH2gEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_25o6IH2gEd2c-_iXG7jBFA" name="update" supplier="_66O3MH2fEd2c-_iXG7jBFA" client="_gGB_cH2gEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_y-WB4H2jEd2c-_iXG7jBFA" name="ConfmlModel"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_1y3_AH2jEd2c-_iXG7jBFA" name="contain" supplier="_y-WB4H2jEd2c-_iXG7jBFA" client="_Ox-TIH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_P8ZIwH2oEd2c-_iXG7jBFA" name="ResourcesModel"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_hqu9UH2pEd2c-_iXG7jBFA" name="TemporaryContentStorage"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_11yE4H2qEd2c-_iXG7jBFA" name="ResourceManager" clientDependency="_6_z5wH2qEd2c-_iXG7jBFA _RI6wkH5IEd2wLK5S9NB6Gg"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_6_z5wH2qEd2c-_iXG7jBFA" name="use" supplier="_hqu9UH2pEd2c-_iXG7jBFA" client="_11yE4H2qEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_M-Y_MH2rEd2c-_iXG7jBFA" name="use" supplier="_11yE4H2qEd2c-_iXG7jBFA" client="_Ox-TIH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_JlD2cH2sEd2c-_iXG7jBFA" name="OpenCPFAction" clientDependency="_NNKlkH2sEd2c-_iXG7jBFA _p8hjcH2gEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_NNKlkH2sEd2c-_iXG7jBFA" name="open" supplier="_Ox-TIH2fEd2c-_iXG7jBFA" client="_JlD2cH2sEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_88qOsH2vEd2c-_iXG7jBFA" name="use" supplier="_y-WB4H2jEd2c-_iXG7jBFA" client="_lWELIH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_ZliToH2wEd2c-_iXG7jBFA" name="use" supplier="_y-WB4H2jEd2c-_iXG7jBFA" client="_QDu18H2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_kiDrkH2wEd2c-_iXG7jBFA" name="use" supplier="_lWELIH2fEd2c-_iXG7jBFA" client="_S-8p4H2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_NXQc0H5IEd2wLK5S9NB6Gg" name="has" supplier="_P8ZIwH2oEd2c-_iXG7jBFA" client="_66O3MH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_RI6wkH5IEd2wLK5S9NB6Gg" name="use" supplier="_P8ZIwH2oEd2c-_iXG7jBFA" client="_11yE4H2qEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_AoIVMH8AEd2q1abqtdNlvA" name="CPFManager" clientDependency="_FJOh0H8AEd2q1abqtdNlvA _NZJJkH8AEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_FJOh0H8AEd2q1abqtdNlvA" name="use" supplier="_X5Vq0H2gEd2c-_iXG7jBFA" client="_AoIVMH8AEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_NZJJkH8AEd2q1abqtdNlvA" name="manage" supplier="_66O3MH2fEd2c-_iXG7jBFA" client="_AoIVMH8AEd2q1abqtdNlvA"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_SOXzIH8AEd2q1abqtdNlvA" name="PropertiesView"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_TspvAH8AEd2q1abqtdNlvA" name="PreviewView"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_VMa4oH8AEd2q1abqtdNlvA" name="ResourceLibraryView"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_Y-YuYH8AEd2q1abqtdNlvA" name="use" supplier="_SOXzIH8AEd2q1abqtdNlvA" client="_Ox-TIH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_aXhrkH8AEd2q1abqtdNlvA" name="use" supplier="_TspvAH8AEd2q1abqtdNlvA" client="_Ox-TIH2fEd2c-_iXG7jBFA"/>
+  <packagedElement xmi:type="uml:Dependency" xmi:id="_b01-IH8AEd2q1abqtdNlvA" name="use" supplier="_VMa4oH8AEd2q1abqtdNlvA" client="_Ox-TIH2fEd2c-_iXG7jBFA"/>
+</uml:Package>

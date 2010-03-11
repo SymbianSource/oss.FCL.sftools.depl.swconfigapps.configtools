@@ -1,0 +1,8 @@
+<!--****************************************************************************
+ * Configuration tool 
+ * This ant build.xml will compile a plugin 
+ ****************************************************************************-->
+ 
+<project name="plugin-build" default="all">
+	<import file="../plugin-build-template.xml"/>
+</project>

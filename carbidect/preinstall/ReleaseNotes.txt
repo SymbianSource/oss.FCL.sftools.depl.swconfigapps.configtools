@@ -1,0 +1,24 @@
+					==================================================================
+					Welcome to use Carbide.ct for TB 9.X Devices
+					==================================================================
+
+Carbide.ct is a tool for handling Configuration Projects. It can be used by developers, variant engineers and build engineers for the following purposes: 
+- Developers can use the tool to create new Configuration Markup Language (ConfML) files for type definitions and to refine existing ones. 
+- Variant engineers can use the tool to specify variant data and manage variant content.
+- Build engineers can use Carbide.ct and associated tools to do batch operations on ConfML data. 
+
+****************************************
+** Version 1.0.0 08-05-2009 rev:xxxx  **
+****************************************
+This is the first release of the tool. It has the following features:
+- Manage Configuration Projects: create a new project, add and remove layers, import files to the layers, edit the files, and add content to the project, and so on. 
+- Import and export Configuration Project Files (CPF). 
+- Create and modify ConfML files. 
+- Refine existing configuration elements (features and settings) using different internal editors. 
+- Import or define implementation markup languages (ImplML) for configuration elements. 
+- Convert ConfML files and associated content to the target device format. 
+- Validate ConfML files. 
+- Package created files into an image file usable by target devices and emulators. 
+
+Known issues:
+- Some quick fixes are not working yet

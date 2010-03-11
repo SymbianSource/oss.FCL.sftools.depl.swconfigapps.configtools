@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: CLI Plug-in
+Bundle-SymbolicName: com.nokia.S60CT.CLI; singleton:=true
+Bundle-ToolName: S60 Configuration Tool Command Line Interface
+Bundle-Version: 2.1.0
+Bundle-Date: 18-04-2008
+Bundle-RepositoryVersion: 1230
+Bundle-Activator: com.nokia.s60ct.cli.Activator
+Bundle-Vendor: NOKIA
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime,
+ com.nokia.S60CT.common,
+ com.nokia.S60CT.generate;visibility:=reexport,
+ com.nokia.S60CT,
+ com.nokia.S60CT.CenRep,
+ com.nokia.S60CT.iby,
+ com.nokia.tools.s60ct.javaversionchecker
+Eclipse-LazyStart: true
+Bundle-ClassPath: lib/,
+ .
+Import-Package: com.nokia.s60ct.genconfml

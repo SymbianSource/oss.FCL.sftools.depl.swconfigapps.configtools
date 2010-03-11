@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.confml.search.ui component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchQueryTab">
+      <queryTab
+            id="search.ui.ConfML1PlainTextSearchID"
+            image="icons/textQuery.gif"
+            index="0"
+            label="%ModelSearchParticipantArea.ConfML1PlainTextSearchExtPoint.Label"
+            queryCompositeAreaFactory="org.eclipse.emf.search.ecore.ui.factories.EcoreTextModelSearchQueryAreaFactory"
+            targetSearchPageID="search.ui.pages.ConfML1ModelSearchPageID"
+            tooltip="%ConfML1PlainTextSearchExtPoint.Tooltip"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchParticipantTab">
+         
+           <participantTab
+            elementComposeableAdapterFactory="search.ui.providers.AllElementsItemProviderAdapterFactory"
+            elementModelEditorSelectionHandler="search.ui.handlers.EditorSelectionHandler"
+            id="com.nokia.tools.vct.confmlAllElementsParticipantTab"
+            image="icons/esearch.gif"
+            index="1"
+            label="%ModelSearchParticipantArea.AllElementsParticipantTab.Label"
+            participantCompositeAreaFactory="search.ui.factories.ModelSearchParticipantAreaFactory"
+            targetSearchPageID="search.ui.pages.ConfML1ModelSearchPageID"
+            targetNsURI=""
+            tooltip="%ModelSearchParticipantArea.AllElementsParticipantTab.Tooltip">
+      </participantTab>
+      
+      <participantTab
+            elementComposeableAdapterFactory="com.nokia.tools.vct.confml.model.confml1.edit.provider.EConfML1ItemProviderAdapterFactory"
+            elementModelEditorSelectionHandler="search.ui.handlers.EditorSelectionHandler"
+            id="com.nokia.tools.vct.confml.model.confml1.EConfML1PackageParticipantTab"
+            image="icons/ecore.gif"
+            index="2"
+            label="%ModelSearchParticipantArea.EConfML1PackageParticipantTab.Label"
+            participantCompositeAreaFactory="search.ui.factories.ModelSearchParticipantAreaFactory"
+            targetSearchPageID="search.ui.pages.ConfML1ModelSearchPageID"
+            targetNsURI="http://www.s60.com/xml/confml/1"
+            tooltip="%ModelSearchParticipantArea.EConfML1PackageParticipantTab.Tooltip">
+      </participantTab>
+      <participantTab
+            elementComposeableAdapterFactory="com.nokia.tools.vct.confml.model.confml2.provider.EConfML2ItemProviderAdapterFactory"
+            elementModelEditorSelectionHandler="search.ui.handlers.EditorSelectionHandler"
+            id="com.nokia.tools.vct.confml.model.confml2.EConfML2PackageParticipantTab"
+            image="icons/ecore.gif"
+            index="3"
+            label="%ModelSearchParticipantArea.EConfML2PackageParticipantTab.Label"
+            participantCompositeAreaFactory="search.ui.factories.ModelSearchParticipantAreaFactory"
+            targetNsURI="http://www.s60.com/xml/confml/2"
+            targetSearchPageID="search.ui.pages.ConfML1ModelSearchPageID"
+            tooltip="%ModelSearchParticipantArea.EConfML1PackageParticipantTab.Tooltip">
+      </participantTab>
+      
+      <participantTab
+            elementComposeableAdapterFactory="com.nokia.tools.vct.confml.model.xsd.provider.EXSDFacetItemProviderAdapterFactory"
+            elementModelEditorSelectionHandler="search.ui.handlers.EditorSelectionHandler"
+            id="com.nokia.tools.vct.confml.model.xsd.EXSDFacetPackageParticipantTab"
+            image="icons/ecore.gif"
+            index="4"
+            label="%ModelSearchParticipantArea.EXSDFacetPackageParticipantTab.Label"
+            participantCompositeAreaFactory="search.ui.factories.ModelSearchParticipantAreaFactory"
+            targetSearchPageID="search.ui.pages.ConfML1ModelSearchPageID"
+            targetNsURI="http://www.w3.org/2001/XMLSchema"
+            tooltip="%ModelSearchParticipantArea.EXSDFacetPackageParticipantTab.Tooltip">
+      </participantTab>
+      
+      
+   </extension>
+   
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            canSearchEnclosingProjects="true"
+            class="search.ui.pages.ModelSearchPage"
+            enabled="true"
+            icon="icons/esearch.gif"
+            id="search.ui.pages.ConfML1ModelSearchPageID"
+            label="%ModelSearchParticipantArea.ConfML1ModelSearchPage.Label"
+            showScopeSection="true"
+            tabPosition="0"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchEngineMapping">
+ 
+      <mapping
+            id="com.nokia.tools.vct.confml.text4All"
+            engineID="search.ConfML1SearchEngine"
+            participantsTabID="com.nokia.tools.vct.confmlAllElementsParticipantTab"
+            queryTabID="search.ui.ConfML1PlainTextSearchID">
+      </mapping>
+      <mapping
+            id="search.text4EConfML1Package"
+            engineID="search.ConfML1SearchEngine"
+            participantsTabID="com.nokia.tools.vct.confml.model.confml1.EConfML1PackageParticipantTab"
+            queryTabID="search.ui.ConfML1PlainTextSearchID">
+      </mapping>
+      <mapping
+            engineID="search.ConfML1SearchEngine"
+            id="search.text4EConfML2Package"
+            participantsTabID="com.nokia.tools.vct.confml.model.confml2.EConfML2PackageParticipantTab"
+            queryTabID="search.ui.ConfML1PlainTextSearchID">
+      </mapping>
+      <mapping
+            id="search.text4EXSDFacetPackage"
+            engineID="search.ConfML1SearchEngine"
+            participantsTabID="com.nokia.tools.vct.confml.model.xsd.EXSDFacetPackageParticipantTab"
+            queryTabID="search.ui.ConfML1PlainTextSearchID">
+      </mapping>
+      
+   </extension>
+</plugin>

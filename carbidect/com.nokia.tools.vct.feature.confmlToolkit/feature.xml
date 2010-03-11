@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.nokia.tools.vct.feature.confmlToolkit"
+      label="ConfmlToolkit Feature"
+      version="1.0.0.qualifier"
+      provider-name="NOKIA">
+
+   <description>
+      Confml toolkit feature.
+Build: @BUILD_ID@
+   </description>
+
+   <copyright>
+      Copyright © 2008 Nokia Corporation. All rights reserved.
+   </copyright>
+
+   <requires>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.emf.ecore"/>
+      <import plugin="org.eclipse.emf.ecore.xmi"/>
+      <import plugin="org.eclipse.emf.edit"/>
+      <import plugin="org.eclipse.core.resources" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.edit.ui"/>
+      <import plugin="org.eclipse.ui.ide"/>
+      <import plugin="org.eclipse.emf.search"/>
+      <import plugin="org.eclipse.emf.search.common"/>
+      <import plugin="org.eclipse.emf.search.ecore"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.emf.search.ui"/>
+      <import plugin="org.eclipse.emf.search.ecore.ui"/>
+      <import plugin="org.eclipse.emf.ecore.edit"/>
+      <import plugin="org.eclipse.emf.ecore.editor"/>
+      <import plugin="org.eclipse.ui.navigator"/>
+      <import plugin="com.nokia.tools.vct.confml.edit" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.runtime" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.edit.ui" version="2.4.1" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.vct.crml.edit" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.vct.gcfml.edit" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.vct.ibyml.edit" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.transaction" version="1.2.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.transaction.ui" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.validation"/>
+      <import plugin="com.nokia.tools.vct.confml" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.validation.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.vct.crml" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.validation" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.vct.ibyml" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.forms" version="3.3.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.jface.text" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.filesystem" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.xerces" version="2.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore.xmi" version="2.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.wst.validation" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.wst.xml.core" version="1.1.300" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.workspace" version="1.2.2" match="greaterOrEqual"/>
+      <import plugin="org.antlr.runtime" version="3.0.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.ide" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.views.properties.tabbed" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.transaction" version="1.2.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.gef" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.navigator" version="3.3.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui.navigator.resources" version="3.3.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.expressions"/>
+      <import plugin="org.eclipse.emf.common" version="2.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.draw2d" version="3.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.ui" version="3.4.0" match="compatible"/>
+      <import plugin="org.apache.batik.transcoder" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.batik.dom" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.apache.batik.dom.svg" version="1.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.emf.ecore" version="2.4.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.common.core" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.common.ui" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.confml.core" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.confml.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.common.core" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.common.ui" version="1.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.navigator" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.preview" version="2.0.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.preview" version="1.1.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.variant.jmf" version="1.1.0" match="greaterOrEqual"/>
+      <import plugin="com.nokia.tools.vct.appshell"/>
+   </requires>
+
+   <plugin
+         id="com.nokia.tools.vct.confml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.confml.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.confml.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.confml.expressions"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.confml.search"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.confml.search.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.crml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.crml.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.crml.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.crml.search"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.crml.search.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.ibyml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.ibyml.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.ibyml.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.ibyml.search"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.ibyml.search.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.navigator.confml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.navigator.crml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.navigator.gcfml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.navigator.ibyml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.navigator.layer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.validation.confml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.validation.crml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.validation.ibyml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.common.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.common.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.confml.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.confml.expressions"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.confml.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.content.confml.model"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.navigator"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.preview"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.jmf"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.media.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.s60ct.confml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.s60ct.confml.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.s60ct.confml.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.gcfml"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.gcfml.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.gcfml.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.variant.validation.core"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.confml.editor.include"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.nokia.tools.vct.confml.editor.view"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

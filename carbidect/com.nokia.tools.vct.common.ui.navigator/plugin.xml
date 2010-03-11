@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.common.ui.navigator component.
+-->
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.themes">
+      <themeElementCategory
+            id="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            label="Group Navigator">
+      </themeElementCategory>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.LabelFocusColor"
+            isEditable="false"
+            label="Label Focus Color"
+            value="232,242,255">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.BorderShadowColor"
+            isEditable="false"
+            label="Border Shadow Color"
+            value="157, 157, 161">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.BorderHighlightColor"
+            isEditable="false"
+            label="Border Highlight Color"
+            value="0,0,0">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.FontColorBold"
+            isEditable="false"
+            label="Font Color Bold"
+            value="51,51,51">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.TooltipForegroundColor"
+            isEditable="false"
+            label="Tooltip Foreground Color"
+            value="0,0,0">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.TooltipBackgroundColor"
+            isEditable="false"
+            label="Tooltip Background Color"
+            value="245,245,200">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.MainBackgroundColor"
+            isEditable="false"
+            label="Main Background Color"
+            value="255,255,255">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.ActiveSelectionForeground"
+            isEditable="false"
+            label="Active Selection Foreground"
+            value="COLOR_LIST_SELECTION_TEXT">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.ActiveSelectionBackground"
+            isEditable="false"
+            label="Active Selection Background"
+            value="COLOR_LIST_SELECTION">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.InactiveSelectionForeground"
+            isEditable="false"
+            label="Inactive Selection Foreground"
+            value="COLOR_WIDGET_FOREGROUND">
+      </colorDefinition>
+      <colorDefinition
+            categoryId="com.nokia.tools.vct.common.ui.navigator.NavigatorCategory"
+            id="com.nokia.tools.vct.common.ui.navigator.InactiveSelectionBackground"
+            isEditable="false"
+            label="Inactive Selection Background"
+            value="COLOR_WIDGET_BACKGROUND">
+      </colorDefinition>
+   </extension>
+
+</plugin>

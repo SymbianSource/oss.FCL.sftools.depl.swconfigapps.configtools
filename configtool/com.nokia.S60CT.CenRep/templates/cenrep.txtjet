@@ -1,0 +1,57 @@
+<%@jet package="templates" imports="java.util.* cenrep.* generate.*" class="CRTemplate" %>
+<%
+	Repository rep = (Repository)argument;
+	String versionId = rep.getVersion();
+	String owner = rep.getOwner();
+	List keys = rep.sortKeys();
+	
+%>
+cenrep
+version <%=versionId%><%
+	if(rep.getOwner()!=null&&!rep.getOwner().equals("")){
+%>
+[owner]
+<%=rep.getOwner().trim()%><%
+}%>
+[defaultmeta]
+ <%
+	if(rep.isBackup()){%>
+ 16777216<%}else{%>
+ 0<%}
+ for(Iterator<KeyRange> itrlistOfKeys=rep.getRangeKey().iterator(); itrlistOfKeys.hasNext();){
+ 	KeyRange keyRange = (KeyRange)itrlistOfKeys.next();
+ 	if(keyRange != null){%>
+<%		if(keyRange.isBackup()){%>
+<%=keyRange.getFirstInt()%> <%=keyRange.getLastInt()%> 16777216
+ <%}else{%>
+<%=keyRange.getFirstInt()%> <%=keyRange.getLastInt()%> 0
+ <%}
+ }
+ }%>
+[platsec]
+<%=rep.getGAccess()%><%
+   for(Iterator<KeyRange> itrlistOfKeys=rep.getRangeKey().iterator(); itrlistOfKeys.hasNext();){
+	 KeyRange keyRange = (KeyRange)itrlistOfKeys.next();
+    if(keyRange != null){%>
+<%=keyRange.getFirstInt()%> <%=keyRange.getLastInt()%><%  
+%><%=CenrepGenerator.createCap(keyRange)%><%//}
+	    }
+    }
+%>
+[Main]
+<% for(Iterator itrKey=keys.iterator(); itrKey.hasNext();){
+	Key key = (Key)itrKey.next();
+	%>
+<%=key.getShortIdent()%> <%=key.getType()%><%
+	if(key.getType().equals(TYPE.STRING)||key.getType().equals(TYPE.STRING8)){%> <%if(key.getRef()!=null && key.getRef().indexOf("/")==-1 && (key.getGvalue()==null||((String)key.getGvalue()).length()==0)){ 
+	
+	%><%="\"\""%><%}else {%><%=key.getGvalue()%><%
+	}}else{ if(key.getRef()!=null && key.getRef().indexOf("/")==-1 &&(key.getGvalue()==null||((String)key.getGvalue()).length()==0)) {%> <%="0"%><%}else {%> <%=key.getGvalue()%><%}}
+
+	if(key.isBackup()){%> 16777216<%
+	  }else{%> 0<%}
+	String capabilities = key.getGAccess();
+%><%=capabilities%><%
+	//}
+	
+}%>

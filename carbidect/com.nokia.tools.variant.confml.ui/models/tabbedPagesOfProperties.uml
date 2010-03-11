@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Package xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/2.1.0/UML" xmi:id="_duEFkX8sEd2bU5KxF_wo3g" name="Package">
+  <elementImport xmi:id="_dyPa8H8sEd2bU5KxF_wo3g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+  </elementImport>
+  <elementImport xmi:id="_dyZL8H8sEd2bU5KxF_wo3g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+  </elementImport>
+  <elementImport xmi:id="_dyZL8X8sEd2bU5KxF_wo3g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#UnlimitedNatural"/>
+  </elementImport>
+  <elementImport xmi:id="_dyZL8n8sEd2bU5KxF_wo3g">
+    <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_0fjgYH8sEd2bU5KxF_wo3g" name="TabControlPropertySection" isAbstract="true">
+    <ownedOperation xmi:id="_mgHUkH8tEd2bU5KxF_wo3g" name="createSpecificControls" isAbstract="true">
+      <ownedParameter xmi:id="_sV8fgH8tEd2bU5KxF_wo3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_bXAKwH8wEd2bU5KxF_wo3g" name="createControls">
+      <ownedParameter xmi:id="_dOFBIH8wEd2bU5KxF_wo3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_KI6RoH8xEd2bU5KxF_wo3g" name="redraw">
+      <ownedParameter xmi:id="_LwesYH8xEd2bU5KxF_wo3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_NGKs8H8xEd2bU5KxF_wo3g" name="dispose">
+      <ownedParameter xmi:id="_OGZa4H8xEd2bU5KxF_wo3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_OdWiUH8xEd2bU5KxF_wo3g" name="setRemoveTab">
+      <ownedParameter xmi:id="_SDvaMH8xEd2bU5KxF_wo3g" direction="return"/>
+      <ownedParameter xmi:id="_SDvaMX8xEd2bU5KxF_wo3g" name="remove"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="__IhqMH8sEd2bU5KxF_wo3g" name="XXXSection">
+    <generalization xmi:id="_aEvRoH8wEd2bU5KxF_wo3g" general="_0fjgYH8sEd2bU5KxF_wo3g"/>
+    <ownedOperation xmi:id="_Cdc-oH8tEd2bU5KxF_wo3g" name="createControls">
+      <ownedParameter xmi:id="_MJb7wH8tEd2bU5KxF_wo3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_T2yFIH8xEd2bU5KxF_wo3g" name="createSpecificControls">
+      <ownedParameter xmi:id="_YUBFcH8xEd2bU5KxF_wo3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_aOhDQH8xEd2bU5KxF_wo3g" name="redraw">
+      <ownedParameter xmi:id="_bFWkoH8xEd2bU5KxF_wo3g" direction="return"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_bYSHsH8xEd2bU5KxF_wo3g" name="dispose">
+      <ownedParameter xmi:id="_cxQFwH8xEd2bU5KxF_wo3g" direction="return"/>
+    </ownedOperation>
+  </packagedElement>
+</uml:Package>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.vct.ibyml/src"
+    modelPluginID="com.nokia.tools.vct.ibyml" modelName="IBYMLModel" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+    <genAnnotations source="selectedPackages">
+      <details key="http://www.s60.com/xml/iby/1" value="persistence-ibyml.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <foreignModel>persistence-ibyml.ecore</foreignModel>
+  <genPackages prefix="EIBYModel" basePackage="com.nokia.tools.vct.ibyml" resource="XML"
+      disposableProviderFactory="true" multipleEditorPages="false" contentTypeIdentifier="com.nokia.tools.vct.ibyml"
+      fileExtensions="ibyml" ecorePackage="persistence-ibyml.ecore#/">
+    <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+      <genAnnotations source="persistence-ibyml.xsd"/>
+    </genAnnotations>
+    <genClasses ecoreClass="persistence-ibyml.ecore#//EEntity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-ibyml.ecore#//EEntity/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-ibyml.ecore#//EEntity/value"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-ibyml.ecore#//EIBYFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-ibyml.ecore#//EIBYFile/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-ibyml.ecore#//EIBYFile/flag"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-ibyml.ecore#//EIBYFile/entries"/>
+      <genFeatures notify="false" children="true" createChild="true" propertyCategory=""
+          propertySortChoices="true" ecoreFeature="ecore:EReference persistence-ibyml.ecore#//EIBYFile/locations"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-ibyml.ecore#//EEntry">
+      <genFeatures children="true" createChild="true" propertyDescription="" propertySortChoices="true"
+          ecoreFeature="ecore:EReference persistence-ibyml.ecore#//EEntry/source"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference persistence-ibyml.ecore#//EEntry/target"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference persistence-ibyml.ecore#//EEntry/fileName"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-ibyml.ecore#//EFileName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-ibyml.ecore#//EFileName/plugin"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-ibyml.ecore#//EIBYDocument">
+      <genFeatures notify="false" children="true" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference persistence-ibyml.ecore#//EIBYDocument/root"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

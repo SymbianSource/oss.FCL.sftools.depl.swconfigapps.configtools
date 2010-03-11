@@ -1,0 +1,372 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Configuration Tool Validation,Configuration Tool Validation,Configuration Tool Validation/Exceptions" />
+		<link rel="copyright" href="http://www.connecting.nokia.com/legal/" />
+		<title>Carbide.ct Validation</title>
+		<link rel="stylesheet" type="text/css"  href="../css/commonPrint.css" />
+	</head>
+<body  class="ns-0 ltr">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<h1 class="firstHeading">Carbide.ct Validation</h1>
+
+		<div id="bodyContent">
+			<div id="contentSub"></div>
+			<table id="toc" class="toc" summary="Contents"><tr><td><div id="toctitle"><h2>Contents</h2></div>
+
+<ul>
+<li class='toclevel-1'><a href="#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a>
+<ul>
+<li class='toclevel-2'><a href="#Central_Repository_Key_validations"><span class="tocnumber">1.1</span> <span class="toctext">Central Repository Key validations</span></a>
+<ul>
+<li class='toclevel-3'><a href="#Error_classification"><span class="tocnumber">1.1.1</span> <span class="toctext">Error classification</span></a></li>
+<li class='toclevel-3'><a href="#Exceptions"><span class="tocnumber">1.1.2</span> <span class="toctext">Exceptions</span></a></li>
+
+</ul>
+</li>
+<li class='toclevel-2'><a href="#Other_validations"><span class="tocnumber">1.2</span> <span class="toctext">Other validations</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Notation"><span class="tocnumber">2</span> <span class="toctext">Notation</span></a>
+<ul>
+<li class='toclevel-2'><a href="#.7B.25element.25.7D"><span class="tocnumber">2.1</span> <span class="toctext">{%element%}</span></a></li>
+
+<li class='toclevel-2'><a href="#.7B.25ref.25.7D"><span class="tocnumber">2.2</span> <span class="toctext">{%ref%}</span></a></li>
+<li class='toclevel-2'><a href="#.7B.25element_ref.25.7D"><span class="tocnumber">2.3</span> <span class="toctext">{%element_ref%}</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Capability_Checks"><span class="tocnumber">3</span> <span class="toctext">Capability Checks</span></a>
+<ul>
+<li class='toclevel-2'><a href="#.7B.25element_ref.25.7D_does_not_have_any_read_capabilities"><span class="tocnumber">3.1</span> <span class="toctext">{%element_ref%} does not have any read capabilities</span></a></li>
+
+<li class='toclevel-2'><a href="#.7B.25element_ref.25.7D_read_capability_differs_from_AlwaysPass_or_ReadDeviceData"><span class="tocnumber">3.2</span> <span class="toctext">{%element_ref%} read capability differs from AlwaysPass or ReadDeviceData</span></a></li>
+<li class='toclevel-2'><a href="#.7B.25element_ref.25.7D_has_other_read_capabilities_defined_with_AlwaysPass"><span class="tocnumber">3.3</span> <span class="toctext">{%element_ref%} has other read capabilities defined with AlwaysPass</span></a></li>
+<li class='toclevel-2'><a href="#.7B.25element_ref.25.7D_is_read-only.2C_but_also_write_capabilities_are_set"><span class="tocnumber">3.4</span> <span class="toctext">{%element_ref%} is read-only, but also write capabilities are set</span></a></li>
+<li class='toclevel-2'><a href="#.7B.25element_ref.25.7D_write_capability_is_neither_AlwaysPass_nor_WriteDeviceData"><span class="tocnumber">3.5</span> <span class="toctext">{%element_ref%} write capability is neither AlwaysPass nor WriteDeviceData</span></a></li>
+<li class='toclevel-2'><a href="#Writable_.7B.25element_ref.25.7D_does_not_have_any_write_capabilities"><span class="tocnumber">3.6</span> <span class="toctext">Writable {%element_ref%} does not have any write capabilities</span></a></li>
+
+<li class='toclevel-2'><a href="#.7B.25element_ref.25.7D_exceeds_capability_amount_limitations"><span class="tocnumber">3.7</span> <span class="toctext">{%element_ref%} exceeds capability amount limitations</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#RFS_.2F_Backup_Checks"><span class="tocnumber">4</span> <span class="toctext">RFS / Backup Checks</span></a>
+<ul>
+<li class='toclevel-2'><a href="#Back-up_is_enabled_for_.7B.25element_ref.25.7D.2C_but_repository_misses_owner_definition"><span class="tocnumber">4.1</span> <span class="toctext">Back-up is enabled for {%element_ref%}, but repository misses owner definition</span></a></li>
+<li class='toclevel-2'><a href="#Read-only_.7B.25element_ref.25.7D_is_marked_for_RFS"><span class="tocnumber">4.2</span> <span class="toctext">Read-only {%element_ref%} is marked for RFS</span></a></li>
+
+<li class='toclevel-2'><a href="#Read-only_.7B.25element_ref.25.7D_is_marked_for_backup"><span class="tocnumber">4.3</span> <span class="toctext">Read-only {%element_ref%} is marked for backup</span></a></li>
+<li class='toclevel-2'><a href="#.7B.25element_ref.25.7D_has_RFS_defined.2C_but_write_capability_is_missing"><span class="tocnumber">4.4</span> <span class="toctext">{%element_ref%} has RFS defined, but write capability is missing</span></a></li>
+<li class='toclevel-2'><a href="#.7B.25element_ref.25.7D_has_RFS_defined.2C_but_write_capability_is_restricted_with_SID"><span class="tocnumber">4.5</span> <span class="toctext">{%element_ref%} has RFS defined, but write capability is restricted with SID</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Misc_Checks"><span class="tocnumber">5</span> <span class="toctext">Misc Checks</span></a>
+
+<ul>
+<li class='toclevel-2'><a href="#Path_identifier_.7B.25ref.25.7D_uses_incorrect_directory_separator_marks"><span class="tocnumber">5.1</span> <span class="toctext">Path identifier {%ref%} uses incorrect directory separator marks</span></a></li>
+<li class='toclevel-2'><a href="#No_value_defined_for_a_setting_.7B.25ref.25.7D"><span class="tocnumber">5.2</span> <span class="toctext">No value defined for a setting {%ref%}</span></a></li>
+<li class='toclevel-2'><a href="#.7B.25element_ref.25.7D_ID_not_in_hexadecimal_format"><span class="tocnumber">5.3</span> <span class="toctext">{%element_ref%} ID not in hexadecimal format</span></a></li>
+<li class='toclevel-2'><a href="#KeyRange_element_.7B.25element_ref.25.7D_does_not_contain_firstInt_.2F_lastInt_definition"><span class="tocnumber">5.4</span> <span class="toctext">KeyRange element {%element_ref%} does not contain firstInt / lastInt definition</span></a></li>
+
+<li class='toclevel-2'><a href="#Writable_setting_.7B.25element_ref.25.7D_does_not_contain_any_documentation"><span class="tocnumber">5.5</span> <span class="toctext">Writable setting {%element_ref%} does not contain any documentation</span></a></li>
+</ul>
+</li>
+<li class='toclevel-1'><a href="#Notes"><span class="tocnumber">6</span> <span class="toctext">Notes</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "show"; var tocHideText = "hide"; showTocToggle(); } </script>
+<a name="Introduction"></a><h2> Introduction </h2>
+
+<p>The article lists validations that are implemented as part of Carbide.ct. Tool validations replace the current excel based central repository SCB CR process.
+</p><p>The tool will report some <b>new errors and warnings</b> that have not been shown before. In other words, the rules for acceptable data have been tightened to ensure the quality of the confml and crml specifications. However, it is usually a simple matter to correct the reported errors and warnings. 
+</p><p>In some rare cases, it may be necessary to allow exceptions to the rules. The owners of the confml and other ml data are responsible for the decisions about the exceptions. The exceptions should be listed in a separate table as explained <a href="#Exceptions" title="Configuration Tool Validation">here</a>. The S60 Configurability Program will follow the situation and later decide, if some mechanism is needed to permanently mark up the exceptions so that the tools would not even report certain errors on certain data.     
+</p>
+<a name="Central_Repository_Key_validations"></a><h3> Central Repository Key validations </h3>
+
+<p><a href="#Capability_Checks" title="Configuration Tool Validation">Capability Checks</a> and <a href="#RFS_.2F_Backup_Checks" title="Configuration Tool Validation">RFS / Backup Checks</a> represent common problems in defining central repository key capabilities, read-onlyness, backup-restore and Restore Factory Settings -property. Not following the rules may make it impossible to 
+</p>
+<ul><li> share settings between components,
+</li><li> enable some other component to change a read-only setting in a harmful way,
+</li><li> make the backup-restore operation or the RFS operation to fail on some componet.
+</li></ul>
+<p>The owner of the settings is responsible for defining these properties. The owner is also responsible for any exceptions that he/she makes to these rules. To help the owners in keeping the setting definitions in a valid state, Carbide.ct has the capability to check cenrep key definitions against these rules and warn the user about violations.
+</p>
+
+<a name="Error_classification"></a><h4> Error classification </h4>
+<p>The rules are divided in two categories: Errors and Warnings. This categorization is based on the experience with these issues since the introduction of Platform Security to S60 SW. Errors represent situation that may risk system integrity. Warnings are less severe situations but they may still cause problems. 
+So, take both seriously and aim to remove all errors from your cen rep key definitions. 
+</p>
+<a name="Exceptions"></a><h4> Exceptions </h4>
+<a name="Other_validations"></a><h3> Other validations </h3>
+<p><a href="#Misc_Checks" title="Configuration Tool Validation">Misc Checks</a> contain validation rules for other errors in confml and implementation-ml (e.g. crml) data.
+</p>
+<a name="Notation"></a><h2> Notation </h2>
+<a name=".7B.25element.25.7D"></a><h3> {%element%} </h3>
+<p>Definition of {%element%} depends on context; basically it is one of the following:
+</p>
+<ul><li> Repository
+</li><li> Key
+</li><li> Range
+</li><li> Bitmask
+</li></ul>
+
+<a name=".7B.25ref.25.7D"></a><h3> {%ref%} </h3>
+<p>{%ref%} means unique reference to an element, format being element specific:
+</p>
+<ul><li> For repository, ref has format "Uid Value (Uid Name)" => <i>e.g. "0x10207218 (KCrUidAknFep)". If Uid Name does not exist, plain Uid Value is shown. </i>
+</li><li> For keys, bitmasks, ranges and confML settings, ref stands for element reference => <i>e.g. "KCRUidConnectionUiUtilities/KConnectionUiUtilitiesScanInterval" </i>
+</li></ul>
+
+<a name=".7B.25element_ref.25.7D"></a><h3> {%element_ref%} </h3>
+<p>{%element_ref%} = {%element%} + {%ref%}
+</p><p>Example: "Key KCRUidConnectionUiUtilities/KConnectionUiUtilitiesScanInterval"
+</p>
+<a name="Capability_Checks"></a><h2> Capability Checks </h2>
+<a name=".7B.25element_ref.25.7D_does_not_have_any_read_capabilities"></a><h3> {%element_ref%} does not have any read capabilities </h3>
+
+<p><b>Classification: </b>
+</p><p>Warning
+</p><p><b>Description:</b>
+</p><p>{%element%} does not contain any read capabilities. This effectively means that capability check will always fail. In case the intention is to specify no need to have any capabilities to access the information, AlwaysPass capability should be used.
+</p>
+<a name=".7B.25element_ref.25.7D_read_capability_differs_from_AlwaysPass_or_ReadDeviceData"></a><h3> {%element_ref%} read capability differs from AlwaysPass or ReadDeviceData </h3>
+<p><b>Classification: </b>
+</p><p>Warning
+</p><p><b>Description:</b>
+
+</p><p>Read capability differs from <i>AlwaysPass</i> or <i>ReadDeviceData</i>. By default, read access to any key must be allowed unless the data is really secret. Only things like passwords for e- mail accounts and network access points are really secret. Secret data should then be protected by <i>ReadDeviceData</i> only. 
+</p><p>If some data really needs to be protected by <i>ReadUserData</i>, it should not be stored in central repository in the first place. Central Repository is meant for storing device settings.
+</p><p>Note that the read and write capabilities can be asymmetric. For example, changing Profile settings should be protected by <i>WriteDeviceData</i>. On the other hand, everybody should be able to read Profile settings at any time, so the read capability should be <i>AlwaysPass</i>.
+
+</p><p>In case there really is need to use other read capabilities, please document the case to the <a href="/Exceptions" title="Configuration Tool Validation/Exceptions">Exceptions table</a>.
+</p>
+<a name=".7B.25element_ref.25.7D_has_other_read_capabilities_defined_with_AlwaysPass"></a><h3> {%element_ref%} has other read capabilities defined with AlwaysPass </h3>
+<p><b>Classification: </b>
+</p><p>Error
+</p><p><b>Description:</b>
+</p><p>AlwaysPass capability defines that there is no need to have any capabilities to access the information. However other capabilities are marked for given {%element%}.
+</p>
+
+<a name=".7B.25element_ref.25.7D_is_read-only.2C_but_also_write_capabilities_are_set"></a><h3> {%element_ref%} is read-only, but also write capabilities are set </h3>
+<p><b>Classification: </b>
+</p><p>Warning
+</p><p><b>Description:</b>
+</p><p>In case {%element%} is marked read-only, no write capabilities are allowed.
+</p><p><b>Notes:</b>
+</p><p>This rule is not applied to repositories (only to keys, bitmasks and ranges). Repository cannot be read-only.
+</p>
+<a name=".7B.25element_ref.25.7D_write_capability_is_neither_AlwaysPass_nor_WriteDeviceData"></a><h3> {%element_ref%} write capability is neither AlwaysPass nor WriteDeviceData </h3>
+
+<p><b>Classification: </b>
+</p><p>Warning
+</p><p><b>Description:</b>
+</p><p>If there is any write access marked to an element, in most cases it should be either AlwaysPass or WriteDeviceData. In case of write protection, most often (in ~99.9% of the cases) element has WriteDeviceData capability (and not e.g. WriteUserData).
+</p><p>It must be ensured that an application without any capabilities can do basic things (e.g. write to screen, use T9...). On the other hand, critical or secret setting data must be well protected.
+</p>
+<a name="Writable_.7B.25element_ref.25.7D_does_not_have_any_write_capabilities"></a><h3> Writable {%element_ref%} does not have any write capabilities </h3>
+<p><b>Classification: </b>
+</p><p>Warning
+
+</p><p><b>Description:</b>
+</p><p>{%element%} does not contain any write capabilities, even though it is writable. This effectively means that capability check will always fail. In case the intention is to specify no need to have any capabilities to write the information, AlwaysPass capability has to be used. 
+</p><p><i>Note</i>: a SID is considered as a capability. So, it is not an error, if the writing of the key is protected only by one SID and nothing else.
+</p>
+<a name=".7B.25element_ref.25.7D_exceeds_capability_amount_limitations"></a><h3> {%element_ref%} exceeds capability amount limitations </h3>
+<p><b>Classification: </b>
+</p><p>Error
+</p><p><b>Description:</b>
+
+</p><p>There is restriction on amount of capabilities. There can be maximum 7 capabilities OR 1 SID + 3 capabilities defined for single check (either read or write).
+</p><p>Note the relationship between capabilities and SID + capabilities:
+</p>
+<ul><li> If several capabilities are required, they all are needed to access the value of the {%element%} (Capability1 AND Capability2 AND Capability3 AND ...).
+</li><li> If the SID and capabilities are marked, either the SID or all the marked capabilities are needed to access the value of the key (SID OR Capability1 AND Capability2 AND ...).
+</li></ul>
+<a name="RFS_.2F_Backup_Checks"></a><h2> RFS / Backup Checks </h2>
+<a name="Back-up_is_enabled_for_.7B.25element_ref.25.7D.2C_but_repository_misses_owner_definition"></a><h3> Back-up is enabled for {%element_ref%}, but repository misses owner definition </h3>
+
+<p><b>Classification: </b>
+</p><p>Error
+</p><p><b>Description:</b>
+</p><p>{%element%} is marked to be backed up, but the owner definition (Secure ID, SID) of the repository is missing. Owner information is needed for back-up to succeed.
+</p>
+<a name="Read-only_.7B.25element_ref.25.7D_is_marked_for_RFS"></a><h3> Read-only {%element_ref%} is marked for RFS </h3>
+<p><b>Classification: </b>
+</p><p>Warning
+</p><p><b>Description:</b>
+
+</p><p>Restore Factory Settings must not be enabled for read-only {%element%}, and will be ignored during initialization file generation.
+</p>
+<a name="Read-only_.7B.25element_ref.25.7D_is_marked_for_backup"></a><h3> Read-only {%element_ref%} is marked for backup </h3>
+<p><b>Classification: </b>
+</p><p>Warning
+</p><p><b>Description:</b>
+</p><p>Backup must not be enabled for read- only {%element%}.
+</p>
+<a name=".7B.25element_ref.25.7D_has_RFS_defined.2C_but_write_capability_is_missing"></a><h3> {%element_ref%} has RFS defined, but write capability is missing </h3>
+
+<p><b>Classification: </b>
+</p><p>Warning
+</p><p><b>Description:</b>
+</p><p>Restore Factory Settings (RFS) works in case of central repository keys so that if all the keys inside repository have RFS set, then the RFS will be done calling the <i>ResetAll()</i> -method in the central repository API. This method checks the repository specific write capability. 
+</p><p>If not all the keys have RFS set, then the <i>Reset()</i> method is called on each key separately. This method checks the capabilities defined for each key. In this case, the write capability of the repository is not checked.
+</p><p>If the repository/key specific write capability is AlwaysPass, anybody (including 3rd party software) can make RFS to your repository/key. If write capability is not defined, RFS won't work at all since the default capability check will fail.
+</p><p>In general, specifying a SID as a capability is enough. However, if RFS is defined, <i>it is wrong to define a SID as the write capability</i>. See the next rule.
+
+</p>
+<a name=".7B.25element_ref.25.7D_has_RFS_defined.2C_but_write_capability_is_restricted_with_SID"></a><h3> {%element_ref%} has RFS defined, but write capability is restricted with SID </h3>
+<p><b>Classification: </b>
+</p><p>Warning
+</p><p><b>Description:</b>
+</p><p>Restore Factory Settings (RFS) works in case of central repository keys so that if all the keys inside repository have RFS set, then the RFS will be done calling the ResetAll-method in the central repository API. This method checks the repository specific write capability.
+</p><p>If not all the keys have RFS set, then the Reset method is called on each key separately. This method checks the capabilities defined for each key and the repository write capability is not checked.
+</p><p>If the repository/key specific write capability is restricted with SID, RFS won't work at all since the default capability check will fail.
+</p>
+<a name="Misc_Checks"></a><h2> Misc Checks </h2>
+
+<a name="Path_identifier_.7B.25ref.25.7D_uses_incorrect_directory_separator_marks"></a><h3> Path identifier {%ref%} uses incorrect directory separator marks </h3>
+<p><b>Classification: </b>
+</p><p>Warning
+</p><p><b>Description:</b>
+</p><p>Directory separators in file paths should be two backslashes ( "\\" ).
+</p><p><b>Notes:</b>
+</p><p>In case string begins with "c:" or "z:", string is considered to be a file path. Confml also supports file and folder datatypes.
+</p>
+<a name="No_value_defined_for_a_setting_.7B.25ref.25.7D"></a><h3> No value defined for a setting {%ref%} </h3>
+
+<p><b>Classification: </b>
+</p><p>Error
+</p><p><b>Description:</b>
+</p><p>Integer, real and boolean settings must always have a value defined.
+</p>
+<a name=".7B.25element_ref.25.7D_ID_not_in_hexadecimal_format"></a><h3> {%element_ref%} ID not in hexadecimal format </h3>
+<p><b>Classification: </b>
+</p><p>Error
+</p><p><b>Description:</b>
+
+</p><p>Repository UID must be in hexadecimal format. The same applies to key, range and bitmask identifiers.
+</p>
+<a name="KeyRange_element_.7B.25element_ref.25.7D_does_not_contain_firstInt_.2F_lastInt_definition"></a><h3> KeyRange element {%element_ref%} does not contain firstInt / lastInt definition </h3>
+<p><b>Classification: </b>
+</p><p>Error
+</p><p><b>Description:</b>
+</p><p>KeyRange definition misses firstInt or lastInt definition. Both are required.
+</p>
+<a name="Writable_setting_.7B.25element_ref.25.7D_does_not_contain_any_documentation"></a><h3> Writable setting {%element_ref%} does not contain any documentation </h3>
+
+<p><b>Classification: </b>
+</p><p>Warning
+</p><p><b>Description:</b>
+</p><p>Writable settings are modified by several parties. Proper modification requires sufficient documentation.
+</p>
+<a name="Notes"></a><h2> Notes </h2>
+<p>Location area might have potential case, which conflicts with RFS &amp; back-up read-onlyness rules. Possibly something to do with post-sales scenarios. Needs to be checked from sheets / location team if that is the case.
+
+</p><p>In any case, rules must be validated against existing confmls/crmls before deployment, to check message validity and to create potential exceptions.
+</p>
+<!-- Saved in parser cache with key s60:pcache:idhash:14231-0!1!0!0!!en!2 and timestamp 20090424074912 -->
+<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Views</h5>
+		<ul>
+
+				 <li id="ca-nstab-main" class="selected"><a href="">Article</a></li>
+				 <li id="ca-talk">Discussion</li>
+				 <li id="ca-edit">Edit</li>
+				 <li id="ca-history">History</li>
+		</ul>
+	</div>
+	<div class="portlet" id="p-personal">
+
+		<h5>Personal tools</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login">Log in</li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+	
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+		<div class='portlet' id='p-navigation'>
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage">Main Page</li>
+
+				<li id="n-help">Help</li>
+				<li id="n-Help-on-editing">Help on editing</li>
+				<li id="n-Sandbox">Sandbox</li>
+				<li id="n-Help-on-searching">Help on searching</li>
+				<li id="n-Contacts">Contacts</li>
+				<li id="n-recentchanges">Recent changes</li>
+
+				<li id="n-randompage">Random page</li>
+			</ul>
+		</div>
+	</div>
+		<div class='portlet' id='p-categories'>
+		<h5>Categories</h5>
+		<div class='pBody'>
+			<ul>
+
+				<li id="n-Hot-topics">Hot topics</li>
+				<li id="n-Development">Development</li>
+				<li id="n----Architecture">-- Architecture</li>
+				<li id="n----Tools">-- Tools</li>
+				<li id="n----How-tos">-- How-tos</li>
+				<li id="n----Adaptation">-- Adaptation</li>
+
+				<li id="n-Technology">Technology</li>
+				<li id="n-Teams">Teams</li>
+				<li id="n-Products">Products</li>
+				<li id="n-Reference">Reference</li>
+			</ul>
+		</div>
+	</div>
+
+		<div class='portlet' id='p-S60 Arena links'>
+		<h5>S60 Arena links</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Discussion-forum">Discussion forum</li>
+				<li id="n-Feedback">Feedback</li>
+				<li id="n-Send-email">Send email</li>
+
+			</ul>
+		</div>
+	</div>
+		<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Search</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" accesskey="f" value="" />
+
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="Go" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" value="Search" />
+			</div></form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Toolbox</h5>
+		<div class="pBody">
+
+			<ul>
+				<li id="t-whatlinkshere">What links here</li>
+				<li id="t-recentchangeslinked">Related changes</li>
+<li id="t-upload">Upload file</li>
+<li id="t-specialpages">Special pages</li>
+				<li id="t-print">Printable version</li>				<li id="t-permalink">Permanent link</li>			</ul>
+
+		</div>
+	</div>
+		</div>
+		<script type="text/javascript"> if (window.runOnloadHook) runOnloadHook();</script>
+</div>
+</body></html>

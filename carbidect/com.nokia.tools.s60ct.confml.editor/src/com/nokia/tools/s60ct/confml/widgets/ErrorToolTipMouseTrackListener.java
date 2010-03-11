@@ -1,0 +1,51 @@
+/*
+* Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies). 
+* All rights reserved.
+* This component and the accompanying materials are made available
+* under the terms of "Eclipse Public License v1.0"
+* which accompanies this distribution, and is available
+* at the URL "http://www.eclipse.org/legal/epl-v10.html".
+*
+* Initial Contributors:
+* Nokia Corporation - initial contribution.
+*
+* Contributors:
+*
+* Description:
+*
+*/
+/**
+ * 
+ */
+package com.nokia.tools.s60ct.confml.widgets;
+
+import org.eclipse.swt.events.MouseEvent;
+import org.eclipse.swt.events.MouseTrackListener;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Shell;
+
+public class ErrorToolTipMouseTrackListener implements MouseTrackListener {
+	private final Shell errorToolTipContainer;
+	private  Composite errorComposite;
+
+	public ErrorToolTipMouseTrackListener(Shell errorToolTipContainer, Composite errorComposite) {
+		this.errorToolTipContainer = errorToolTipContainer;
+		this.errorComposite=errorComposite;
+		
+	}
+
+	public void mouseEnter(MouseEvent e) {
+		ErrorToolTipWidget.calculateLocationOfErrorToolTip(errorComposite, errorToolTipContainer);
+		errorToolTipContainer.setVisible(true);
+
+	}
+
+	public void mouseExit(MouseEvent e) {
+		errorToolTipContainer.setVisible(false);
+
+	}
+
+	public void mouseHover(MouseEvent e) {
+
+	}
+}

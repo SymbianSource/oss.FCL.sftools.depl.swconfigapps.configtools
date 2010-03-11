@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="1. Carbide.ct User Guide">
+   <topic label="Getting Started">
+      <topic href="html/gettingstarted/overview.html" label="Carbide.ct overview">
+      </topic>
+   </topic>
+   <topic label="Concepts">
+      <anchor id="concepts"/>
+   </topic>
+   <topic href="html/tasks.html" label="Using Carbide.ct">
+      <anchor id="tasks"/>
+   </topic>
+   <topic href="html/keys.html" label="Carbide.ct keyboard shortcuts">
+      <anchor id="tasks"/>
+   </topic>
+</toc>

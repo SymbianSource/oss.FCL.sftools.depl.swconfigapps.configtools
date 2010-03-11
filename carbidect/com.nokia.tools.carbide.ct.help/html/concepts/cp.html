@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<title>Configuration Project</title>
+</head>
+
+<body>
+<h1>Configuration Project</h1>
+<p>Carbide.ct is based on the concept of Configuration Project. A Configuration Project specifies the logical structure, related data and related methods, 
+which enable efficient tooling support for configurability needs throughout the feature, platform, 
+product and variant creation lifecycles. It contains all ConfMLs, ImplMLs, 
+documentation and content that are needed to create variant for a specific configuration. The following concepts are 
+closely related to Configuration Project:</p>
+<p>
+<table border="1"> 
+<thead>
+    <tr>
+      <th>Concept</th>
+      <th>Meaning</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+      <td>Configuration</td>
+      <td>Configuration in Configuration Project defines a collection of layers and their order in relation to each other. In other words, it defines a chain of layers, and related metadata. Configuration can also refer to configuration element inside Configuration Markup Language File, which defines zero or more configuration elements in terms of features and settings.</td>
+    </tr>
+    <tr>
+      <td>ConfML</td>
+      <td>Configuration Markup Language Configuration ML is an XML-based markup language for defining software configuration elements and configuration data of S60 devices.</td>
+    </tr>
+    <tr>
+      <td>ImplML</td>
+      <td>Implementation Markup Language A markup language for defining settings transformation. These files are optionally used to convert ConfML files into platform- or component-specific format.</td>
+    </tr>
+    <tr>
+      <td>Layer</td>
+      <td>A structural unit of a Configuration Project, representing full or partial set of settings and customizable resources produced in certain phase of configuration process.</td>
+    </tr>
+    <tr>
+      <td>Configuration Process</td>
+      <td>End-to-end process, which starts from defining the configurable features and ending to taking software into use in manufacturing.</td>
+    </tr>
+    <tr>
+      <td>Configuration Process Phase</td>
+      <td>A single step in the configuration process, such as integrating several components into one delivery, or modifying delivery values due to interest of some stakeholder.</td>
+    </tr>
+    <tr>
+      <td>Configuration root file</td>
+      <td>ConfML file describing layer chaining and related properties.</td>
+    </tr>
+    <tr>
+      <td>Variant</td>
+      <td>Software product that is the subject of a configuration process.</td>
+    </tr>
+</tbody>
+</table>
+</p>
+<p>Configuration Project defines how software configuration is composed and managed throughout the configuration process. This allows collecting and managing the settings and customisable resources in consistent way, thus creating harmonized environment for automatisation.</p>
+<p>During the process, each of the integration or customisation phase is composed into separate layer residing in the project. Single layer contains things relevant for that specific phase, consisting mainly of ConfML definitions (for example, configuration interfaces, data and view definitions), mapping rules to implementation and related content. The basic principle is that layers are connected to each other, and layers added later in the process are able to override the data and content defined in earlier layers.</p>
+<p>Information about collection of layers, their order and related metadata form a single configuration. Configuration Project can consist of any number of configurations.</p>
+
+</body>
+</html>

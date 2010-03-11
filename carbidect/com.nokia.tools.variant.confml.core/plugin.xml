@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.confml.core component.
+-->
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id: plugin.xml,v 1.1.2.20 2008/08/27 11:57:53 e0199457 Exp $
+-->
+
+<plugin>
+   <extension-point id="confml_variant" name="ConfML Variant Contribution" schema="schema/confml_variant.exsd"/>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.nokia.com/xml/ns/confml-core"
+            class="com.nokia.tools.variant.confml.core.model.core.EConfmlRootPackage"
+            genModel="model/confml-models.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://www.nokia.com/xml/ns/confml-core/metadata-2.0"
+            class="com.nokia.tools.variant.confml.core.model.metadata.EMetadataPackage"
+            genModel="model/confml-models.genmodel"/>
+   </extension>
+   
+   
+   <!--extension
+         id="ConfMLLayerBuilder"
+         name="ConfML Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="com.nokia.tools.variant.confml.internal.core.confml.ConfMLBuilder">
+         </run></builder>
+   </extension-->
+   <extension
+         id="ConfMLLayerNature"
+         name="ConfML Layer"
+         point="org.eclipse.core.resources.natures">
+      <runtime>
+         <run
+               class="com.nokia.tools.variant.confml.internal.core.confml.ConfMLNature">
+         </run>
+      </runtime>
+      <builder
+            id="com.nokia.tools.variant.confml.core.ConfMLLayerBuilder">
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.contentTypes">
+      <content-type
+            base-type="org.eclipse.core.runtime.xml"
+            file-names=".metadata"
+            id="com.nokia.tools.variant.confml.core.ConfML.Metadata"
+            name="ConfML Metadata"
+            priority="normal">
+      </content-type>
+   </extension>
+   <extension
+         point="org.eclipse.emf.transaction.editingDomains">
+      <editingDomain
+            id="com.nokia.tools.variant.confml.core.ConfMLModelDomain">
+      </editingDomain>
+   </extension>
+   <extension
+         name="Project to ConfML adapters"
+         point="org.eclipse.core.runtime.adapters">
+      <factory
+            adaptableType="org.eclipse.core.resources.IProject"
+            class="com.nokia.tools.variant.confml.internal.core.project.ProjectAdapterFactory">
+         <adapter
+               type="com.nokia.tools.vct.common.appmodel.EConfigurationProject">
+         </adapter>
+      </factory>
+   </extension>
+
+</plugin>

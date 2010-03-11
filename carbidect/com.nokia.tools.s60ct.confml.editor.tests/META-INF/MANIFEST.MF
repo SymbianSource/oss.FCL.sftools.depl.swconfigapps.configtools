@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Tests Fragment
+Bundle-SymbolicName: com.nokia.tools.s60ct.confml.editor.tests
+Bundle-Version: 1.0.0
+Bundle-Vendor: NOKIA
+Fragment-Host: com.nokia.tools.s60ct.confml.editor;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.junit;bundle-version="3.8.2",
+ com.nokia.tools.s60ct.confml.tests;bundle-version="1.0.0",
+ com.nokia.tools.s60ct.javaversionchecker.test;bundle-version="1.0.0",
+ com.nokia.tools.vct.confml.tests;bundle-version="1.0.0",
+ com.nokia.tools.carbide.ct.refactoring.tests;bundle-version="1.0.0",
+ com.nokia.tools.variant.confml.tests;bundle-version="1.0.0",
+ com.nokia.tools.carbidect.cone.tests;bundle-version="1.0.0"
+Export-Package: com.nokia.tools.s60ct.confml.editor.tests

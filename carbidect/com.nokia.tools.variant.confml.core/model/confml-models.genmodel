@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.variant.confml.core/src"
+    modelPluginID="com.nokia.tools.variant.confml.core" modelName="Confml-models"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>confml-models.ecore</foreignModel>
+  <genPackages prefix="EConfmlRoot" basePackage="com.nokia.tools.variant.confml.core.model"
+      disposableProviderFactory="true" ecorePackage="confml-models.ecore#/">
+    <genDataTypes ecoreDataType="confml-models.ecore#//Eclipse_IExtension"/>
+    <genDataTypes ecoreDataType="confml-models.ecore#//Java_URI"/>
+    <genDataTypes ecoreDataType="confml-models.ecore#//Eclipse_IPath"/>
+    <genDataTypes ecoreDataType="confml-models.ecore#//Eclipse_IResource"/>
+    <genDataTypes ecoreDataType="confml-models.ecore#//Eclipse_IFile"/>
+    <genDataTypes ecoreDataType="confml-models.ecore#//Eclipse_IProject"/>
+    <genDataTypes ecoreDataType="confml-models.ecore#//Eclipse_Version"/>
+    <genDataTypes ecoreDataType="confml-models.ecore#//Eclipse_IFileStore"/>
+    <genDataTypes ecoreDataType="confml-models.ecore#//Ecore_URI"/>
+    <genClasses ecoreClass="confml-models.ecore#//EBinaryResource"/>
+    <genClasses ecoreClass="confml-models.ecore#//EWorkspaceModel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//EWorkspaceModel/projectMap"/>
+    </genClasses>
+    <genClasses ecoreClass="confml-models.ecore#//EProjectEntry">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//EProjectEntry/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//EProjectEntry/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="confml-models.ecore#//ESourceLocator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//ESourceLocator/uri"/>
+    </genClasses>
+    <nestedGenPackages prefix="EApplication" basePackage="com.nokia.tools.variant.confml.core.model"
+        disposableProviderFactory="true" ecorePackage="confml-models.ecore#//application">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="confml-models.ecore#//application/EAppValueType">
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/STRING"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/INTEGER"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/DECIMAL"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/RESOURCE"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/SELECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/BOOLEAN"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/MULTISELECTION"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/DATE"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/TIME"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/DATETIME"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EAppValueType/DURATION"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="confml-models.ecore#//application/EStorageClass">
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EStorageClass/PROJECT"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EStorageClass/PKZIP"/>
+        <genEnumLiterals ecoreEnumLiteral="confml-models.ecore#//application/EStorageClass/SECURE_M0"/>
+      </genEnums>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EConfMLLayer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EConfMLLayer/features"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EConfMLLayer/views"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EConfMLLayer/resourceMap"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EConfMLLayer/documentMap"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EConfMLLayer/implMap"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EConfMLLayer/layerFiles"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//application/EConfMLLayer/parent"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EConfMLLayer/rootConfml"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EConfMLLayer/layerURI"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EConfMLLayer/name"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppFeature">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppFeature/settings"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppFeature/relevant"/>
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppFeature/ref"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppSettingData">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSettingData/typeInfo"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppViewEntry">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppViewEntry/key"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppViewEntry/value"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppView"/>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppGroup">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppGroup/settings"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppGroupContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppGroupContainer/groups"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSettingRef">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSettingRef/resolved"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSettingEntry">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSettingEntry/key"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSettingEntry/value"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppFeatureEntry">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppFeatureEntry/value"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppFeatureEntry/key"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSimpleData">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleData/value"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleData/ref"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppCompositeData"/>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSequenceData">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSequenceData/items"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSequenceData/template"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSequenceDataItem"/>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppDataContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppDataContainer/subSettings"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppResourceData">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppResourceData/localPath"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppResourceData/targetPath"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppExpression">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppExpression/literal"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppSettingType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSettingType/readOnly"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSettingType/constraint"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSettingType/relevant"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSettingType/required"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSettingType/deprecated"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSimpleType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleType/minInclusive"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleType/maxInclusive"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleType/minExclusive"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleType/maxExclusive"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleType/minLength"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleType/length"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleType/maxLength"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleType/totalDigits"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleType/pattern"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSimpleType/type"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSequenceType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSequenceType/minOccurs"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSequenceType/maxOccurs"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSequenceType/mapKey"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSequenceType/mapValue"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppCompositeType"/>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppTypeContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppTypeContainer/typeMap"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppResourceType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppResourceType/file"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppResourceType/localPath"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppResourceType/targetPath"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSettingOption">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSettingOption/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSettingOption/literalValue"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSettingOption/relevant"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSettingOption/refValue"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppOptionContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppOptionContainer/options"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSettingTypeEntry">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSettingTypeEntry/key"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSettingTypeEntry/value"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSetting">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSetting/rfsInfo"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSetting/typeInfo"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSetting/valueInfo"/>
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSetting/ref"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppSubSettingDataEntry">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppSubSettingDataEntry/key"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppSubSettingDataEntry/value"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppRfsInfo">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppRfsInfo/rfs"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppDescriptionContainer">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppDescriptionContainer/description"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppIconContainer">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppIconContainer/iconDescriptor"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppIconContainer/iconTitle"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppIconContainer/iconURI"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppNamedItem">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppNamedItem/name"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppPropertyContainer">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EAppPropertyContainer/properties"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppProperty">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppProperty/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppProperty/value"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppProperty/unit"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EAppResourceEntry">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppResourceEntry/key"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppResourceEntry/value"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//application/EConfigurationProject">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//application/EConfigurationProject/layers"/>
+        <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference confml-models.ecore#//application/EConfigurationProject/lastLayer"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EConfigurationProject/rootConfml"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EConfigurationProject/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EConfigurationProject/viewId"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EConfigurationProject/storage"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EConfigurationProject/confVersion"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//application/EAppMetadata">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppMetadata/date"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppMetadata/owner"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppMetadata/editor"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppMetadata/status"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppMetadata/version"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppMetadata/platform"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppMetadata/product"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppMetadata/release"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//application/EAppMetadata/customer"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="ECpf" basePackage="com.nokia.tools.variant.confml.core.model"
+        resource="Basic" disposableProviderFactory="true" ecorePackage="confml-models.ecore#//cpf">
+      <genClasses ecoreClass="confml-models.ecore#//cpf/ECPFRoot">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//cpf/ECPFRoot/dataModel"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//cpf/ECPFRoot/view"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//cpf/ECPFRoot/settings"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="confml-models.ecore#//cpf/EUserSetting">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference confml-models.ecore#//cpf/EUserSetting/model"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//cpf/ESimpleUserSetting">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//cpf/ESimpleUserSetting/userValue"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//cpf/ESequenceUserSetting">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//cpf/ESequenceUserSetting/fields"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="EMetadata" basePackage="com.nokia.tools.variant.confml.core.model"
+        resource="XML" disposableProviderFactory="true" ecorePackage="confml-models.ecore#//metadata">
+      <genClasses ecoreClass="confml-models.ecore#//metadata/EMetadata">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//metadata/EMetadata/components"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference confml-models.ecore#//metadata/EMetadata/properties"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//metadata/EMetaComponent">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/EMetaComponent/type"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/EMetaComponent/path"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//metadata/EMetaProperty">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/EMetaProperty/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/EMetaProperty/value"/>
+      </genClasses>
+      <genClasses ecoreClass="confml-models.ecore#//metadata/ECPFMetadata">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/description"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/viewId"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/cpfRootFile"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/author"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/version"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/dataOverrideFile"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/product"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/platform"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/release"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/customer"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/owner"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute confml-models.ecore#//metadata/ECPFMetadata/date"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+</genmodel:GenModel>

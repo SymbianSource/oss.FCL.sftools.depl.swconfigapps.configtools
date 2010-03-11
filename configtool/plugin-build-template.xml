@@ -1,0 +1,366 @@
+<!--****************************************************************************
+ * Configuration tool plugin build template
+ * This ant pluging-build-template.xml will contain the common targets
+ * to build a eclipse plugin
+ ****************************************************************************-->
+ 
+<project name="${pluginName}" default="all">
+ 	<property file="../common.properties"/>
+  <property file="../${common.buildproperties}"/>
+  <property file="build.properties"/>
+  <property file="plugin.properties"/>
+  <property file="../test.properties" /> 
+  
+  <fileset id="plugin-resources" dir="." includes="${bin.includes}"/>
+
+
+ <path id="project.class.path">
+ 		
+    <!-- add lib jars to classpath -->
+    <fileset dir="${common.plugin-lib}" casesensitive="yes">
+      <include name="**/*.jar"/>
+    </fileset>
+    <!-- add also the generated Configuration Tool jars to classpath -->
+    <fileset dir="${common.plugin-dist}" casesensitive="yes">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>
+
+  <!-- Gets the svnversion with the svnversion command and stores the output to svnrevision. 
+       The target is executed only if the svnrevision has not been set. 
+       -->
+  <target name="get-svnversion" unless="common.svnversion">
+		<echo message="plugin-build-template.xml get-svnversion" level="debug"/>  
+    <exec dir="." executable="svnversion" outputproperty="common.svnversion" />
+    <echo message="svnversion from svn command = ${common.svnversion}" />
+  </target>
+  <!-- Sets the buildate property if it has not been set by the common property file -->
+  <target name="get-builddate" unless="common.builddate">
+		<echo message="plugin-build-template.xml get-builddate" level="debug"/>
+    <tstamp prefix="build"/>
+    <property name="common.builddate" value="${build.DSTAMP}"/>
+  </target>
+
+    <!-- generate a build property file -->
+  <target name="update-properties" depends="get-svnversion">
+		<echo message="plugin-build-template.xml update-properties" level="debug"/>  
+    <tstamp prefix="build"/>
+    <echo file="${common.buildproperties}">
+    common.svnversion     =${svnrevision}
+    </echo>
+  <!-- replace the possible : characters because the do not work in filenames-->
+    <replace file="${common.buildproperties}" token=":"/>
+    <property file="${common.buildproperties}"/>
+  </target>
+
+
+  <!-- All target will clean and then commit all the build steps-->
+	<target name="all" depends="clean, build">
+		<echo message="plugin-build-template.xml all" level="debug"/>
+	</target>		 
+	
+	<!-- Build target will commit all the build steps and can be used for incremental 
+	building, because ant recognized changed files -->
+	<target name="build" depends="init, resource, compile, jar"> 
+		<echo message="plugin-build-template.xml build" level="debug"/>
+	</target>		
+	
+  <target name="clean">
+		<echo message="plugin-build-template.xml clean" level="debug"/>  
+    <delete dir="${common.plugin-target}" quiet="true" />
+  </target>
+
+  <target name="info">
+		<echo message="plugin-build-template.xml info" level="debug"/>  
+    <echoproperties/>
+  </target>    
+
+  <target name="init" depends="get-svnversion,get-builddate">
+		<echo message="plugin-build-template.xml init" level="debug"/>  
+    <mkdir dir="${common.plugin-target}/bin" />
+    <mkdir dir="${common.plugin-dist}" />
+  </target>
+  
+    
+  <target name="init_test">
+    <echo message="plugin-build-template.xml ${pluginName} init_test" level="debug"/>
+    <mkdir dir="${common.unittest.bin.dir}" />
+    <mkdir dir="${common.unittest.reports.dir}"/>
+    <mkdir dir="${common.unittest.reports.emma.dir}"/>
+  </target>
+    
+  <target name="resource" depends="init">
+		<echo message="plugin-build-template.xml resource" level="debug"/>  
+    <copy todir="${common.plugin-target}/bin/">
+      <fileset refid="plugin-resources" /> 
+    </copy>
+  </target>
+
+  <target name="compile" depends="resource"
+    description="compile the source">
+		<echo message="plugin-build-template.xml compile" level="debug"/>    
+    <!-- Update manifest file with value from -Dversion=string -->
+    <manifest file="${common.plugin-target}/bin/META-INF/MANIFEST.MF" mode="update">
+  		<attribute name="Bundle-ReleaseVersion" value="${common.releaseversion}"/>
+  		<attribute name="Bundle-Date" value="${common.builddate}"/>
+  		<attribute name="Bundle-RepositoryVersion" value="${common.svnversion}"/>
+  	</manifest>
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${source..}" destdir="${common.plugin-target}/bin">
+      <classpath refid="project.class.path"/>
+    </javac>
+  </target>
+
+  <target name="jar" depends="compile,resource">
+		<echo message="plugin-build-template.xml jar" level="debug"/>  
+    <jar jarfile="${common.plugin-dist}/${pluginName}_${common.plugin-version}-${common.builddate}-${common.svnversion}.jar" 
+         basedir="${common.plugin-target}/bin"
+         manifest="${common.plugin-target}/bin/META-INF/MANIFEST.MF">
+    </jar>
+  </target>
+
+  <target name="test">
+		<echo message="plugin-build-template.xml test" level="debug"/>  
+  </target>    
+  
+    <!-- ==== COVERAGE ==== -->
+  
+  	<path id="tests.class.path">
+	    <path refid="project.class.path"/>
+	    <fileset dir="../tests/lib" casesensitive="no">
+	      <include name="*.jar"/>
+	    </fileset>
+	</path>
+
+	<path id="inst.class.path">
+	    <fileset dir="${common.plugin-lib}" casesensitive="no">
+	      <include name="**/*.jar"/>
+	    </fileset>
+	    <fileset dir="${common.plugin-dist}" casesensitive="no">
+	      <include name="**/*.jar"/>
+	      <include name="*.jar"/>
+	    </fileset>
+	</path>
+	
+	<path id="test.inst.class.path">
+	    <fileset dir="${common.plugin-lib}" casesensitive="no">
+	      <include name="**/*.jar"/>
+	    </fileset>
+	    <fileset dir="${common.plugin-dist}" casesensitive="no">
+	      <include name="**/*.jar"/>
+	      <include name="*.jar"/>
+	    </fileset>
+ 	    <fileset dir="../tests/lib" casesensitive="no">
+	      <include name="*.jar"/>
+	    </fileset>
+
+	</path>
+
+	<!-- Set emma.lib to refer to the list of EMMA jar files -->
+	<path id="emma.lib" >
+	    <fileset dir="${test.emma.libdir}">
+	        <include name="*.jar"/>
+	    </fileset>
+	</path>
+
+	<!-- Define which classes will be reported in the coverage reports -->
+	<!-- (by default, we will include all classes and assume -->
+	<!-- that your project's output folder is target/classes -->
+	<path id="emma.coverage.classes" >
+	    <pathelement location="build/bin" />
+	</path>
+
+	<!-- Load <emma> and <emmajava> custom tasks so that they can be used in ANT -->
+	<taskdef resource="emma_ant.properties" classpathref="emma.lib"/>
+
+	<target name="_inst_compile" >
+	  <echo message="plugin-build-template.xml ${pluginName} _inst_compile" level="debug"/>
+		<antcall target="compile_inst"/>
+		<antcall target="jar"/>
+	</target>
+
+  <target name="_test_coverage" ><!-- depends="init_test, test_compile, test_coverage_execution, test_coverage_report"-->
+  	<echo message="plugin-build-template.xml ${pluginName} _test_coverage" level="debug"/>
+  	<antcall target="init_test"/>
+  	<antcall target="test_compile"/>
+  	<antcall target="test_coverage_execution"/>
+  	<antcall target="test_coverage_report"/>
+  </target>
+
+  <target name="resource_inst" depends="init">
+    <echo message="plugin-build-template.xml ${pluginName} resource" level="debug"/>
+    <copy todir="${common.plugin-target}/inst/">
+      <fileset refid="plugin-resources" /> 
+    </copy>
+    <copy todir="${common.plugin-target}/bin/">
+      	<fileset dir="${common.plugin-src.dir}" includes="**/*.properties"/>
+      	<fileset dir="${common.plugin-src.dir}" includes="**/*.tokens"/>
+      	<fileset dir="${common.plugin-src.dir}" includes="**/*.g"/>
+      	<fileset dir="${common.plugin-src.dir}" includes="**/*.txtjet"/>
+    </copy>
+  </target>
+
+ <target name="compile_inst" depends="emma, resource, resource_inst" description="compile the source with instrumentation">
+    <echo message="plugin-build-template.xml ${pluginName} compile_inst" level="debug"/>
+    <!-- Update manifest file with value from -Dversion=string -->
+    <manifest file="${common.plugin-target}/bin/META-INF/MANIFEST.MF" mode="update">
+  		<attribute name="Bundle-ReleaseVersion" value="${common.releaseversion}"/>
+  		<attribute name="Bundle-Date" value="${common.builddate}"/>
+  		<attribute name="Bundle-RepositoryVersion" value="${common.svnversion}"/>
+  	</manifest>
+  	
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac executable="${common.javac-exe}" 
+    				debug="on" 
+    				verbose="${common.javac-verbose}" 
+    				fork="${common.javac-fork}" 
+    				compiler="${common.javac-compiler}" 
+    				srcdir="${common.plugin-src.dir}" 
+    				destdir="${common.plugin-target}/bin" 
+    				target="${common.javac-target}" 
+    				source="${common.javac-source}">
+      <classpath refid="inst.class.path"/>
+    </javac>
+    
+     <emma enabled="true"> 
+    	<instr instrpathref="emma.coverage.classes"
+         destdir="${common.instr.dir}"
+         metadatafile="${common.unittest.reports.emma.dir}/${pluginName}-metadata.emma"
+         merge="true">
+        <filter value="${emma.filter}" />
+  	  </instr>
+		</emma>
+
+	  <copy todir="${common.plugin-target}/bin">  	
+ 		    <fileset dir="${common.instr.dir}" >
+		        <include name="**/*.class" />
+		    </fileset>
+	  </copy>	  
+    
+  </target>
+
+  <target name="test_coverage_execution" >
+    <echo message="plugin-build-template.xml ${pluginName} test_coverage_execution" level="debug"/>
+
+  	<junit printsummary="yes" haltonfailure="no" fork="true">
+			<classpath>
+			  <pathelement location="${common.unittest.bin.dir}"/>
+			  <pathelement location="${common.instr.dir}"/>
+				<path refid="test.inst.class.path"/>
+				<path refid="emma.lib" />
+			</classpath>
+			
+			<formatter type="xml"/>
+	
+			<batchtest todir="${common.unittest.reports.dir}">
+				<fileset dir="${common.unittest.bin.dir}">
+					<include name="**/*Test*.class"/>
+					<exclude name="**/AllTests.class"/> 
+				</fileset>
+			</batchtest>
+			
+			<jvmarg value="-Demma.coverage.out.file=${pluginName}/${common.unittest.reports.emma.dir}/${pluginName}-coverage.emma" />
+			<jvmarg value="-Demma.coverage.out.merge=true" />
+		</junit>
+  </target>    
+  
+	<target name="emma" description="turns on EMMA's instrumentation/reporting" >
+	    <echo message="plugin-build-template.xml ${pluginName} emma" level="debug"/>
+	    <property name="emma.enabled" value="true" />
+
+	    <mkdir dir="${common.instr.dir}" />
+	    
+	    <property name="emma.filter" value="" />
+	</target>
+	
+	<target name="test_coverage_report">
+		<echo message="plugin-build-template.xml ${pluginName} test_coverage_report" level="debug"/>
+  
+  	<junitreport todir="${common.unittest.reports.dir}">
+				<fileset dir="${common.unittest.reports.dir}">
+					<include name="TEST-*.xml"/>
+				</fileset>
+				<report format="frames" todir="${common.unittest.reports.dir}/html"/>
+  	</junitreport>
+  	<copy todir="../tests/emma/src">
+  	    <fileset dir="src">
+					<include name="**/*.java"/>
+				</fileset>
+	  </copy>
+
+  	<copy todir="../tests/target/test-results/">
+  	    <fileset dir="${common.unittest.reports.dir}">
+					<include name="TEST-*.xml"/>
+				</fileset>
+	  </copy>
+
+  	<copy todir="../tests/target/emma">
+  	    <fileset dir="${common.unittest.reports.emma.dir}">
+					<include name="*.emma"/>
+				</fileset>
+	  </copy>
+
+
+  	<!-- if enabled, generate coverage report(s): -->
+		<!--<emma enabled="true">
+		    <report sourcepath="${common.plugin-src.dir}" sort="+block,+name,+method,+class" metrics="method:70,block:80,line:80,class:100">
+		    <fileset dir="${common.unittest.reports.emma.dir}" >
+		        <include name="*.emma" />
+		    </fileset>
+		    <xml outfile="${common.unittest.reports.emma.dir}/coverage.xml" depth="package"/>
+		    <html outfile="${common.unittest.reports.emma.dir}/coverage.html" depth="method" columns="name,class,method,block,line"/>
+	    </report>
+		</emma>-->
+		
+  </target>    
+  
+   <target name="test_compile" >
+      <echo message="plugin-build-template.xml ${pluginName} test_compile" level="debug"/>
+			<javac executable="${common.javac-exe}"
+							srcdir="${common.unittest.src.dir}" 
+							destdir="${common.unittest.bin.dir}" 
+							target="${common.javac-target}" 
+							source="${common.javac-source}"
+							compiler="${common.javac-compiler}"
+							fork="${common.javac-fork}" 
+							memoryInitialSize="256m" 
+							memoryMaximumSize="512m">
+		      <classpath refid="test.inst.class.path"/>
+			</javac>
+  </target>    
+  
+  <target name="test_execution">
+    <echo message="plugin-build-template.xml ${pluginName} test_execution" level="debug"/>
+		
+		<junit printsummary="yes" haltonfailure="no" fork="true">
+			<classpath>
+				<pathelement location="${common.unittest.bin.dir}"/>
+				<path refid="tests.class.path"/>
+			</classpath>
+			
+			<formatter type="xml"/>
+	
+			<batchtest todir="${common.unittest.reports.dir}">
+				<fileset dir="${common.unittest.bin.dir}">
+					<include name="**/*Test*.class"/>
+					<exclude name="**/AllTests.class"/> 
+				</fileset>
+			</batchtest>
+			
+		</junit>
+  </target>
+	
+	<target name="test_report">
+		<echo message="plugin-build-template.xml ${pluginName} test_report" level="debug"/>
+  
+  	<junitreport todir="${common.unittest.reports.dir}">
+				<fileset dir="${common.unittest.reports.dir}">
+					<include name="TEST-*.xml"/>
+				</fileset>
+				<report format="frames" todir="${common.unittest.reports.dir}/html"/>
+  	</junitreport> 
+  </target>  
+  
+  
+    
+</project>

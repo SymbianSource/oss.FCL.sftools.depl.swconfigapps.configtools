@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?NLS TYPE="org.eclipse.help.toc"?>
+
+<toc label="Tasks" link_to="toc.xml#tasks"> 
+	<topic label="Tasks"> 
+		<topic label="Installing the Tool" href="html/tasks/install.html" />
+  <topic href="html/tasks/cp.html" label="New Configuration Project">
+  </topic>
+  <topic href="html/tasks/layers.html" label="Creating layers">
+  </topic>
+  <topic href="html/tasks/import.html" label="Importing files">
+  </topic>
+  <topic href="html/tasks/rootfiles.html" label="Add layer and configuration root files">
+  </topic>
+  <topic href="html/tasks/active.html" label="Selecting active root file">
+  </topic>
+  <topic href="html/tasks/value.html" label="Overriding data with Value Editor">
+  </topic>
+  <topic href="html/tasks/view.html" label="Creating new View definition">
+  </topic> 
+	</topic>
+</toc>

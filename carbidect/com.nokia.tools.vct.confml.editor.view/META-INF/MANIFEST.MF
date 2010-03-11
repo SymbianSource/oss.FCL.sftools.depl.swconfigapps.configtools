@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ConfML View Editor Plugin
+Bundle-SymbolicName: com.nokia.tools.vct.confml.editor.view;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.nokia.tools.vct.confml.editor.view.ViewsEditorPlugin
+Bundle-Vendor: NOKIA
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.ui.ide;bundle-version="3.4.0",
+ org.eclipse.ui.views.properties.tabbed;bundle-version="3.4.0",
+ com.nokia.tools.vct.common.core,
+ com.nokia.tools.vct.common.appmodel,
+ com.nokia.tools.vct.common.ui,
+ com.nokia.tools.vct.common.ui.navigator;bundle-version="2.0.0",
+ com.nokia.tools.variant.confml.core;bundle-version="2.0.0",
+ com.nokia.tools.variant.confml.ui;bundle-version="1.0.0",
+ org.eclipse.emf.transaction;bundle-version="1.2.1",
+ org.eclipse.emf.transaction.ui;bundle-version="1.2.0",
+ org.eclipse.draw2d;bundle-version="3.4.0",
+ org.eclipse.gef;bundle-version="3.4.0",
+ com.nokia.tools.vct.confml;bundle-version="1.0.0",
+ com.nokia.tools.variant.validation.core;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-ActivationPolicy: lazy

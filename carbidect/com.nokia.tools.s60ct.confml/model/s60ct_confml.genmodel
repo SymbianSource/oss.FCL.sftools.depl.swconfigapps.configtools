@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.s60ct.confml/src"
+    modelPluginID="com.nokia.tools.s60ct.confml" modelName="S60ct_confml" editorPluginClass="com.nokia.tools.s60ct.model.confml.presentation.ConfmlFeatureEditorPlugin"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>s60ct_confml.ecore</foreignModel>
+  <genPackages prefix="Confml" basePackage="com.nokia.tools.s60ct.model" disposableProviderFactory="true"
+      multipleEditorPages="false" generateModelWizard="false" ecorePackage="s60ct_confml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="s60ct_confml.ecore#//ESettingValueType">
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/INTEGER"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/STRING"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/DECIMAL"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/SELECTION"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/BOOLEAN"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/URI"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/DATETIME"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/DURATION"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/TIME"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/DATE"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//ESettingValueType/MULTISELECTION"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="s60ct_confml.ecore#//EExtensionPolicy">
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//EExtensionPolicy/REPLACE"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//EExtensionPolicy/APPEND"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//EExtensionPolicy/PREFIX"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="s60ct_confml.ecore#//EResourceKind">
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//EResourceKind/FILE"/>
+      <genEnumLiterals ecoreEnumLiteral="s60ct_confml.ecore#//EResourceKind/FOLDER"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="s60ct_confml.ecore#//EJavaURI"/>
+    <genClasses ecoreClass="s60ct_confml.ecore#//EFeature">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//EFeature/settings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EFeature/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EFeature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EFeature/relevant"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//ESettingType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESettingType/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESettingType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESettingType/readOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESettingType/constraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESettingType/relevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESettingType/required"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESettingType/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESettingType/deprecated"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//ESettingOption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESettingOption/relevant"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//ESimpleSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleSetting/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleSetting/minInclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleSetting/maxInclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleSetting/minExclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleSetting/maxExclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleSetting/minLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleSetting/maxLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleSetting/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleSetting/pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleSetting/totalDigits"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESimpleSetting/options"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//ESequenceSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESequenceSetting/minOccurs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESequenceSetting/maxOccurs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESequenceSetting/items"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESequenceSetting/template"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESequenceSetting/mapKey"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESequenceSetting/mapValue"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//EItemSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EItemSetting/number"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//EItemSetting/subSettings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//EItemSetting/fields"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//ESubSettingValue">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESubSettingValue/simpleSetting"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//EDescriptionContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EDescriptionContainer/descriptionText"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EDescriptionContainer/descriptionUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EDescriptionContainer/descriptionUriText"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//EIconContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EIconContainer/iconUriTitle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EIconContainer/iconUri"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//EResourceLocator">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EResourceLocator/resourceUri"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//ESettingValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESettingValue/ref"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//ECompositeSetting"/>
+    <genClasses ecoreClass="s60ct_confml.ecore#//EResourceSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EResourceSetting/kind"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference s60ct_confml.ecore#//EResourceSetting/localPath"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference s60ct_confml.ecore#//EResourceSetting/targetPath"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//ESettingContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESettingContainer/subTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//ESimpleValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESimpleValue/value"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//ESequenceValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESequenceValue/template"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESequenceValue/items"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESequenceValue/extensionPolicy"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//ESequenceValueItem"/>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//ECompositeValue"/>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//ESettingValueContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESettingValueContainer/subSettings"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//EResourceValue">
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference s60ct_confml.ecore#//EResourceValue/localPath"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference s60ct_confml.ecore#//EResourceValue/targetPath"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//EProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EProperty/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EProperty/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EProperty/unit"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="s60ct_confml.ecore#//ELinkContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ELinkContainer/linkUri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ELinkContainer/linkUriTitle"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//EOptionMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EOptionMap/map"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//EOption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EOption/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//EOption/value"/>
+    </genClasses>
+    <genClasses ecoreClass="s60ct_confml.ecore#//ESetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESetting/rfs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESetting/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESetting/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESetting/ref"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference s60ct_confml.ecore#//ESetting/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute s60ct_confml.ecore#//ESetting/defaultRfs"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

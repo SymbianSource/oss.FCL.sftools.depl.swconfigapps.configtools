@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchQueryTab">
+      <queryTab
+            id="search.ui.IBYMLModelPlainTextSearchID"
+            image="icons/textQuery.gif"
+            index="0"
+            label="%ModelSearchParticipantArea.IBYMLModelPlainTextSearchExtPoint.Label"
+            queryCompositeAreaFactory="org.eclipse.emf.search.ecore.ui.factories.EcoreTextModelSearchQueryAreaFactory"
+            targetSearchPageID="search.ui.pages.IBYMLModelModelSearchPageID"
+            tooltip="%IBYMLModelPlainTextSearchExtPoint.Tooltip"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchParticipantTab">
+         
+      <participantTab
+            elementComposeableAdapterFactory="com.nokia.tools.vct.ibyml.ibymodel.provider.EIBYModelItemProviderAdapterFactory"
+            elementModelEditorSelectionHandler="search.ui.handlers.EditorSelectionHandler"
+            id="com.nokia.tools.vct.ibyml.ibymodel.EIBYModelPackageParticipantTab"
+            image="icons/ecore.gif"
+            index="1"
+            label="%ModelSearchParticipantArea.EIBYModelPackageParticipantTab.Label"
+            participantCompositeAreaFactory="search.ui.factories.ModelSearchParticipantAreaFactory"
+            targetSearchPageID="search.ui.pages.IBYMLModelModelSearchPageID"
+            targetNsURI="http://www.s60.com/xml/iby/1"
+            tooltip="%ModelSearchParticipantArea.EIBYModelPackageParticipantTab.Tooltip">
+      </participantTab>
+      
+      
+   </extension>
+   
+   <extension
+         point="org.eclipse.search.searchPages">
+      <page
+            canSearchEnclosingProjects="true"
+            class="search.ui.pages.ModelSearchPage"
+            enabled="true"
+            icon="icons/esearch.gif"
+            id="search.ui.pages.IBYMLModelModelSearchPageID"
+            label="%ModelSearchParticipantArea.IBYMLModelModelSearchPage.Label"
+            showScopeSection="true"
+            tabPosition="0"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.emf.search.ui.modelSearchEngineMapping">
+ 
+      <mapping
+            id="search.text4EIBYModelPackage"
+            engineID="search.IBYMLModelSearchEngine"
+            participantsTabID="com.nokia.tools.vct.ibyml.ibymodel.EIBYModelPackageParticipantTab"
+            queryTabID="search.ui.IBYMLModelPlainTextSearchID">
+      </mapping>
+      
+   </extension>
+</plugin>

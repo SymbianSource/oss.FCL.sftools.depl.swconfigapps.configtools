@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+  <extension point="org.eclipse.emf.ecore.generated_package">
+    <package 
+       uri = "http://www.s60.com/xml/confml/1" 
+       class = "configurationemf.ConfigurationemfPackage"
+       genModel = "model/configurationEMF.genmodel" /> 
+  </extension>
+  <extension
+        point="org.eclipse.core.runtime.contentTypes">
+     <content-type
+           base-type="org.eclipse.core.runtime.xml"
+           default-charset="ASCII"
+           file-extensions="confml"
+           id="confml"
+           name="S60 Configuration Tool"
+           priority="high"/>
+  </extension>
+  <extension
+        point="org.eclipse.emf.validation.constraintProviders">
+     <constraintProvider
+           cache="true">
+        <package
+              namespaceUri="http://www.s60.com/xml/confml/1">
+        </package>
+        <constraints
+              categories="general.validation">
+           <constraint
+                 class="configurationemf.validation.SettingRefConstraint"
+                 id="setting.ref"
+                 lang="Java"
+                 name="Setting Ref Validation"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Setting">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.SettingRequiredConstraint"
+                 id="setting.required"
+                 lang="Java"
+                 name="Setting Required Validation"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Setting">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.SettingTypeConstraint"
+                 id="setting.type"
+                 lang="Java"
+                 name="Setting Type Validation"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Setting">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.SettingOptionConstraint"
+                 id="setting.option"
+                 lang="Java"
+                 name="Option Validation"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Setting">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.SettingNameWarning"
+                 id="setting.name.warning"
+                 lang="Java"
+                 name="Setting Name Warning"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Setting">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.SettingTypeInfo"
+                 id="com.nokia.S60CT.constraint1"
+                 lang="Java"
+                 name="Setting Type Info"
+                 severity="INFO"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Setting">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.SettingNameConstraint"
+                 id="setting.name.error"
+                 lang="Java"
+                 name="Setting Name Validation"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.SettingDescriptionMissing"
+                 id="setting.desc.missing"
+                 lang="Java"
+                 name="Setting Description Missing"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Setting">
+              </target>
+              <target
+                    class="Frame">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.SettingNameEqualsRef"
+                 id="setting.name.equals.ref"
+                 lang="Java"
+                 name="Setting Name Equals Ref"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Setting">
+              </target>
+              <target
+                    class="Frame">
+              </target>
+           </constraint>
+        </constraints>
+        <constraints
+              categories="general.validation">
+           <constraint
+                 class="configurationemf.validation.FeatureRefConstraint"
+                 id="feature.ref"
+                 lang="Java"
+                 name="Feature Ref Validation"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Feature">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.FeatureDuplicateSettingNamesWarning"
+                 id="feature.duplicate.setting.name"
+                 lang="Java"
+                 name="Feature Duplicate Setting Name"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Feature">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.FeatureNameWarning"
+                 id="feature.name.warning"
+                 lang="Java"
+                 name="Feature Name Warning"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Feature">
+              </target>
+           </constraint></constraints>
+        <constraints
+              categories="general.validation">
+           <constraint
+                 class="configurationemf.validation.ConfigurationFeatureRefConstraint"
+                 id="configuration.feature.ref.is.uniq"
+                 lang="Java"
+                 name="Configuration Feature Ref Validation"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Configuration">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.ConfigurationDuplicateFeatureNamesWarning"
+                 id="configuration.duplicate.feature.name"
+                 lang="Java"
+                 name="Configuration Duplicate Feature Name"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Configuration">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.ConfigurationNameWarning"
+                 id="configuration.name.warning"
+                 lang="Java"
+                 name="Configuration Name Warning"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Configuration">
+              </target>
+           </constraint>
+           <constraint
+                 class="configurationemf.validation.ConfigurationMissingSetting"
+                 id="configuration.missing.setting"
+                 lang="Java"
+                 name="Configuration Missing Setting"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Configuration">
+              </target>
+           </constraint>
+        </constraints>
+        <constraints
+              categories="general.validation">
+           <constraint
+                 class="variantdata.validation.VariantDataChainBroken"
+                 id="VariantData.chain.broken"
+                 lang="JAVA"
+                 name="Variantdata chain broken Validation"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Configuration">
+              </target>
+           </constraint>
+           <constraint
+                 class="variantdata.validation.VariantDataBroken"
+                 id="VariantData.Broken"
+                 lang="JAVA"
+                 name="VariantData Broken"
+                 severity="ERROR"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Configuration">
+              </target>
+           </constraint>
+           <constraint
+                 class="variantdata.validation.ExtraRefsInVariantData"
+                 id="VariantData.has.Extra.Refs"
+                 lang="JAVA"
+                 name="VariantData has extra Refs"
+                 severity="WARNING"
+                 statusCode="1">
+              <message>
+                 {0}
+              </message>
+              <target
+                    class="Configuration">
+              </target>
+           </constraint>
+        </constraints>
+     </constraintProvider>
+     <category
+           id="setting.validation"
+           name="Setting Validation">
+     </category>
+     <category
+           id="feature.validation"
+           name="Feature Validation">
+     </category>
+     <category
+           id="configuration.validation"
+           name="Configuration Validation">
+     </category>
+     <category
+           id="VariantData.validation"
+           name="VariantData Validation">
+     </category>
+  </extension>
+  <extension
+        point="org.eclipse.emf.validation.constraintBindings">
+     <clientContext
+           id="alwaysTrue">
+        <selector
+              class="configurationemf.validation.selector.CSelector">
+        </selector>
+     </clientContext>
+     <binding
+           category="setting.validation"
+           context="alwaysTrue">
+     </binding>
+     <binding
+           category="feature.validation"
+           context="alwaysTrue">
+     </binding>
+     <binding
+           category="configuration.validation"
+           context="alwaysTrue">
+     </binding>
+  </extension>
+  <extension
+        point="org.eclipse.emf.validation.traversal">
+     <traversalStrategy
+           class="configurationemf.validation.ATraversalStrategy"
+           namespaceUri="http://www.s60.com/xml/confml/1">
+        <eclass
+              name="Configuration">
+        </eclass>
+     </traversalStrategy>
+  </extension>
+
+</plugin>
+

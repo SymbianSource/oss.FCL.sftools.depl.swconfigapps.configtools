@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:iby="http://www.s60.com/xml/iby/1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ecore:documentRoot="EIBYDocument" ecore:nsPrefix="iby" ecore:package="com.nokia.tools.vct.ibyml.ibymodel" targetNamespace="http://www.s60.com/xml/iby/1">
+  <xsd:import namespace="http://www.eclipse.org/emf/2002/Ecore" schemaLocation="platform:/plugin/org.eclipse.emf.ecore/model/Ecore.xsd"/>
+  <xsd:element name="ibyfile" type="iby:ibyFileType"/>
+  <xsd:complexType ecore:name="EEntity" name="entityType">
+    <xsd:attribute name="ref" type="ecore:EString"/>
+    <xsd:attribute name="value" type="ecore:EString"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="EIBYFile" name="ibyFileType">
+    <xsd:sequence>
+      <xsd:element ecore:name="entries" ecore:resolveProxies="true" form="qualified" maxOccurs="unbounded" minOccurs="0" name="entry" type="iby:entryType"/>
+      <xsd:element ecore:name="locations" ecore:resolveProxies="true" form="qualified" maxOccurs="unbounded" minOccurs="0" name="location" type="iby:entityType"/>
+    </xsd:sequence>
+    <xsd:attribute name="name" type="ecore:EString"/>
+    <xsd:attribute name="flag" type="ecore:EString"/>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="EEntry" name="entryType">
+    <xsd:sequence>
+      <xsd:element ecore:resolveProxies="true" form="qualified" minOccurs="0" name="source" type="iby:entityType"/>
+      <xsd:element ecore:resolveProxies="true" form="qualified" minOccurs="0" name="target" type="iby:entityType"/>
+      <xsd:element ecore:resolveProxies="true" form="qualified" minOccurs="0" name="fileName" type="iby:fileNameType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="EFileName" name="fileNameType">
+    <xsd:complexContent>
+      <xsd:extension base="iby:entityType">
+        <xsd:attribute name="plugin" type="ecore:EString"/>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

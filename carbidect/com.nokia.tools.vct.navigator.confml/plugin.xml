@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.navigator.confml component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.navigator.viewer">
+      <viewerContentBinding
+            viewerId="org.eclipse.ui.navigator.ProjectExplorer">
+         <includes>
+            <contentExtension
+                  pattern="com.nokia.tools.vct.navigator.confml">
+            </contentExtension>
+         </includes>
+      </viewerContentBinding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <navigatorContent
+            activeByDefault="true"
+            contentProvider="com.nokia.tools.vct.navigator.confml.ConfmlContentProvider"
+            id="com.nokia.tools.vct.navigator.confml"
+            labelProvider="com.nokia.tools.vct.navigator.confml.ConfmlLabelProvider"
+            name="ConfML Content"
+            priority="normal">
+         <triggerPoints>
+            <and>
+   	          <instanceof value="org.eclipse.core.resources.IFile"/>
+    	      <test property="org.eclipse.core.resources.extension" value="confml"/>
+            </and>
+         </triggerPoints>
+         <possibleChildren>
+            <instanceof
+                  value="com.nokia.tools.vct.confml.model.confml1.EConfMLDocument">
+            </instanceof>
+         </possibleChildren>
+      </navigatorContent>
+   </extension>
+   <extension
+         point="org.eclipse.ui.decorators">
+      <decorator
+            adaptable="false"
+            class="com.nokia.tools.vct.navigator.confml.ConfMLMarkerDecorator"
+            id="com.nokia.tools.vct.navigator.confml.decorator"
+            label="ConfML Resource Decorator"
+            lightweight="true"
+            location="BOTTOM_RIGHT"
+            state="true">
+         <enablement>
+            <or>
+               <objectClass
+                     name="org.eclipse.emf.ecore.EObject">
+               </objectClass>
+               <objectClass
+                     name="org.eclipse.core.resources.IResource">
+               </objectClass>
+            </or>
+         </enablement>
+      </decorator>
+   </extension>
+
+</plugin>

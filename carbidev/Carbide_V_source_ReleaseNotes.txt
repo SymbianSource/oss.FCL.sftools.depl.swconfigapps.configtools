@@ -1,0 +1,134 @@
+============================================================================
+RELEASE NOTES for Carbide.V 2.0 RC1                                20.2.2009
+============================================================================
+
+Product Description:
+====================
+Carbide.v is a PC-hosted tool providing front-end for managing S60 terminals
+variant settings.  It allows reading, editing and writing all customizations 
+and  resources in the form of a CPF file.  Carbide.v is intended  to achieve 
+better quality and time-to-market of variant customization by providing rich
+UI for customizing settings,  WYSIWYG preview of branded  resources and data
+validation.
+
+Other  key  enablers  in  new  configurability approach are Configuration ML 
+(ConfML)  and  CPF  format.  ConfML  is  an XML-based language for defining,
+describing  and  specifying  software settings of a phone variant. It allows 
+exporting  feature  settings,  applying values and validating correctness of 
+the configurations.
+
+CPF  is  a  file  format  for storing ConfML data and customizable resources
+(media,  files,  etc)  in  a  form  of one file, providing means for logical 
+grouping of features and  settings, history and descriptions of the variant.
+
+Content of this Package:
+========================
+Source code (source plugins) of Carbide.v application
+
+com.nokia.tools.variant.carbidev
+com.nokia.tools.variant.common.core
+com.nokia.tools.variant.common.ui
+com.nokia.tools.variant.compare.ui
+com.nokia.tools.variant.compare
+com.nokia.tools.variant.confml.core
+com.nokia.tools.variant.confml.expressions
+com.nokia.tools.variant.content.confml.model
+com.nokia.tools.variant.doc
+com.nokia.tools.variant.editor
+com.nokia.tools.variant.javascript
+com.nokia.tools.variant.jmf
+com.nokia.tools.variant.media.ui
+com.nokia.tools.variant.navigator
+com.nokia.tools.variant.preview.theme
+com.nokia.tools.variant.preview
+com.nokia.tools.variant.report.generator
+com.nokia.tools.variant.report
+com.nokia.tools.variant.resourcelibrary
+com.nokia.tools.variant.storage
+com.nokia.tools.variant.user
+com.nokia.tools.variant.viewer
+com.nokia.tools.variant.views
+com.nokia.tools.vct.appshell
+com.nokia.tools.vct.cli
+com.nokia.tools.vct.confml.expressions
+com.nokia.tools.vct.confml
+
+Requirement Dependencies to Plugins of Carbide.ui Project:
+==========================================================
+com.nokia.tools.content.core
+com.nokia.tools.editing.beaninfo
+com.nokia.tools.editing.core
+com.nokia.tools.editing.jfc
+com.nokia.tools.editing.ui
+com.nokia.tools.media.core
+com.nokia.tools.media.font.s60
+com.nokia.tools.media.jai
+com.nokia.tools.media.svg
+com.nokia.tools.media.symbian
+com.nokia.tools.media.utils
+com.nokia.tools.packaging
+com.nokia.tools.platform.core
+com.nokia.tools.resource.core
+com.nokia.tools.screen.core
+com.nokia.tools.screen.ui
+com.nokia.tools.theme.core
+com.nokia.tools.theme.s60
+com.nokia.tools.theme.s60.26
+com.nokia.tools.theme.s60.31
+com.nokia.tools.theme.s60.32
+com.nokia.tools.ui
+com.nokia.tools.ui.branding
+
+Requirement libraries:
+======================
+List of libraries below must be included to specified directories of 
+"com.nokia.tools.variant.jmf_1.1.0.v20090220_10-28" plugin:
+
+Dir		Libraries	Download url
+---		---------	------------
+lib		jmf.jar		http://java.sun.com/javase/technologies/desktop/media/jmf/2.1.1/download.html
+		sound.jar
+		soundbank.gm
+
+os/win32/x86	fobs4jmf.dll	http://fobs.sourceforge.net/
+		jmacm.dll	<windows folder>/system32 (after JMF installation)
+		jmam.dll
+		jmcvid.dll
+		jmdaud.dll
+		jmdaudc.dll
+		jmddraw.dll
+		jmfjawt.dll
+		jmg723.dll
+		jmgdi.dll
+		jmgsm.dll
+		jmh261.dll
+		jmh263enc.dll
+		jmjpeg.dll
+		jmmci.dll
+		jmmpa.dll
+		jmmpegv.dll
+		jmutil.dll
+		jmvcm.dll
+		jmvfw.dll
+		jmvh263.dll
+		jsound.dll
+
+Development Tools and Packages:
+===============================
+
+Download url						Tools
+------------						-----
+http://www.eclipse.org/downloads/			Eclipse for RCP/Plug-in Developers
+							Eclipse Modeling Tools
+
+http://download.eclipse.org/tools/orbit/downloads/	Orbit Project (latest stable build recommended)
+
+ 
+----------------------------------------------------------------------------
+Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+All rights reserved.
+  
+This component and the accompanying materials are made available under 
+the terms of the License "Symbian Foundation License v1.0" which accompanies
+this distribution, and is available at 
+the URL "http://www.symbianfoundation.org/legal/sfl-v10.html".

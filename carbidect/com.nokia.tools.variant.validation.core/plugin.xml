@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.variant.validation.core component.
+-->
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="com.nokia.tools.variant.validation" name="Validator" schema="schema/com.nokia.tools.variant.validation.exsd"/>
+<extension
+         id="validationmarker"
+         name="ConfML Validation Problem"
+         point="org.eclipse.core.resources.markers">
+      <super
+            type="org.eclipse.core.resources.problemmarker">
+      </super>
+      <persistent
+            value="true">
+      </persistent>
+      <attribute
+            name="severity">
+      </attribute>
+      <attribute
+            name="categoryId">
+      </attribute>
+      <attribute
+            name="problemId">
+      </attribute>
+      <attribute
+            name="ref">
+      </attribute>
+   </extension>
+   <extension
+         id="com.nokia.tools.variant.confml.core.ConfMLLayerBuilder"
+         name="Validation Builder"
+         point="org.eclipse.core.resources.builders">
+      <builder
+            hasNature="true">
+         <run
+               class="com.nokia.tools.variant.validation.core.builder.ConfMLBuilder">
+         </run>
+      </builder>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="com.nokia.tools.variant.validation.core.preferences.ValidationPreferenceInitializer">
+      </initializer>
+      <scope
+            class="com.nokia.tools.variant.validation.core.preferences.ValidationPreferenceScope"
+            name="com.nokia.tools.variant.validation.core.preferences.ValidationPreferenceScope">
+      </scope>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.constraintBindings">
+      <clientContext
+            id="general.validationContext">
+         <selector
+               class="com.nokia.tools.variant.validation.core.BuildSelector">
+         </selector>
+      </clientContext>
+      <binding
+            category="general.validation"
+            context="general.validationContext">
+      </binding>
+   </extension>
+   <extension
+         point="org.eclipse.emf.validation.constraintProviders">
+      <category
+            id="general.validation"
+            name="name">
+      </category>
+   </extension>
+</plugin>

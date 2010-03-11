@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="S60CTJavaVersionChecker"
+         name="test"
+         point="org.eclipse.ui.startup">
+      <startup class="com.nokia.tools.s60ct.javaversionchecker.JavaVersionCheckerStartup">
+      </startup>
+   </extension> 
+
+</plugin>

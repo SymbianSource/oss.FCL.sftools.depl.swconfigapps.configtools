@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.variant.resourcelibrary/src"
+    modelPluginID="com.nokia.tools.variant.resourcelibrary" modelName="Resourcelibrary-model"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false">
+  <foreignModel>resourcelibrary-model.ecore</foreignModel>
+  <genPackages prefix="resources" basePackage="com.nokia.tools.variant.resourcelibrary"
+      disposableProviderFactory="true" ecorePackage="resourcelibrary-model.ecore#/">
+    <genDataTypes ecoreDataType="resourcelibrary-model.ecore#//EPath"/>
+    <genDataTypes ecoreDataType="resourcelibrary-model.ecore#//EStorage"/>
+    <genDataTypes ecoreDataType="resourcelibrary-model.ecore#//InputStream"/>
+    <genDataTypes ecoreDataType="resourcelibrary-model.ecore#//IContentType"/>
+    <genDataTypes ecoreDataType="resourcelibrary-model.ecore#//IContentDescription"/>
+    <genClasses image="false" ecoreClass="resourcelibrary-model.ecore#//FileSystemElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourcelibrary-model.ecore#//FileSystemElement/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference resourcelibrary-model.ecore#//FileSystemElement/settings"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourcelibrary-model.ecore#//FileSystemElement/readOnly"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourcelibrary-model.ecore#//FileSystemElement/note"/>
+      <genOperations ecoreOperation="resourcelibrary-model.ecore#//FileSystemElement/getPath"/>
+      <genOperations ecoreOperation="resourcelibrary-model.ecore#//FileSystemElement/getFullPath"/>
+      <genOperations ecoreOperation="resourcelibrary-model.ecore#//FileSystemElement/delete"/>
+      <genOperations ecoreOperation="resourcelibrary-model.ecore#//FileSystemElement/move">
+        <genParameters ecoreParameter="resourcelibrary-model.ecore#//FileSystemElement/move/target"/>
+      </genOperations>
+      <genOperations ecoreOperation="resourcelibrary-model.ecore#//FileSystemElement/copy">
+        <genParameters ecoreParameter="resourcelibrary-model.ecore#//FileSystemElement/copy/target"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="resourcelibrary-model.ecore#//Directory">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resourcelibrary-model.ecore#//Directory/children"/>
+      <genOperations ecoreOperation="resourcelibrary-model.ecore#//Directory/getChild">
+        <genParameters ecoreParameter="resourcelibrary-model.ecore#//Directory/getChild/name"/>
+      </genOperations>
+      <genOperations ecoreOperation="resourcelibrary-model.ecore#//Directory/addChild">
+        <genParameters ecoreParameter="resourcelibrary-model.ecore#//Directory/addChild/child"/>
+      </genOperations>
+      <genOperations ecoreOperation="resourcelibrary-model.ecore#//Directory/getSize"/>
+    </genClasses>
+    <genClasses ecoreClass="resourcelibrary-model.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourcelibrary-model.ecore#//File/tempPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourcelibrary-model.ecore#//File/size"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute resourcelibrary-model.ecore#//File/contentDescription"/>
+      <genOperations ecoreOperation="resourcelibrary-model.ecore#//File/getInputStream"/>
+    </genClasses>
+    <genClasses ecoreClass="resourcelibrary-model.ecore#//ResourceModelRoot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourcelibrary-model.ecore#//ResourceModelRoot/tempDirPath"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Confml" basePackage="com.nokia.tools.variant.content" ecorePackage="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE">
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/int"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/string"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/real"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/selection"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/file"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/folder"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/sequence"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/dateTime"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/date"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/time"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/duration"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/multiselection"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/simple_file"/>
+      <genEnumLiterals ecoreEnumLiteral="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//TYPE/simple_folder"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//URI"/>
+    <genDataTypes ecoreDataType="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Object"/>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//ParentGroup">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//ParentGroup/leafGroup"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//LeafGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//LeafGroup/settings"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/defaultValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/lastSavedValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/option"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/minLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/maxLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/length"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/pattern"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/totalDigits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/maxExclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/minExclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/maxInclusive"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SimpleSetting/minInclusive"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Icon">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Icon/title"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Icon/href"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Icon/filePath"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//View">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//View/parentGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//View/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//View/icon"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//View/sharedSettingInstances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//View/sharedFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SequenceSetting">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SequenceSetting/defaultStructure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SequenceSetting/template"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SequenceSetting/sequenceItem"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SequenceSetting/minOccurs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SequenceSetting/maxOccurs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SequenceSetting/lastSavedStructure"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/absRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/property"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/leafGroup"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/rfsValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/featureName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/note"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/relevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/constraint"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/computedRelevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/computedConstraint"/>
+      <genOperations ecoreOperation="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/isDefault"/>
+      <genOperations ecoreOperation="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/isDirty"/>
+      <genOperations ecoreOperation="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/getFeatureRef"/>
+      <genOperations ecoreOperation="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting/getSettingRef"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SequenceItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//SequenceItem/setting"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Option/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Option/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Option/relevant"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Group/desc"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Group/icon"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Group/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Group/id"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Property">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Property/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Property/unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Property/value"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//FileSystemEntrySetting">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//FileSystemEntrySetting/targetPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//FileSystemEntrySetting/sourcePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//FileSystemEntrySetting/lastSavedSourcePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//FileSystemEntrySetting/lastSavedTargetPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//FileSystemEntrySetting/defaultSourcePath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//FileSystemEntrySetting/defaultTargetPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//FileSystemEntrySetting/file"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Feature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Feature/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Feature/relevant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Feature/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Feature/iconTitle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Feature/iconDescriptor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Feature/iconURI"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Feature/computedRelevant"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//MinInclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//MinInclusive/value"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//MaxInclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//MaxInclusive/value"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//MaxExclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//MaxExclusive/value"/>
+    </genClasses>
+    <genClasses ecoreClass="/com.nokia.tools.variant.content.confml.model/model/confml.ecore#//MinExclusive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute /com.nokia.tools.variant.content.confml.model/model/confml.ecore#//MinExclusive/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.nokia.s60ct.validation.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            id="com_nokia_S60CT_action_set_validate"
+            label="Validate"
+            visible="true">
+         <action
+               class="com.nokia.s60ct.actions.ValidateAllAction"
+               definitionId="validate.all"
+               disabledIcon="icons/Validate_disabled.gif"
+               icon="icons/Validate_enabled.gif"
+               id="com.nokia.S60CT.validate.all"
+               label="Validate All..."
+               menubarPath="Tools/Validation"
+               pulldown="false"
+               state="true"
+               style="push"
+               toolbarPath="MainToolBar/Tools"
+               tooltip="Validate all">
+         </action>
+      </actionSet>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <viewerContribution
+            id="com.nokia.S60CT.validation.viewerContribution1"
+            targetID="com.nokia.S60CT.gui.view1">
+         <menu
+               id="validate"
+               label="Validation"
+               path="additions">
+            <separator name="slot0"/>
+         </menu>
+         <action
+               class="com.nokia.s60ct.actions.BatchValidationDelegate"
+               id="com.nokia.S60CT.validation.action1"
+               label="Validate..."
+               menubarPath="validate/slot0"/>
+         <action
+               class="com.nokia.s60ct.actions.EnableLiveValidationDelegate"
+               id="com.nokia.S60CT.validation.action1"
+               label="Enable Live Validation"
+               menubarPath="validate/slot0"/>
+      </viewerContribution>
+      <objectContribution
+            id="com.nokia.S60CT.validation.objectContribution1"
+            objectClass="org.eclipse.emf.ecore.EObject">
+         <action
+               class="com.nokia.s60ct.actions.BatchValidationDelegate"
+               icon="icons/Validate_enabled.gif"
+               id="com.nokia.S60CT.validate.selected"
+               label="%_UI_Validation_label"
+               menubarPath="validate">
+         </action>
+      </objectContribution>
+   </extension>
+   
+
+<extension
+      id="com.nokia.S60CT.validation.confml"
+      name="Confml Marker"
+      point="org.eclipse.core.resources.markers">
+   <persistent value="false"/>
+   <super
+         type="org.eclipse.core.resources.problemmarker">
+   </super>
+   <super
+         type="org.eclipse.emf.validation.problem">
+   </super>
+</extension>
+<extension
+      point="org.eclipse.ui.ide.markerImageProviders">
+   <imageprovider
+         icon="icons/error.gif"
+         id="com.nokia.S60CT.validation.imageProvider"
+         markertype="org.eclipse.core.resources.problemmarker"/>
+</extension>
+<extension
+      point="org.eclipse.core.runtime.products">
+   <product
+         application="com.nokia.s60ct.validation.Application"
+         name="Validation Plugin">
+   </product>
+</extension>
+<extension
+      point="startup.initializer">
+   <initializer
+         class="com.nokia.s60ct.init.ValidationPluginInitializer">
+   </initializer>
+</extension>
+<extension
+      point="org.eclipse.ui.startup">
+   <startup
+         class="com.nokia.s60ct.init.ValidationPluginGUIInit">
+   </startup>
+</extension>
+<extension
+      point="org.eclipse.ui.commands">
+   <command
+         id="validate.all"
+         name="Validate All">
+   </command>
+</extension>
+<extension
+      point="org.eclipse.ui.bindings">
+   <key
+         commandId="validate.all"
+         schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+         sequence="Alt+V">
+   </key>
+</extension>
+<extension
+      point="org.eclipse.ui.ide.markerResolution">
+   <markerResolutionGenerator
+         class="com.nokia.s60ct.quickfixers.QuickFixerDuplicateFeatureName">
+      <attribute
+            name="sourceId"
+            value="configuration.duplicate.feature.name">
+      </attribute>
+   </markerResolutionGenerator>
+   <markerResolutionGenerator
+         class="com.nokia.s60ct.quickfixers.QuickFixerUndefinedSettingType">
+      <attribute
+            name="sourceId"
+            value="configuration.undefined.setting.type">
+      </attribute>
+   </markerResolutionGenerator>
+</extension>
+</plugin>

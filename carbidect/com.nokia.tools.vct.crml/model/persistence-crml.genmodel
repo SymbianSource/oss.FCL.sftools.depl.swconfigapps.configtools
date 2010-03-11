@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.vct.crml/src"
+    modelPluginID="com.nokia.tools.vct.crml" modelName="CRMLModel" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="5.0" copyrightFields="false">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+    <genAnnotations source="selectedPackages">
+      <details key="http:///crml.ecore" value="persistence-crml.xsd"/>
+    </genAnnotations>
+    <details key="directoryURI" value="."/>
+  </genAnnotations>
+  <foreignModel>persistence-crml.ecore</foreignModel>
+  <genPackages prefix="ECRML" basePackage="com.nokia.tools.vct.crml" resource="XML"
+      disposableProviderFactory="true" multipleEditorPages="false" contentTypeIdentifier="com.nokia.tools.vct.content.crml"
+      fileExtensions="crml" ecorePackage="persistence-crml.ecore#/">
+    <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/exporter/org.eclipse.xsd.ecore.exporter">
+      <genAnnotations source="persistence-crml.xsd"/>
+    </genAnnotations>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="persistence-crml.ecore#//EKeyType">
+      <genEnumLiterals ecoreEnumLiteral="persistence-crml.ecore#//EKeyType/int"/>
+      <genEnumLiterals ecoreEnumLiteral="persistence-crml.ecore#//EKeyType/real"/>
+      <genEnumLiterals ecoreEnumLiteral="persistence-crml.ecore#//EKeyType/string"/>
+      <genEnumLiterals ecoreEnumLiteral="persistence-crml.ecore#//EKeyType/string8"/>
+      <genEnumLiterals ecoreEnumLiteral="persistence-crml.ecore#//EKeyType/binary"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="persistence-crml.ecore#//EAccessType">
+      <genEnumLiterals ecoreEnumLiteral="persistence-crml.ecore#//EAccessType/ND"/>
+      <genEnumLiterals ecoreEnumLiteral="persistence-crml.ecore#//EAccessType/READ"/>
+      <genEnumLiterals ecoreEnumLiteral="persistence-crml.ecore#//EAccessType/WRITE"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="persistence-crml.ecore#//CommonAttrs">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//CommonAttrs/id"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-crml.ecore#//EMeta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EMeta/identification"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EMeta/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EMeta/platform"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EMeta/owner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EMeta/editor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EMeta/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EMeta/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EMeta/product"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EMeta/release"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-crml.ecore#//EContent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EContent/value"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-crml.ecore#//ERepository">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//ERepository/version"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//ERepository/uidName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//ERepository/uidValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//ERepository/initialisationFileVersion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//ERepository/owner"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//ERepository/rfs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-crml.ecore#//ERepository/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-crml.ecore#//ERepository/meta"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-crml.ecore#//ERepository/rangeKey"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-crml.ecore#//EKey">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EKey/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EKey/ident"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EKey/type"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-crml.ecore#//EKey/value"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-crml.ecore#//EKey/bits"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-crml.ecore#//EKeyRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EKeyRange/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EKeyRange/int"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EKeyRange/firstInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EKeyRange/lastInt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EKeyRange/indexBits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EKeyRange/firstIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EKeyRange/countInt"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-crml.ecore#//EKeyRange/keys"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-crml.ecore#//EAccess">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EAccess/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EAccess/capabilities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EAccess/sid"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-crml.ecore#//EValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EValue/val"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EValue/id"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-crml.ecore#//EBit">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EBit/state"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-crml.ecore#//ERefContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//ERefContainer/ref"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-crml.ecore#//EAttributeAndDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EAttributeAndDescription/desc"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-crml.ecore#//EReadOnly">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EReadOnly/readOnly"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-crml.ecore#//EAccessContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-crml.ecore#//EAccessContainer/access"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="persistence-crml.ecore#//EBackup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute persistence-crml.ecore#//EBackup/backup"/>
+    </genClasses>
+    <genClasses ecoreClass="persistence-crml.ecore#//ECRMLDocumentRoot">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference persistence-crml.ecore#//ECRMLDocumentRoot/repository"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

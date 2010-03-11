@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.tools.vct.confml.editor.include/src"
+    editDirectory="/com.nokia.tools.vct.confml.editor.include/src" editorDirectory="/com.nokia.tools.vct.confml.editor.include/src"
+    modelPluginID="com.nokia.tools.vct.confml.editor.include" modelName="Xinc-model"
+    editPluginClass="com.nokia.tools.vct.confml.editor.include.XIncludeEditorPlugin"
+    editorPluginClass="com.nokia.tools.vct.confml.editor.include.XIncludeEditorPlugin"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    editPluginID="com.nokia.tools.vct.confml.editor.include" editorPluginID="com.nokia.tools.vct.confml.editor.include"
+    colorProviders="true">
+  <foreignModel>xinc-model.ecore</foreignModel>
+  <genPackages prefix="EXincModel" basePackage="com.nokia.tools.vct.confml.editor.include"
+      resource="Basic" disposableProviderFactory="true" multipleEditorPages="false"
+      fileExtensions="confml" ecorePackage="xinc-model.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="xinc-model.ecore#//EConfMLVersion">
+      <genEnumLiterals ecoreEnumLiteral="xinc-model.ecore#//EConfMLVersion/CONFML1"/>
+      <genEnumLiterals ecoreEnumLiteral="xinc-model.ecore#//EConfMLVersion/CONFML2"/>
+    </genEnums>
+    <genClasses ecoreClass="xinc-model.ecore#//EDocument">
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference xinc-model.ecore#//EDocument/includes"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute xinc-model.ecore#//EDocument/version"/>
+    </genClasses>
+    <genClasses ecoreClass="xinc-model.ecore#//EInclude">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xinc-model.ecore#//EInclude/href"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference xinc-model.ecore#//EInclude/target"/>
+    </genClasses>
+    <genClasses ecoreClass="xinc-model.ecore#//EProjectFile">
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EAttribute xinc-model.ecore#//EProjectFile/resource"/>
+      <genFeatures property="None" createChild="false" ecoreFeature="ecore:EReference xinc-model.ecore#//EProjectFile/included"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute xinc-model.ecore#//EProjectFile/version"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xinc-model.ecore#//EProjectResource">
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute xinc-model.ecore#//EProjectResource/name"/>
+      <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute xinc-model.ecore#//EProjectResource/projectPath"/>
+    </genClasses>
+    <genClasses ecoreClass="xinc-model.ecore#//EProjectFolder"/>
+    <genClasses image="false" ecoreClass="xinc-model.ecore#//EResourceContainer">
+      <genFeatures property="None" children="true" createChild="false" ecoreFeature="ecore:EReference xinc-model.ecore#//EResourceContainer/resources"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

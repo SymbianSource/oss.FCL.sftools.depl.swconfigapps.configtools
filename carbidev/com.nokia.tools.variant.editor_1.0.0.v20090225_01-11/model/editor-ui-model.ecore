@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="model"
+    nsURI="http://ui_editor_model/1.0" nsPrefix="model">
+  <eClassifiers xsi:type="ecore:EClass" name="UIModel">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uiGroups" upperBound="-1"
+        eType="#//UIGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UIGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uiSettings" upperBound="-1"
+        eType="#//UISetting" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sortingOrder" eType="#//SortingOrder"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="model" eType="ecore:EDataType ../../com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Object"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uiGroups" upperBound="-1"
+        eType="#//UIGroup" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UISetting">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="setting" eType="ecore:EClass ../../com.nokia.tools.variant.content.confml.model/model/confml.ecore#//Setting"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="selected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="focused" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="uiMessages" upperBound="-1"
+        eType="#//UIMessage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="children" upperBound="-1"
+        eType="#//UISetting" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="data" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="UIMessageType">
+    <eLiterals name="INFO" value="1"/>
+    <eLiterals name="WARNING" value="2"/>
+    <eLiterals name="ERROR" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UIMessage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//UIMessageType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SortingOrder">
+    <eLiterals name="ASCENDING" value="1" literal="ASCENDING"/>
+    <eLiterals name="DESCENDING" value="2" literal="DESCENDING"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="SortingCriteria">
+    <eLiterals name="FEATURE" value="1"/>
+    <eLiterals name="NOTE" value="2"/>
+    <eLiterals name="DEFAULT_VALUE" value="3"/>
+  </eClassifiers>
+  <eSubpackages name="summaryModel" nsURI="http://ui_editor_model/1.1" nsPrefix="summaryModel">
+    <eClassifiers xsi:type="ecore:EClass" name="UISummaryModel">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="uiGroups" upperBound="-1"
+          eType="#//summaryModel/UISummaryGroup"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UIElement">
+      <eOperations name="isDirty" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eOperations name="isDefault" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//summaryModel/SUMMARYTYPE"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastSavedValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="note" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          defaultValueLiteral=""/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="UISummaryGroup">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="uiElements" upperBound="-1"
+          eType="#//summaryModel/UIElement"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="SUMMARYTYPE">
+      <eLiterals name="name"/>
+      <eLiterals name="owner" value="1"/>
+      <eLiterals name="contents" value="2"/>
+      <eLiterals name="customer" value="3"/>
+      <eLiterals name="author" value="4"/>
+      <eLiterals name="productimages" value="5"/>
+      <eLiterals name="guideline" value="6"/>
+      <eLiterals name="description" value="7"/>
+      <eLiterals name="version" value="8" literal="version"/>
+      <eLiterals name="date" value="9"/>
+      <eLiterals name="history" value="10"/>
+      <eLiterals name="product" value="11"/>
+      <eLiterals name="platform" value="12"/>
+      <eLiterals name="release" value="13"/>
+      <eLiterals name="AVR" value="14"/>
+      <eLiterals name="status" value="15"/>
+      <eLiterals name="origin" value="16"/>
+      <eLiterals name="target" value="17"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Note">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="History">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="note" upperBound="-1"
+          eType="#//summaryModel/Note" containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

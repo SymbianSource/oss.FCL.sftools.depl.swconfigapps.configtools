@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).
+  All rights reserved.
+  This component and the accompanying materials are made available
+  under the terms of "Eclipse Public License v1.0"
+  which accompanies this distribution, and is available
+  at the URL "http://www.eclipse.org/legal/epl-v10.html".
+  
+  Initial Contributors:
+  Nokia Corporation - Initial contribution
+  
+  Contributors:
+  
+  Description: This file is part of com.nokia.tools.vct.common.secure.ui component.
+-->
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.nokia.tools.vct.internal.common.secure.ui.editor.KeyManagerEditor"
+            contributorClass="com.nokia.tools.vct.internal.common.secure.ui.editor.KeyManagerEditorActionBarContributor"
+            default="false"
+            icon="icons/key_editor_icon.png"
+            id="com.nokia.tools.vct.keystore.editor.KeyStoreEditor"
+            name="Key Manager Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            description="Commands Related to Key Management, Encryption and Signing"
+            id="com.nokia.tools.vct.common.secure.ui.security"
+            name="Security Commands">
+      </category>
+      <command
+            categoryId="com.nokia.tools.vct.common.secure.ui.security"
+            defaultHandler="com.nokia.tools.vct.internal.common.secure.ui.handlers.OpenKeyManagerHandler"
+            id="com.nokia.tools.vct.common.secure.ui.OpenKeyManager"
+            name="Open Key Manager">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commandImages">
+      <image
+            commandId="com.nokia.tools.vct.common.secure.ui.OpenKeyManager"
+            icon="icons/key_editor_icon.png">
+      </image>
+   </extension>
+</plugin>

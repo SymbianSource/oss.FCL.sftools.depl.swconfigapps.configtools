@@ -1,0 +1,85 @@
+<%@jet package="com.nokia.tools.s60ct.build.builder" imports="java.util.* com.nokia.tools.s60ct.build.crml.* com.nokia.tools.vct.crml.crmodel.*" class="CRTemplate" %>
+<%
+	RepositoryWithData repWithData = (RepositoryWithData)argument;
+	ERepository rep = repWithData.getRepository();
+	String versionId = rep.getVersion();
+	versionId = versionId==null? "1":versionId;
+	String owner = rep.getOwner();
+	
+List<EKey> keys =/*repWithData.getKeyValueMap().keySet()*/repWithData.sortKeys();
+	
+%>
+cenrep
+version <%=versionId%><%
+	if(owner!=null&&!owner.equals("")) {
+%>
+[owner]
+<%=owner.trim()%><%
+	}%>
+[defaultmeta]
+ <%
+	if(rep.isBackup()){%>
+ 16777216<%}else{%>
+ 0<%}
+ for(Iterator<EKeyRange> rangeKeys=rep.getRangeKey().iterator(); rangeKeys.hasNext();){
+ 	EKeyRange keyRange = (EKeyRange)rangeKeys.next();
+ 	if(keyRange != null){%>
+<%		if(keyRange.isBackup()){%>
+<%=keyRange.getFirstInt()%> <%=keyRange.getLastInt()%> 16777216<%}else{%>
+<%=keyRange.getFirstInt()%> <%=keyRange.getLastInt()%> 0<%}
+ }
+ }%>
+[platsec]
+ <%
+    //EList<EAccess> repAccesses = rep.getAccess();
+	//StringBuilder sb1 = new StringBuilder();
+	/*for(EAccess acc: repAccesses) {
+		if(sb1.length()!=0)
+			sb1.append(" ");
+		System.out.println(acc.getType());
+		if(acc.getType()==EAccessType.READ)
+			sb1.append("cap_rd=");
+		else
+			sb1.append("cap_wr=");
+		sb1.append(acc.getCapabilities().toLowerCase());
+		
+	}*/
+	String repCap = CenrepGenerator.createCap(rep);
+ %>
+<%=repCap.equals("")?"":" "+CenrepGenerator.createCap(rep)
+%><%
+  for(Iterator<EKeyRange> rangeKeys=rep.getRangeKey().iterator(); rangeKeys.hasNext();){
+	 EKeyRange keyRange = rangeKeys.next();
+    if(keyRange != null){%>
+<%=keyRange.getFirstInt()%> <%=keyRange.getLastInt()%><%  
+%><%=" "+CenrepGenerator.createCap(keyRange)%><%//}
+	    }
+    }
+%>
+[Main]
+<% for(Iterator<EKey> itrKey=keys.iterator(); itrKey.hasNext();){
+	EKey key = itrKey.next();
+	%>
+<%=key.getIdent()%> <%=key.getType()%><%
+	if(key.getType().equals(EKeyType.STRING)||key.getType().equals(EKeyType.STRING8)){%> <%=repWithData.getKeyValueMap().get(key)%><%
+	}else{%> <%=repWithData.getKeyValueMap().get(key)%><%}
+
+	if(key.isBackup()){%> 16777216<%
+	  }else{%> 0<%}
+	  /*	EList<EAccess> accesses = key.getAccess();
+		StringBuilder sb = new StringBuilder();
+		for(EAccess acc: accesses) {
+			if(sb.length()!=0)
+				sb.append(" ");
+			System.out.println(acc.getType());
+			if(acc.getType()==EAccessType.READ)
+				sb.append("cap_rd=");
+			else
+				sb.append("cap_wr=");
+			sb.append(acc.getCapabilities().toLowerCase());
+			}*/
+			String keyCap = CenrepGenerator.createCap(key);
+%><%=keyCap.equals("")?"":" "+keyCap%><%
+	//}
+	
+}%>

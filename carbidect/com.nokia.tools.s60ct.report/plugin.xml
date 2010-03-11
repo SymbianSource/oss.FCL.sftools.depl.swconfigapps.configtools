@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            id="com.nokia.tools.s60ct.report.contribution1">
+         <menu
+               label="Generate"
+               path="additions"
+               id="com.nokia.tools.s60ct.report.menu1">
+            <separator
+                  name="generationGroup">
+            </separator>
+         </menu>
+         <action
+               class="com.nokia.tools.s60ct.report.popup.actions.GenerateReportPopupAction"
+               enablesFor="1"
+               icon="icons/report_16_tlb.gif"
+               id="com.nokia.tools.s60ct.report.newAction"
+               label="Create Report"
+               menubarPath="com.nokia.tools.s60ct.report.menu1/group1"
+               tooltip="Create HTML report">
+         </action>
+         <visibility>
+            <and>
+               <or>
+                  <objectState
+                        name="contentTypeId"
+                        value="com.nokia.tools.vct.content.confml">
+                  </objectState>
+                  <objectState
+                        name="contentTypeId"
+                        value="com.nokia.tools.vct.content.confml2">
+                  </objectState>
+               </or>
+               <objectState
+                     name="projectNature"
+                     value="com.nokia.tools.variant.confml.core.ConfMLLayerNature">
+               </objectState>
+            </and>
+         </visibility>
+      </objectContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="com.nokia.tools.s60ct.report.ReportStartup">
+      </startup>
+   </extension>
+
+</plugin>

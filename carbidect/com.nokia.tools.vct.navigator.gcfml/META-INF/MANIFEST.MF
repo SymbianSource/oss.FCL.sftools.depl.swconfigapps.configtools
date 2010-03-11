@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GCFML Ui Contributions Plug-in
+Bundle-SymbolicName: com.nokia.tools.vct.navigator.gcfml;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: NOKIA
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Require-Bundle: org.eclipse.ui.navigator,
+ com.nokia.tools.vct.gcfml.edit;bundle-version="1.0.0",
+ org.eclipse.core.resources;bundle-version="3.4.0",
+ org.eclipse.ui;bundle-version="3.4.0",
+ org.eclipse.core.runtime;bundle-version="3.4.0",
+ com.nokia.tools.vct.common.core,
+ com.nokia.tools.vct.common.ui,
+ org.eclipse.emf.edit.ui;bundle-version="2.4.1"
+Export-Package: com.nokia.tools.vct.navigator.gcfml
+Bundle-ActivationPolicy: lazy

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.nokia.S60CT.iby/src"
+    modelPluginID="com.nokia.S60CT.iby" modelName="Iby" richClientPlatform="true"
+    importerID="org.eclipse.uml2.uml.ecore.importer" complianceLevel="5.0" copyrightFields="false">
+  <genAnnotations source="http://www.eclipse.org/emf/2002/GenModel/importer/org.eclipse.uml2.uml.ecore.importer">
+    <details key="DUPLICATE_FEATURE_INHERITANCE" value="DISCARD"/>
+    <details key="DUPLICATE_OPERATIONS" value="DISCARD"/>
+    <details key="DERIVED_FEATURES" value="PROCESS"/>
+    <details key="SUBSETTING_PROPERTIES" value="REPORT"/>
+    <details key="REDEFINING_OPERATIONS" value="REPORT"/>
+    <details key="ANNOTATION_DETAILS" value="PROCESS"/>
+    <details key="UNION_PROPERTIES" value="REPORT"/>
+    <details key="DUPLICATE_OPERATION_INHERITANCE" value="DISCARD"/>
+    <details key="DUPLICATE_FEATURES" value="DISCARD"/>
+    <details key="REDEFINING_PROPERTIES" value="REPORT"/>
+    <details key="ECORE_TAGGED_VALUES" value="PROCESS"/>
+    <details key="COMMENTS" value="PROCESS"/>
+    <details key="OPERATION_BODIES" value="IGNORE"/>
+    <details key="SUPER_CLASS_ORDER" value="PROCESS"/>
+    <details key="INVARIANT_CONSTRAINTS" value="PROCESS"/>
+  </genAnnotations>
+  <foreignModel>iby.uml</foreignModel>
+  <genPackages prefix="IBY" resource="XML" disposableProviderFactory="true" ecorePackage="IBY.ecore#/">
+    <genClasses image="false" ecoreClass="IBY.ecore#//Entity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IBY.ecore#//Entity/ref"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IBY.ecore#//Entity/value"/>
+    </genClasses>
+    <genClasses ecoreClass="IBY.ecore#//IBYFile">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IBY.ecore#//IBYFile/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IBY.ecore#//IBYFile/locationt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IBY.ecore#//IBYFile/entries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IBY.ecore#//IBYFile/flag"/>
+    </genClasses>
+    <genClasses ecoreClass="IBY.ecore#//Location"/>
+    <genClasses ecoreClass="IBY.ecore#//Entry">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IBY.ecore#//Entry/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IBY.ecore#//Entry/target"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference IBY.ecore#//Entry/fileName"/>
+    </genClasses>
+    <genClasses ecoreClass="IBY.ecore#//SrcPath"/>
+    <genClasses ecoreClass="IBY.ecore#//TargetPath"/>
+    <genClasses ecoreClass="IBY.ecore#//FileName"/>
+    <genClasses image="false" ecoreClass="IBY.ecore#//Entity2">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute IBY.ecore#//Entity2/plugin"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
