@@ -167,9 +167,9 @@ public class AboutDialog extends org.eclipse.ui.internal.dialogs.AboutDialog
 		String legalText ="Copyright (c) 2009 Nokia Corporation and/or its subsidiary(-ies).\n" +
 				"All rights reserved.\n" +
 				"This component and the accompanying materials are made available    \n" +
-				"under the terms of the License \"Symbian Foundation License v1.0\"\n" +
+				"under the terms of the License \"Eclipse Public License v1.0\"\n" +
 				"which accompanies this distribution, and is available at the URL \n" +
-				"\"http://www.symbianfoundation.org/legal/sfl-v10.html\".";
+				"\"http://www.eclipse.org/legal/epl-v10.html\".";
 		
 		return "\n"+toolName+"\n\n"+pluginVersion+"\n"+pluginDate+" rev."+pluginRepositoryVersion+"\n\n"+legalText;
     }
